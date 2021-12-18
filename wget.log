@@ -1,0 +1,877 @@
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:19--  http://nicholasjohnson.com/courses
+Resolving nicholasjohnson.com... 192.30.252.153, 192.30.252.154
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/courses/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:19--  http://nicholasjohnson.com/courses/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6847 (6.7K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:20--  http://nicholasjohnson.com/courses/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6847 (6.7K) [text/html]
+Saving to: 'nicholasjohnson.com/courses'
+
+     0K ......                                                100% 1.05M=0.006s
+
+2014-11-04 16:19:20 (1.05 MB/s) - 'nicholasjohnson.com/courses' saved [6847/6847]
+
+Removing nicholasjohnson.com/courses.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:20--  http://nicholasjohnson.com/stylesheets/style.css
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9544 (9.3K) [text/css]
+Remote file exists but does not contain any link -- not retrieving.
+
+nicholasjohnson.com/stylesheets/style.css: No such file or directory
+Removing nicholasjohnson.com/stylesheets/style.css.
+unlink: No such file or directory
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:20--  http://nicholasjohnson.com/stylesheets/monokai.css
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9956 (9.7K) [text/css]
+Remote file exists but does not contain any link -- not retrieving.
+
+nicholasjohnson.com/stylesheets/monokai.css: No such file or directory
+Removing nicholasjohnson.com/stylesheets/monokai.css.
+unlink: No such file or directory
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:21--  http://nicholasjohnson.com/stylesheets/pdf.css
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 1185 (1.2K) [text/css]
+Remote file exists but does not contain any link -- not retrieving.
+
+nicholasjohnson.com/stylesheets/pdf.css: No such file or directory
+Removing nicholasjohnson.com/stylesheets/pdf.css.
+unlink: No such file or directory
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:21--  http://nicholasjohnson.com/javascripts/all.js
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 805106 (786K) [application/javascript]
+Remote file exists but does not contain any link -- not retrieving.
+
+Removing nicholasjohnson.com/javascripts/all.js.
+unlink: No such file or directory
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:21--  http://nicholasjohnson.com/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6933 (6.8K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:21--  http://nicholasjohnson.com/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6933 (6.8K) [text/html]
+Saving to: 'nicholasjohnson.com/index.html'
+
+     0K ......                                                100% 58.4K=0.1s
+
+2014-11-04 16:19:22 (58.4 KB/s) - 'nicholasjohnson.com/index.html' saved [6933/6933]
+
+Removing nicholasjohnson.com/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:22--  http://nicholasjohnson.com/angular/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6252 (6.1K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:22--  http://nicholasjohnson.com/angular/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6252 (6.1K) [text/html]
+Saving to: 'nicholasjohnson.com/angular/index.html'
+
+     0K ......                                                100%  829K=0.007s
+
+2014-11-04 16:19:22 (829 KB/s) - 'nicholasjohnson.com/angular/index.html' saved [6252/6252]
+
+Removing nicholasjohnson.com/angular/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:22--  http://nicholasjohnson.com/javascript-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 119031 (116K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:22--  http://nicholasjohnson.com/javascript-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 119031 (116K) [text/html]
+Saving to: 'nicholasjohnson.com/javascript-book/index.html'
+
+     0K .......... .......... .......... .......... .......... 43% 59.9K 1s
+    50K .......... .......... .......... .......... .......... 86% 90.0K 0s
+   100K .......... ......                                     100%  116K=1.5s
+
+2014-11-04 16:19:24 (75.9 KB/s) - 'nicholasjohnson.com/javascript-book/index.html' saved [119031/119031]
+
+Removing nicholasjohnson.com/javascript-book/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:24--  http://nicholasjohnson.com/jquery-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 136429 (133K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:24--  http://nicholasjohnson.com/jquery-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 136429 (133K) [text/html]
+Saving to: 'nicholasjohnson.com/jquery-book/index.html'
+
+     0K .......... .......... .......... .......... .......... 37% 88.3K 1s
+    50K .......... .......... .......... .......... .......... 75%  258K 0s
+   100K .......... .......... .......... ...                  100%  195K=0.9s
+
+2014-11-04 16:19:26 (143 KB/s) - 'nicholasjohnson.com/jquery-book/index.html' saved [136429/136429]
+
+Removing nicholasjohnson.com/jquery-book/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:26--  http://nicholasjohnson.com/backbone-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 47639 (47K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:26--  http://nicholasjohnson.com/backbone-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 47639 (47K) [text/html]
+Saving to: 'nicholasjohnson.com/backbone-book/index.html'
+
+     0K .......... .......... .......... .......... ......    100%  296K=0.2s
+
+2014-11-04 16:19:26 (296 KB/s) - 'nicholasjohnson.com/backbone-book/index.html' saved [47639/47639]
+
+Removing nicholasjohnson.com/backbone-book/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:26--  http://nicholasjohnson.com/cv
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/cv/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:27--  http://nicholasjohnson.com/cv/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13793 (13K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:27--  http://nicholasjohnson.com/cv/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 13793 (13K) [text/html]
+Saving to: 'nicholasjohnson.com/cv'
+
+     0K .......... ...                                        100% 98.4K=0.1s
+
+2014-11-04 16:19:27 (98.4 KB/s) - 'nicholasjohnson.com/cv' saved [13793/13793]
+
+Removing nicholasjohnson.com/cv.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:27--  http://nicholasjohnson.com/blog
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/blog/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:28--  http://nicholasjohnson.com/blog/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6463 (6.3K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:29--  http://nicholasjohnson.com/blog/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6463 (6.3K) [text/html]
+Saving to: 'nicholasjohnson.com/blog'
+
+     0K ......                                                100%  889K=0.007s
+
+2014-11-04 16:19:29 (889 KB/s) - 'nicholasjohnson.com/blog' saved [6463/6463]
+
+Removing nicholasjohnson.com/blog.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:29--  http://nicholasjohnson.com/courses/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6847 (6.7K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:29--  http://nicholasjohnson.com/courses/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6847 (6.7K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/index.html'
+
+     0K ......                                                100% 2.62M=0.002s
+
+2014-11-04 16:19:30 (2.62 MB/s) - 'nicholasjohnson.com/courses/index.html' saved [6847/6847]
+
+Removing nicholasjohnson.com/courses/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:30--  http://nicholasjohnson.com/courses/angularjs/exercises/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9933 (9.7K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:30--  http://nicholasjohnson.com/courses/angularjs/exercises/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9933 (9.7K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/index.html'
+
+     0K .........                                             100% 64.2K=0.2s
+
+2014-11-04 16:19:30 (64.2 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/index.html' saved [9933/9933]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:30--  http://nicholasjohnson.com/angular-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 39110 (38K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:31--  http://nicholasjohnson.com/angular-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 39110 (38K) [text/html]
+Saving to: 'nicholasjohnson.com/angular-book/index.html'
+
+     0K .......... .......... .......... ........             100% 64.7K=0.6s
+
+2014-11-04 16:19:31 (64.7 KB/s) - 'nicholasjohnson.com/angular-book/index.html' saved [39110/39110]
+
+Removing nicholasjohnson.com/angular-book/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:31--  http://nicholasjohnson.com/courses/angularjs/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8403 (8.2K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:32--  http://nicholasjohnson.com/courses/angularjs/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8403 (8.2K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/index.html'
+
+     0K ........                                              100%  941K=0.009s
+
+2014-11-04 16:19:32 (941 KB/s) - 'nicholasjohnson.com/courses/angularjs/index.html' saved [8403/8403]
+
+Removing nicholasjohnson.com/courses/angularjs/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:32--  http://nicholasjohnson.com/courses/angularjs
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/courses/angularjs/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:32--  http://nicholasjohnson.com/courses/angularjs/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8403 (8.2K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:33--  http://nicholasjohnson.com/courses/angularjs/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8403 (8.2K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs.1'
+
+     0K ........                                              100% 2.17M=0.004s
+
+2014-11-04 16:19:33 (2.17 MB/s) - 'nicholasjohnson.com/courses/angularjs.1' saved [8403/8403]
+
+Removing nicholasjohnson.com/courses/angularjs.1.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:33--  http://nicholasjohnson.com/courses/modern-web-design
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/courses/modern-web-design/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:33--  http://nicholasjohnson.com/courses/modern-web-design/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9143 (8.9K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:34--  http://nicholasjohnson.com/courses/modern-web-design/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9143 (8.9K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/modern-web-design'
+
+     0K ........                                              100% 2.25M=0.004s
+
+2014-11-04 16:19:34 (2.25 MB/s) - 'nicholasjohnson.com/courses/modern-web-design' saved [9143/9143]
+
+Removing nicholasjohnson.com/courses/modern-web-design.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:34--  http://nicholasjohnson.com/cv/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 13793 (13K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:34--  http://nicholasjohnson.com/cv/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 13793 (13K) [text/html]
+Saving to: 'nicholasjohnson.com/cv/index.html'
+
+     0K .......... ...                                        100% 53.5K=0.3s
+
+2014-11-04 16:19:34 (53.5 KB/s) - 'nicholasjohnson.com/cv/index.html' saved [13793/13793]
+
+Removing nicholasjohnson.com/cv/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:35--  http://nicholasjohnson.com/%7B%7Buser.link%7D%7D
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+Remote file does not exist -- broken link!!!
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:35--  http://nicholasjohnson.com/angular-book
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/angular-book/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:35--  http://nicholasjohnson.com/angular-book/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39110 (38K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:35--  http://nicholasjohnson.com/angular-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 39110 (38K) [text/html]
+Saving to: 'nicholasjohnson.com/angular-book.1'
+
+     0K .......... .......... .......... ........             100%  112K=0.3s
+
+2014-11-04 16:19:36 (112 KB/s) - 'nicholasjohnson.com/angular-book.1' saved [39110/39110]
+
+Removing nicholasjohnson.com/angular-book.1.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:36--  http://nicholasjohnson.com/courses/further_angular/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+Remote file does not exist -- broken link!!!
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:36--  http://nicholasjohnson.com/angular/exercises
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+Remote file does not exist -- broken link!!!
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:36--  http://nicholasjohnson.com/node/exercises
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+Remote file does not exist -- broken link!!!
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:37--  http://nicholasjohnson.com/images/george-boole.jpg
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 266025 (260K) [image/jpeg]
+Remote file exists but does not contain any link -- not retrieving.
+
+Removing nicholasjohnson.com/images/george-boole.jpg.
+unlink: No such file or directory
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:37--  http://nicholasjohnson.com/blog/no_framework_mvc.html
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 20918 (20K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:37--  http://nicholasjohnson.com/blog/no_framework_mvc.html
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 20918 (20K) [text/html]
+Saving to: 'nicholasjohnson.com/blog/no_framework_mvc.html'
+
+     0K .......... ..........                                 100% 74.0K=0.3s
+
+2014-11-04 16:19:38 (74.0 KB/s) - 'nicholasjohnson.com/blog/no_framework_mvc.html' saved [20918/20918]
+
+Removing nicholasjohnson.com/blog/no_framework_mvc.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:38--  http://nicholasjohnson.com/blog/extracting_images_into_a_concern.html
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 13592 (13K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:38--  http://nicholasjohnson.com/blog/extracting_images_into_a_concern.html
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 13592 (13K) [text/html]
+Saving to: 'nicholasjohnson.com/blog/extracting_images_into_a_concern.html'
+
+     0K .......... ...                                        100% 80.1K=0.2s
+
+2014-11-04 16:19:38 (80.1 KB/s) - 'nicholasjohnson.com/blog/extracting_images_into_a_concern.html' saved [13592/13592]
+
+Removing nicholasjohnson.com/blog/extracting_images_into_a_concern.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:38--  http://nicholasjohnson.com/courses/angularjs/exercises/templates/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5387 (5.3K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:39--  http://nicholasjohnson.com/courses/angularjs/exercises/templates/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5387 (5.3K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/templates/index.html'
+
+     0K .....                                                 100%  865K=0.006s
+
+2014-11-04 16:19:39 (865 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/templates/index.html' saved [5387/5387]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/templates/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:39--  http://nicholasjohnson.com/courses/angularjs/exercises/binding/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5097 (5.0K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:39--  http://nicholasjohnson.com/courses/angularjs/exercises/binding/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5097 (5.0K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/binding/index.html'
+
+     0K ....                                                  100%  675K=0.007s
+
+2014-11-04 16:19:39 (675 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/binding/index.html' saved [5097/5097]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/binding/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:39--  http://nicholasjohnson.com/courses/angularjs/exercises/more_binding/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6247 (6.1K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:40--  http://nicholasjohnson.com/courses/angularjs/exercises/more_binding/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6247 (6.1K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/more_binding/index.html'
+
+     0K ......                                                100%  906K=0.007s
+
+2014-11-04 16:19:40 (906 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/more_binding/index.html' saved [6247/6247]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/more_binding/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:40--  http://nicholasjohnson.com/courses/angularjs/exercises/controller/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5319 (5.2K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:40--  http://nicholasjohnson.com/courses/angularjs/exercises/controller/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5319 (5.2K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/controller/index.html'
+
+     0K .....                                                 100%  632K=0.008s
+
+2014-11-04 16:19:40 (632 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/controller/index.html' saved [5319/5319]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/controller/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:40--  http://nicholasjohnson.com/courses/angularjs/exercises/scope/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5447 (5.3K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:41--  http://nicholasjohnson.com/courses/angularjs/exercises/scope/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5447 (5.3K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/scope/index.html'
+
+     0K .....                                                 100% 1.87M=0.003s
+
+2014-11-04 16:19:41 (1.87 MB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/scope/index.html' saved [5447/5447]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/scope/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:41--  http://nicholasjohnson.com/courses/angularjs/exercises/di/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6459 (6.3K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:41--  http://nicholasjohnson.com/courses/angularjs/exercises/di/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6459 (6.3K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/di/index.html'
+
+     0K ......                                                100%  877K=0.007s
+
+2014-11-04 16:19:41 (877 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/di/index.html' saved [6459/6459]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/di/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:41--  http://nicholasjohnson.com/courses/angularjs/exercises/karma/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5762 (5.6K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:42--  http://nicholasjohnson.com/courses/angularjs/exercises/karma/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5762 (5.6K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/karma/index.html'
+
+     0K .....                                                 100%  935K=0.006s
+
+2014-11-04 16:19:42 (935 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/karma/index.html' saved [5762/5762]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/karma/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:42--  http://nicholasjohnson.com/courses/angularjs/exercises/repeat_and_filter/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7689 (7.5K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:42--  http://nicholasjohnson.com/courses/angularjs/exercises/repeat_and_filter/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7689 (7.5K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/repeat_and_filter/index.html'
+
+     0K .......                                               100% 53.5K=0.1s
+
+2014-11-04 16:19:42 (53.5 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/repeat_and_filter/index.html' saved [7689/7689]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/repeat_and_filter/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:43--  http://nicholasjohnson.com/courses/angularjs/exercises/ng-include/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5681 (5.5K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:43--  http://nicholasjohnson.com/courses/angularjs/exercises/ng-include/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5681 (5.5K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/ng-include/index.html'
+
+     0K .....                                                 100%  737K=0.008s
+
+2014-11-04 16:19:43 (737 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/ng-include/index.html' saved [5681/5681]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/ng-include/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:43--  http://nicholasjohnson.com/courses/angularjs/exercises/ajax/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5228 (5.1K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:43--  http://nicholasjohnson.com/courses/angularjs/exercises/ajax/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5228 (5.1K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/ajax/index.html'
+
+     0K .....                                                 100%  593K=0.009s
+
+2014-11-04 16:19:44 (593 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/ajax/index.html' saved [5228/5228]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/ajax/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:44--  http://nicholasjohnson.com/courses/angularjs/exercises/jsonp/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6086 (5.9K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:44--  http://nicholasjohnson.com/courses/angularjs/exercises/jsonp/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6086 (5.9K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/jsonp/index.html'
+
+     0K .....                                                 100% 2.85M=0.002s
+
+2014-11-04 16:19:44 (2.85 MB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/jsonp/index.html' saved [6086/6086]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/jsonp/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:44--  http://nicholasjohnson.com/courses/angularjs/exercises/homework/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5654 (5.5K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:44--  http://nicholasjohnson.com/courses/angularjs/exercises/homework/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 5654 (5.5K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/homework/index.html'
+
+     0K .....                                                 100% 2.38M=0.002s
+
+2014-11-04 16:19:45 (2.38 MB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/homework/index.html' saved [5654/5654]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/homework/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:45--  http://nicholasjohnson.com/courses/angularjs/exercises/custom_filters/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9767 (9.5K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:45--  http://nicholasjohnson.com/courses/angularjs/exercises/custom_filters/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 9767 (9.5K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/custom_filters/index.html'
+
+     0K .........                                             100% 65.1K=0.1s
+
+2014-11-04 16:19:45 (65.1 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/custom_filters/index.html' saved [9767/9767]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/custom_filters/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:45--  http://nicholasjohnson.com/courses/angularjs/exercises/services/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8029 (7.8K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:46--  http://nicholasjohnson.com/courses/angularjs/exercises/services/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8029 (7.8K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/services/index.html'
+
+     0K .......                                               100% 52.4K=0.1s
+
+2014-11-04 16:19:46 (52.4 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/services/index.html' saved [8029/8029]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/services/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:46--  http://nicholasjohnson.com/courses/angularjs/exercises/directives/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7586 (7.4K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:46--  http://nicholasjohnson.com/courses/angularjs/exercises/directives/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7586 (7.4K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/directives/index.html'
+
+     0K .......                                               100% 52.2K=0.1s
+
+2014-11-04 16:19:47 (52.2 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/directives/index.html' saved [7586/7586]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/directives/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:47--  http://nicholasjohnson.com/courses/angularjs/exercises/crud/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 11191 (11K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:47--  http://nicholasjohnson.com/courses/angularjs/exercises/crud/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 11191 (11K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/crud/index.html'
+
+     0K ..........                                            100% 82.6K=0.1s
+
+2014-11-04 16:19:47 (82.6 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/crud/index.html' saved [11191/11191]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/crud/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:47--  http://nicholasjohnson.com/courses/angularjs/exercises/routing/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8038 (7.8K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:48--  http://nicholasjohnson.com/courses/angularjs/exercises/routing/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 8038 (7.8K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/routing/index.html'
+
+     0K .......                                               100% 61.4K=0.1s
+
+2014-11-04 16:19:48 (61.4 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/routing/index.html' saved [8038/8038]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/routing/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:48--  http://nicholasjohnson.com/courses/angularjs/exercises/transitions/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7992 (7.8K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:48--  http://nicholasjohnson.com/courses/angularjs/exercises/transitions/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7992 (7.8K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/transitions/index.html'
+
+     0K .......                                               100% 56.8K=0.1s
+
+2014-11-04 16:19:48 (56.8 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/transitions/index.html' saved [7992/7992]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/transitions/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:49--  http://nicholasjohnson.com/courses/angularjs/exercises/animation/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7388 (7.2K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:49--  http://nicholasjohnson.com/courses/angularjs/exercises/animation/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 7388 (7.2K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/animation/index.html'
+
+     0K .......                                               100% 50.2K=0.1s
+
+2014-11-04 16:19:49 (50.2 KB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/animation/index.html' saved [7388/7388]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/animation/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:49--  http://nicholasjohnson.com/courses/angularjs/exercises/bootstrap/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6236 (6.1K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:50--  http://nicholasjohnson.com/courses/angularjs/exercises/bootstrap/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 6236 (6.1K) [text/html]
+Saving to: 'nicholasjohnson.com/courses/angularjs/exercises/bootstrap/index.html'
+
+     0K ......                                                100% 1.26M=0.005s
+
+2014-11-04 16:19:50 (1.26 MB/s) - 'nicholasjohnson.com/courses/angularjs/exercises/bootstrap/index.html' saved [6236/6236]
+
+Removing nicholasjohnson.com/courses/angularjs/exercises/bootstrap/index.html.
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:50--  http://nicholasjohnson.com/angularjs-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 404 Not Found
+Remote file does not exist -- broken link!!!
+
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:50--  http://nicholasjohnson.com/javascript-book
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://nicholasjohnson.com/javascript-book/ [following]
+Spider mode enabled. Check if remote file exists.
+--2014-11-04 16:19:50--  http://nicholasjohnson.com/javascript-book/
+Connecting to nicholasjohnson.com|192.30.252.153|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 119031 (116K) [text/html]
+Remote file exists and could contain links to other resources -- retrieving.
+
+--2014-11-04 16:19:51--  http://nicholasjohnson.com/javascript-book/
+Reusing existing connection to nicholasjohnson.com:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 119031 (116K) [text/html]
+Saving to: 'nicholasjohnson.com/javascript-book.1'
+
+     0K .......... .......... .......... .......... .......... 43% 75.8K 1s
+    50K .......... .......... .......... .......... .......... 86% 93.5K 0s
+   100K .......... ......                                     100%  104K=1.4s
+
+2014-11-04 16:19:53 (86.1 KB/s) - 'nicholasjohnson.com/javascript-book.1' saved [119031/119031]
+
+Removing nicholasjohnson.com/javascript-book.1.
+
+Found 5 broken links.
+
+http://nicholasjohnson.com/%7B%7Buser.link%7D%7D
+http://nicholasjohnson.com/courses/further_angular/
+http://nicholasjohnson.com/angular/exercises
+http://nicholasjohnson.com/node/exercises
+http://nicholasjohnson.com/angularjs-book/
+
+FINISHED --2014-11-04 16:19:53--
+Total wall clock time: 34s
+Downloaded: 39 files, 750K in 7.2s (104 KB/s)

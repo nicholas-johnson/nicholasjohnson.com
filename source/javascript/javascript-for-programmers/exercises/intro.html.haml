@@ -1,0 +1,359 @@
+---
+title: "JavaScript Intro"
+section: "javascript"
+course: "javascript-for-programmers"
+exercise: "intro"
+layout: "exercise"
+alias: "javascript/javascript-for-programmers"
+---
+
+%article
+  %section
+    :markdown
+
+      # Hello JavaScript, you Handsome Little Thing
+
+      JavaScript is a language with a pure philosophy. Built in just two weeks, it has a beautiful heart. Unfortunately, 30 years of history has piled up on top of it, obscuring the beauty beneath layers of inconsistent APIs and anti-patterns. Clean away the loose earth and rubble though, and you can see the ancient wonder that lies beneath.
+
+      JavaScript inherits from LISP via Scheme. It's a functional language, and not really related to Java at all. The name JavaScript is purely a marketing exercise. Java was the cool thing at the time. The Java like syntax is there to make JavaScript feel more accessible. Underneath however beats a heart of purest Scheme.
+
+      ## Fully Object Oriented
+
+      It's object oriented, but on it's own terms. All objects are associative arrays and inheritance is directly from object to object. Classes are simple object factory functions, you call them with `new` and they give you an object.
+
+      ## Prototypical 
+
+      Objects inherit one from the other directly, via a __proto__ pointer. This actually gives us all the features of a classical language like Java with nonw of the fuss. It's a simpler, purer way to do inheritance.
+
+      ## Functional
+
+      It's also functional. Functions are first class objects and can be passed around. Local variables are attributes of hidden scope objects, and persist as long as they are needed. This is closure.
+
+      ## Executing JavaScript
+
+      We have two ways of executing JavaScript, in a browser, or in a console via Node.
+
+      We execute JavaScript in a browser by linking to it. with a script tag, like so:
+
+    :ruby
+      code = <<-CODE
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <script src="script.js"></script>
+      </head>
+      <body>
+
+      </body>
+      </html>
+      CODE
+    =code(code, :html)
+
+    :markdown
+
+      Typically we link to an external file, though we can include JavaScript directly between the <script></script> tags.
+
+      We might make a script.js file and pop a hello world in it:
+
+    :ruby
+      code = <<-CODE
+      alert("Hello JavaScript!!");
+      CODE
+    =code(code)
+
+    :markdown
+
+  %section.exercise
+    :markdown
+      ## Exercise - Hello World
+
+      The goal of this exercise is to get an environment set up and working.
+
+      1. Create a folder in which to work.
+      2. Create a new HTML file in a text editor. Call it index.html.
+      3. Create a JavaScript file in a text editor. Call it script.js.
+      4. Put an alert in the script file, like this: alert('Hello world');
+      5. Use a script tag to link the JavaScript file into the HTML file
+      6. Open the HTML file in a browser. See the alert?
+      7. Extend the code so it pops up two alerts.
+
+
+  %section
+    :markdown
+      # Variables
+
+      Variables in JavaScript are global by default. This is because JavaScript is designed to be easy for non-programmers to use, and non-programmers might not understand about variable scope.
+
+      As a real programmer though you should always initialize your variables correctly using the var keyword:
+
+    :ruby
+      code = <<-CODE
+      var a; // creates the variable in the current scope
+      a = 12; // stores a value in the variable
+      CODE
+    =code(code)
+
+    :markdown
+
+      You can create and assign a variable in the same line:
+
+    :ruby
+      code = <<-CODE
+      var a = 12;
+      CODE
+    =code(code)
+
+    :markdown
+
+      ## Single Global Scope
+
+      JavaScript has a single global scope which any script can write to. You should avoid creating global variables wherever possible, or sooner or later you will get a conflict.
+
+      You may have multiple scripts on the page. Some of these might be advertiser scripts which you don't control. Avoid putting variables in this messy space wherever possible.
+
+      The var keyword creates a local variable, local to the current function. **Always remember your var keyword.** We will look later at additional ways to keep variables private with functions, closure and objects.
+
+      ## Variables a fully Polymorphic
+
+      Variables are fully polymorphic, you can store anything you like in any variable, there is no type checking. JavaScript is weekly typed.
+
+    :ruby
+      code = <<-CODE
+      var a;
+
+      a = 12;
+      a = "Hello JavaScript!";
+      CODE
+    =code(code)
+
+    :markdown
+
+      This is different to a language like Java where variables can only store one type of thing.
+
+      Having weekly typed variables is appropriate for JavaScript. It allows our scripts to be much shorter as we don't have to write any code to get around the type system. Shorter scripts means faster downloads.
+
+      However weak typing makes it harder for large teams to work together, and it makes it hard for an IDE to do code completion. It's a trade off.
+
+  %section.exercise
+    :markdown
+      ## Exercise - Weeks in a lifetime
+
+      Given three variables
+
+    :ruby
+      code = <<-CODE
+      var daysInYear = 365.25;
+      var daysInWeek = 7;
+      var yearsInLifetime = 80;
+      CODE
+    =code(code)
+
+    :markdown
+
+      Calculate the average number of weeks in a human lifetime.
+
+
+  %section
+    :markdown
+
+      # Strings
+
+      Strings in JavaScript are arrays of characters. You define them using single or double quotes, as long as you are consistent:
+
+    :ruby
+      code = <<-CODE
+      "Hi there";
+      'Hi there';
+      CODE
+    =code(code)
+
+    :markdown
+
+      We can include escape characters in strings with a backslash:
+
+    :ruby
+      code = <<-CODE
+      "Hi \\n there";
+      "Hi \\"there\\"";
+      CODE
+    =code(code)
+
+    :markdown
+
+      Most styleguides prefer single quoted strings because they use fewer pixels and thereforemake your laptop weigh less in your bag. (Just kidding about that last part.)
+
+      ## Concatenation
+
+      You can concatenate strings using the + character:
+
+    :ruby
+      code = <<-CODE
+      "Hello " + "There";
+      CODE
+    =code(code)
+
+    :markdown
+
+      ## Strings as arrays
+
+      Strings work rather like arrays. Access a part of a string using the square brace syntax like so:
+
+    :ruby
+      code = <<-CODE
+      "Hello there"[0]; // returns "H"
+      CODE
+    =code(code)
+
+    :markdown
+
+      Note that although strings look like arrays, they are not arrays, and don't give you the array API.
+
+      ## Handy functions
+
+      You can split a string into an array using the split function:
+
+    :ruby
+      code = <<-CODE
+      "Hello".split('');
+      // ['H', 'e', 'l', 'l', 'o']
+      CODE
+    =code(code)
+
+    :markdown
+
+      You can join the array back up again using the join function:
+
+    :ruby
+      code = <<-CODE
+      ['H', 'e', 'l', 'l', 'o'].join('')
+      // "Hello"
+      CODE
+    =code(code)
+
+    :markdown
+
+      If you want to reverse a string you can split it, reverse the array, then join them back together again:
+
+    :ruby
+      code = <<-CODE
+
+      "Hello".split('').reverse().join('');
+      // "olleH"
+      CODE
+    =code(code)
+
+    :markdown
+
+      You can replace a value in a string using the replace function:
+
+    :ruby
+      code = <<-CODE
+      "Hello".replace('e', 'a');
+      // "Hallo"
+      CODE
+    =code(code)
+
+    :markdown
+
+      You can also use a regular expression:
+
+    :ruby
+      code = <<-CODE
+      'Hello'.replace(/l/g, 'w');
+      // "Hewwow"
+      CODE
+    =code(code)
+
+  %section.exercise
+    :markdown
+      ## Exercise - String Concatenation
+
+      1. Create a variable called greeting. Store the value 'hello' in it.
+      2. Create a variable called name. Store the value 'world' in it.
+      3. Use your variables to alert "hello world"
+      4. Use a couple of regex to change the output to "he110 w0r1d"
+      5. Use a couple more functions to reverse the result. A coding device! Write the reverse decoder.
+
+  %section
+    :markdown
+
+      # Numbers
+
+      All numbers in JavaScript are floating point. There are no integers. This keeps things simple for new developers, but you need to be aware of this if you are writing code to deal with financial transactions.
+
+      Typically it's not an issue.
+
+      ## Conversion
+
+      Convert a string to a number using parseInt or parseFloat:
+
+    :ruby
+      code = <<-CODE
+      parseInt("123");
+      CODE
+    =code(code)
+
+    :markdown
+
+      Convert a number to a string simply by concatenating it with a string, like so:
+
+    :ruby
+      code = <<-CODE
+      "" + 123
+      "123"
+      CODE
+    =code(code)
+
+    :markdown
+
+
+  %section
+    :markdown
+      # Conditionals
+
+      JavaScript comes with conditional statements, if, else if and else:
+
+    :ruby
+      code = <<-CODE
+      var a = 12
+
+      if (a > 12) {
+        alert('a was greater');
+      } else if (a < 12) {
+        alert('a was smaller');
+      } else {
+        alert('a was 12');
+      }
+      CODE
+    =code(code)
+
+    :markdown
+
+      ## == or ===?
+      In most languages == (double equals) means equal to. In JavaScript === (triple equals) means exactly equals to and == means equal to with type casting.
+
+      Type casting is fiddly stuff, and often behaves in unexpected ways. Good JavaScript programmers generally avoid ==.
+
+      You should use ===.
+
+  %section.exercise
+    :markdown
+
+      ## Exercise - Conditional logic
+
+      1. Create a little program that tells you if it's the morning, afternoon or night. You can get the hour of the day something like this:
+
+
+    :ruby
+      code = <<-CODE
+      // returns a number between 0 and 24
+      new Date().getHours();
+      CODE
+    =code(code, :javascript)
+
+  %section.downloads
+    :markdown
+
+      ## Downloads
+
+      * [Demo code from the board](https://www.dropbox.com/sh/y4fmkkmivrgtt5d/AAAO8lt2DNdM-gXj5pRzvTAna?dl=1)

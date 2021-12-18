@@ -1,0 +1,36 @@
+---
+title: "How to Understand the Angular Hello World"
+tags: angular, javascript, browserify
+layout: 'blog'
+description: ""
+published: false
+course_sidebar: :react
+---
+
+:markdown
+  Right at the top of our hello world, we have this little doozy.
+
+  import {Component} from 'angular2/core';
+
+  This is a JavaScript module include. Pretty much every major language in the world features modules. The glaring exception from this pantheon is JavaScript.
+
+  A module is just the ability to split some of your code out into a different file, which is surely a good thing.
+
+  We've had modules in JavaScript for some time now. Starting with requireJS, then more recently Browserify and Webpack. Each of these projects has attempted to give JavaScript a module system, and each has been successful in it's own way.
+
+  Given that There are three major ways of implementing modules in JavaScript:
+
+  1. Dynamically append script tags to the page in the correct order. This is not so nice, since, if you're taking modules seriously, you may have hundreds of modules.
+  2. Use AJAX to dynamically include the modules. Ditto for above.
+  3. Bundle the modules into wrapper functions that can be required in other wrapper functions. This is that approach that Browserify and Webpack take. This is good, but you need some (simple) tooling.
+  4.
+
+  The Angular core team have chosen a little known module system called systemJS. which can handle both AJAX and bundling. You don't have to follow their lead. Webpack and Browserify remain the lead module system contenders.
+
+  ## What about those curly braces?
+
+  But what about this: {}? Surely that can't be the new ES6 module syntax. Well no. An ES6 import looks like this:
+
+  import Toaster from './Toaster'
+
+  This will create a local variable called Toaster in the current module, which will contain the object exported by the Toaster module.

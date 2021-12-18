@@ -1,0 +1,299 @@
+---
+title: "How do I think in Angular 2 if I have a jQuery background?"
+tags: angular, angular2, javascript
+layout: 'blog'
+description: ""
+published: false
+course_sidebar: :angular
+---
+
+
+:markdown
+
+  A few years back I wrote a response to the Stack Overflow question <a href="http://stackoverflow.com/a/23606512/687677" target="_blank">"How do I think in Angular if I have a jQuery background."</a>
+
+  Unfortunately the question was closed as too broad, but not before it received quite a few thousand upvotes. It's still ranks highly in Google.
+
+  This is the follow up for Angular 2. I assume no Angular 1 knowledge, but I do expect you to know jQuery at least a little bit.
+
+  ## What is this and who are you?
+
+  You are a JavaScript developer. You probably know jQuery. You've heard that Angular 2 is cool, but you're put off by sheer number of apparently necessary libraries that are attached to it. TypeScript, SystemJS, RequireJS, RXJS Observables, Babel, Traceur etc, etc.
+
+  All of these things are very good, but they're not Angular 2.
+
+  Angular 2 is pluggable. It comes with a core, and you can then extend this with module loaders, transpilers, etc. But you actually don't need all these things to write Angular.
+
+  This little guide will teach you core Angular 2, theory and practice. You can then go off and build on top of your knowledge with the confidence that comes from knowing the core.
+
+  # Angular 2 vs. JQuery - Fight!
+
+  JQuery and Angular 2 are not the worst of enemies. They can work side by side happily in a project. However, as you relax into Angular 2, you may find that you need jQuery less and less, to the point where you might let go of it altogether.
+
+  JQuery is essentially a DOM manipulation library. It contains a series of helpful functions for making changes to the DOM. You can append elements, update HTML, etc. Any change you make to the DOM is done manually.
+
+  Angular 2 is different. Conceptually it's a framework for creating brand new DOM nodes. These new DOM nodes can do pretty much anything a regular DOM node can do. Angular automatically takes care of ensuring that these DOM nodes come into existence, and that they are consistent with the current state of the app.
+
+  # 1. Angular 2 lets you build custom DOM nodes
+
+  First up. Angular 2 is a framework for building custom DOM nodes. We call these components. Just like a regular DOM node, an Angular 2 component contains several things:
+
+  * a template (how the node should appear on screen),
+  * events - which can be emitted,
+  * attributes - for configuring the node,
+  * and styling - how the node should display by default.
+
+  ## Angular DOM nodes can do everything a built in DOM node can do:
+
+  Here is a hyperlink: `<a href="http://www.xkcd.com" title="XKCD">XKCD</a>`
+
+  It looks like this: <a href="http://www.xkcd.com" target="_blank" title="XKCD">XKCD</a>
+
+  This hyperlink DOM node has:
+
+  * Styling: By default, it is blue with an underscore, though I have overridden this here.
+  * Behaviour: If I click on it, it sets document.location to a new value and loads a new page. If I hover (and I'm using Chrome or Firefox) I get a tooltip.
+  * Attributes: I can set an href attribute to tell it how to behave onclick.
+  * Events: It can emit an onclick event if I click on it which will bubble up the DOM tree.
+
+  Angular lets us create components with all these capabilities.
+
+  ## A Component in Angular 2
+
+  Here's a very simple helloWorld component:
+
+
+:ruby
+  code = <<-CODE
+  var helloWorld = ng.core
+    .Component({
+      selector: 'helloWorld',
+      template: '<p>Hello World!!!</p>'
+    })
+    .Class({
+      constructor: function() {}
+    });
+  CODE
+=code(code)
+
+:markdown
+
+  We can then write HTML which looks like this:
+
+:ruby
+  code = <<-CODE
+  <helloWorld></helloWorld>
+  CODE
+=code(code, :html)
+
+:markdown
+
+  What we will see is a DOM that looks like this:
+
+:ruby
+  code = <<-CODE
+  <helloWorld>
+    <p>
+      Hello World!!!
+    </p>
+  </helloWorld>
+  CODE
+=code(code, :html)
+
+:markdown
+  **This is the first big difference. With JQuery, you write HTML, then make selective DOM changes one by one. With Angular 2 you make brand new DOM nodes and nest them inside one another. For example, you might make a sidebar node, or a catList node, or a navigation node. Your app is built out of a tree of new DOM nodes.**
+
+%aside.box
+  :markdown
+    ## But What About Modules?
+
+    Notice here that I am just assigning the helloWorld component to a variable. Later you will use a module loader like SystemJS to include your code, but for now, a variable will do.
+
+:markdown
+
+  <a href="http://codepen.io/superluminary/pen/BKRbKE?editors=1010" target="_blank">Play with a working sample here.</a>
+
+  # 2. You have to bootstrap
+
+  With jQuery, we run our code onDomReady by passing a function to $, like so:
+
+:ruby
+  code = <<-CODE
+  $(function() {
+    $('body').append('<h1>Hello world!!!</h1>')
+  });
+  CODE
+=code(code)
+
+:markdown
+
+  This piece of code waits until the DOM has loaded, then executes the function which appends an h1 to the body.
+
+  ## Bootstrapping in Angular
+
+  We have to do something similar in Angular. We wait until the DOM is loaded, then call Bootstrap and pass it a component.
+
+:ruby
+  code = <<-CODE
+  document.addEventListener('DOMContentLoaded', function() {
+    ng.platform.browser.bootstrap(helloWorld, [])
+  });
+  CODE
+=code(code)
+
+:markdown
+
+  Because Angular 2 targets IE9 and above, we can use the browser's built in DOMContentLoaded event which does the same thing.
+
+  <a href="http://codepen.io/superluminary/pen/BKRbKE?editors=1010" target="_blank">Play with a working sample here.</a>
+
+  # 3. Component's hold their own state
+
+  In jQuery, it can be difficult to know where to store data. We might use data attributes on the DOM, or a JSON object. If we create new DOM nodes, we need to make sure they have the information they need to manage themselves.
+
+  In Angular 2, components hold their own state. Anything we add to `this` in the component Class constructor function will be available in the front end.
+
+:ruby
+  code = <<-CODE
+  var helloWorld = ng.core
+    .Component({
+      selector: 'helloWorld',
+      template: '<h1>Hello {{name}}!!!</h1>'
+    })
+    .Class({
+      constructor: function() {
+        this.name = "Molly Malone";
+      }
+    });
+  CODE
+=code(code)
+
+:markdown
+
+  This is true for functions too. We can add anything we like to `this` in the component class, and then output it using curly braces. The curly brace is called a binding. The expression in it is bound to the state of the component.
+
+  <a href="http://codepen.io/superluminary/pen/Mymxmj?editors=1010" target="_blank">Play with a working sample here.</a>
+
+  # 4. Components Automagically Redraw Themselves Whenever Their State Changes
+
+  In JQuery, if we change our application state, we are responsible for updating our front end.
+
+  In Angular 2, the framework actively listens for changes in the component state and updates the front end accordingly.
+
+  If any attribute of the component class changes, the front end will be redrawn appropriately. Only the portions of the DOM which have changed will be updated.
+
+  This is true no matter how the state changes. It can change in response to a listener. It can change in response to an AJAX callback. It can change on a setTimeout or a setInterval.
+
+:ruby
+  code = <<-CODE
+  var helloWorld = ng.core
+    .Component({
+      selector: 'helloWorld',
+      template: '<h1>{{i}}</h1>'
+    })
+    .Class({
+      constructor: function() {
+        this.i = 0;
+        setInterval(() => {
+          this.i++;
+        }, 500)
+        this.name = "Molly Malone";
+      }
+    });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    ng.platform.browser.bootstrap(helloWorld, [])
+  });
+  CODE
+=code(code)
+
+:markdown
+
+  This works using zones.js, a JavaScript library which shims all of the built in asynchronous functions in JavaScript so that they emit an observable which can be subscribed to.
+
+  If an Asyncronous event occurs, Angular 2 will check all it's bindings, and make them consistent. This is reliable, and just happens without our intervention.
+
+  <a href="http://codepen.io/superluminary/pen/xVdBjW?editors=1010" target="_blank">Play with a working sample here.</a>
+
+%aside.box
+  :markdown
+    ## Hold up, what is this: () => {}
+
+    This is a fat arrow function. Fat arrows are a new way to define functions introduced in ES6. They work in Chrome and Firefox, but not IE yet.
+
+    They have a consistent value for `this`, so in the asynchronous `setInterval` callback, we can be sure that the value of `this` will be correct
+
+    <a href="http://forwardadvance.com/es6/fat-arrows/" target="_blank">You can read more on fat arrows here.</a>
+
+
+:markdown
+  # 5. Components are Analogous to Functions, they have inputs and outputs.
+
+  Functions accept input, they process it, and they give you output. Here's a silly function that says hello.
+
+:ruby
+  code = <<-CODE
+  var sayHello = function(name) { // Here's the input
+    greeting = "hello " + name; // here's the process
+    return greeting; // here's the output
+  }
+  CODE
+=code(code)
+
+:markdown
+
+  Components are the same. Their inputs are attributes, and their outputs are events.
+
+  ## Attributes are component input. Events are component output
+
+  *Understand this because it is important!*
+
+  * For each component, we send data into it via attributes (and properties which are subtly different but look similar)
+  * For each component, we get data out of it by means of events. Components can throw standard events or custom events which we make up.
+
+  ## This is the core concept of Flux
+
+  Flux architecture is a way of thinking about code. We build our application as a tree, just like the DOM is a tree. We nest components inside of other components to build our app.
+
+  * Data flows down the tree by means of attributes. An element is able to pass data to it's children.
+  * Signals flow back up the tree by means of events.
+
+  This is why we talk about one way binding in Angular 2. Data flows in one direction at a time.
+
+  ## Data flows down the tree at attributes
+
+  We choose which attributes we'll listen to using the inputs attribute of the component.
+
+:ruby
+  code = <<-CODE
+  var app = {}
+  app.UserComponent = ng.core
+    .Component({
+      selector: "user",
+      inputs: ["profile"],
+      template:
+      `
+        <div>
+          user: {{profile}}
+        </div>
+      `
+    })
+    .Class({
+      constructor: function() {}
+    })
+  CODE
+=code(code)
+
+:markdown
+
+  We can then write a template like this:
+
+:ruby
+  code = <<-CODE
+  <user profile="davey"></user>
+  <user profile="mikey"></user>
+  <user profile="stuey"></user>
+  CODE
+=code(code)
+
+:markdown

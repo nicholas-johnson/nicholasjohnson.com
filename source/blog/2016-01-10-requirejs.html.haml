@@ -1,0 +1,23 @@
+---
+title: CommonJS vs AMD - RequireJS vs SystemJS vs Browserify vs ES6 Modules.
+tags: javascript
+layout: 'blog'
+published: false
+---
+:markdown
+
+  ## CommonJS and AMD are specifications
+
+  **CommonJS** is a specification for a set of standard JavaScript APIs. The aim is to make JavaScript more standards based, and to ultimately provide a standard library, as rich as those provided by languages such as Ruby or Python.
+
+  One part of CommonJS is the module loading API which looks very like the API you find in Node. You get an exports object which your JavaScript module writes to. In NodeJS this works very well, since in Node, each module is a file.
+
+  However in a browser we have a global namespace, and so this may require some tooling to work properly.
+
+  **AMD**  (Asynchronous Module Definition) is a competing specification for loading modules.
+
+  Specifically you get access to a
+
+  RequireJS, Browserify and SystemJS are module loaders.
+
+  RequireJS allows you to

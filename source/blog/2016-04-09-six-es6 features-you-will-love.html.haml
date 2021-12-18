@@ -1,0 +1,105 @@
+---
+title: "Six ES6 Features You Will Love"
+tags: angular, javascript, browserify
+layout: 'blog'
+description: ""
+published: false
+course_sidebar: :react
+---
+
+
+Six ES6 Language Features You Will Love
+
+:markdown
+
+  JavaScript is a pretty old language. It's <script>document.write(new Date().getFullYear() - 1995)</script> this year. Older indeed than many JavaScript programmers.
+
+  In those <script>document.write(new Date().getFullYear() - 1995)</script> years, a lot has changed in the world of code
+
+  ## Default Parameters
+
+  https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/default_parameters
+
+
+  ## Getters and Setters
+
+
+
+  ## Fat Arrow Functions
+
+
+
+  ## Fetch
+
+
+
+  ## Promises
+
+
+  ## For Of Loops
+
+
+
+  ## 1. Destructuring Assignment of Arrays
+
+  Destructuring Assignment lets us take an object or array, pull values out of it, and assign them to variables in a single line. In some other languages, this is called parallel assignation.
+
+  Say we have an array like this: `['cats', 'dogs'];` We can pull these values out and assign them to variables:
+
+:ruby
+  code = <<-CODE
+  [a, b] = ['cats', 'dogs'];
+
+  console.log(a)
+    'cats'
+  console.log(b)
+    'dogs'
+  CODE
+=code(code)
+
+:markdown
+
+  We can use this to easily swap the values of two variables:
+
+:ruby
+  code = <<-CODE
+  var a = 'cats'
+  var b = 'dogs'
+
+  var [a,b] = [b,a];
+
+  console.log(a)
+    'cats'
+  console.log(b)
+    'dogs'
+  CODE
+=code(code)
+
+:markdown
+
+
+
+
+  ## Destructuring Assignment of Objects
+
+  Technically the same topic, but I'm giving it it's own section. Destructuring assignment also works on Objects
+
+  Say we have an object like this:
+
+  pets = {
+    cats: () => 'go meow',
+    dogs: () => 'go woof'
+  }
+
+  We can pull what we need from the object like this:
+
+  var {cats, dogs} = pets;
+
+  console.log(cats());
+    'go meow'
+
+  This is wonderful when we're requiring a node module:
+
+  var {debounce} = require('_');
+
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
