@@ -9,6 +9,12 @@ const manifest = {
       img: '/images/sections/node.svg',
       exercises: [
         {
+          slug: 'Intro',
+          title: 'Why learn HTML/CSS?',
+          description:
+            'HTML and CSS are the building blocks of web development. HTML is used to build the structure of a page, and CSS is used to style the content of a page.',
+        },
+        {
           slug: 'tags',
           title: 'Welcome to HTML',
           description: 'We use tags to cut up our HTML',

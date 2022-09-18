@@ -1,11 +1,12 @@
 import { FC } from 'react'
+import Course from '../../components/Course'
 import manfest from './manifest'
 
 const Webdev: FC = () => {
   return (
-    <div>
+    <Course>
       <h1>{manfest.title}</h1>
-    </div>
+    </Course>
   )
 }
 

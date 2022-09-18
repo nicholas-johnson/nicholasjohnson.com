@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { FC } from 'react'
+import { ICourseManifest } from '../../types'
 
 import {
   StyledLink,
@@ -8,23 +9,17 @@ import {
   StyledSidebarWrapper,
 } from './Sidebar.styles'
 
-interface ISidebarItem {
-  url: string
-  title: string
-  description?: string
-}
-
 export interface ISidebarProps {
-  items: ISidebarItem[]
+  manifest: ICourseManifest
 }
 
-export const Sidebar: FC<ISidebarProps> = ({ items }: ISidebarProps) => {
+export const Sidebar: FC<ISidebarProps> = ({ manifest }: ISidebarProps) => {
   return (
     <StyledSidebarWrapper>
       <StyledList>
-        {items.map(({ url, title, description }) => (
-          <StyledListItem key={url}>
-            <Link href={url} passHref>
+        {manifest.exercises.map(({ slug, title, description }) => (
+          <StyledListItem key={slug}>
+            <Link href={`/${manifest.slug}/${slug}`} passHref>
               <StyledLink>{title}</StyledLink>
             </Link>
           </StyledListItem>

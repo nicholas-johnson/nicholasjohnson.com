@@ -1,4 +1,4 @@
-import StoryWrapper from '../StoryWrapper'
+import StoryWrapper from '../../StoryWrapper'
 
 import { Menu, IMenuProps } from './Menu'
 
