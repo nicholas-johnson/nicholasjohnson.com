@@ -19,12 +19,9 @@ export async function getStaticProps({
   params: { slug: string; folder: string }
 }) {
   const { slug, folder } = params
-  console.log('Params', params, slug, folder)
   const post = await getPostBySlug({ slug, folder })
 
-  const { default: manifest } = await import(
-    '../../content/source/intro-to-javascript/manifest'
-  )
+  const { default: manifest } = await import(`../../content/${folder}/manifest`)
 
   console.log(manifest)
 

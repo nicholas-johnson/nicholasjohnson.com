@@ -1,4 +1,24 @@
 .post {
   line-height: 1.8rem;
   letter-spacing: 0.01rem;
+
+  img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.8rem;
+    letter-spacing: 0.01rem;
+    color: #666;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }

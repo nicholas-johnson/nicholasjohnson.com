@@ -1,4 +1,4 @@
-import { ICourseManifest } from '../../../types'
+import { ICourseManifest } from '../../types'
 
 const manifest: ICourseManifest = {
   title: 'Learn to Program with JavaScript!',

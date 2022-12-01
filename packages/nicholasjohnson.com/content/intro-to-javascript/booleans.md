@@ -11,9 +11,8 @@ date: '2022-11-30 19:04:36'
 
 These values that we're using, true and false, have a special name. They are called Boolean values, named after the wonderful Victorian English mathematician George Boole who first described them. Boolean values are actually the basis for all computing. You may have heard it said that computers use ones and zeros, and it's true. Deep inside, computers are made of vast arrays of switches, which can be either on or off, one or zero, true or false.
 
-%figure
-%img{src: "/images/george-boole.jpg", alt:"George Boole"}
-%figcaption
+<img src="/images/george-boole.jpg" alt="George Boole" />
+
 He looks like a nice sort of chap, a bit like Colin Firth.
 
 The simple operations we carry out on Boolean values, when combined in clever ways, let a computer do all the clever things it's able to do. When you move your mouse pointer, there's a whole cascade of little ones and zeroes bouncing around inside the chips and cables that you will never see.
