@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
-
 # Don't string me along...
 
 The next thing we should know about is strings. A piece of text in JavaScript is called a string. It's a string of letters all attached together. We can tell it's a string because it sits between quote marks like this:

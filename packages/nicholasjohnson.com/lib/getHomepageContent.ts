@@ -22,3 +22,5 @@ export const getHomepageContent = async () => {
 
   return { posts }
 }
+
+export type IHomepageContent = Awaited<ReturnType<typeof getHomepageContent>>

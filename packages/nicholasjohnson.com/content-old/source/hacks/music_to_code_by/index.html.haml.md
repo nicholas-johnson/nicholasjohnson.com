@@ -1,4 +1,3 @@
-%article
     %section
       %h1 Music to Code By
       Free and open source coding music on infinite loop.
@@ -8,5 +7,3 @@
       %audio{ controls: true, loop: true }
         %source{ src: 'music/bach_prelude_in_c_major.mp3' }
       %a{ href: 'http://amclassical.com' } CC Attribution: A-M Classical
-  
-  

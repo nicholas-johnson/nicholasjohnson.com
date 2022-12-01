@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # This
 
 This is a special variable in JavaScript. It is instantiated when you _call_ a function,and it's value will change depending on how you call the function.

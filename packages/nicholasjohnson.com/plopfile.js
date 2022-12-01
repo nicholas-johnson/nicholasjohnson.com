@@ -21,8 +21,8 @@ module.exports = function Plopfile(plop) {
       },
       {
         type: 'add',
-        path: 'components/{{pascalCase name}}/{{pascalCase name}}.styles.ts',
-        templateFile: 'templates/Component.styles.ts.hbs',
+        path: 'components/{{pascalCase name}}/{{pascalCase name}}.module.scss',
+        templateFile: 'templates/Component.module.scss.hbs',
       },
       {
         type: 'add',

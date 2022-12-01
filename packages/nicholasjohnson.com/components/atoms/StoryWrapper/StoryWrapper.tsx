@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
-import theme from '../theme'
+import theme from '../../theme'
 
 import { StyledStoryWrapper } from './StoryWrapper.styles'
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FC } from 'react'
-import { ICourseManifest } from '../../types'
+import { ICourseManifest } from '../../../types'
 
 import {
   StyledLink,

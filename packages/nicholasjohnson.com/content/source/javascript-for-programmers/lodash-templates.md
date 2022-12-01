@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Lodash Templates
 
 We can improve our front end using templates. Templates are strings, potentially take from the DOM, which can be compiled against an object to produce a new DOM node

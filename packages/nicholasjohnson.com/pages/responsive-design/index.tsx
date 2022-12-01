@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import React from 'react'
 import { FC } from 'react'
-import Course from '../../components/Course'
-import Header from '../../components/Header'
+import Course from '../../components/atoms/Course'
+import Header from '../../components/atoms/Header'
 import manifest from './manifest'
 import manfest from './manifest'
 

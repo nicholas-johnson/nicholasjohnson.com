@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # JQuery
 
 JQuery is a standard DOM manipulation tool. It abstracts the browser differences and gives you a clean cross browser DOM API.

@@ -1,20 +1,21 @@
 ---
-  title: "Ruby Instance Eval"
-  description: ""
-  section: "ruby"
-  course: "ruby-course"
-  exercise: "instance-eval"
-  layout: "exercise"
-  ---
-  
-  %article
+
+title: "Ruby Instance Eval"
+description: ""
+section: "ruby"
+course: "ruby-course"
+exercise: "instance-eval"
+layout: "exercise"
+
+---
+
     %section
       :markdown
-  
+
         # Instance_Eval
-  
+
         We use instance eval to evaluate a block in the context of a Ruby object.
-  
+
       :ruby
         code = <<-CODE
         class A
@@ -25,11 +26,11 @@
         puts A.new.instance_eval { puts @b }
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         We can use this to construct a DSL (Domain specific language, like this:)
-  
+
       :ruby
         code = <<-CODE
         class Review
@@ -38,27 +39,27 @@
             self.stars = 0
             instance_eval &block
           end
-  
+
           def set_title t
             self.title = t
           end
         end
-  
+
         r = Review.new do |review|
           set_title "new Macbook"
         end
         CODE
       =code(code)
-  
+
       :markdown
-  
+
     %section.exercise
       :markdown
-  
+
         ## Exercise - Instance Eval
-  
+
         Use instance_eval to define a DSL for creating web pages.
-  
+
       :ruby
         code = <<-CODE
         Page.new do
@@ -67,13 +68,13 @@
         end
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         ## Extension
-  
+
         Extend your DSL so you can also create sub-pages, like so:
-  
+
       :ruby
         code = <<-CODE
         Page.new do
@@ -86,5 +87,3 @@
         end
         CODE
       =code(code)
-  
-  

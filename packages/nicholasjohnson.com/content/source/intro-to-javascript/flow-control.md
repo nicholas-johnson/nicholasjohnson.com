@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
-
 # Flow Control - Do this, or else...
 
 Our programs so far have been very nice, but quite linear. We can make sandwiches, but we can't decide whether or not we should be making sandwiches. Sometimes in our code we need to be able to be respond to things. We need to be able to say "what if?"

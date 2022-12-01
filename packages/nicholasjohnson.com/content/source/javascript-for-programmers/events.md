@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # JQuery Events
 
 The real strength of JavaScript is that it allows the page to respond to the user. Whenever the user does something on the page, from moving the mouse to pressing a button, to submitting a form, lots of little events are fired off in the browser. We can tell our code to listen for certain events and call functions in response to them.

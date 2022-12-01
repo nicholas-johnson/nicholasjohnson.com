@@ -1,12 +1,11 @@
-%article
     %section
-  
+
       :markdown
         # Styling SVG with CSS
-  
+
         It's possible to style your SVG elements using plain CSS, like so:
-  
-  
+
+
       :ruby
         code = <<-CODE
         <!DOCTYPE html>
@@ -23,7 +22,7 @@
         </html>
         CODE
       =code(code, :html)
-  
+
       :ruby
         code = <<-CODE
         circle.red {
@@ -32,15 +31,13 @@
         }
         CODE
       =code(code, :css)
-  
+
       :markdown
-  
+
         CSS in SVG is limited to setting colours and gradients. You can also set the size of the SVG image like any other image.
-  
+
         You can't create new elements or manipulate the position of elements just using CSS.
-  
+
         ## Exercise
-  
+
         Use CSS to restyle your self portrait from the last exercise.
-  
-  

@@ -1,27 +1,28 @@
 ---
-  title: "AJAX"
-  section: "javascript"
-  course: "javascript-for-programmers"
-  exercise: "promises"
-  layout: "exercise"
-  ---
-  
-  %article
+
+title: "AJAX"
+section: "javascript"
+course: "javascript-for-programmers"
+exercise: "promises"
+layout: "exercise"
+
+---
+
     %section
       :markdown
-  
+
         # Promises
-  
+
         Promises are now a core feature of JavaScript, and are available in Chrome and Firefox. This is interesting news.
-  
+
         ## What is a promise?
-  
+
         JavaScript is single threaded, but it needs to deal with asynchronous events. In the past we used callbacks for this. Say we wanted to make an AJAX request, we might pass a callback in like this:
-  
+
       :ruby
         code = <<-CODE
         var url = '/mydata.json';
-  
+
         $.getJSON(url, function(data, status) {
           if ((status) == '200') {
             // update the page;
@@ -31,17 +32,17 @@
         });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         This is fine if we need to do only one thing, but what if we need multiple things to wait for each other? Now we have callbacks within callbacks within callbacks. Our code becomes a callback Christmas tree. A deeply nested triangle of code decorated with behaviour.
-  
+
         More recently we got the ability to write code like this (again jQuery):
-  
+
       :ruby
         code = <<-CODE
         var url = '/mydata.json';
-  
+
         $.getJSON(url)
           .done(function(data) {
             // update the page;
@@ -51,21 +52,21 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         This is a nicer pattern. We have smaller functions, each of which does a single thing, and the conditional is gone.
-  
+
         The call to $.getJSON(url) returns a promise of future data, a Promise. We can chain methods off it to deal with the success and error states.
-  
+
         Promises are a formalisation of this syntax. We get standardised method names and parameters, which makes it easier to make libraries interoperate with one another.
-  
+
         ## Promises are now core JavaScript
-  
+
         A variety of Promise specifications and libraries have been produced over the last few years. Fortunately we now have an official specification.
-  
+
         We create a promise like this:
-  
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve) {
@@ -74,11 +75,11 @@
         });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         We can then have something happen when the promise resolves:
-  
+
       :ruby
         code = <<-CODE
         getA
@@ -87,21 +88,21 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
-  
+
+
         ## Chaining thens
-  
+
         We may wish to have multiple things happen when our promise resolves. If our thenned function returns a value, that value will be passed on down the chain, like so:
-  
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve) {
           var a = 12;
           resolve(a);
         });
-  
+
         getA
           .then(function(a) {
             console.log(a);
@@ -116,19 +117,19 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         If the function returns a value, the next element in the chain is called right away, but if a thenned function returns a promise, we wait until it is resolved. This can happen anywhere in the chain.
-  
-  
+
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve) {
           var a = 12;
           resolve(a);
         });
-  
+
         getA
           .then(function(a) {
             console.log(a);
@@ -148,29 +149,29 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         ## Creating a promise which has already resolved
-  
+
         This code is not cool:
-  
+
         var getA = new Promise(function(resolve) {
           resolve();
         });
-  
+
         I've done this solely for the purpose of creating a promise object which I can chain from. We can create a promise which is already resolved like so:
-  
+
       :ruby
         code = <<-CODE
         var sequence = Promise.resolve();
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         When a promise is in the resolved state, any thennable functions fill be executed right away in sequence.
-  
+
       :ruby
         code = <<-CODE
         sequence
@@ -182,19 +183,19 @@
           })
         CODE
       =code(code)
-  
-  
+
+
       :markdown
-  
+
         We can then make use of this promise to chain sequential code.
-  
-  
-  
-  
+
+
+
+
         ## Thenning regular functions
-  
+
         This means that any function which receives a value and returns one can be integrated into the chain. For example parseInt:
-  
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve) {
@@ -202,7 +203,7 @@
           console.log(a + a); // outputs "1212"
           resolve(a);
         });
-  
+
         getA
           .then(parseInt)
           .then(function(a) {
@@ -210,17 +211,17 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
-  
-  
+
+
+
         ## Catch
-  
+
         It may be the case that our promise fails to resolve. Perhaps our AJAX request fails. Perhaps our API is down. Perhaps there is no database. Perhaps we timeout.
-  
+
         In these instances we might need to reject the promise. We can do this like so:
-  
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve, reject) {
@@ -228,11 +229,11 @@
         })
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         We can then catch the error like so:
-  
+
       :ruby
         code = <<-CODE
         getA
@@ -241,17 +242,17 @@
           });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         If a promise is rejected, we skip any intervening thens, and go right to the catch, then we continue as normal.
-  
+
       :ruby
         code = <<-CODE
         var getA = new Promise(function(resolve) {
           resolve();
         });
-  
+
         getA
           .then(function() {
             console.log('one');
@@ -277,15 +278,15 @@
           })
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         Note that if your code throws an exception, the promise will be implicitly rejected and execution will proceed to the next catch block.
-  
+
         ## Promise.all
-  
+
         Sometimes we might want to wait until all our promises have resolved before we execute the next step. For this we have Promise.all.
-  
+
       :ruby
         code = <<-CODE
         var waitAWhile = new Promise(function(resolve) {
@@ -294,14 +295,14 @@
             resolve('a');
           }, 1000);
         });
-  
+
         var waitAWhileMore = new Promise(function(resolve) {
           setTimeout(function() {
             console.log('waited a while more');
             resolve('b');
           }, 2000);
         });
-  
+
         Promise.all([
           waitAWhile,
           waitAWhileMore
@@ -310,16 +311,16 @@
         });
         CODE
       =code(code)
-  
+
       :markdown
-  
+
         The thenned function will receive an array of return values from the functions.
-  
+
       -# Here's another example. We calculate the volume of a cube given one side.
-  
+
       -# Of course this could be done in a single step.
-  
-  
+
+
       -# var getEdge = function() {
       -#   var data = {
       -#     edge: 12
@@ -327,19 +328,19 @@
       -#   console.log(data)
       -#   return data;
       -# }
-  
+
       -# var getArea = function (data) {
       -#   data.area = data.edge * data.edge;
       -#   console.log(data)
       -#   return data;
       -# }
-  
+
       -# var getVolume = function (data) {
       -#   data.volume = data.area * data.edge;
       -#   console.log(data)
       -#   return data;
       -# }
-  
+
       -# new Promise(function(resolve) {resolve()})
       -#   .then(getEdge)
       -#   .then(getArea)
@@ -347,8 +348,3 @@
       -#   .then(function(data) {
       -#     console.log(data);
       -#   })
-  
-  
-  
-  
-  

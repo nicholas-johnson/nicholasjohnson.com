@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Linting with Gulp
 
 Gulp is an essential part of the modern JavaScript toolchain. It handles compilation, linting, concatenation, minification, all as you save.

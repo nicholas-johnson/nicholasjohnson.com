@@ -5,7 +5,7 @@ section_slug: "javascript"
 layout: "section_index"
 ---
 
-%article
+
 
 
   %section
@@ -65,7 +65,7 @@ layout: "section_index"
   - blog.tags.each do |tag, articles|
     -if tag == 'javascript' 
       -articles.sort_by(&:date).reverse.each do |article|
-        %article
+        
           %h2
             = link_to article.title, article
           %span.date

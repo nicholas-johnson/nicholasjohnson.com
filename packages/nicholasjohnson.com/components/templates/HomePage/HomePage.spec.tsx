@@ -1,12 +1,12 @@
 import { composeStories } from '@storybook/testing-react';
 import { render } from '@testing-library/react';
 
-import * as stories from './Logo.stories';
+import * as stories from './HomePage.stories';
 
-const { LogoStory } = composeStories(stories);
+const { HomePageStory } = composeStories(stories);
 
 test('reuses args from composed story', () => {
-    render(<LogoStory />);
+    render(<HomePageStory />);
     
     // https://storybook.js.org/addons/@storybook/testing-react
 });

@@ -1,21 +1,16 @@
-import Sidebar from '../../components/Sidebar'
+import ContentPage from '../../components/templates/ContentPage'
 import { getAllContent } from '../../lib/getAllContent'
-import { getPostBySlug } from '../../lib/getPostBySlug'
-import manifest from './manifest'
+import { getPostBySlug, IPost } from '../../lib/getPostBySlug'
+import { ICourseManifest } from '../../types'
 
 const Page = ({
   post,
+  manifest,
 }: {
-  post: Awaited<ReturnType<typeof getPostBySlug>>
+  post: IPost
+  manifest?: ICourseManifest
 }) => {
-  const { html, title } = post
-  return (
-    <div>
-      {/* <Sidebar manifest={manifest} /> */}
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  )
+  return <ContentPage post={post} manifest={manifest} />
 }
 
 export async function getStaticProps({
@@ -27,7 +22,13 @@ export async function getStaticProps({
   console.log('Params', params, slug, folder)
   const post = await getPostBySlug({ slug, folder })
 
-  return { props: { ...params, post } }
+  const { default: manifest } = await import(
+    '../../content/source/intro-to-javascript/manifest'
+  )
+
+  console.log(manifest)
+
+  return { props: { ...params, post, manifest } }
 }
 
 export async function getStaticPaths() {

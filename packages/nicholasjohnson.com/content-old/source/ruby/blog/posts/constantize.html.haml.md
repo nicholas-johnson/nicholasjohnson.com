@@ -1,16 +1,14 @@
-%article
-  
     :markdown
       ## Constantize
-  
+
       **Note, this article is incomplete**
-  
+
       Hello, and in today's Rails we're in Active Support looking at constantize. This excellent method allows us to pass in any String and get back a defined constant.
-  
+
       There are quite a few little nuggets we can pull from this, so we'll be spending the next few days looking it over.
-  
+
     %h2 Here's the code:
-  
+
     :ruby
       code = <<-CODE
         # Tries to find a constant with the name specified in the argument string.
@@ -33,13 +31,13 @@
         # unknown.
         def constantize(camel_cased_word)
           names = camel_cased_word.split('::')
-  
+
           # Trigger a builtin NameError exception including the ill-formed constant in the message.
           Object.const_get(camel_cased_word) if names.empty?
-  
+
           # Remove the first blank element in case of '::ClassName' notation.
           names.shift if names.size > 1 && names.first.empty?
-  
+
           names.inject(Object) do |constant, name|
             if constant == Object
               constant.const_get(name)
@@ -47,7 +45,7 @@
               candidate = constant.const_get(name)
               next candidate if constant.const_defined?(name, false)
               next candidate unless Object.const_defined?(name)
-  
+
               # Go down the ancestors to check it it's owned
               # directly before we reach Object or the end of ancestors.
               constant = constant.ancestors.inject do |const, ancestor|
@@ -55,7 +53,7 @@
                 break ancestor if ancestor.const_defined?(name, false)
                 const
               end
-  
+
               # owner is in Object, so raise
               constant.const_get(name, false)
             end
@@ -63,32 +61,31 @@
         end
       CODE
     =code(code, :ruby)
-  
+
     :markdown
-  
+
       We can call this method to get any constant currently in scope.
-  
-  
+
+
       Using Module#const_get
-  
+
       module CircusOfHorrors
         class EvilClown
         end
       end
       class NiceClown
       end
-  
+
       CircusOfHorrors.const_get :EvilClown
       CircusOfHorrors.const_get :NiceClown
-  
+
       Using Array#inject to generate an accumulated value
-  
+
       [1,2,3].inject {|sum, x|sum+x}
-  
-  
+
+
       Shifting an array up to remove the first empty value
-  
+
       If you remember, we're on the
-  
+
       names.shift if names.size > 1 && names.first.empty?
-  

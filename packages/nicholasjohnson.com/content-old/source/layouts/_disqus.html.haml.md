@@ -1,6 +1,5 @@
+-unless current_page.data.comments == false
 
-  -unless current_page.data.comments == false
-    %article
       #disqus_thread
       %script
         :plain
@@ -13,8 +12,7 @@
       %noscript
         Please enable JavaScript to view the
         %a{ href: "http://disqus.com/?ref_noscript"}comments powered by Disqus.
-  
+
       %a.dsq-brlink{href: "http://disqus.com"}
         comments powered by
         %span.logo-disqus Disqus
-  

@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
-
 # Putting it all together
 
 We've now learned pretty much all the fundamentals of JavaScript. You should now be equipped to write some simple programs.

@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Functions
 
 In JavaScript all functions are objects. You can pass them around and store them in variables and arrays. You can pass them as parameters to other functions, or return them from other functions. Put them in an object and they become methods. This is code as data. We treat functions exactly as we would treat a string or a number.

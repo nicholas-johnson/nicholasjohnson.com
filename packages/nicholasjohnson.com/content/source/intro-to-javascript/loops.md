@@ -7,7 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
 #loops
 
 # Loops

@@ -1,0 +1,21 @@
+.wrapper {
+  ul,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    border-left: 0.5px solid #ccc;
+  }
+
+  a {
+    display: block;
+    padding: 0rem 1rem;
+  }
+}

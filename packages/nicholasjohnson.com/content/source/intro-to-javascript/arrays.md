@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Arrays
 
 Mrs Potts is in trouble. She has been given the job of making Pizza's for the staff room Pizza Party. The head wants cheese and tomato, but the deputy head wants 5 cheese, pepperoni, mushroom and ham. How can she represent all these ingredients in a JavaScript friendly fashion? It's keeping her awake at night.

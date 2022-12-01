@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
-
 # Maths Operators - Doing Sums
 
 JavaScript is great for maths. Lets say we need to know what 3 times 5 is. We can just ask JavaScript:

@@ -1,23 +1,25 @@
 ---
-  title: "This"
-  section: "javascript"
-  course: "javascript-for-programmers"
-  exercise: "lodash-templates"
-  layout: "exercise"
-  ---
-  %article
+
+title: "This"
+section: "javascript"
+course: "javascript-for-programmers"
+exercise: "lodash-templates"
+layout: "exercise"
+
+---
+
     %section
       :markdown
         # Lodash Templates
-  
+
         We can improve our front end using templates. Templates are strings, potentially take from the DOM, which can be compiled against an object to produce a new DOM node
-  
+
         LoDash (a fast implementation of underscore) provides one such implementation.
-  
+
         First we must include loDash on our page using a script tag: <https://lodash.com>
-  
+
         Then we create a template as a string and compile it against an object
-  
+
       :ruby
         code = <<-CODE
         var template = _.template("Hello {{ name }}!");
@@ -25,16 +27,16 @@
         // Outputs: "Hello World"
         CODE
       =code(code)
-  
+
       :markdown
-  
-  
+
+
         ## Pulling the template from the DOM
-  
+
         We don't want to be writing templates as strings in our JavaScript. Ideally we compose HTML in our HTML. The most convenient way to do this is with a script tag.
-  
+
         We set a type of text/template to prevent the browser from trying to execute the template as JavaScript. We set an id attribute to allow us to find the template.
-  
+
       :ruby
         code = <<-CODE
         <script type="text/template" id="helloTemplate">
@@ -42,10 +44,10 @@
         </script>
         CODE
       =code(code, :html)
-  
+
       :markdown
         We can then write some JavaScript:
-  
+
       :ruby
         code = <<-CODE
         $(function() {
@@ -55,19 +57,18 @@
         })
         CODE
       =code(code)
-  
+
     %section.exercise
       :markdown
         ## Exercise - Mario
-  
+
         Extract your Mario UI into a template.
-  
-  
+
+
     %section.exercise
       :markdown
         ## Harder Exercise - A Flickr feed
-  
+
         Improve your Flickr app.
-  
+
         Create a template which renders a single image from the feed, now use lodash to pull this template from the DOM and, for each image, render the image and draw it to the DOM.
-  

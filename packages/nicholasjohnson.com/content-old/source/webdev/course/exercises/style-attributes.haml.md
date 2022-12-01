@@ -1,20 +1,21 @@
 ---
-  title: "CSS Style Exercise"
-  section: "webdev"
-  exercise: "style-attributes"
-  course: "course"
-  layout: "exercise"
-  ---
-  
-  %article
+
+title: "CSS Style Exercise"
+section: "webdev"
+exercise: "style-attributes"
+course: "course"
+layout: "exercise"
+
+---
+
     %section
       :markdown
         # Style attributes
-  
+
         We define the look of our web page using CSS. The best way to apply styling to a page is using a separate CSS stylesheet, which defines all the rules for our site. We'll get to this shortly.
-  
+
         We can however apply styles to individual elements on a page. Say we have a paragraph, like this:
-  
+
       :ruby
         code = <<-CODE
         <p>
@@ -22,11 +23,11 @@
         </p>
         CODE
       =code(code, :html)
-  
+
       :markdown
-  
+
         We can make it bigger with a style attribute like so:
-  
+
       :ruby
         code = <<-CODE
         <p style="font-size:30px">
@@ -34,11 +35,11 @@
         </p>
         CODE
       =code(code, :html)
-  
+
       :markdown
-  
+
         If we wish to apply some more rules we can do so by separating them with a semi-colon, like so:
-  
+
       :ruby
         code = <<-CODE
         <p style="font-size:30px; color: red;">
@@ -46,18 +47,18 @@
         </p>
         CODE
       =code(code, :html)
-  
+
       :markdown
-  
-  
-  
+
+
+
     %section.exercise
       :markdown
-  
+
         ## Exercise - Style Tags
-  
+
         Use HTML something like this. You can copy and paste this if you like:
-  
+
       :ruby
         code = <<-CODE
         <!DOCTYPE html>
@@ -79,13 +80,13 @@
         </html>
         CODE
       =code(code, :html)
-  
+
       :markdown
-  
+
         Refer to the CSS cheat-sheet here:
-  
+
       %a{ href: '/css-cheatsheet' } CSS Cheat-sheet
-  
+
       :markdown
         1. Make the h1 big and red.
         2. Make the paragraph blue.
@@ -94,4 +95,3 @@
         5. Add a 5 pixed dotted grey border around the body element.
         6. Set a width on the body of 500px.
         7. Center the page by setting margin:0 auto; on the body.
-  

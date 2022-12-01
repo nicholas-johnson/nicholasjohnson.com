@@ -3,25 +3,27 @@ import { FC } from 'react'
 
 import { StyledList, StyledListItem, StyledMenuWrapper } from './Menu.styles'
 
+import styles from './Menu.module.scss'
+
 export interface IMenuProps {}
 
 export const Menu: FC<IMenuProps> = ({}: IMenuProps) => {
   return (
-    <StyledMenuWrapper>
-      <StyledList>
-        <StyledListItem>
+    <nav className={styles.wrapper}>
+      <ul>
+        <li>
           <Link href="http://linkedin.com/nicholashowardjohnson">LinkedIn</Link>
-        </StyledListItem>
-        <StyledListItem>
+        </li>
+        <li>
           <Link href="http://youtube.com/d/seniordevtime">YouTube</Link>
-        </StyledListItem>
-        <StyledListItem>
+        </li>
+        <li>
           <Link href="/contact">Contact</Link>
-        </StyledListItem>
-        <StyledListItem>
+        </li>
+        <li>
           <Link href="/hire">Hire Me</Link>
-        </StyledListItem>
-      </StyledList>
-    </StyledMenuWrapper>
+        </li>
+      </ul>
+    </nav>
   )
 }

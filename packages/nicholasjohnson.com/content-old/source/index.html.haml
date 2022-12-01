@@ -6,7 +6,7 @@ per_page: 5
 comments: false
 ---
 .blog_index
-  %article
+  
 
     %h1.top Nicholas Johnson
 
@@ -24,7 +24,7 @@ comments: false
       - if prev_page
         %p= link_to 'Previous page', prev_page
   - page_articles.each_with_index do |article, i|
-    %article
+    
       %h1
         = link_to article.title, article
       %span.date
@@ -43,7 +43,7 @@ comments: false
     - if next_page
       %p= link_to 'Next page', next_page
 
-  %article
+  
     %h1 Writings
     %ul
       %li
@@ -56,7 +56,7 @@ comments: false
       %li
         %a{href: "/backbone-book/"} Backbone - Step by Logical Step
 
-  %article
+  
     %h1 Projects
 
     :markdown
@@ -67,7 +67,7 @@ comments: false
       ## [Higgidy](http://www.higgidy.co.uk)
       [Higgidy](http://www.higgidy.co.uk) is a Rails site built in 2010. I am currently rebuilding it using Mongo and Express.
 
-  %article
+  
     %h1 Courses
 
     :markdown
@@ -87,7 +87,7 @@ comments: false
       * [Mobile Web design at Silicon Beach](http://www.siliconbeachtraining.co.uk/mobile-development-training/mobile-web-design-course-package)
       * [Rails at JBI](http://www.jbinternational.co.uk/course/399/ruby-rails-training-course-london-uk)
 
-  %article
+  
     %h1 Stack Overflow
 
     %div{ ng: {controller: 'stackExchangeController'}}
@@ -107,7 +107,7 @@ comments: false
       %a.button.action{ href: 'http://stackoverflow.com/users/687677/superluminary' } Visit my profile
 
 
-  %article
+  
     =partial 'partials/testimonials'
 
     .action_button_row

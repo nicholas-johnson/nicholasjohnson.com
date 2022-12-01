@@ -1,15 +1,11 @@
 ---
-title: "JavaScript Intro"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "intro"
-layout: "exercise"
+title: 'JavaScript Intro'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'intro'
+layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
-
-%article
-
-
 
 # Hello JavaScript, you Handsome Little Thing
 
@@ -55,24 +51,15 @@ We have two ways of executing JavaScript. On the server we use NodeJS. In a brow
   </html>
 ```
 
-
-
-
-
 Although we can write JavaScript between the script tags, we typically link to an external file, like so:
 
 ```js
-  <script src="main.js"></script>
+<script src="main.js"></script>
 ```
-
-
-
 
 Note that script tags are not self-closing, you need to explicitly close them or your page will disappear.
 
 On the server we run JavaScript using NodeJS. Having downloaded Node from <https://nodejs.org>, you can simply run `node my_file.js` to run it locally in your console. More on this later.
-
-
 
 ## Exercise - Hello World
 
@@ -86,27 +73,21 @@ The goal of this exercise is to get an environment set up and working.
 6. Open the HTML file in a browser. See the alert?
 7. Extend the code so it pops up two alerts.
 
-
-
 # Variables
 
 We create variables using the let or const keywords. We also have the var keyword, which is older and slightly discouraged.
 
 ## Var, Let and Const
 
-* `var` is the original variable declaration keyword. It has function level scope, which means that if you define it in a function, the variable will be available everywhere in that function. This behaviour is often surprising, so its use is often discouraged.
-* `let` is a replacement for `var`. It works the same, but it has block level scope. If you define it inside a for loop for example, it's only available inside that for loop.
-* `const` is the same as let, but once you declare the variable you can never change it. We actually use const a lot in JavaScript.
+- `var` is the original variable declaration keyword. It has function level scope, which means that if you define it in a function, the variable will be available everywhere in that function. This behaviour is often surprising, so its use is often discouraged.
+- `let` is a replacement for `var`. It works the same, but it has block level scope. If you define it inside a for loop for example, it's only available inside that for loop.
+- `const` is the same as let, but once you declare the variable you can never change it. We actually use const a lot in JavaScript.
 
 ```js
-  let a; // creates the variable in the current scope
-  a = 12; // stores a value in the variable
-  const a = 12; // consts must be initialised when they are created
+let a // creates the variable in the current scope
+a = 12 // stores a value in the variable
+const a = 12 // consts must be initialised when they are created
 ```
-
-
-
-
 
 ## Single Global Scope
 
@@ -121,22 +102,17 @@ We have ways to work around this, specifically JavaScript modules which require 
 Variables are fully polymorphic, you can store anything you like in any variable, there is no type checking.
 
 ```js
-  let a;
+let a
 
-  a = 12;
-  a = "Hello JavaScript!";
-  a = [1, 2, 'hulabaloo'];
-  a = () => {}
+a = 12
+a = 'Hello JavaScript!'
+a = [1, 2, 'hulabaloo']
+a = () => {}
 ```
-
-
-
-
 
 Having weekly typed variables is appropriate for JavaScript. JavaScript is designed to be super accessible to new coders, and even non-coders. As the language of the web, it is right that it should be democratic.
 
 However weak typing can make it harder for large teams to work together. If you find yourself working on a larger project, you might consider TypeScript. This is just JavaScript plus optional typing. More on this in another course.
-
 
 .question
 
@@ -145,56 +121,40 @@ However weak typing can make it harder for large teams to work together. If you 
 Given three variables
 
 ```js
-    const daysInYear = 365.25;
-    const daysInWeek = 7;
-    const yearsInLifetime = 80;
+const daysInYear = 365.25
+const daysInWeek = 7
+const yearsInLifetime = 80
 ```
-
-
-
-
 
 Calculate the average number of weeks in a human lifetime.
 
 .hiddenanswer
 
-
-
 We can create a new variable and assign the calculation to it.
 
 ```js
-    const weeksInALifetime = daysInYear / daysInWeek * yearsInLifetime
+const weeksInALifetime = (daysInYear / daysInWeek) * yearsInLifetime
 ```
 
-
-
-
 The answer is 4174 by the way. What are you doing this week?
-
-
-
 
 # Strings
 
 Strings in JavaScript are arrays of characters. You define them using 'single quotes', "double quotes" or \`backticks\`:
 
-* Single and Double quoted strings are equivalent and can include escape characters, such as \\n which gives you a newline.
-* Backtick strings, sometimes called template strings, can be multiline and include code with the ${} syntax
+- Single and Double quoted strings are equivalent and can include escape characters, such as \\n which gives you a newline.
+- Backtick strings, sometimes called template strings, can be multiline and include code with the ${} syntax
 
 ```js
-  const doubleQuotedString = "Hi there";
+const doubleQuotedString = 'Hi there'
 
-  const singleQuotedString = 'Hi there';
-  
-  const backtickString = `
+const singleQuotedString = 'Hi there'
+
+const backtickString = `
     Hi
     there
   `
 ```
-
-
-
-
 
 We can include escape characters in strings with a backslash. Here's a newline:
 
@@ -203,39 +163,25 @@ We can include escape characters in strings with a backslash. Here's a newline:
   "Hi \\"there\\"";
 ```
 
-
-
-
-
 Backtick template strings can contain code includes, like this
 
 ```js
-  const name = 'Dave'
-  `I'm sorry ${name} I can't do that`
+const name = 'Dave'`I'm sorry ${name} I can't do that`
 ```
-
-
-
-
 
 This is especially useful for template strings. You might compose HTML as a string and later insert it into the DOM.
 
 ```js
-  const name = 'Dave';
-  const template = `
+const name = 'Dave'
+const template = `
     <p>
       I'm sorry ${name} 
       I can't do that
     </p>
-  `;
+  `
 
-  document.getElementById('root').innerHTML = template;
-  
+document.getElementById('root').innerHTML = template
 ```
-
-
-
-
 
 Most styleguides prefer single quoted strings wherever possible because they use fewer pixels and therefore make your laptop weigh less in your bag. It's a small difference, but noticable.
 
@@ -244,24 +190,16 @@ Most styleguides prefer single quoted strings wherever possible because they use
 You can concatenate strings using the + character:
 
 ```js
-  'Hello ' + 'There';
+'Hello ' + 'There'
 ```
-
-
-
-
 
 ## Strings as arrays
 
 Strings work rather like arrays. Access a part of a string using the square brace syntax like so:
 
 ```js
-  "Hello there"[0]; // returns "H"
+'Hello there'[0] // returns "H"
 ```
-
-
-
-
 
 Note that although strings look like arrays, they are not arrays, and don't give you the array API.
 
@@ -270,58 +208,37 @@ Note that although strings look like arrays, they are not arrays, and don't give
 You can split a string into an array using the split function:
 
 ```js
-  "Hello".split('');
-  // ['H', 'e', 'l', 'l', 'o']
+'Hello'.split('')
+// ['H', 'e', 'l', 'l', 'o']
 ```
-
-
-
-
 
 You can join the array back up again using the join function:
 
 ```js
-  ['H', 'e', 'l', 'l', 'o'].join('')
-  // "Hello"
+;['H', 'e', 'l', 'l', 'o'].join('')
+// "Hello"
 ```
-
-
-
-
 
 If you want to reverse a string you can split it, reverse the array, then join them back together again:
 
 ```js
-
-  "Hello".split('').reverse().join('');
-  // "olleH"
+'Hello'.split('').reverse().join('')
+// "olleH"
 ```
-
-
-
-
 
 You can replace a value in a string using the replace or replaceAll functions:
 
 ```js
-  "Hello".replaceAll('l', 'w');
-  // "Hewwo"
+'Hello'.replaceAll('l', 'w')
+// "Hewwo"
 ```
-
-
-
-
 
 You can also use a regular expression:
 
 ```js
-  'Hello'.replace(/l/g, 'w');
-  // "Hewwo"
+'Hello'.replace(/l/g, 'w')
+// "Hewwo"
 ```
-
-
-
-
 
 ## Exercise - String Concatenation
 
@@ -330,9 +247,6 @@ You can also use a regular expression:
 3. Use your variables to alert "hello world".
 4. Use a couple of regex to change the output to "he110 w0r1d"
 5. Use a couple more functions to reverse the result. A coding device! Write the reverse decoder.
-
-
-
 
 # Numbers
 
@@ -345,72 +259,49 @@ Typically it's not an issue, but you do need to be aware of it, especially when 
 Convert a string to a number using parseInt or parseFloat:
 
 ```js
-  const myInt = parseInt("123");
-  const myFloat = parseFloat("123.456");
+const myInt = parseInt('123')
+const myFloat = parseFloat('123.456')
 ```
-
-
-
-
 
 Convert a number to a string simply by concatenating it with a string, like so:
 
 ```js
-  "" + 123
-  "123"
+'' + 123
+;('123')
 ```
-
-
-
-
-
-
-
 
 # Conditionals and Boolean Algebra
 
 JavaScript comes with conditional statements, if, else if and else:
 
 ```js
-  var a = 12
+var a = 12
 
-  if (a > 12) {
-    alert('a was greater');
-  } else if (a < 12) {
-    alert('a was smaller');
-  } else {
-    alert('a was 12');
-  }
+if (a > 12) {
+  alert('a was greater')
+} else if (a < 12) {
+  alert('a was smaller')
+} else {
+  alert('a was 12')
+}
 ```
 
-
-
-
-
 ## == or ===?
-In most languages `==` (double equals) means equal to. In JavaScript `===` (triple equals) means *exactly equals* to and `==` means *equal to with type casting*.
+
+In most languages `==` (double equals) means equal to. In JavaScript `===` (triple equals) means _exactly equals_ to and `==` means _equal to with type casting_.
 
 Type casting is fiddly stuff, and often behaves in unexpected ways. For example, it will try to see if a string can be cast into a number.
 
 ```js
-  '1' == 1 // is true 
-  '1' === 1 // is false
+'1' == 1 // is true
+'1' === 1 // is false
 ```
 
-
-
-
-
 It's there to help non-coders get work done, JavaScript is meant to be a democratic language. As a software engineer, you avoid this functionality and always use ===. We have linting tools that will enforce the use of ===, more on this later.
-
-
-
 
 ## Exercise - Conditional logic
 
 1. Create a little program that tells you if it's the morning, afternoon or night. You can get the hour of the day with `new Date().getHours()`:
-
-
 
 # Next - Functions
 

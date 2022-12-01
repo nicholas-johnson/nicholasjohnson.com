@@ -1,14 +1,11 @@
 ---
-title: "JavaScript Intro"
-section: "javascript"
-course: "intro-to-javascript"
-exercise: "intro"
-layout: "exercise"
+title: 'JavaScript Intro'
+section: 'javascript'
+course: 'intro-to-javascript'
+exercise: 'intro'
+layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
-
-%article
-
 
 # Welcome to JavaScript
 
@@ -18,19 +15,16 @@ JavaScript is the most widely deployed language in the world by an order of magn
 
 You will find it:
 
-* In your web browser (in pretty much every laptop, desktop and smartphone in the world, perhaps more than once)
-* In a mobile webview powering the apps on your smartphone - many mobile apps are built using JavaScript
-* On your server - NodeJS provides a complete and powerful web server used by some of the biggest companies in the world, companies like Microsoft.
-* In your front end development environment - JavaScript powers Gulp, Grunt, Yeoman, Sass and many other tools front end developers rely on.
+- In your web browser (in pretty much every laptop, desktop and smartphone in the world, perhaps more than once)
+- In a mobile webview powering the apps on your smartphone - many mobile apps are built using JavaScript
+- On your server - NodeJS provides a complete and powerful web server used by some of the biggest companies in the world, companies like Microsoft.
+- In your front end development environment - JavaScript powers Gulp, Grunt, Yeoman, Sass and many other tools front end developers rely on.
 
 ## JavaScript is rather good (which is lucky really)
 
 JavaScript is often misunderstood. It it different to most other languages out there. This is because JavaScript comes from a different evolutionary branch to most other languages.
 
-Most modern languages descend from C. They have  JavaScript is actually a dialect of LISP.
-
-
-
+Most modern languages descend from C. They have JavaScript is actually a dialect of LISP.
 
 ## Exercise: Saying Hello to JavaScript
 
@@ -42,47 +36,31 @@ The easiest way to run JavaScript is in a web browser. You just create a web pag
 
 First of all we'll need to make a web page for our script to live in. Create the following ultra simple html document and save it in a folder. Call it hello.html.
 
-
 ```html
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Hello JavaScript</title>
-    </head>
-    <body>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello JavaScript</title>
+  </head>
+  <body></body>
+</html>
 ```
-
-
-
-
 
 ### Write some Script
 
 Next create a document to contain your javascript. Save it in the same folder as your html and call it hello.js.
 
 ```js
-  alert("Hello JavaScript, your new best friend!");
+alert('Hello JavaScript, your new best friend!')
 ```
-
-
-
-
-
 
 ### Hook them up
 
 Now we need to link the two together. In the head of your html document add a script tag like so:
 
-
 ```html
-  <script src="hello.js"></script>
+<script src="hello.js"></script>
 ```
-
-
-
-
 
 _(Note that if you're an xhtml type of person, you should note that the script tag cannot be self closing. It will break in IE.)_
 
@@ -95,9 +73,6 @@ Now open the page you just created in your web browser of choice. You should see
 ## Exercise - more alerts
 
 Extend the code so it pops up two alerts.
-
-
-
 
 ## So what did we do here?
 

@@ -17,9 +17,6 @@ export const getPostBySlug = async ({
   const fullPath = join(contentPath, folder, `${slug}.md`)
 
   return getPostByPath(fullPath)
-  // const fileContents = fs.readFileSync(fullPath, 'utf8')
-  // const { data, content } = matter(fileContents)
-  // const html = marked.parse(content)
-
-  // return { data, content, html }
 }
+
+export type IPost = Awaited<ReturnType<typeof getPostBySlug>>

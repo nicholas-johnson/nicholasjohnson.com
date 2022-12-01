@@ -1,4 +1,4 @@
-import Sidebar from '../../components/Sidebar'
+import Sidebar from '../../components/atoms/Sidebar'
 import { getPostBySlug } from '../../lib/getPostBySlug'
 import manifest from './manifest'
 

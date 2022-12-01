@@ -1,13 +1,13 @@
 import { FC } from "react";
 
-import { Styled{{pascalCase name}}Wrapper } from './{{pascalCase name}}.styles'
+import styles from './{{pascalCase name}}.module.scss'
 
 export interface I{{pascalCase name}}Props {}
 
 export const {{pascalCase name}}: FC< I{{pascalCase name}}Props> = ({}: I{{pascalCase name}}Props) => {
     return (
-        <Styled{{pascalCase name}}Wrapper>
+        <div className={styles.{{pascalCase name}}>
             {{pascalCase name}}
-        </Styled{{pascalCase name}}Wrapper>
+        </div>
     );
 };

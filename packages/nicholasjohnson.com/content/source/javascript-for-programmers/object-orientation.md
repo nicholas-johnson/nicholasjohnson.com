@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Object Orientation
 
 You may have noticed JavaScript doesn't have classes. In fact, as we have seen with JSON JavaScript doesn't need any of that to make an object, but without classes we do lose a few pieces of functionality, specifically:

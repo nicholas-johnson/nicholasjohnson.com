@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
 
-%article
-
 # Functions - doing things more than once
 
 Mrs. Potts is the school dinner lady. Today is the school trip, and it's her job to make sandwiches for all the children. She has to make a lot of sandwiches, and each one takes some work. The bus will be arriving soon and Mrs. Potts is worried she might not finish. Some of the children might not have enough food to eat. Hurry Mrs. Potts!

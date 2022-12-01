@@ -7,8 +7,6 @@ layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
 
-%article
-
 # Promises
 
 Promises are now a core feature of JavaScript, and are available in Chrome and Firefox. This is interesting news.

@@ -1,14 +1,11 @@
 ---
-title: "JavaScript Closure"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "closure"
-layout: "exercise"
+title: 'JavaScript Closure'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'closure'
+layout: 'exercise'
 date: '2022-11-30 19:00:40'
 ---
-
-%article
-
 
 # JavaScript Closure
 
@@ -23,20 +20,16 @@ Closure is one of those things that looks hard, but it's actually really simple 
 ## For example
 
 ```js
-  var outer = () => {
-    let a = "A local variable";
-    let inner = function() {
-      console.log(a)
-    }
-    return inner;
+var outer = () => {
+  let a = 'A local variable'
+  let inner = function () {
+    console.log(a)
   }
-  const returnedFnc = outer();
-  returnedFnc();
+  return inner
+}
+const returnedFnc = outer()
+returnedFnc()
 ```
-
-
-
-
 
 This is a function that returns another function. When I call `outer` it makes two local variables, `a` which holds the string "A local variable", and `inner` which points to another function. We then return inner, and assign it to the global variable `returnedFnc`.
 
@@ -44,19 +37,13 @@ The key thing to note here, is that, when I call `returnedFnc`, the local variab
 
 Closure simply means that all the local variables that were in scope when the function was declared continue to be in scope for as long as that function exists.
 
-
-
 ## Exercise - Watch a Video
 
 This is a tricky thing to explain in words, so I made a video explaining it in code. In the first part of this video, I'll explain what closure is, and in the second half, I'll show you three places where you're probably already using it.
 
 = partial :"/layouts/youtube", locals: {id: "2cRjcXwsG0I"}
 
-
 For bonus points, feel free to leave a comment and say hello. I always try to reply!
-
-
-
 
 ## Why would you want this?
 
@@ -77,25 +64,16 @@ In the old days we did this by hand. Nowadays, we have formalised this pattern i
 Here is an IIFE. Notice the braces at the end of the function? This is a function that runs immediately, creates a closure, then appends a function called inner to a global `modules` store in the parent scope. As long as `modules` persists, `inner` will persist, and will continue to have access to the variable `a`
 
 ```js
+const modules = {}(function () {
+  var a = 'A Local variable'
+  var inner = function () {
+    console.log(a)
+  }
+  modules.inner = inner
+})()
 
-  const modules = {}
-
-  (function() {
-    var a = "A Local variable"
-    var inner = function() {
-      console.log(a)
-    }
-    modules.inner = inner
-  })()
-
-  modules.inner();
+modules.inner()
 ```
-
-
-
-
-
-
 
 ## Exercise - Guess the output
 
@@ -104,159 +82,133 @@ For each of the following, try to work out what the output will be. Run the code
 ### 1.
 
 ```js
-  var a = 12;
-  (function() {
-    console.log(a);
-  })();
+var a = 12
+;(function () {
+  console.log(a)
+})()
 ```
-
-
-
-
 
 ### 2.
 
 ```js
-  var a = 5;
-  (function() {
-    var a = 12;
-    console.log(a);
-  })();
+var a = 5
+;(function () {
+  var a = 12
+  console.log(a)
+})()
 ```
-
-
-
-
 
 ### 3.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    var a = 12;
-    return (function() {
-      console.log(a);
-    });
-  })();
+var a = 10
+var x = (function () {
+  var a = 12
+  return function () {
+    console.log(a)
+  }
+})()
 
-  x();
+x()
 ```
-
-
-
-
 
 ### 4.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    var y = function() {
-      var a = 12;
-    };
-    return function() {
-      console.log(a);
-    }
-  })();
+var a = 10
+var x = (function () {
+  var y = function () {
+    var a = 12
+  }
+  return function () {
+    console.log(a)
+  }
+})()
 
-  x();
+x()
 ```
-
-
-
-
-
 
 ### 5.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    (function() {
-      a = 12; // <<< look carefully at this line.
-    })();
-    return (function() {
-      console.log(a);
-    });
-  })();
+var a = 10
+var x = (function () {
+  ;(function () {
+    a = 12 // <<< look carefully at this line.
+  })()
+  return function () {
+    console.log(a)
+  }
+})()
 
-  x();
+x()
 ```
-
-
-
-
 
 ### 6.
 
 ```js
-  var a = 10;
-  (function() {
-    var a = 15;
-    window.x = function() {
-      console.log(a);
-    }
-  })();
+var a = 10
+;(function () {
+  var a = 15
+  window.x = function () {
+    console.log(a)
+  }
+})()
 
-  x();
+x()
 ```
-
-
-
-
 
 ## Further Reading
 
-* [Read my post on "What is a closure" on Stack Overflow](http://stackoverflow.com/a/7464475/687677)
+- [Read my post on "What is a closure" on Stack Overflow](http://stackoverflow.com/a/7464475/687677)
 
+-#
 
--# %article
+-#  
+-#
 
--#   
--#     
+-# ## Exercise - Closure and the Sandwich Calculator
 
--#       ## Exercise - Closure and the Sandwich Calculator
+-# Mrs Potts the school dinner lady is tired of all the global sandwich variables getting under her feet and tripping her up all the time. She needs help cleaning her kitchen. Will you help her?
 
--#       Mrs Potts the school dinner lady is tired of all the global sandwich variables getting under her feet and tripping her up all the time. She needs help cleaning her kitchen. Will you help her?
+-# She would like it very much if you would build a sandwich machine for her, but wrap it in a closure so as to keep everything neat.
 
--#       She would like it very much if you would build a sandwich machine for her, but wrap it in a closure so as to keep everything neat.
+-# ### 1. Create a self executing function
 
--#       ### 1. Create a self executing function
+-# like this:
 
--#       like this:
+-# :ruby
+-# code = <<-CODE
+-# (function() {
 
--#     :ruby
--#       code = <<-CODE
--#       (function() {
+-# })();
+-# CODE
+-#
 
--#       })();
--#       CODE
--#     
+-#
 
--#     
+-# This will be our closure and will hold the sandwich machine, keeping all it's parts nicely together.
 
--#       This will be our closure and will hold the sandwich machine, keeping all it's parts nicely together.
+-# ### 2. Create methods
 
--#       ### 2. Create methods
+-# Within the closure, create three little functions to add the bread, spread the soya margarine and add the jam. These little methods should use console.log to write a string representing their action to the DOM, e.g. "Now spreading the jam!"
 
--#       Within the closure, create three little functions to add the bread, spread the soya margarine and add the jam. These little methods should use console.log to write a string representing their action to the DOM, e.g. "Now spreading the jam!"
+-# Assign these functions to private variables, we don't want any of the children breaking in to the closure and spreading jam all over the place.
 
--#       Assign these functions to private variables, we don't want any of the children breaking in to the closure and spreading jam all over the place.
+-# Now, also within the closure create a makeSandwich function which calls the three other methods in sequence, writing the sandwich instructions to the DOM.
 
--#       Now, also within the closure create a makeSandwich function which calls the three other methods in sequence, writing the sandwich instructions to the DOM.
+-# ### 3. Smuggle makeSandwich out of the closure
 
--#       ### 3. Smuggle makeSandwich out of the closure
+-# We want Mrs Potts to be able to call makeSandwich, so we need to make a global variable which she can access from the kitchen, the news agent, a flight to Barbados, anywhere.
 
--#       We want Mrs Potts to be able to call makeSandwich, so we need to make a global variable which she can access from the kitchen, the news agent, a flight to Barbados, anywhere.
+-# Assign makeSandwich to the global window object, thus smuggling it out of the closure. Refer back to the example if you need to remember how to do this.
 
--#       Assign makeSandwich to the global window object, thus smuggling it out of the closure. Refer back to the example if you need to remember how to do this.
+-# ### 4. Call makeSandwich from outside the closure
 
--#       ### 4. Call makeSandwich from outside the closure
+-# You can now call makeSandwich from outside the closure. Because you've used onDomReady, you'll need to call it onDomReady.
 
--#       You can now call makeSandwich from outside the closure. Because you've used onDomReady, you'll need to call it onDomReady.
+-# If you've succeeded well done! This is super close to #{Time.now.year} best practice JavaScript!
 
--#       If you've succeeded well done! This is super close to #{Time.now.year} best practice JavaScript!
+-# ### Exercise Extension
 
--#       ### Exercise Extension
-
--#       If you'd like to take this a little further, you could make it receive an array of fillings, then output them in the sandwich.
+-# If you'd like to take this a little further, you could make it receive an array of fillings, then output them in the sandwich.
