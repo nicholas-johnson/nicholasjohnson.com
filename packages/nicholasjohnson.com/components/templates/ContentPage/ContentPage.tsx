@@ -20,7 +20,9 @@ export const ContentPage: FC<IContentPageProps> = ({
   return (
     <div className={styles.contentPage}>
       <Header className={styles.header} />
-      {manifest && <Sidebar manifest={manifest} />}
+      {manifest && (
+        <Sidebar manifest={manifest} className={styles.leftSidebar} />
+      )}
       <Post post={post} className={styles.article} />
     </div>
   )

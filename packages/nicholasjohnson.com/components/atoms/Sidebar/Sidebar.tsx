@@ -2,29 +2,28 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { ICourseManifest } from '../../../types'
 
-import {
-  StyledLink,
-  StyledList,
-  StyledListItem,
-  StyledSidebarWrapper,
-} from './Sidebar.styles'
+import styles from './Sidebar.module.scss'
 
 export interface ISidebarProps {
   manifest: ICourseManifest
+  className?: string
 }
 
-export const Sidebar: FC<ISidebarProps> = ({ manifest }: ISidebarProps) => {
+export const Sidebar: FC<ISidebarProps> = ({
+  manifest,
+  className,
+}: ISidebarProps) => {
   return (
-    <StyledSidebarWrapper>
-      <StyledList>
+    <nav className={`${styles.sidebar} ${className}`}>
+      <ul>
         {manifest.exercises.map(({ slug, title, description }) => (
-          <StyledListItem key={slug}>
+          <li key={slug}>
             <Link href={`/${manifest.slug}/${slug}`} passHref>
-              <StyledLink>{title}</StyledLink>
+              <span>{title}</span>
             </Link>
-          </StyledListItem>
+          </li>
         ))}
-      </StyledList>
-    </StyledSidebarWrapper>
+      </ul>
+    </nav>
   )
 }
