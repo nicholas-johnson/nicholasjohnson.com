@@ -4,6 +4,7 @@ section: "javascript"
 course: "intro-to-javascript"
 exercise: "intro"
 layout: "exercise"
+date: '2022-11-30 19:04:36'
 ---
 
 %article

@@ -1,13 +1,13 @@
 ---
-title: "Booleans"
-section: "javascript"
-course: "intro-to-javascript"
-exercise: "booleans"
-layout: "exercise"
+title: 'Booleans'
+section: 'javascript'
+course: 'intro-to-javascript'
+exercise: 'booleans'
+layout: 'exercise'
+date: '2022-11-30 19:04:36'
 ---
 
 %article
-
 
 # An exciting foray into Booleans. What Ho!
 
@@ -18,65 +18,42 @@ These values that we're using, true and false, have a special name. They are cal
 %figcaption
 He looks like a nice sort of chap, a bit like Colin Firth.
 
-
-
 The simple operations we carry out on Boolean values, when combined in clever ways, let a computer do all the clever things it's able to do. When you move your mouse pointer, there's a whole cascade of little ones and zeroes bouncing around inside the chips and cables that you will never see.
 
 In the context of JavaScript, Booleans are useful in decision making. Should we do this or that? Should we let the user submit their shopping cart or not. Should this element be clickable or not. Lets have a look at what we can do.
 
-
-
-## This and That ##
+## This and That
 
 One of the simplest things we can do with Booleans is the "and" operation. It looks like this:
 
-
 ```js
-  const daytime = true;
-  const sunny = true;
-  const canGoOut = (daytime && sunny);
+const daytime = true
+const sunny = true
+const canGoOut = daytime && sunny
 ```
-
-
-
-
 
 Here we set a variable called canGoOut. This variable will be true if both daytime and sunny are true.
 
 We can use this in a program like so:
 
-
-
 ```js
-  const daytime = true
-  const sunny = true
-  const canGoOut = (daytime && sunny);
-  if (canGoOut) {
-    alert("lets go out!")
-  }
+const daytime = true
+const sunny = true
+const canGoOut = daytime && sunny
+if (canGoOut) {
+  alert('lets go out!')
+}
 ```
-
-
-
-
 
 or more simply
 
-
 ```js
-  const daytime = true
-  const sunny = true
-  if (daytime && sunny) {
-    alert("lets go out!")
-  }
+const daytime = true
+const sunny = true
+if (daytime && sunny) {
+  alert('lets go out!')
+}
 ```
-
-
-
-
-
-
-
 
 ## Exercise - this and that
 
@@ -86,43 +63,25 @@ or more simply
 4. What happens if sunny is not true?
 5. Add an icecreamTruck variable. Only go out if there's icecream.
 
-
-
-
-
-
-## This OR That ##
+## This OR That
 
 The second useful thing we can do with Booleans is or. Sometimes we want to be able to say "do something if this other thing is true, or if this second other thing is true. We say or in Javascript using the vertical bar character. For example:
 
-
 ```js
-  const iFancyIcecream = false;
-  const youFancyIcecream = true;
-  const buyIcecream = (iFancyIcecream || youFancyIcecream);
+const iFancyIcecream = false
+const youFancyIcecream = true
+const buyIcecream = iFancyIcecream || youFancyIcecream
 ```
-
-
-
-
 
 We can use this in a program like this:
 
-
 ```js
-  const iFancyIcecream = false;
-  const youFancyIcecream = true;
-  if (iFancyIcecream || youFancyIcecream) {
-    alert("I am just going to the shop now...");
-  }
+const iFancyIcecream = false
+const youFancyIcecream = true
+if (iFancyIcecream || youFancyIcecream) {
+  alert('I am just going to the shop now...')
+}
 ```
-
-
-
-
-
-
-
 
 ## Exercise - IceCream
 
@@ -134,26 +93,16 @@ We can use this in a program like this:
 6. Add the sunny variable. Only go out if I fancy icecream or you fancy icecream, and it's sunny. You'll need to use some braces here.
 7. Add the icecreamTruck variable. Only go out if I fancy icecream or you fancy icecream, and it's sunny and there's an icecream truck nearby.
 
-
-
-
-## Not That! ##
+## Not That!
 
 The last useful thing we can do with Booleans is Not. Sometimes we want something to happen if something is not true. For example we might want to display an error if someone has not filled in a field correctly. We say not! in JavaScript using an exclamation mark, like so:
 
 ```js
-  const filledInField = false
-  if (!filledInField) {
-    alert("Please fill in the field!");
-  }
+const filledInField = false
+if (!filledInField) {
+  alert('Please fill in the field!')
+}
 ```
-
-
-
-
-
-
-
 
 ## Exercise - NOT
 
@@ -161,38 +110,27 @@ The last useful thing we can do with Booleans is Not. Sometimes we want somethin
 2. Enter the not that! code above and run it.
 3. What happens if the field is filled in?
 
-
-
-
 ## Equals this?
 
 So far and so esoteric. It's all very well setting Boolean values explicitly in our code, but for this to be useful we need to be able to be able to make Booleans from other values. Lets return to our timing example above. Lets say that have a variable called hour, and we want to determine if it's mid-day or not. We might do something like this:
 
 ```js
-  const hour = 12;
-  const midday = (hour === 12);
-  alert(midday);
+const hour = 12
+const midday = hour === 12
+alert(midday)
 ```
-
-
-
-
 
 Here we're simply saying: if the hour variable is equal to 12, the midday variable is true. In JavaScript === means equal to.
 
 %aside.box
 
 ## == or ===?
+
 In most languages == (double equals) means equal to. In JavaScript === (triple equals) means exactly equals to and == means equal to with type casting.
 
 Type casting is fiddly stuff, and often behaves in unexpected ways. Good JavaScript programmers generally avoid ==.
 
 You should use ===.
-
-
-
-
-
 
 ## Exercise - Midday
 
@@ -200,45 +138,29 @@ You should use ===.
 2. Enter the code above and run it.
 3. What is the value of midday?
 
-
-
-
-## My dad is bigger than your dad ##
+## My dad is bigger than your dad
 
 We can do other mathematical operations to make Booleans. Here we do one thing if hour > 12 and another if hour is less than 12.
 
-
 ```js
-  const hour = 13;
-  if (hour > 12) {
-    alert("after midday");
-  } else {
-    alert("before midday");
-  }
+const hour = 13
+if (hour > 12) {
+  alert('after midday')
+} else {
+  alert('before midday')
+}
 ```
-
-
-
-
 
 We can combine Boolean operators too, for example:
 
-
 ```js
-  const hour = 13;
-  if ((hour > 11) && (hour < 14)) {
-    alert("you could have lunch now.");
-  } else {
-    alert("it isn't lunchtime.");
-  }
+const hour = 13
+if (hour > 11 && hour < 14) {
+  alert('you could have lunch now.')
+} else {
+  alert("it isn't lunchtime.")
+}
 ```
-
-
-
-
-
-
-
 
 ## Exercise - Build a little clock
 
@@ -249,16 +171,10 @@ We can combine Boolean operators too, for example:
 5. You can use the following code to get the actual time of day:
 
 ```js
-  const hour = (new Date()).getHours();
+const hour = new Date().getHours()
 ```
 
-
-
-
-
 Hook your clock up to the actual hour of the day.
-
-
 
 ## Further Exercise
 
@@ -268,29 +184,21 @@ Hook your clock up to the actual hour of the day.
 4. If your dad is bigger than my dad, alert this also.
 5. If both dads are the same size, alert this fact also.
 
+## Answers
 
-
-
-## Answers ##
-
-### My dad is bigger than your dad ###
+### My dad is bigger than your dad
 
 The best way to tackle this is with an if / else if / else statement. There are 3 possible results, either one dad is bigger than the other, or they are the same.
 
-
 ```js
-  const myDadSize = 12;
-  const yourDadSize = 13;
+const myDadSize = 12
+const yourDadSize = 13
 
-  if ( myDadSize > yourDadSize ) {
-    alert("My dad is the biggest (of course).");
-  } else if  ( myDadSize < yourDadSize ) {
-    alert("Oh, your dad is the biggest.");
-  } else{
-    alert("Our dads are the same size");
-  }
+if (myDadSize > yourDadSize) {
+  alert('My dad is the biggest (of course).')
+} else if (myDadSize < yourDadSize) {
+  alert('Oh, your dad is the biggest.')
+} else {
+  alert('Our dads are the same size')
+}
 ```
-
-
-
-
