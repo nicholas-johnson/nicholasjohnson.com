@@ -1,12 +1,13 @@
 ---
-title: "This"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "lodash-templates"
-layout: "exercise"
+title: 'This'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'lodash-templates'
+layout: 'exercise'
+date: '2022-11-30 19:00:40'
 ---
-%article
 
+%article
 
 # Lodash Templates
 
@@ -19,15 +20,10 @@ First we must include loDash on our page using a script tag: <https://lodash.com
 Then we create a template as a string and compile it against an object
 
 ```js
-  var template = _.template("Hello {{ name }}!");
-  var compiledTemplate = template({name: "World"});
-  // Outputs: "Hello World"
+var template = _.template('Hello {{ name }}!')
+var compiledTemplate = template({ name: 'World' })
+// Outputs: "Hello World"
 ```
-
-
-
-
-
 
 ## Pulling the template from the DOM
 
@@ -36,34 +32,24 @@ We don't want to be writing templates as strings in our JavaScript. Ideally we c
 We set a type of text/template to prevent the browser from trying to execute the template as JavaScript. We set an id attribute to allow us to find the template.
 
 ```html
-  <script type="text/template" id="helloTemplate">
-    "Hello {{ name }}!"
-  </script>
+<script type="text/template" id="helloTemplate">
+  "Hello {{ name }}!"
+</script>
 ```
-
-
-
 
 We can then write some JavaScript:
 
 ```js
-  $(function() {
-    var templateStr = $('#helloTemplate').html();
-    var template = _.template(templateStr);
-    var compiledTemplate = template({name: "World"});
-  })
+$(function () {
+  var templateStr = $('#helloTemplate').html()
+  var template = _.template(templateStr)
+  var compiledTemplate = template({ name: 'World' })
+})
 ```
-
-
-
-
 
 ## Exercise - Mario
 
 Extract your Mario UI into a template.
-
-
-
 
 ## Harder Exercise - A Flickr feed
 

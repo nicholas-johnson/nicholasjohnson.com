@@ -1,15 +1,13 @@
 ---
-title: "JavaScript Evnets"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "events"
-layout: "exercise"
+title: 'JavaScript Evnets'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'events'
+layout: 'exercise'
+date: '2022-11-30 19:00:40'
 ---
 
 %article
-
-
-
 
 # JQuery Events
 
@@ -18,40 +16,28 @@ The real strength of JavaScript is that it allows the page to respond to the use
 Assume a little div like this:
 
 ```html
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>jQuery</title>
-      <script src="jquery.js"></script>
-      <script src="dont_click.js"></script>
-      </head>
-    <body>
-      <div class="clickable">
-        Do not press this button.
-      </div>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <script src="jquery.js"></script>
+    <script src="dont_click.js"></script>
+  </head>
+  <body>
+    <div class="clickable">Do not press this button.</div>
+  </body>
+</html>
 ```
-
-
-
-
 
 We can write some corresponding JavaScript to find the clickable element and assign a function to the click event.
 
-
 ```js
-  $(function() {
-    $(".clickable").click(function() {
-      alert("I can't believe you just did that!");
-    });
-  });
+$(function () {
+  $('.clickable').click(function () {
+    alert("I can't believe you just did that!")
+  })
+})
 ```
-
-
-
-
-
 
 ## Deconstructing don't click
 
@@ -59,22 +45,16 @@ Let's just deconstruct that JavaScript a little and have a look inside.
 
 First we have this:
 
-
 ```js
   $(function() {
     ...
   });
 ```
 
-
-
-
-
 This calls the dollar function and passes it a function. When we pass dollar a function, jQuery puts it on one side until the DOM is loaded and runs it then.
 jQuery
 
 The function we passed it looks like this:
-
 
 ```js
   $(".clickable").click(function() {
@@ -82,35 +62,20 @@ The function we passed it looks like this:
     });
 ```
 
-
-
-
-
 Can you guess what it does? First it gets all the elements on the page with class "clickable". Then it calls a method called click on them. This method says what to do when we click. It's a click handler.
 
 And what happens when we click it? This happens:
 
-
 ```js
-  alert("I can't believe you just did that!");
+alert("I can't believe you just did that!")
 ```
 
-
-
-
-
 ...and we get our cute little alert box. So appealing!
-
-
-
 
 ## Exercise - Make it red
 
 1. Create a web page with half a dozen paragraphs on it.
 2. Add a click handler. When you click a paragraph it goes red.
-
-
-
 
 ## Exercise - Keyup
 
@@ -119,16 +84,10 @@ Create a text input field. Listen for the keyup event. Alert the value of the te
 Get the value of an input field using:
 
 ```js
-  $('input').val();
+$('input').val()
 ```
 
-
-
-
-
 For bonus points, append the value of the text box into a div.
-
-
 
 ## Further Exercise - Rollover
 
@@ -142,7 +101,6 @@ Count the total number of rollovers and output that in a div.
 
 .downloads
 
-
 ## Downloads
 
-* [Code from the board](https://www.dropbox.com/sh/af47ivbh2aue6rr/AADCgVFdfRoN9MunmXHeJ1h5a?dl=1)
+- [Code from the board](https://www.dropbox.com/sh/af47ivbh2aue6rr/AADCgVFdfRoN9MunmXHeJ1h5a?dl=1)

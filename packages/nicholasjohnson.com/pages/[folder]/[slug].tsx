@@ -3,7 +3,12 @@ import { getAllContent } from '../../lib/getAllContent'
 import { getPostBySlug } from '../../lib/getPostBySlug'
 import manifest from './manifest'
 
-const Page = ({ html, title }: Awaited<ReturnType<typeof getPostBySlug>>) => {
+const Page = ({
+  post,
+}: {
+  post: Awaited<ReturnType<typeof getPostBySlug>>
+}) => {
+  const { html, title } = post
   return (
     <div>
       {/* <Sidebar manifest={manifest} /> */}
@@ -22,7 +27,7 @@ export async function getStaticProps({
   console.log('Params', params, slug, folder)
   const post = await getPostBySlug({ slug, folder })
 
-  return { props: { ...params, ...post } }
+  return { props: { ...params, post } }
 }
 
 export async function getStaticPaths() {

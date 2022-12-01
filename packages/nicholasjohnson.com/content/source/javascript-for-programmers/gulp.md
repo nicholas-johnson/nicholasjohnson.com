@@ -1,22 +1,19 @@
 ---
-title: "Grunt"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "gulp"
-layout: "exercise"
+title: 'Grunt'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'gulp'
+layout: 'exercise'
+date: '2022-11-30 19:00:40'
 ---
 
 %article
-
 
 # Linting with Gulp
 
 Gulp is an essential part of the modern JavaScript toolchain. It handles compilation, linting, concatenation, minification, all as you save.
 
 Here we will use it to automatically lint our files. Any mistakes we make will pop up as we save.
-
-
-
 
 ## Exercise 1 - Install Gulp
 
@@ -25,14 +22,10 @@ Gulp is built on top of NodeJS, so first install NodeJS from <http://nodejs.org>
 Test your installation by typing node at a command line.
 
 ```js
-  node
+node
 ```
 
 =code(code, :bash)
-
-
-
-
 
 ## Exercise 2 - Set up npm
 
@@ -46,8 +39,6 @@ Now initialize npm:
 
 =code(code, :bash)
 
-
-
 ## Exercise 3 - Install gulp and the linter
 
 ```js
@@ -57,19 +48,15 @@ Now initialize npm:
 
 =code(code, :bash)
 
-
-
 You may need to restart your console having installed gulp-cli.
 
 Test your installation at a command line by typing gulp.
 
 ```js
-  gulp
+gulp
 ```
 
 =code(code, :bash)
-
-
 
 Now install the linter
 
@@ -79,9 +66,6 @@ Now install the linter
 
 =code(code, :bash)
 
-
-
-
 ## Exercise 4 - Make a gulpfile
 
 We wire these together using a gulpfile. Create a file called gulpfile.js in the directory where you want to work.
@@ -89,51 +73,42 @@ We wire these together using a gulpfile. Create a file called gulpfile.js in the
 A simple gulpfile.js looks like this:
 
 ```js
-  'use strict';
-  var gulp = require('gulp');
-  var jshint = require('gulp-jshint');
+'use strict'
+var gulp = require('gulp')
+var jshint = require('gulp-jshint')
 
-  // Lint Configuration
-  var lintConfig = {
-    "strict": false,
-    "quotmark": false,
-    "browser": true,
-    "devel": true,
-    "globals": {
-      "$": true,
-    }
-  };
+// Lint Configuration
+var lintConfig = {
+  strict: false,
+  quotmark: false,
+  browser: true,
+  devel: true,
+  globals: {
+    $: true,
+  },
+}
 
-  // Files to lint
-  var files = [
-    '**/*.js',
-    '!node_modules/**'
-  ];
+// Files to lint
+var files = ['**/*.js', '!node_modules/**']
 
-  // The hint task
-  gulp.task('js:hint', function() {
-    return gulp.src(files)
-      .pipe(jshint(lintConfig))
-      .pipe(jshint.reporter('default'));
-  });
+// The hint task
+gulp.task('js:hint', function () {
+  return gulp
+    .src(files)
+    .pipe(jshint(lintConfig))
+    .pipe(jshint.reporter('default'))
+})
 
-  // Watch files for changes
-  gulp.task('watch', function() {
-    gulp.watch(files, ['js:hint']);
-  });
+// Watch files for changes
+gulp.task('watch', function () {
+  gulp.watch(files, ['js:hint'])
+})
 
-  // Sets a default task
-  gulp.task('default', ['watch']);
+// Sets a default task
+gulp.task('default', ['watch'])
 ```
 
-
-
-
 Have a read through and try to understand the settings. Now go to a command line and type gulp. Any JavaScript files in the directory of subdirectories will be linted.
-
-
-
-
 
 ## Exercise 5 - Fix your code
 

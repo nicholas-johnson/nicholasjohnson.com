@@ -1,13 +1,13 @@
 ---
-title: "Functions"
-section: "javascript"
-course: "javascript-for-programmers"
-exercise: "functions"
-layout: "exercise"
+title: 'Functions'
+section: 'javascript'
+course: 'javascript-for-programmers'
+exercise: 'functions'
+layout: 'exercise'
+date: '2022-11-30 19:00:40'
 ---
 
 %article
-
 
 # Functions
 
@@ -15,9 +15,9 @@ In JavaScript all functions are objects. You can pass them around and store them
 
 We have three ways of creating a function:
 
-* Named functions
-* Lambda functions
-* ES6 fat arrows.
+- Named functions
+- Lambda functions
+- ES6 fat arrows.
 
 90% of the time, you're probably going to use fat arrows, so we'll look at those first.
 
@@ -28,13 +28,10 @@ Fat arrows were introduced in the ES6 specification and are supported in all the
 They look like this:
 
 ```js
-  const x = () => { 
-    console.log('hey there')
-  }
+const x = () => {
+  console.log('hey there')
+}
 ```
-
-
-
 
 Note that we are creating a local variable `x` here and assigning the function to it. **All functions are objects in JavaScript. We assign them to variables, we sling them around like any other data. This is one of the great strengths of JavaScript.**
 
@@ -45,11 +42,8 @@ See the `=>`? That's the fat arrow that gives this syntax its name.
 We can call this function like this:
 
 ```js
-  x();
+x()
 ```
-
-
-
 
 We just put braces after the variable. If the variable points to a function, that function will be called. If not, we'll get an error. JavaScript is loosly typed, so it's easy to screw up here. If you find this uncomfortable, you might like TypeScript which adds optional typing to the JavaScript syntax.
 
@@ -58,15 +52,12 @@ We just put braces after the variable. If the variable points to a function, tha
 We can pass parameters to this function between the round braces, like this:
 
 ```js
-  const add = (a, b) => { 
-    return a + b
-  }
+const add = (a, b) => {
+  return a + b
+}
 
-  console.log(add(12, 13))
+console.log(add(12, 13))
 ```
-
-
-
 
 All values between the round braces become local variables inside the function body.
 
@@ -75,106 +66,80 @@ All values between the round braces become local variables inside the function b
 If we have only one parameter, we can omit the braces, like so:
 
 ```js
-  const square = a => { 
-    const result = a * a;
-    return result;
-  }
+const square = (a) => {
+  const result = a * a
+  return result
+}
 
-  console.log(square(12))
+console.log(square(12))
 ```
-
-
-
 
 ## One line functions that return a value
 
 In addition, if our function is exactly one line long, we can omit the curly braces and return statement. The evaluated value will be returned automatically.
 
 ```js
-  const square = a => a * a;
+const square = (a) => a * a
 
-  console.log(square(12))
+console.log(square(12))
 ```
-
-
-
 
 ## Examples of ES6 Fat Arrow Functions =>
 
 Here are some examples of fat arrow functions:
 
 ```js
-  const square = a => a * a;
+const square = (a) => a * a
 
-  const sum = (a, b) => a + b;
+const sum = (a, b) => a + b
 
-  const formattedDate = () => new Date().toLocaleString(
-    'en-UK', {
-      day: 'numeric', 
-      month: 'long'
-    }
-  );
-  formattedDate() // returns  7 February
+const formattedDate = () =>
+  new Date().toLocaleString('en-UK', {
+    day: 'numeric',
+    month: 'long',
+  })
+formattedDate() // returns  7 February
 
-  const getConnectionObject = (username, password) => ({
-    username, password
-  });
-  getConnectionObject('dave', '123') // returns { username: 'dave', password: '123' }
+const getConnectionObject = (username, password) => ({
+  username,
+  password,
+})
+getConnectionObject('dave', '123') // returns { username: 'dave', password: '123' }
 ```
-
-
-
-
 
 # ES5 functions
 
 The older function syntax is more verbose. We can create a named function like this. This will create a local variable called sayHello and assign the function to it.
 
 ```js
-  function sayHello() {
-    alert('hello function!');
-  }
+function sayHello() {
+  alert('hello function!')
+}
 ```
-
-
-
-
 
 We can explicitly assign this function to a variable if we want:
 
 ```js
-  const sayHello = function() {
-    alert('hello function!');
-  }
+const sayHello = function () {
+  alert('hello function!')
+}
 ```
-
-
-
-
 
 # Passing too many or too few parameters
 
 If you pass too many parameters, additional ones will be discarded.
 
 ```js
-  sayHello('Dave', 'Mike', 'Dan');
-  // alerts 'hello Dave'
+sayHello('Dave', 'Mike', 'Dan')
+// alerts 'hello Dave'
 ```
-
-
-
-
 
 If you pass too few, unassigned parameters will get the value undefined.
 
 ```js
-  sayHello();
-  // alerts 'hello undefined'
+sayHello()
+// alerts 'hello undefined'
 ```
-
-
-
-
 
 ## The Value of `this` in a fat arrow vs. an ES5 function
 
@@ -185,8 +150,6 @@ In JavaScript, `this` is a variable that is available inside a function that poi
 Fat arrow functions have a static value of `this`. It's set when the function is first defined. This is useful when you need to use a function as an event handler for example. You pass the function elsewhere, and it still continues to work.
 
 More on this in a later section.
-
-
 
 ## Exercise - A Sandwich Calculator
 
@@ -199,13 +162,9 @@ Good luck!
 
 .hiddenanswer
 
-
 ```js
-    const sandwichCalculator = (bread, cheese) => {
-      if (bread / 2 > cheese) return cheese; 
-      return bread / 2;
-    }
+const sandwichCalculator = (bread, cheese) => {
+  if (bread / 2 > cheese) return cheese
+  return bread / 2
+}
 ```
-
-
-
