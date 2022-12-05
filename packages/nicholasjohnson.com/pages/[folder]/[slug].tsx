@@ -23,8 +23,6 @@ export async function getStaticProps({
 
   const { default: manifest } = await import(`../../content/${folder}/manifest`)
 
-  console.log(manifest)
-
   return { props: { ...params, post, manifest } }
 }
 

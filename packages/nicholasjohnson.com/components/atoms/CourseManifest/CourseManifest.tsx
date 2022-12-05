@@ -2,19 +2,19 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { ICourseManifest } from '../../../types'
 
-import styles from './Sidebar.module.scss'
+import styles from './CourseManifest.module.scss'
 
-export interface ISidebarProps {
+export interface ICourseManifestProps {
   manifest: ICourseManifest
   className?: string
   folder?: string
 }
 
-export const Sidebar: FC<ISidebarProps> = ({
+export const CourseManifest: FC<ICourseManifestProps> = ({
   manifest,
   className,
   folder,
-}: ISidebarProps) => {
+}: ICourseManifestProps) => {
   return (
     <nav className={`${styles.sidebar} ${className}`}>
       <ul>

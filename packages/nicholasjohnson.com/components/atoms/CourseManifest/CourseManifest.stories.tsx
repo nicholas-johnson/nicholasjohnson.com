@@ -1,8 +1,8 @@
 import StoryWrapper from '../StoryWrapper'
 
-import { Sidebar, ISidebarProps } from './Sidebar'
+import { CourseManifest, ICourseManifestProps } from './CourseManifest'
 
-const sidebarProps: ISidebarProps = {
+const sidebarProps: ICourseManifestProps = {
   items: [
     {
       title: 'Templates',
@@ -50,7 +50,7 @@ const sidebarProps: ISidebarProps = {
 export const SidebarStory = (args: ISidebarProps) => {
   return (
     <StoryWrapper width={200}>
-      <Sidebar {...args} />
+      <CourseManifest {...args} />
     </StoryWrapper>
   )
 }

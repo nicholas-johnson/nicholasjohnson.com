@@ -10,7 +10,6 @@ const exercises = manifest.courses.responsiveDesign.exercises.map(
 )
 
 const Page = ({ params, data, content, html }) => {
-  console.log({ params, data, content, html })
   return (
     <div>
       <Sidebar items={exercises} />
@@ -20,7 +19,6 @@ const Page = ({ params, data, content, html }) => {
   )
 }
 export async function getStaticProps({ params }) {
-  console.log({ params })
   const slug = params.slug
   const folder = 'responsive-design'
   const pageData = manifest.courses.responsiveDesign.exercises.find(

@@ -4,7 +4,7 @@ import { IPost } from '../../../lib/getPostBySlug'
 import { ICourseManifest } from '../../../types'
 import Header from '../../atoms/Header'
 import Post from '../../atoms/Post'
-import Sidebar from '../../atoms/Sidebar'
+import CourseManifest from '../../atoms/CourseManifest'
 
 import styles from './ContentPage.module.scss'
 
@@ -20,14 +20,14 @@ export const ContentPage: FC<IContentPageProps> = ({
   return (
     <div className={styles.contentPage}>
       <Header className={styles.header} />
+      <Post post={post} className={styles.article} />
       {manifest && (
-        <Sidebar
+        <CourseManifest
           manifest={manifest}
           folder={post.folder}
           className={styles.leftSidebar}
         />
       )}
-      <Post post={post} className={styles.article} />
     </div>
   )
 }

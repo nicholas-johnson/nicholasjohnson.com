@@ -9,7 +9,7 @@ date: '2022-11-30 19:04:36'
 
 # Welcome to JavaScript
 
-JavaScript is the most widely deployed language in the world by an order of magnitude.
+JavaScript is the most widely deployed language in the world by an order of magnitude. In this course, you're going to learn this most ubiquitous of all languages. You don't need any previous experience, we'll pick it up as we go, but you will need a computer of some kind.
 
 ## JavaScript is everywhere
 
@@ -17,14 +17,15 @@ You will find it:
 
 - In your web browser (in pretty much every laptop, desktop and smartphone in the world, perhaps more than once)
 - In a mobile webview powering the apps on your smartphone - many mobile apps are built using JavaScript
+- On your desktop. Apps like Slack, Microsoft Teams or VSCode are written in JavaScript
 - On your server - NodeJS provides a complete and powerful web server used by some of the biggest companies in the world, companies like Microsoft.
-- In your front end development environment - JavaScript powers Gulp, Grunt, Yeoman, Sass and many other tools front end developers rely on.
+- In your front end development environment - JavaScript powers Webpack, Sass and many other tools front end developers rely on.
 
 ## JavaScript is rather good (which is lucky really)
 
 JavaScript is often misunderstood. It it different to most other languages out there. This is because JavaScript comes from a different evolutionary branch to most other languages.
 
-Most modern languages descend from C. They have JavaScript is actually a dialect of LISP.
+Most modern languages descend from C. JavaScript is actually a descended from Scheme.
 
 ## Exercise: Saying Hello to JavaScript
 
