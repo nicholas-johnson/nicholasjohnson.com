@@ -15,10 +15,13 @@ export const CourseManifest: FC<ICourseManifestProps> = ({
   className,
   folder,
 }: ICourseManifestProps) => {
+  const { title, exercises } = manifest
+
   return (
     <nav className={`${styles.sidebar} ${className}`}>
+      <h2>{title}</h2>
       <ul>
-        {manifest.exercises.map(({ slug, title, description }) => (
+        {exercises.map(({ slug, title, description }) => (
           <li key={slug}>
             <Link href={`/${folder}/${slug}`} passHref>
               <a>{title}</a>
