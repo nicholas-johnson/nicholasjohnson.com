@@ -18,7 +18,10 @@ export interface IExercise {
 
 export interface ICourseManifest {
   title: string
-  slug: string
   img: string
   exercises: IExercise[]
+}
+
+export interface ICourseManifests {
+  courses: ICourseManifest[]
 }

@@ -2,9 +2,9 @@ import { setDefaultResultOrder } from 'dns'
 import { FC } from 'react'
 import { IPost } from '../../../lib/getPostBySlug'
 import { ICourseManifest } from '../../../types'
-import Header from '../../atoms/Header'
-import Post from '../../atoms/Post'
-import CourseManifest from '../../atoms/CourseManifest'
+import Header from '../../shared/Header'
+import Post from '../../shared/Post'
+import CourseManifest from '../../shared/CourseManifest'
 
 import styles from './ContentPage.module.scss'
 
