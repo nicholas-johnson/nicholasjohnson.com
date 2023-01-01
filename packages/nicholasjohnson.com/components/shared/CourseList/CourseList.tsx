@@ -13,9 +13,13 @@ export const CourseList: FC<ICourseListProps> = ({
 }: ICourseListProps) => {
   return (
     <nav className={styles.CourseList}>
+      <h2>Free Courses</h2>
       <ul>
         {manifests.map((manifest) => (
-          <li key={manifest.title}>{manifest.title}</li>
+          <li key={manifest.title}>
+            {manifest.title}
+            <img src={manifest.img} />
+          </li>
         ))}
       </ul>
     </nav>

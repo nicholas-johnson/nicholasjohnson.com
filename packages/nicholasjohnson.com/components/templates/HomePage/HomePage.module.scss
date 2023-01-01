@@ -1,12 +1,27 @@
 .homePage {
-  padding: 2rem;
+  padding: 3rem;
   display: grid;
-  grid-template-columns: 1fr minmax(30rem, 50rem) 1fr;
+  grid-template-columns: minmax(30rem, 50rem) 1fr 18rem;
   row-gap: 4rem;
   column-gap: 2rem;
   grid-template-areas:
-    'header   header  header'
-    'sidebar1 content sidebar2';
+    ' header  header  header '
+    ' content .       sidebar';
+
+  // @media (max-width: 1250px) {
+  //   grid-template-columns: minmax(15rem, 1fr) minmax(30rem, 50rem);
+  //   grid-template-areas:
+  //     'header  header '
+  //     'content sidebar';
+  // }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'sidebar'
+      'content';
+  }
 }
 
 .header {
@@ -15,8 +30,12 @@
 
 .content {
   grid-area: content;
+  @media (max-width: 800px) {
+    padding-right: 0rem;
+  }
 }
 
 .rightNav {
-  grid-area: sidebar2;
+  grid-area: sidebar;
+  padding-top: 4rem;
 }

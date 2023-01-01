@@ -2,62 +2,52 @@ import { ICourseManifest } from '../../types'
 
 const manifest: ICourseManifest = {
   title: 'Learn to Program with JavaScript!',
-  img: '/images/cover-images/station-2.jpg',
+  img: '/images/cover-images/station2.jpg',
+  alt: 'A train station',
   exercises: [
     {
       slug: 'intro',
       title: 'Welcome to JavaScript',
-      description: "Let's explore",
     },
     {
       slug: 'strings',
-      title: 'Strings',
-      description: "Don't string me along",
+      title: "Don't string me along",
     },
     {
       slug: 'variables',
-      title: 'Variables',
-      description: 'Buckets of Fun',
+      title: 'Buckets of Fun',
     },
     {
       slug: 'maths',
-      title: 'Maths',
-      description: 'Doing Sums',
+      title: 'Doing Sums',
     },
     {
       slug: 'functions',
-      title: 'Functions',
-      description: 'Doing things more than once',
+      title: 'Doing things more than once',
     },
     {
       slug: 'flow-control',
-      title: 'Flow Control',
-      description: 'Do this, or else...',
+      title: 'Do this, or else...',
     },
     {
       slug: 'booleans',
-      title: 'Booleans',
-      description: 'An exciting foray into Booleans. What Ho!',
+      title: 'An exciting foray into Booleans. What Ho!',
     },
     {
       slug: 'loops',
-      title: 'Loops',
-      description: 'I am dizzy, my head is spinning',
+      title: 'I am dizzy, my head is spinning',
     },
     {
       slug: 'arrays',
-      title: 'Arrays',
-      description: 'Racks of Variables',
+      title: 'Racks of Variables',
     },
     {
       slug: 'integration',
-      title: 'Putting it all together',
-      description: 'Looping over arrays',
+      title: 'Looping over arrays',
     },
     {
       slug: 'json',
-      title: 'JSON',
-      description: 'JavaScript Object Notation',
+      title: 'JavaScript Object Notation',
     },
   ],
 }

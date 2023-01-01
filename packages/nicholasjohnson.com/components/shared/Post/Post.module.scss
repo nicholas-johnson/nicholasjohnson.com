@@ -2,8 +2,17 @@
   line-height: 1.8rem;
   letter-spacing: 0.01rem;
 
+  h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    a {
+      text-decoration: none;
+    }
+  }
+
   img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 20rem;
   }
 
   blockquote {
