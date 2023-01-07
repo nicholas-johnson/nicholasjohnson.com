@@ -13,13 +13,13 @@ export interface ISeries {
 export interface IExercise {
   slug: string
   title: string
+  description?: string
 }
 
 export interface ICourseManifest {
   title: string
   img: string
   alt: string
-  imgAlt: string
   exercises: IExercise[]
 }
 

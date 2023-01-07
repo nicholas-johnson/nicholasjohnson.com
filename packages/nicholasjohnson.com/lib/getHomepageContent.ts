@@ -17,7 +17,7 @@ export const getHomepageContent = async () => {
   const filePaths = await getFilesInDirectories(dirPaths)
 
   const posts = (await getPostsByPath(filePaths)).sort((a, b) =>
-    a.date > b.date ? -1 : 1
+    a?.date > b?.date ? -1 : 1
   )
 
   return { posts }

@@ -17,7 +17,7 @@ export const Header: FC<IHeaderProps> = ({ className = '' }: IHeaderProps) => {
           <h1>
             <Link href="/">Hi, I'm Nicholas Johnson</Link>
           </h1>
-          <p>Learn Code! Create Life! Explore the Galaxy!</p>
+          <p>I'm going to teach you everything I know</p>
         </hgroup>
       </Link>
       <div />

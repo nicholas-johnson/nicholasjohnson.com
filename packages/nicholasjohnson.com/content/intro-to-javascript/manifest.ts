@@ -3,7 +3,7 @@ import { ICourseManifest } from '../../types'
 const manifest: ICourseManifest = {
   title: 'Learn to Program with JavaScript!',
   img: '/images/cover-images/station2.jpg',
-  alt: 'A train station',
+  alt: 'A space station',
   exercises: [
     {
       slug: 'intro',
