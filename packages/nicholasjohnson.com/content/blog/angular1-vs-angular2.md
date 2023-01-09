@@ -2,10 +2,10 @@
 title: Angular 1 vs. Angular 2
 tags: javascript, angular
 layout: 'blog'
-date: '2014-06-30 19:04:36'
+date: '2016-02-15'
 ---
 
-Angular 1 and Angular 2 are philosophically different.
+AngularJS and Angular are philosophically different.
 
 ## Angular 1
 

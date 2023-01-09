@@ -3,7 +3,7 @@ title: 'How does ng-app work?'
 tags: javascript, angular
 layout: 'blog'
 course_sidebar: :angular
-date: '2014-06-30 19:04:36'
+date: '2015-06-02'
 ---
 
 Today's Angular is the angularInit function. This is the function which makes ng-app work.

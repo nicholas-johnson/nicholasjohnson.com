@@ -3,7 +3,7 @@ title: 'Why you should (sometimes) use MongoDB'
 tags: javascript, mongodb
 layout: 'blog'
 course_sidebar: :mongo
-date: '2014-06-30 19:04:36'
+date: '2015-07-17'
 ---
 
 I should start out by saying that I have no axe to grind here. I'm just a guy who enjoys learning things and using new technology.

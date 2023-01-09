@@ -1,13 +1,11 @@
 ---
-title: "How does the TypeScript Angular DI magic work?"
+title: 'How does the TypeScript Angular DI magic work?'
 tags: angular, angular2, javascript, es6
 layout: 'blog'
-description: "Angular 2 comes with a brand new DI mechanism. The premier way to do DI in Angular 2 is using TypeScript \"Magic\". Most articles gloss over this magic. In this article we look at the mechanism."
+description: 'Angular 2 comes with a brand new DI mechanism. The premier way to do DI in Angular 2 is using TypeScript "Magic". Most articles gloss over this magic. In this article we look at the mechanism.'
 course_sidebar: :angular2
-date: '2014-06-30 19:04:36'
+date: '2016-02-26'
 ---
-
-
 
 **TL;DR: Using decorators and a Reflect.metadata polyfill.**
 
@@ -17,11 +15,9 @@ Angular 2 comes with a brand new DI mechanism. The premier way to do DI in Angul
 
 ## Questions Answered:
 
-* How does Dependency Injection work in Angular 2 with TypeScript?
-* What is `Reflect.metadata`?
-* Where is Angular 2 injector metadata stored?
-
-
+- How does Dependency Injection work in Angular 2 with TypeScript?
+- What is `Reflect.metadata`?
+- Where is Angular 2 injector metadata stored?
 
 ## DI in Angular 1
 
@@ -32,41 +28,31 @@ Angular 1 used strings as tokens for DI. You registered your component with Angu
 We might declare pterodactyls in one place:
 
 ```js
-  angular.module('app')
-.service('PterodactylService', function(){
+angular.module('app').service('PterodactylService', function () {
   // PterodactylService Constructor
 })
 ```
 
-
-
-
-
 We could then inject our pterodactyls into the park controller like this:
 
 ```js
-  angular.module('app')
-.controller('ParkController', ['PterodactylService', function(PterodactylService){
-  // Controller code
-}])
+angular.module('app').controller('ParkController', [
+  'PterodactylService',
+  function (PterodactylService) {
+    // Controller code
+  },
+])
 ```
-
-
-
-
 
 or if you were happy to forgo minification or use ngAnnotate, it might even look like this:
 
 ```js
-  angular.module('app')
-.controller('ParkController', function(PterodactylService) {
-  // Controller code
-});
+angular
+  .module('app')
+  .controller('ParkController', function (PterodactylService) {
+    // Controller code
+  })
 ```
-
-
-
-
 
 This magic was possible because Angular 1 used string tokens for injectors. All injectable objects had to be declared with a string and a constructor function. You couldn't just inject any old object. You could only inject Angular stuff.
 
@@ -92,15 +78,11 @@ constructor(x: Pterodactyls, y: string) {}
   }
 ```
 
-
-
-
-
 When Angular needs a Park, it automatically instantiates Pterodactyls for us. If the current Injector has already instantiated Pterodactyls, it will use the singleton.
 
 This is DI Magic.
 
-*If you're not familiar with decorators, how they work, and how they differ from annotations, you might wish to [read my article on it here](/blog/annotations-vs-decorators/).*
+_If you're not familiar with decorators, how they work, and how they differ from annotations, you might wish to [read my article on it here](/blog/annotations-vs-decorators/)._
 
 ## Typescript doesn't do DI for us
 
@@ -111,36 +93,26 @@ First up, TypeScript is not tied to Angular; it's its own language. It makes no 
 Removing the decorator for now, a TypeScript version of the above in Angular 2 looks like this:
 
 ```js
-  class Pterodactyls {}
+class Pterodactyls {}
 
-  class Park {
-constructor(x: Pterodactyls, y: string) {}
-  }
+class Park {
+  constructor(x: Pterodactyls, y: string) {}
+}
 ```
-
-
-
-
 
 Here's our Park, into which we will inject our Pterodactyls. If we look at the compiled ES5, we get this:
 
 ```js
-  var Pterodactyls = (function () {
-function Pterodactyls() {
-}
-return Pterodactyls;
-  })();
+var Pterodactyls = (function () {
+  function Pterodactyls() {}
+  return Pterodactyls
+})()
 
-  var Park = (function () {
-function Park(x, y) {
-}
-return Park;
-  })();
+var Park = (function () {
+  function Park(x, y) {}
+  return Park
+})()
 ```
-
-
-
-
 
 Note that nothing about this is specific to Angular 2. This is all regular typescript code, compiled into a couple of regular JavaScipt IIFEs.
 
@@ -158,11 +130,7 @@ If you are using TypeScript, you will probably have a file in your root called t
   }
 ```
 
-
-
-
-
-This is the magic sauce. `emitDecoratorMetadata`. This option will preserve type information in your object's *metadata*.
+This is the magic sauce. `emitDecoratorMetadata`. This option will preserve type information in your object's _metadata_.
 
 ## JavaScript Objects have metadata now?
 
@@ -175,87 +143,85 @@ It's not implemented in current browsers, so we need a polyfill. The angular2-po
 The `emitDecoratorMetadata` option encourages TypeScript to store type information in the metadata. It doesn't matter what decorator you add, any will do. We can just invent one. Let's compile our code again, this time with a decorator.
 
 ```js
-  class Pterodactyls {}
+class Pterodactyls {}
 
-  @Aviary
-  class Park {
-constructor(x: Pterodactyls, y: string) {}
-  }
+@Aviary
+class Park {
+  constructor(x: Pterodactyls, y: string) {}
+}
 ```
-
-
-
-
 
 Note there is no `@Aviary` decorator. I just made it up. The only thing that matters here to the compiler is that a decorator was present.
 
 Having decorated our Park, we now get this little beauty. Don't worry, we'll dissect it slowly:
 
 ```js
-  var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-  var c = arguments.length,
-    r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-    d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-    r = Reflect.decorate(decorators, target, key, desc);
-  else
-    for (var i = decorators.length - 1; i >= 0; i--)
-      if (d = decorators[i])
-        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-  };
-
-  var __metadata = (this && this.__metadata) || function (k, v) {
-  if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-    return Reflect.metadata(k, v);
-  };
-
-  // Here are the Pterodactyls
-  var Pterodactyls = (function () {
-  function Pterodactyls() {}
-  return Pterodactyls;
-  })();
-
-  // Here's the Park
-  var Park = (function () {
-  function Park(x, y) {
+var __decorate =
+  (this && this.__decorate) ||
+  function (decorators, target, key, desc) {
+    var c = arguments.length,
+      r =
+        c < 3
+          ? target
+          : desc === null
+          ? (desc = Object.getOwnPropertyDescriptor(target, key))
+          : desc,
+      d
+    if (typeof Reflect === 'object' && typeof Reflect.decorate === 'function')
+      r = Reflect.decorate(decorators, target, key, desc)
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if ((d = decorators[i]))
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r
+    return c > 3 && r && Object.defineProperty(target, key, r), r
   }
-  Park = __decorate([
-      Aviary,
-      __metadata('design:paramtypes', [Pterodactyls, String])
-  ], Park);
-  return Park;
-  })();
+
+var __metadata =
+  (this && this.__metadata) ||
+  function (k, v) {
+    if (typeof Reflect === 'object' && typeof Reflect.metadata === 'function')
+      return Reflect.metadata(k, v)
+  }
+
+// Here are the Pterodactyls
+var Pterodactyls = (function () {
+  function Pterodactyls() {}
+  return Pterodactyls
+})()
+
+// Here's the Park
+var Park = (function () {
+  function Park(x, y) {}
+  Park = __decorate(
+    [Aviary, __metadata('design:paramtypes', [Pterodactyls, String])],
+    Park
+  )
+  return Park
+})()
 ```
-
-
-
-
 
 Whoa, that's quite a bit of code just from our two little classes! There are helpers in there called `__decorate` and `__metadata`.
 
 Now we are talking! This is not code we would ever want to write by hand, but we can see how our injectors might work now. We have the names of the functions to use as constructors available and stored.
 
-## The __metadata helper function
+## The \_\_metadata helper function
 
 We have a new global function: `__metadata`. This receives a key: `'design:paramtypes'` and an array of injectable objects.
 
 We also have our old friend `__decorate`. You may remember that `__decorate` receives an array of decorator functions. The object under constructions will be passed to these decorator functions one by one. These decorator functions can make arbitrary changes to the object.
 
-## What does __metadata do?
+## What does \_\_metadata do?
 
 Here is the `__metadata` function as created by TypeScript:
 
 ```js
-  var __metadata = (this && this.__metadata) || function (k, v) {
-if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-  return Reflect.metadata(k, v);
-  };
+var __metadata =
+  (this && this.__metadata) ||
+  function (k, v) {
+    if (typeof Reflect === 'object' && typeof Reflect.metadata === 'function')
+      return Reflect.metadata(k, v)
+  }
 ```
-
-
-
-
 
 All it does is shell out to `Reflect.metadata`. This is defined in angular2-polyfills.js.
 
@@ -264,41 +230,32 @@ All it does is shell out to `Reflect.metadata`. This is defined in angular2-poly
 Let's call `Reflect.metadata('design:paramtypes', [Pterodactyls, String])` and see what we get:
 
 ```js
-  function decorator(target, targetKey) {
-if (!IsUndefined(targetKey)) {
-  if (!IsObject(target)) {
-    throw new TypeError();
+function decorator(target, targetKey) {
+  if (!IsUndefined(targetKey)) {
+    if (!IsObject(target)) {
+      throw new TypeError()
+    }
+    targetKey = ToPropertyKey(targetKey)
+    OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey)
+  } else {
+    if (!IsConstructor(target)) {
+      throw new TypeError()
+    }
+    OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, undefined)
   }
-  targetKey = ToPropertyKey(targetKey);
-  OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, targetKey);
 }
-else {
-  if (!IsConstructor(target)) {
-    throw new TypeError();
-  }
-  OrdinaryDefineOwnMetadata(metadataKey, metadataValue, target, undefined);
-}
-  }
 ```
-
-
-
-
 
 Oh look! A decorator function. Calling `Reflect.metadata` gives us a plain old decorator. Angular uses a decorator to save the metadata on the object.
 
-Now TypeScript just chains this decorator into the call to __decorate:
+Now TypeScript just chains this decorator into the call to \_\_decorate:
 
 ```js
-  Park = __decorate([
-Aviary,
-__metadata('design:paramtypes', [Pterodactyls, String])
-  ], Park);
+Park = __decorate(
+  [Aviary, __metadata('design:paramtypes', [Pterodactyls, String])],
+  Park
+)
 ```
-
-
-
-
 
 And hey presto, metadata saved using the Reflect API, all ready for the Angular DI mechanism to read from at injection time.
 
@@ -321,4 +278,3 @@ It uses `Reflect.metadata` to do this. `Reflect.metadata` does not exist inside 
 The Angular 2 DI can then query this `Map` to determine what to inject.
 
 What appears to be magic is just very clever science.
-

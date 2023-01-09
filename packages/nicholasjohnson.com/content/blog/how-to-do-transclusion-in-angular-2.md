@@ -5,7 +5,7 @@ layout: 'blog'
 description: ''
 published: true
 course_sidebar: :angular2
-date: '2014-06-30 19:04:36'
+date: '2016-03-24'
 ---
 
 **TL;DR: AngularJS had transclusion which allowed us to access the content inside a directive's tag. Angular has contentChildren which does the same thing. contentChildren are bound to their own component, not to the component they are included in.**

@@ -5,7 +5,7 @@ layout: 'blog'
 description: ''
 published: true
 course_sidebar: :react
-date: '2014-06-30 19:04:36'
+date: '2016-04-05 19:04:36'
 ---
 
 **TL;DR: AngularJS is a complex, monolithic framework that makes lots of choices for you. React is a DOM manipulation library that fits into a dynamic evolving ecosystem. Both are actually rather good.**

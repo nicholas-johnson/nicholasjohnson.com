@@ -3,7 +3,7 @@ title: 'Creating Read-Only & Virtual Attributes with JavaScript Getters and Sett
 tags: javascript
 layout: 'blog'
 course_sidebar: :js2
-date: '2014-06-30 19:04:36'
+date: '2016-01-10'
 ---
 
 **TL;DR Getters and setters let us create read only attributes of JSON objects. They work in all current browsers (except IE8), so you can use them today**
@@ -51,7 +51,6 @@ Note that we can still interact with our cat in exactly the same way:
 
 ```js
 console.log(cat.name)
-
 ;('Miffy')
 ```
 
@@ -62,7 +61,6 @@ Because we only have a getter, the value of cat.name cannot be changed. We have 
 ```js
 cat.name = 'Hermionie'
 console.log(cat.name)
-
 ;('Miffy')
 ```
 

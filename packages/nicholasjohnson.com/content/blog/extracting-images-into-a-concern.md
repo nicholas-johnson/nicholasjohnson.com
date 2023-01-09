@@ -2,7 +2,7 @@
 title: Using a Rails concern to dry up Paperclip Attachments
 tags: rails
 layout: 'blog'
-date: '2014-06-30 19:04:36'
+date: '2013-06-10'
 ---
 
 Rails concerns have come in for a **bit of a kicking** lately, service objects clearly being a better solution in many instances, but I think there are valid use cases.

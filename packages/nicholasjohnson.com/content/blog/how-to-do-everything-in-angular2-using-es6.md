@@ -4,7 +4,7 @@ tags: angular, angular2, javascript, es6
 layout: 'blog'
 description: 'The Angular team have done a great job providing proper fluent JavaScript APIs for interacting with all the Angular 2 stuff. In this article, we look at all the biggies'
 course_sidebar: :angular2
-date: '2014-06-30 19:04:36'
+date: '2016-02-26'
 ---
 
 Most of the information and tutorials on Angular 2 currently available focus on TypeScript, with perhaps a handwavy gesture towards ES5 somewhere at the start.

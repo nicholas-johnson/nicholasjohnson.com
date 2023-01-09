@@ -2,12 +2,9 @@
 title: "What's the difference between annotations and decorators in Angular?"
 tags: angular, angular2, javascript, es6
 layout: 'blog'
-description: "Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an annotations array. Decorators are functions that receive the decorated object and can make any changes to it they like. Traceur gives us annotations. TypeScript gives us decorators. Angular 2 supports both."
-date: '2014-06-30 19:04:36'
-
+description: 'Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an annotations array. Decorators are functions that receive the decorated object and can make any changes to it they like. Traceur gives us annotations. TypeScript gives us decorators. Angular 2 supports both.'
+date: '2016-02-21'
 ---
-
-
 
 **TL;DR: Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an "annotations" array. Decorators are functions that receive the decorated object and can make any changes to it they like.**
 
@@ -22,16 +19,12 @@ Annotations and Decorators are two very different language features competing fo
 You will have noticed that an Angular component is often written like this:
 
 ```js
-  @Component({
-selector: 'app',
-template: 'Hello World!'
-  })
-  class MyComponent {}
+@Component({
+  selector: 'app',
+  template: 'Hello World!',
+})
+class MyComponent {}
 ```
-
-
-
-
 
 This is obviously not JavaScript, but it can be compiled to JavaScript using Traceur (annotations) or TypeScript (decorators). The two compilers will treat this annotation very differently. Let's look at what we get.
 
@@ -42,72 +35,77 @@ Annotations are a hardcoded language feature. When I annotate a class (really ju
 Google's Traceur compiler includes annotations as an experimental feature. If we run the above code through Traceur, we get the following:
 
 ```js
-  $traceurRuntime.ModuleStore.getAnonymousModule(function(require) {
-"use strict";
-var $__3;
-var MyComponent = $traceurRuntime.initTailRecursiveFunction(function() {
-  return $traceurRuntime.call(function() {
-    function MyComponent() {}
-    return $traceurRuntime.continuation($traceurRuntime.createClass, $traceurRuntime, [MyComponent, {}, {}]);
-  }, this, arguments);
-})();
-Object.defineProperty(MyComponent, "annotations", {get: function() {
-    return [new Component({
-      selector: 'app',
-      template: 'Hello World!'
-    })];
-  }});
-;
-return ($__3 = {}, Object.defineProperty($__3, "MyComponent", {
-  get: function() {
-    return MyComponent;
-  },
-  configurable: true,
-  enumerable: true
-}), $__3);
-  });
+$traceurRuntime.ModuleStore.getAnonymousModule(function (require) {
+  'use strict'
+  var $__3
+  var MyComponent = $traceurRuntime.initTailRecursiveFunction(function () {
+    return $traceurRuntime.call(
+      function () {
+        function MyComponent() {}
+        return $traceurRuntime.continuation(
+          $traceurRuntime.createClass,
+          $traceurRuntime,
+          [MyComponent, {}, {}]
+        )
+      },
+      this,
+      arguments
+    )
+  })()
+  Object.defineProperty(MyComponent, 'annotations', {
+    get: function () {
+      return [
+        new Component({
+          selector: 'app',
+          template: 'Hello World!',
+        }),
+      ]
+    },
+  })
+  return (
+    ($__3 = {}),
+    Object.defineProperty($__3, 'MyComponent', {
+      get: function () {
+        return MyComponent
+      },
+      configurable: true,
+      enumerable: true,
+    }),
+    $__3
+  )
+})
 ```
-
-
-
-
 
 <a href="https://google.github.io/traceur-compiler/demo/repl.html#%2F%2F%20Options%3A%20--annotations%20--array-comprehension%20--async-functions%20--async-generators%20--exponentiation%20--export-from-extended%20--for-on%20--generator-comprehension%20--jsx%20--member-variables%20--proper-tail-calls%20--require%20--types%20%0A%40Component(%7B%0A%20%20selector%3A%20'app'%2C%0A%20%20template%3A%20'Hello%20World!'%0A%7D)%0Aexport%20class%20MyComponent%20%7B%0A%0A%7D%3B%0A" target="_blank">Have a play with this code in the Traceur REPL here.</a>
 
 The key thing to notice here is this bit:
 
 ```js
-  Object.defineProperty(MyComponent, "annotations", {get: function() {
-  return [new Component({
-    selector: 'app',
-    template: 'Hello World!'
-  })];
-}});
+Object.defineProperty(MyComponent, 'annotations', {
+  get: function () {
+    return [
+      new Component({
+        selector: 'app',
+        template: 'Hello World!',
+      }),
+    ]
+  },
+})
 ```
-
-
-
-
 
 Paraphrasing somewhat, Traceur is actually generating something like this:
 
 ```js
-  var MyComponent = function MyComponent() {}
-  MyComponent.annotations = [
-new Component({
-  selector: 'app',
-  template: 'Hello World!'
-})
-  ]
+var MyComponent = function MyComponent() {}
+MyComponent.annotations = [
+  new Component({
+    selector: 'app',
+    template: 'Hello World!',
+  }),
+]
 ```
 
-
-
-
-
-
 An annotations property is being defined on MyComponent, which is populated with a newly instantiated Component object. This is what annotations do. They just create this array. You are then free to do what you like with the array. Angular inspects it to decide how to treat the component.
-
 
 ## Decorators
 
@@ -116,55 +114,51 @@ Decorators are different (better?). A decorator is a function that receives the 
 Decorators are implemented by the TypeScript compiler. TypeScript compiles the MyComponent code like this:
 
 ```js
-  var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-var c = arguments.length,
-  r = c < 3 ? target : desc === null ?
-  desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-  d;
-if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-  r = Reflect.decorate(decorators, target, key, desc);
-else
-  for (var i = decorators.length - 1; i >= 0; i--)
-    if (d = decorators[i])
-      r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-return c > 3 && r && Object.defineProperty(target, key, r), r;
-  };
-  var MyComponent = (function () {
-function MyComponent() {}
-MyComponent = __decorate(
-  [
-    Component({
-      selector: 'app',
-      template: 'Hello World!'
-    })
-  ],
-  MyComponent
-);
-return MyComponent;
-  }());
+var __decorate =
+  (this && this.__decorate) ||
+  function (decorators, target, key, desc) {
+    var c = arguments.length,
+      r =
+        c < 3
+          ? target
+          : desc === null
+          ? (desc = Object.getOwnPropertyDescriptor(target, key))
+          : desc,
+      d
+    if (typeof Reflect === 'object' && typeof Reflect.decorate === 'function')
+      r = Reflect.decorate(decorators, target, key, desc)
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if ((d = decorators[i]))
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r
+    return c > 3 && r && Object.defineProperty(target, key, r), r
+  }
+var MyComponent = (function () {
+  function MyComponent() {}
+  MyComponent = __decorate(
+    [
+      Component({
+        selector: 'app',
+        template: 'Hello World!',
+      }),
+    ],
+    MyComponent
+  )
+  return MyComponent
+})()
 ```
-
-
-
-
-
 
 <a href="http://www.typescriptlang.org/Playground#src=%40Component(%7B%0A%20%20selector%3A%20'app'%2C%0A%20%20template%3A%20'Hello%20World!'%0A%7D)%0Aclass%20MyComponent%20%7B%7D" target="_blank">Have a play with this code in the TypeScript playground here.</a>
 
 The key part is here (to paraphrase):
 
 ```js
-  var __decorate = function(decorators, target) {
-for (var i = decorators.length - 1; i >= 0; i--)
-  d(target, key, r)
-  }
+var __decorate = function (decorators, target) {
+  for (var i = decorators.length - 1; i >= 0; i--) d(target, key, r)
+}
 ```
 
-
-
-
-
-Our component calls __decorate, which is defined automatically whenever we decorate something. Our component passes __decorate an array of decorators, and itself. The decorators are just functions. Each decorator function will receive the object, and can modify it in any way you see fit.
+Our component calls **decorate, which is defined automatically whenever we decorate something. Our component passes **decorate an array of decorators, and itself. The decorators are just functions. Each decorator function will receive the object, and can modify it in any way you see fit.
 
 It follows that we can easily use decorators to implement annotations, but we can also do anything else we like. We might add attributes, modify attributes, run conditional code, even create and return a completely new object.
 
@@ -173,8 +167,6 @@ It follows that we can easily use decorators to implement annotations, but we ca
 ## Relect.decorate
 
 If you have sharp eyes, you may have noticed that TypeScript tries to shell out to a native Reflect.decorate, before running all the decorators. It turns out that Relect.decorate is in the draft ES7 specification. A polyfill is defined in the angular2-polyfills.js file.
-
-
 
 ## To sum up:
 
@@ -197,37 +189,31 @@ Annotations, being harcoded, are much simpler for an optimising compiler to deal
 
 Decorators, allow for arbitrary object changes (or even changes beyond the object). They are thus much harder for a compiler to reason about and optimise for. It is harder to provide code hinting for decorators, because you can't know for sure what they will do. They might even do something naughty like an eval, or modify the object differently depending on the time of day. They allow for all sorts of fun features, like metaprogramming. They are much more - what I would call - JavaScripty.
 
-
 ## Decorators and Annotations in Angular
 
 Both Decorators and Annotations are supported by Angular. This is a legacy thing because Angular 2 swapped from AtScript to TypeScript while it was still in development.
 
-* Compiling with Traceur? You have *annotations*.
-* Handcoding ES5 or ES6 with the annotations style? You have *annotations*.
-* Compiling with TypeScript? You have *decorators*.
-* Handcoding ES5 or ES6 with the Lucid API (my favourite)? You have *decorators*.
+- Compiling with Traceur? You have _annotations_.
+- Handcoding ES5 or ES6 with the annotations style? You have _annotations_.
+- Compiling with TypeScript? You have _decorators_.
+- Handcoding ES5 or ES6 with the Lucid API (my favourite)? You have _decorators_.
 
 The main difference you will notice is your imports. Because annotations and decorators are different, you will need to import different objects.
 
 If you are using decorators, your imports will look like normal TypeScript imports:
 
 ```js
-  import {Component, View} from 'angular2/angular2';
+import { Component, View } from 'angular2/angular2'
 ```
-
-
-
-
 
 If you are using annotations then you'll have to import the annotation version of the core angular components
 
 ```js
-  import {ComponentAnnotation as Component, ViewAnnotation as View} from 'angular2/angular2';
+import {
+  ComponentAnnotation as Component,
+  ViewAnnotation as View,
+} from 'angular2/angular2'
 ```
-
-
-
-
 
 Otherwise, your Angular code will remain unchanged.
 
@@ -237,4 +223,4 @@ Decorators are the default, and the most fun, but also offer more flexibility, a
 
 ## Further reading
 
-* <a href="http://blog.wolksoftware.com/decorators-reflection-javascript-typescript" target="_blank">Decorators & metadata reflection in TypeScript: From Novice to Expert</a>
+- <a href="http://blog.wolksoftware.com/decorators-reflection-javascript-typescript" target="_blank">Decorators & metadata reflection in TypeScript: From Novice to Expert</a>

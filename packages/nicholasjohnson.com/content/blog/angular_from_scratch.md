@@ -3,7 +3,7 @@ title: 'Angular from Scratch with Matthieu Lux'
 tags: javascript, angular
 layout: 'blog'
 course_sidebar: :angular
-date: '2014-06-30 19:04:36'
+date: '2015-06-12'
 ---
 
 Watch as Matthieu rebuilds angular complete with $scope, $digest, $apply, $compile, ng-bind and ng-model in half an hour and a hundred lines of code or so.

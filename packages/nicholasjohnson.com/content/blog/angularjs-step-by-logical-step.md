@@ -1,16 +1,13 @@
 ---
-title: "The Angular Book"
+title: 'The Angular Book'
 tags: angularjs
-description: "Angular JS tutorial, step by step Angular"
+description: 'Angular JS tutorial, step by step Angular'
 layout: 'blog'
 published: true
 useBookCover: true
 course_sidebar: :angular
-date: '2014-06-30 19:04:36'
+date: '2014-02-20'
 ---
-
-.book_cover
-
 
 # AngularJS
 
@@ -22,12 +19,9 @@ date: '2014-06-30 19:04:36'
 
 %img{src: '/images/shuttle.jpg'}
 
-
-*Image credit: [San Diego Air and Space Museum Archives](https://www.flickr.com/photos/sdasmarchives/sets/?&page=1)*
-
+_Image credit: [San Diego Air and Space Museum Archives](https://www.flickr.com/photos/sdasmarchives/sets/?&page=1)_
 
 #intro
-
 
 # Welcome to Angular!
 
@@ -37,8 +31,6 @@ With Angular you will be **unstoppable**. You will be able to pull in live strea
 
 %aside.pullquote
 You will be able to AJAX in content and integrate it onto your page with stealth and grace.
-
-
 
 ## So what exactly is Angular?
 
@@ -73,12 +65,8 @@ A directive can contain its own template, state and behaviour. It can receive da
 For example, say we have an app that wants to make use of Google maps. We might create a component to render maps, then wire it into the HTML like this:
 
 ```html
-<map latitude='15' longitude="6" zoom="4"></map>
+<map latitude="15" longitude="6" zoom="4"></map>
 ```
-
-
-
-
 
 Angular will do the rest.
 
@@ -94,7 +82,6 @@ Drop any data into $scope from any source, then write a template that assumes yo
 
 Of course, there is no magic in computer science, just extreme cleverness. Angular can use plain old JSON objects for data storage because of the digest cycle. More on this later.
 
-
 ## What is this book?
 
 This book is your guide to Angular. It's designed to complement my Angular course which you are very welcome to come on. Best of luck!
@@ -103,7 +90,7 @@ This book is your guide to Angular. It's designed to complement my Angular cours
 
 You probably have some knowledge of JavaScript, perhaps a lot of knowledge! You have probably used jQuery for DOM manipulation. You might be starting to feel a little constrained by what JQuery can do.
 
-You might have played with one of the other MV* frameworks like Backbone, but you've heard that Angular is something special. It is, you're going to like it.
+You might have played with one of the other MV\* frameworks like Backbone, but you've heard that Angular is something special. It is, you're going to like it.
 
 ## About the author
 
@@ -111,9 +98,7 @@ Hi, I'm Nicholas Johnson. I'm a software developer and trainer working mainly wi
 
 **And now onwards to Angular!**
 
-
 #why_it_rocks
-
 
 # Why Angular Rocks, and why you should care
 
@@ -141,17 +126,15 @@ Pull in any JSON feed from anywhere on the Internet. Angular will automatically 
 
 Angular watches your data for you. Whenever your data changes, Angular figures out what has changed, executes any listeners, and recompiles the changed parts of the DOM. Angular does this automatically, so you don't need to write any wiring code.
 
-*Angular always automatically ensures that your view is consistent with your models. This is a massive deal.*
+_Angular always automatically ensures that your view is consistent with your models. This is a massive deal._
 
 #jquery_vs_angular
 
-
-
 # Angular vs. JQuery
 
-*An overview of the philosopical and structural differences between jQuery and Angular.*
+_An overview of the philosopical and structural differences between jQuery and Angular._
 
-Angular and JQuery adopt radically different ideologies. If you're coming from jQuery you may find some of the differences surprising. Angular will probably make you quite angry.  Push through this, it'll be worth your time.
+Angular and JQuery adopt radically different ideologies. If you're coming from jQuery you may find some of the differences surprising. Angular will probably make you quite angry. Push through this, it'll be worth your time.
 
 ## Semantic HTML vs. Angular Templates
 
@@ -191,7 +174,7 @@ In Angular, we define directives. A directive is a function which returns a JSON
 
 A component is a directive which contains it's own controller and template. It works like a completely self contained new type of DOM node. Just use to it in your HTML like any other DOM node and presto.
 
-Angualr is *"What a web browser would have been had it been designed for web applications"* - Misko
+Angualr is _"What a web browser would have been had it been designed for web applications"_ - Misko
 
 ## Closure vs. $scope
 
@@ -211,24 +194,19 @@ In Angular you can do this too, but you are encouraged to make use of data bindi
 
 <http://stackoverflow.com/questions/14994391/how-do-i-think-in-angularjs-if-i-have-a-jquery-background/23606512#23606512>
 
-
 #mvc
 
-
-
 # How does Angular do MVC?
-
 
 %aside.questions_answered
 
 ## Questions Answered:
 
-* What is MVC and how does it apply to Angular.
-* What are models in Angular (hint: they are just JSON objects).
-* What is a view in Angular (hint: They are generally just plain old HTML5 flatfiles).
-* What is a controller in Angular (hint: It's just a newable function)
-* What is Angular $scope? (hint: $scope is an object provided by Angular in which we store models.)
-
+- What is MVC and how does it apply to Angular.
+- What are models in Angular (hint: they are just JSON objects).
+- What is a view in Angular (hint: They are generally just plain old HTML5 flatfiles).
+- What is a controller in Angular (hint: It's just a newable function)
+- What is Angular $scope? (hint: $scope is an object provided by Angular in which we store models.)
 
 ## A reliable old pattern
 
@@ -264,7 +242,6 @@ $Scope objects inherit from each other, so you might store an object in the glob
 
 Angular's interpretation of MVC is ridiculously lightweight compared to say Backbone. In fact, when I first saw it I couldn't believe it could work like that, I thought there must be some mistake. My question was, where is the code that makes it all work? It's all in there, in the Angular framework.
 
-
 ## Questions
 
 Try to answer these questions for yourself before moving on:
@@ -275,7 +252,6 @@ Try to answer these questions for yourself before moving on:
 4. What is an Angular controller?
 5. What do we store in the $scope object?
 
-
 ## Answers
 
 1. MVC is Model View Controller
@@ -284,9 +260,7 @@ Try to answer these questions for yourself before moving on:
 4. A controller is just a function.
 5. The $scope object is for storing models. We can also put functions in there which become available to our templates.
 
-
 #templates
-
 
 # Templates (Views)
 
@@ -316,7 +290,6 @@ Of course there are several downsides to this approach
 
 An Angular template looks like this:
 
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -325,15 +298,10 @@ An Angular template looks like this:
     <script src="angular.js"></script>
   </head>
   <body ng-app>
-
     {{"Hello" + "World"}}
-
   </body>
 </html>
 ```
-
-
-
 
 There are three things to notice here:
 
@@ -369,15 +337,11 @@ Anything we place between the curly braces will be evaluated.
 2. Content between `{ { } }` is evaluated and added to the DOM.
 3. The content between `{ { } }` looks a lot like JavaScript, but is in fact Angular templating language.
 
-
-
 ## Exercise - Hello World
 
 Enter the code above to create a hello world application. Run it in your browser.
 
-
 #data_binding
-
 
 # Data Binding
 
@@ -397,10 +361,6 @@ Here's an example of data binding in action:
   </body>
 </html>
 ```
-
-
-
-
 
 This example will bind the input element to a model called "hello". When you type into the input element, the template updates itself.
 
@@ -423,12 +383,11 @@ Some directives create new `$scopes`, so you can scope models to particular part
 When Angular compiles the DOM it looks for angular template code between braces like this:
 
 ```js
-{{ }}
+{
+  {
+  }
+}
 ```
-
-
-
-
 
 It then pushes a watcher in the $$watchers array in the current $scope object which can check to see if the value is dirty and execute a function if it is.
 
@@ -442,23 +401,17 @@ Whenever we interact with any of the built in Angular components, a `$digest` is
 
 This is how Angular ensures that your view is always consistent with your data. Angular effectively writes all your wiring code for you.
 
-
-
 ## Exercise - Binding
 
 1. Enter the above code and get it running in your browser.
 2. Add a second input element, also bound to the "hello" model. Notice how these two are now synchronised.
 3. Add a third input element. Bind it to a world variable. Output the world variable using the {{}} syntax.
 
-
 #built_in_directives
-
 
 # Built in Directives
 
-
 **TL;DR A directive is an object that extends the Angular compiler. The Angular compiler extends HTML. Therefore, a directive is an object that extends HTML by adding new custom attributes and elements.**
-
 
 ## What are directives?
 
@@ -466,8 +419,8 @@ Directives are the hooks that connect your template to your code. They are compi
 
 When Angular compiles your DOM, it looks for directives and uses them to guide the compilation process. A directive might loop over a collection, output a value, bind a form input to a model, AJAX in some content, validate a form, manage an image carousel, any DOM related task you can conceive of.
 
-* A directive might work a bit like a helper function, adding some behaviour to a DOM node.
-* Alternately a directive might completely take over the behaviour of a DOM node, replacing it with its own template and behaviour.
+- A directive might work a bit like a helper function, adding some behaviour to a DOM node.
+- Alternately a directive might completely take over the behaviour of a DOM node, replacing it with its own template and behaviour.
 
 Directives are hooked into the template using HTML attributes, element names or sometimes class names. Angular comes with a bunch of built-in directives which allow you to build most things.
 
@@ -478,13 +431,8 @@ In fact, the original version of Angular did not have user definable directives 
 We've just seen the ng-model directive in action. It binds a form element to a model on the $scope.
 
 ```html
-<input ng-model="toast" />
-{{toast}}
+<input ng-model="toast" /> {{toast}}
 ```
-
-
-
-
 
 `ng-model` is a directive. It adds input listeners to the input and updates a `toast` attribute on the current `$scope` whenever the user types in the field.
 
@@ -498,12 +446,7 @@ If you prefer your code valid, you can express Angular directives as HTML5 data 
 <input data-ng-model="toast" />
 ```
 
-
-
-
-
 Your template will now pass HTML5 validation.
-
 
 %aside.box
 
@@ -511,11 +454,8 @@ Your template will now pass HTML5 validation.
 
 HTML is case insensitive, so all Angular directive attributes are lower case. JavaScript uses camel case for function names by convention, so in the Angular codebase, the directives are referred to using camel case. You will find both forms talked about.
 
-* In HTML directives-are-hyphenated
-* In JavaScript directivesAreCamelCased
-
-
-
+- In HTML directives-are-hyphenated
+- In JavaScript directivesAreCamelCased
 
 #di
 
@@ -526,28 +466,21 @@ Angular talks a lot about DI, which is a scary term for a trivial concept. In fa
 Instead of doing this:
 
 ```js
-const myFunction = function() {
-  const a = 12;
-  alert(a);
+const myFunction = function () {
+  const a = 12
+  alert(a)
 }
-myFunction();
+myFunction()
 ```
-
-
-
-
 
 We would do this:
 
 ```js
-const myFunction = function(a) {
-  alert(a);
+const myFunction = function (a) {
+  alert(a)
 }
-myFunction(12);
+myFunction(12)
 ```
-
-
-
 
 Code written this way is more modular, less prone to spaghettification, and is easier to test as you can pass in mock objects. This is DI. It's pretty simple. Angular however takes DI to a whole 'nother level...
 
@@ -567,43 +500,33 @@ Your function headers are actually inspected, and dependencies provided to them 
     <title></title>
     <script src="../angular/angular.js"></script>
     <script>
-      const MyController = function( $scope ) {
-        $scope.test = "hello";
+      const MyController = function ($scope) {
+        $scope.test = 'hello'
       }
     </script>
   </head>
-  <body ng-controller='MyController'>
+  <body ng-controller="MyController">
     {{test}}
   </body>
 </html>
 ```
 
-
-
-
 As you can see, we're passing the `$scope` variable in to the controller. When we run the script, this variable becomes available to us. The template also has access to $scope and will pull variables from it.
 
 Let's say we want to do something else though, what if we want to write to the log. We can just adjust the code and tell MyController to receive a log, like so.
 
-
 ```js
-const MyController = function( $log ) {
-  $log.log("hey there!");
+const MyController = function ($log) {
+  $log.log('hey there!')
 }
 ```
-
-
 
 %p.pullout
 HEY WHAT!!
 
-
-
 We changed the variable name in the header, and Angular passed in an object capable of doing logging. This looks like named parameters, but JavaScript doesn't support named parameters. Something fishy is going on here...
 
 %p.highlight Angular knows what to pass in by looking at the name of the variable. But how!
-
-
 
 ## The magical curtain of toString
 
@@ -614,10 +537,6 @@ Angular is inspecting the parameters of our function, by calling
 MyFunction.toString()
 ```
 
-
-
-
-
 All JavaScript objects have a toString method which returns a string version of the object. In the case of a function object, toString returns a string containing the function code. Angular inspects this, works out the variable names, and calls a factory method (in this case called LogProvider) to get the dependency.
 
 ## Passing in multiple dependencies
@@ -625,28 +544,20 @@ All JavaScript objects have a toString method which returns a string version of 
 So what if we want to pass in more than one dependency? Well we can do that as well:
 
 ```js
-const MyController = function( $scope, $log ) {
-  $scope.test = "hello";
-  $log.log("hey there!");
+const MyController = function ($scope, $log) {
+  $scope.test = 'hello'
+  $log.log('hey there!')
 }
 ```
-
-
-
 
 As you might expect, we can reverse the parameters and still get the same effect:
 
 ```js
-const MyController = function( $log, $scope ) {
-  $scope.test = "hello";
-  $log.log("hey there!");
+const MyController = function ($log, $scope) {
+  $scope.test = 'hello'
+  $log.log('hey there!')
 }
 ```
-
-
-
-
-
 
 ## Further Reading
 
