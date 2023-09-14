@@ -1,0 +1,68 @@
+---
+import type { MarkdownInstance } from "astro";
+import { markdown } from "@astropub/md";
+
+interface Props {
+  posts: MarkdownInstance<Record<string, any>>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="postList">
+  {
+    posts.map((post) => (
+      <li class="post">
+        <a href={post.url}>
+          <h2>
+            <a href={post.url}>{post.frontmatter.title}</a>
+          </h2>
+          {markdown(post.frontmatter.preview || "")}
+          <p class="meta">
+            Last updated:{" "}
+            {new Date(post.frontmatter.date).toLocaleDateString(undefined, {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}{" "}
+            -{Math.round(post.rawContent().split(" ").length / 250)} minute read
+            - {post.rawContent().split(" ").length} words -
+            <a href={post.url}>Read more</a>
+          </p>
+        </a>
+      </li>
+    ))
+  }
+
+  <style lang="scss">
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    p.meta {
+      font-size: 0.8rem;
+
+      letter-spacing: 0.01rem;
+      text-align: right;
+      border-top: 1px dashed #ccc;
+      color: #999;
+      a {
+        color: #999;
+      }
+    }
+
+    li.post {
+      margin: 4rem 0;
+    }
+
+    h2 a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  </style>
+</ul>

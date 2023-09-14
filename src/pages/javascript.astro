@@ -1,0 +1,87 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+import PostList from "../components/PostList.astro";
+import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
+import CourseList from "../components/CourseList.astro";
+
+const allPosts = await Astro.glob("./posts/*.md");
+
+const posts = allPosts.sort((a, b) => {
+  return a.frontmatter.date > b.frontmatter.date ? -1 : 1;
+});
+---
+
+<GlobalLayout title="Nicholas Johnson.com">
+  <div class="home">
+    <div class="main">
+      <div class="intro">
+        <h1>JavaScript is Lovely</h1>
+        <p>
+          JavaScript is the democratic language of the internet. It supports all
+          coding styles and all skill levels. There's nothing else like it, it's
+          a magnificent little language with a pure soul and a few wonky bits
+          around the edge. It has grown with us over the years, imposing no
+          restrictions and letting us discover new ways of working almost every
+          day.
+        </p>
+
+        <p>
+          I was lucky enough to pick up JavaScript in 1997, when it was first
+          coming out in Netscape. Back then it was a weird little beast that no
+          one quite knew what to do with. I've been using ever since, and I like
+          to think we've grown together.
+        </p>
+      </div>
+
+      <h1>Writings</h1>
+      <PostList posts={posts} />
+    </div>
+
+    <div class="sidebar">
+      <h2>JavaScript Courses</h2>
+      <div class="courseLinks">
+        <CourseList courses={[learnToCodeWithJavaScript]} />
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .home {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+
+    .main {
+      max-width: 50rem;
+      flex: 1;
+    }
+
+    .intro {
+      margin: 8rem 0;
+
+      h1 {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar {
+      max-width: 20rem;
+      margin-top: 4rem;
+
+      h2 {
+        padding-left: 2rem;
+      }
+
+      .courseLinks {
+        border-left: 1px dashed #b8b8b8;
+        padding-left: 2rem;
+      }
+    }
+  </style>
+</GlobalLayout>

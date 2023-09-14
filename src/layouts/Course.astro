@@ -1,0 +1,97 @@
+---
+import CourseSidebar from "../components/CourseSidebar.astro";
+import GlobalLayout from "./GlobalLayout.astro";
+import { courses } from "../data/courses";
+import CourseNextPrevLinks from "../components/CourseNextPrevLinks.astro";
+
+interface Props {
+  title: string;
+  frontmatter: {
+    title: string;
+    seoTitle?: string;
+    description: string;
+    date: string;
+    tags: string[];
+    course: keyof typeof courses;
+    file: string;
+  };
+}
+
+const { title, frontmatter } = Astro.props;
+
+const course = courses[frontmatter.course];
+---
+
+<GlobalLayout title={title || frontmatter.seoTitle || frontmatter.title}>
+  <div class="content ArticlePage">
+    <article id="content">
+      <slot />
+
+      <nav class="nextPrev">
+        <CourseNextPrevLinks course={course} path={frontmatter.file} />
+      </nav>
+    </article>
+
+    <nav class="sidebar">
+      <div class="sidebarHost">
+        <CourseSidebar course={course} />
+      </div>
+    </nav>
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  article {
+    max-width: 50rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    flex: 1;
+
+    @media screen and (max-width: 1000px) {
+      width: auto;
+      margin: 4rem 0;
+    }
+  }
+  nav.sidebar {
+    min-width: 20rem;
+    margin: 12rem auto 4rem auto;
+
+    .sidebarHost {
+      position: sticky;
+      top: 0rem;
+      padding: 2rem 0;
+      max-height: 100vh;
+      overflow: auto;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: auto;
+      margin: 4rem 0;
+    }
+  }
+
+  nav.nextPrev {
+    margin: 4rem auto;
+    @media screen and (max-width: 1000px) {
+      width: auto;
+      margin: 4rem 0;
+    }
+  }
+</style>
+
+<style is:global lang="scss">
+  .ArticlePage {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+</style>

@@ -1,0 +1,64 @@
+# Learn to code with JavaScript
+
+/javascript/intro-to-javascript/exercises/intro/ /learn-to-code-with-javascript/intro
+/javascript/intro-to-javascript/exercises/strings/ /learn-to-code-with-javascript/strings
+/javascript/intro-to-javascript/exercises/arrays/ /learn-to-code-with-javascript/arrays
+/javascript/intro-to-javascript/exercises/booleans/ /learn-to-code-with-javascript/booleans
+/javascript/intro-to-javascript/exercises/flow-control/ /learn-to-code-with-javascript/flow-control
+/javascript/intro-to-javascript/exercises/functions/ /learn-to-code-with-javascript/functions
+/javascript/intro-to-javascript/exercises/integration/ /learn-to-code-with-javascript/integration
+/javascript/intro-to-javascript/exercises/loops/ /learn-to-code-with-javascript/loops
+/javascript/intro-to-javascript/exercises/maths/ /learn-to-code-with-javascript/maths
+/javascript/intro-to-javascript/exercises/objects/ /learn-to-code-with-javascript/objects
+/javascript/intro-to-javascript/exercises/variables/ /learn-to-code-with-javascript/variables
+/javascript/intro-to-javascript/exercises/json/ /learn-to-code-with-javascript/mario
+
+# Ruby Course
+
+/ruby/ruby-course/exercises/arrays /ruby-course/arrays
+/ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
+/ruby/ruby-course/exercises/book/ /ru-coursees/book
+/ruby/ruby-course/exercises/classes-and-objects/ /ruby/ruby-course/-courseobjects
+/ruby/ruby-course/exercises/define-method/ /ruby/ruby-c-course-method
+/ruby/ruby-course/exercises/exceptions/ /ruby/rub-courseeptions
+/ruby/ruby-course/exercises/extend-and-include/ /ruby/ruby-course-courseinclude
+/ruby/ruby-course/exercises/flow-control/ /ruby/ruby--coursecontrol
+/ruby/ruby-course/exercises/functions/ /ruby/ru-coursenctions
+/ruby/ruby-course/exercises/hashes-and-symbols/ /ruby/ruby-course-coursesymbols
+/ruby/ruby-course/exercises/index/ /rub-courses/index
+/ruby/ruby-course/exercises/inheritance/ /ruby/ruby-courseritance
+/ruby/ruby-course/exercises/instance-eval/ /ruby/ruby-c-coursece-eval
+/ruby/ruby-course/exercises/intro/ /rub-courses/intro
+/ruby/ruby-course/exercises/introspection/ /ruby/ruby-c-coursepection
+/ruby/ruby-course/exercises/lifecycle-callbacks/ /ruby/ruby-course/-coursellbacks
+/ruby/ruby-course/exercises/method-missing/ /ruby/ruby-co-coursemissing
+/ruby/ruby-course/exercises/modules/ /ruby/-coursemodules
+/ruby/ruby-course/exercises/monkey-patching/ /ruby/ruby-cou-courseatching
+/ruby/ruby-course/exercises/numbers/ /ruby/-coursenumbers
+/ruby/ruby-course/exercises/operator-overloading/ /ruby/ruby-course/e-courseloading
+/ruby/ruby-course/exercises/receiving-a-block/ /ruby/ruby-cours-coursea-block
+/ruby/ruby-course/exercises/rspec/ /rub-courses/rspec
+/ruby/ruby-course/exercises/ruby-send/ /ruby/ru-courseby-send
+/ruby/ruby-course/exercises/static-methods/ /ruby/ruby-co-coursemethods
+/ruby/ruby-course/exercises/strings/ /ruby/-coursestrings
+/ruby/ruby-course/exercises/variables-and-constants/ /ruby/ruby-course/exer-coursenstants
+/ruby/ruby-course/exercises/writing-a-gem/ /ruby/ruby-c-courseg-a-gem
+
+# Posts
+
+/blog/ /posts
+/blog/angular1-vs-angular2 /posts/angular1-vs-angular2
+/blog/angularjs-step-by-logical-step /posts/angularjs-step-by-logical-step
+/blog/annotations-vs-decorators /posts/annotations-vs-decorators
+/blog/astro-vs-next-vs-eleventy /posts/astro-vs-next-vs-eleventy
+/blog/building-angular-with-browserify /posts/building-angular-with-browserify
+/blog/extracting-images-into-a-concern /posts/extracting-images-into-a-concern
+/blog/how-angular2-di-works-with-typescript /posts/how-angular2-di-works-with-typescript
+/blog/how-to-do-everything-in-angular2-using-es6 /posts/how-to-do-everything-in-angular2-using-es6
+/blog/how-to-do-transclusion-in-angular-2 /posts/how-to-do-transclusion-in-angular-2
+/blog/javascript-getters-and-setters /posts/javascript-getters-and-setters
+/blog/ng-app /posts/ng-app
+/blog/no-framework-mvc /posts/no-framework-mvc
+/blog/react-for-angular-developers /posts/react-for-angular-developers
+/blog/what-is-babel /posts/what-is-babel
+/blog/why-you-should-sometimes-use-mongo /posts/why-you-should-sometimes-use-mongo

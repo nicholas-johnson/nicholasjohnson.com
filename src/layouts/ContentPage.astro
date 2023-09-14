@@ -1,0 +1,33 @@
+---
+import GlobalLayout from "./GlobalLayout.astro";
+
+interface Props {
+  title: string;
+  frontmatter: {
+    title: string;
+    seoTitle?: string;
+    description: string;
+    date: string;
+    tags: string[];
+    file: string;
+  };
+}
+
+const { title, frontmatter } = Astro.props;
+---
+
+<GlobalLayout title={title || frontmatter.seoTitle || frontmatter.title}>
+  <div class="content">
+    <slot />
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    max-width: 200rem;
+    margin: 1rem;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+</style>

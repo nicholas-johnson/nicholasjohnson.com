@@ -1,0 +1,138 @@
+---
+import CourseSidebar from "../components/CourseSidebar.astro";
+import GlobalLayout from "./GlobalLayout.astro";
+import { courses } from "../data/courses";
+import CourseNextPrevLinks from "../components/CourseNextPrevLinks.astro";
+import {
+  AstroGlobNoMatch,
+  InvalidContentEntrySlugError,
+} from "astro/dist/core/errors/errors-data";
+import type { ICourse } from "../types/Course";
+
+interface Props {
+  title: string;
+  frontmatter: {
+    title: string;
+    subTitle: string;
+    subSubTitle?: string;
+    seoTitle?: string;
+    description: string;
+    tags: string[];
+    course: keyof typeof courses;
+  };
+}
+
+const { title, frontmatter } = Astro.props;
+
+const course: ICourse = courses[frontmatter.course];
+
+// TODO: There is no way to pass a InvalidContentEntrySlugError, so we get all content and FileSystemEntry. Not fast but works.
+const allContent = await Astro.glob("../pages/**/*.md");
+---
+
+<GlobalLayout title={title || frontmatter.seoTitle || frontmatter.title}>
+  <div class="content ArticlePage">
+    <article id="content">
+      <section class="workbook-intro">
+        <h1>{frontmatter.title}</h1>
+        <h2>{frontmatter.subTitle}</h2>
+        <p><strong>By Nicholas Johnson</strong></p>
+        <p><strong>Version {course.version}</strong></p>
+        <img src={course.cover} alt="Workbook Cover Image" />
+        <slot />
+      </section>
+
+      {
+        course.exercises.map((exercise) => {
+          const slug = exercise.slug;
+          const courseSlug = course.slug;
+
+          const content = allContent.find(
+            (c) => c.url === `/${courseSlug}/${slug}`
+          );
+
+          return (
+            <section id={slug}>
+              {content && <Fragment set:html={content.compiledContent()} />}
+            </section>
+          );
+        })
+      }
+    </article>
+
+    <nav class="sidebar">
+      <div>
+        <CourseSidebar course={course} internalAnchors />
+      </div>
+    </nav>
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  article {
+    max-width: 50rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    flex: 1;
+
+    @media screen and (max-width: 1000px) {
+      width: auto;
+      margin: 4rem 0;
+    }
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  nav.sidebar {
+    min-width: 20rem;
+    margin: 10rem auto 2rem auto;
+    div {
+      position: sticky;
+      top: 0rem;
+      max-height: 100vh;
+      overflow: auto;
+      padding: 2rem 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: auto;
+      margin: 4rem 0;
+    }
+  }
+</style>
+
+<style is:global lang="scss">
+  .ArticlePage {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .workbook-intro {
+      text-align: center;
+      h1 {
+        margin-bottom: 1rem;
+      }
+      h2 {
+        margin-bottom: 3rem;
+      }
+      p {
+        line-height: 1rem;
+      }
+      img {
+        margin: 4rem auto;
+      }
+    }
+  }
+</style>

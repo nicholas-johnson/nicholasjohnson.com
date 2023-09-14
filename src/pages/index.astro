@@ -1,0 +1,121 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+import PostList from "../components/PostList.astro";
+import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
+import CourseList from "../components/CourseList.astro";
+import { webDevCourse } from "../data/webDevCourse";
+
+const allPosts = await Astro.glob("./posts/*.md");
+
+const posts = allPosts.sort((a, b) => {
+  return a.frontmatter.date > b.frontmatter.date ? -1 : 1;
+});
+---
+
+<GlobalLayout title="Nicholas Johnson.com">
+  <div class="home">
+    <div class="main">
+      <div class="intro">
+        <div class="imageHost">
+          <img src="/images/me.jpg" alt="Nick Johnson" />
+        </div>
+
+        <div class="textHost">
+          <h1>Hi, I'm Nick Johnson!</h1>
+          <p>
+            I've worked in startups and massive corporations. I've run teams and
+            departments. I've lead training courses all over the world. For the
+            last five years I've mostly worked in fintech, building products for
+            major banks and challengers.
+          </p>
+
+          <p>
+            If you have an interesting project, possibly AI related, please feel
+            free to get in touch at <a href="mailto:hello@nicholasjohnson.com"
+              >hello@nicholasjohnson.com</a
+            >. I'll be glad to have a chat.
+          </p>
+        </div>
+      </div>
+      <h1>Writings</h1>
+      <PostList posts={posts} />
+    </div>
+
+    <div class="sidebar">
+      <h2>Free Courses</h2>
+      <div class="courseLinks">
+        <CourseList courses={[learnToCodeWithJavaScript, webDevCourse]} />
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .home {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+
+    .main {
+      max-width: 50rem;
+      flex: 1;
+    }
+
+    .intro {
+      display: flex;
+      gap: 2rem;
+      border-left: 5px solid black;
+      padding-left: 2rem;
+      margin: 8rem 0;
+
+      .imageHost {
+        flex: 1;
+        max-width: 20rem;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .textHost {
+        flex: 1;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      @media (max-width: 1100px) {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      @media (max-width: 600px) {
+        flex-direction: column-reverse;
+
+        .imageHost {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .sidebar {
+      max-width: 20rem;
+      margin-top: 4rem;
+
+      h2 {
+        padding-left: 2rem;
+      }
+
+      .courseLinks {
+        border-left: 1px dashed #b8b8b8;
+        padding-left: 2rem;
+      }
+    }
+  </style>
+</GlobalLayout>

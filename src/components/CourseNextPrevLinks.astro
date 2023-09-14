@@ -1,0 +1,72 @@
+---
+import type { ICourse } from "../types/Course";
+
+interface Props {
+  path?: string;
+  course: ICourse;
+}
+
+const getSlug = (path: string) => {
+  const parts = path.split("/");
+  return parts[parts.length - 1].replace(".md", "");
+};
+
+const getCurrentIndex = (slug: string, course: ICourse) => {
+  return course.exercises.findIndex((exercise) => exercise.slug === slug);
+};
+
+const path = Astro.props.path || window.location.pathname;
+const course = Astro.props.course;
+const slug = getSlug(path);
+
+if (!course) {
+  throw new Error(`No course found ${slug}`);
+}
+
+const currentIndex = getCurrentIndex(slug, course);
+const prevExercise = course.exercises[currentIndex - 1];
+const nextExercise = course.exercises[currentIndex + 1];
+
+console.log({ currentIndex, path, slug, prevExercise, nextExercise });
+---
+
+<ul>
+  {
+    prevExercise && (
+      <li>
+        <a href={`/${course.slug}/${prevExercise.slug}`} class="prev">
+          <span class="arrow">&lt;</span> Back: {prevExercise.title}
+        </a>
+      </li>
+    )
+  }
+
+  {
+    nextExercise && (
+      <li>
+        <a href={`/${course.slug}/${nextExercise.slug}`} class="prev">
+          Next: {nextExercise.title} <span class="arrow">&gt;</span>
+        </a>
+      </li>
+    )
+  }
+</ul>
+
+<style lang="scss">
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: black;
+  }
+</style>
