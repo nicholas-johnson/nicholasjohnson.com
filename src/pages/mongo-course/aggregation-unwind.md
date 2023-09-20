@@ -1,12 +1,11 @@
 ---
-title: "Aggregate unwind"
-description: "Unwinding arrays"
-section: "mongo"
-exercise: "aggregation-unwind"
+title: Aggregate unwind
+description: Unwinding arrays
+section: mongo
+exercise: aggregation-unwind
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Unwind arrays and manipulate the contents
 

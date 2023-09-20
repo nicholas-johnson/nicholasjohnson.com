@@ -1,14 +1,11 @@
-;;;
-"title": "The Mongo Aggregation Framework plus $match",
-"description": "In which we introduce the aggregation framework, and learn how to chain operations to generate more complex queries",
-"section": "mongo",
-"exercise": "aggregation",
-"layout": "exercise"
-;;;
-
-%article
-
-
+---
+title: The Mongo Aggregation Framework plus $match,
+description: In which we introduce the aggregation framework, and learn how to chain operations to generate more complex queries,
+section: mongo,
+exercise: aggregation,
+layout: ../../layouts/Course.astro
+course: mongoCourse
+---
 
 # The Mongo Aggregation Framework
 
@@ -18,29 +15,17 @@ For example, you might take a result set, filter it, group by a particular field
 
 We can compose a pipeline as a set of JSON objects, then run the pipeline on a collection.
 
-
 ## Empty pipeline
 
 If you provide an empty pipeline, Mongo will return all the results in the collection:
 
 ```js
-  db.entrycodes.aggregate()
+db.entrycodes.aggregate();
 ```
-
-
-
-
-
-
-
 
 ## Exercise - Create an Empty pipeline
 
 Try out the aggregate pipeline now. Call aggregate on your people collection. You'll see the result is the same as if you called find.
-
-
-
-
 
 # Filtering the pipeline with $match
 
@@ -49,51 +34,35 @@ We can use the aggregation pipeline to filter a result set. This is more or less
 Say we want to list only people who have cats (where cat is a sub-document), we would probably do something like this this:
 
 ```js
-  db.people.find({
-    cat:{
-      $exists: true
-    }
-  })
+db.people.find({
+  cat: {
+    $exists: true,
+  },
+});
 ```
-
-
-
-
 
 We can get the same result in the aggregation framework using $match, like so:
 
 ```js
-  db.people.aggregate({
-    '$match' : {
-      cat:{
-        $exists: true
-      }
-    }
-  })
+db.people.aggregate({
+  $match: {
+    cat: {
+      $exists: true,
+    },
+  },
+});
 ```
-
-
-
-
 
 So why use aggregation over find? In this example they are the same, but the power comes when we start to chain additional functions as we shall soon see.
 
-
-
 ## Exercise - $match
 
-* Use the people dataset. Match all the people who are 10 years old who have ten year old cats.
-* Match all the people who are over 80 years old, and who's cats are over 15 years old.
-
-
-
+- Use the people dataset. Match all the people who are 10 years old who have ten year old cats.
+- Match all the people who are over 80 years old, and who's cats are over 15 years old.
 
 ## When to use match
 
 Matching is quick but not smart. It's designed to limit the result set, so that the rest of the pipeline can run more quickly. When used with project we can match against fields that don't exist in our result set. This is a powerful and useful feature.
-
-
-
 
 ## Larger Exercise - Zips
 
@@ -109,6 +78,5 @@ Import it into Mongo using mongoimport, something like this:
 
 =code(code, :bash)
 
-
-* Find all the zip codes in Massachusetts (state:'MA").
-* Find all the zip codes with a population less than 1000.
+- Find all the zip codes in Massachusetts (state:'MA").
+- Find all the zip codes with a population less than 1000.

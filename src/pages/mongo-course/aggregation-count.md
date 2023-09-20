@@ -1,12 +1,11 @@
 ---
-title: "Counting with Group"
-description: "Using Group and count to count distinct"
-section: "mongo"
-exercise: "aggregation-count"
+title: Counting with Group
+description: Using Group and count to count distinct
+section: mongo
+exercise: aggregation-count
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Counting with Group
 

@@ -1,12 +1,11 @@
 ---
-title: "Count, Limit, Skip & Sort"
-description: "We can chain additional functions onto our find queries to modify the results"
-section: "mongo"
-exercise: "count-and-limit"
+title: Count, Limit, Skip & Sort
+description: We can chain additional functions onto our find queries to modify the results
+section: mongo
+exercise: count-and-limit
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Count, Limit, Skip & Sort
 

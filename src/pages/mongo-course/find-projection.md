@@ -1,12 +1,11 @@
 ---
-title: "Modifying the output of find with projection"
-description: "Mongo lets us build an API. Here we learn how to format our output."
-section: "mongo"
-exercise: "find-projection"
+title: Modifying the output of find with projection
+description: Mongo lets us build an API. Here we learn how to format our output.
+section: mongo
+exercise: find-projection
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Projection
 

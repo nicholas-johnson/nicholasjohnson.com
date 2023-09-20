@@ -1,8 +1,3 @@
-%article
-
-
-
-
 # Guess the output
 
 For each of the following, try to work out what the output will be. Run the code to check your answer.
@@ -10,106 +5,81 @@ For each of the following, try to work out what the output will be. Run the code
 ## 1.
 
 ```js
-  var a = 12;
-  (function() {
-    alert(a);
-  })();
+var a = 12;
+(function () {
+  alert(a);
+})();
 ```
-
-
-
-
 
 ## 2.
 
 ```js
-  var a = 5;
-  (function() {
-    var a = 12;
-    alert(a);
-  })();
+var a = 5;
+(function () {
+  var a = 12;
+  alert(a);
+})();
 ```
-
-
-
-
 
 ## 3.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    var a = 12;
-    return (function() {
-      alert(a);
-    });
-  })();
+var a = 10;
+var x = (function () {
+  var a = 12;
+  return function () {
+    alert(a);
+  };
+})();
 
-  x();
+x();
 ```
-
-
-
-
 
 ## 4.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    var y = function() {
-      var a = 12;
-    };
-    return function() {
-      alert(a);
-    }
-  })();
+var a = 10;
+var x = (function () {
+  var y = function () {
+    var a = 12;
+  };
+  return function () {
+    alert(a);
+  };
+})();
 
-  x();
+x();
 ```
-
-
-
-
-
 
 ## 5.
 
 ```js
-  var a = 10;
-  var x = (function() {
-    (function() {
-      a = 12; // <<< look carefully at this line.
-    })();
-    return (function() {
-      alert(a);
-    });
+var a = 10;
+var x = (function () {
+  (function () {
+    a = 12; // <<< look carefully at this line.
   })();
+  return function () {
+    alert(a);
+  };
+})();
 
-  x();
+x();
 ```
-
-
-
-
 
 ## 6.
 
 ```js
-  var a = 10;
-  (function() {
-    var a = 15;
-    window.x = function() {
-      alert(a);
-    }
-  })();
+var a = 10;
+(function () {
+  var a = 15;
+  window.x = function () {
+    alert(a);
+  };
+})();
 
-  x();
+x();
 ```
-
-
-
-
 
 ## Further Reading
 

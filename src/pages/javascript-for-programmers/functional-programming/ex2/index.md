@@ -1,8 +1,3 @@
-%article
-
-
-
-
 # A Better Sandwich Calculator
 
 Mrs Potts the school dinner lady is tired of all the global sandwich variables getting under her feet and tripping her up all the time. She needs help cleaning her kitchen. Will you help her?
@@ -14,14 +9,8 @@ She would like it very much if you would build a sandwich machine for her, but w
 like this:
 
 ```js
-  (function() {
-
-  })();
+(function () {})();
 ```
-
-
-
-
 
 This will be our closure and will hold the sandwich machine, keeping all it's parts nicely together.
 

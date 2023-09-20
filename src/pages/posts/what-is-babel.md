@@ -12,23 +12,23 @@ It makes available all the syntactical sugar that was added to JavaScript with E
 You can convert prety much any modern JavaScript features into code that will run on any browser, even the really old ones. This is fantastic news if you need to support older browsers, mobile browsers, Safari, IE11, or anything other than edge Chrome."
 ---
 
-Babel is a JavaScript transpiler that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
+Babel is a JavaScript **transpiler** that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
 
-It makes available all the syntactical sugar that was added to JavaScript with ES6 and ES7, including classes, fat arrows, multiline strings, generators, and many more.
+arrows, multiline strings, generators, and many more.
 
 You can convert prety much any modern JavaScript features into code that will run on any browser, even the really old ones. This is fantastic news if you need to support older browsers, mobile browsers, Safari, IE11, or anything other than edge Chrome.
 
-If we want, we can also optionally use it to transpile TypeScript into regular JavaScript that will run in a browser. It's also used for JSX and TSX. If you're writing react, chances are you're already using Babel.
+If we want, we can also optionally use it to transpile **TypeScript** into regular JavaScript that will run in a browser. It's also used for **JSX** and **TSX**. If you're writing React, chances are you're already using Babel.
 
 ## Installation
 
 Babel comes packaged as an node module. Installation, as you might expect, is via npm:
 
-`npm install --save-dev babel-cli`
+`npm install babel-cli`
 
-There are plugins for webpack, Rollup, Gulp, Grunt, VSCode, Sublime, Webstorm, etc. Whatever your development toolchain, Babel can probably slot into it.
+There are plugins for Webpack, Rollup, Gulp, Grunt, VSCode, Sublime, Webstorm, etc. Whatever your development toolchain, Babel can probably slot into it.
 
-%a{href: 'https://babeljs.io/docs/setup/', target: "\_blank"} See here for setup instructions for your toolset of choice.
+<a href='https://babeljs.io/docs/setup/' target:="_blank">See here for setup instructions for your toolset of choice.</a>
 
 ## Classes
 
@@ -36,11 +36,11 @@ Old style ES5 JavaScript is class free. Objects inherit directly from other obje
 
 Any function can be a constructor function, and calling it with the new keyword will yield a new object.
 
-You can read more about this here in the [JavaScript for Smart People course - Object Orientation section](http://nicholasjohnson.com/javascript/javascript-for-programmers/exercises/object-orientation/)
+You can read more about this here in the [JavaScript for Smart People course - Object Orientation section](http://nicholasjohnson.com/javascript-for-programmers/object-orientation/)
 
-This is all very cool and JavaScripty, but it understandably makes C# and Java developers a bit antsy. They are used to classical inheritance, so ES6 introduced the class keyword. This lets us define functions which can only be used as constructors.
+This is all very cool and JavaScripty, but it understandably makes C# and Java developers a bit antsy. They are used to classical inheritance, so ES6 introduced the class keyword. This lets us define functions which can only be used as constructors and handle the prototype chain.
 
-A class, as we all know, is a special cookie cutter object that can only be used to define other objects. This is a special case of prototypical inheritence. We limit ourselves to only creating objects from functions that we have specifically decided should be used as such.
+A class, as we all know, is a special cookie cutter object that can only be used to define other objects. This is a special case of prototypical inheritence. We limit ourselves to only creating objects from functions that we have specifically decided should be used as such, and get a friendly syntax.
 
 ## Classes in Babel
 
@@ -48,28 +48,28 @@ An ES6 class looks like this:
 
 ```js
 class Person {}
-const dave = new Person()
+const dave = new Person();
 ```
 
-If we run it through Babel we simply get a constructor function, plus a little decoration:
+If we run it through Babel with an ES5 target we simply get a constructor function, plus a little decoration:
 
 ```js
-'use strict'
+"use strict";
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function')
+    throw new TypeError("Cannot call a class as a function");
   }
 }
 
 var Person = function Person() {
-  _classCallCheck(this, Person)
-}
+  _classCallCheck(this, Person);
+};
 
-var dave = new Person()
+var dave = new Person();
 ```
 
-We have our Person function, which can be used as a standard prototypical constructor. We also get a little bit of safety checking with the \_classCallCheck function.
+We have our Person function, which can be used as an old-school prototypical constructor. We also get a little bit of safety checking with the \_classCallCheck function.
 
 The \_classCallCheck function is called inside the Person constructor, and will throw an error unless the Person function is being treated as a constructor function.
 
@@ -82,51 +82,51 @@ const template = `
   <div>
     <h1>hello {{name}}</h1>
   </div>
-  `
+  `;
 ```
 
-This compiles to:
+In Babel, this compiles to:
 
 ```js
-var template = '\n  <div>\n<h1>hello {{name}}</h1>\n  </div>\n  '
+var template = "\n  <div>\n<h1>hello {{name}}</h1>\n  </div>\n  ";
 ```
 
 ## Fat Arrows
 
-Fat Arrows give us a nice syntax for defining anonymous functions.
+Fat Arrows give us a nice syntax for defining anonymous functions with a bound value of `this`.
 
 We can write this:
 
 ```js
-;(x, y) => {
-  return x + y
-}
+(x, y) => {
+  return x + y;
+};
 ```
 
 Babel gives us this:
 
 ```js
-;(function (x, y) {
-  return x + y
-})
+(function (x, y) {
+  return x + y;
+});
 ```
 
 Note that this function has not been called. I could save it to a variable, or pass it as a parameter to a callback or promise.
 
-If I want to call the function, I could do this:
+If I want to call the function immediately, I could do this:
 
 ```js
-;((x, y) => {
-  return x + y
-})(1, 2)
+((x, y) => {
+  return x + y;
+})(1, 2);
 ```
 
 which yields this:
 
 ```js
-;(function (x, y) {
-  return x + y
-})(1, 2)
+(function (x, y) {
+  return x + y;
+})(1, 2);
 ```
 
 ## Fat arrows with exactly one parameter
@@ -134,17 +134,17 @@ which yields this:
 When we have exactly one parameter we are allowed to omit the braces preceding the arrow:
 
 ```js
-;(x) => {
-  return x + 1
-}
+(x) => {
+  return x + 1;
+};
 ```
 
 yields:
 
 ```js
-;(function (x) {
-  return x + 1
-})
+(function (x) {
+  return x + 1;
+});
 ```
 
 ## Fat Arrows with exactly one line of code
@@ -152,15 +152,15 @@ yields:
 We can go even further than this. If our function contains exactly one line of code (assuming a line ends with a semi-colon) we can omit the curly braces and return statement altogether:
 
 ```js
-;(x) => x + 1
+(x) => x + 1;
 ```
 
 compiles to:
 
 ```js
-;(function (x) {
-  return x + 1
-})
+(function (x) {
+  return x + 1;
+});
 ```
 
 ## Fat arrows in practice
@@ -168,15 +168,15 @@ compiles to:
 Let's use one of these to output all the elements in an array.
 
 ```js
-;[1, 2, 99].map((num) => console.log(num))
+[1, 2, 99].map((num) => console.log(num));
 ```
 
 gives us:
 
 ```js
-;[1, 2, 99].map(function (num) {
-  return console.log(num)
-})
+[1, 2, 99].map(function (num) {
+  return console.log(num);
+});
 ```
 
 ## Fat Arrows and This (Lexical Scoping)
@@ -185,16 +185,16 @@ Don't skip this bit, it matters.
 
 The this keyword is set in JavaScript to be the object immediately preceding the dot when the function is called. This is logical, but often annoying, as it sometimes requires _this_ to be stored in _that_.
 
-If this sounds crazy to you, it is a little. [More on _this_ here](http://nicholasjohnson.com/javascript/javascript-for-programmers/exercises/meaning-of-this/):
+If this sounds crazy to you, it is a little. [More on _this_ here](http://nicholasjohnson.com/javascript-for-programmers/meaning-of-this/):
 
 Fat arrows get around this by preserving the current value of this. We call this lexical scoping.
 
 ```js
-  const x = {
-y: function() {
-  () => {console.log(this)}();
-}
+const x = {
+  y() {
+    () => {console.log(this)}();
   }
+}
 ```
 
 compiles to this:
@@ -202,13 +202,13 @@ compiles to this:
 ```js
 var x = {
   y: function y() {
-    var _this = this
+    var _this = this;
 
-    ;(function () {
-      console.log(_this)
-    })()
+    (function () {
+      console.log(_this);
+    })();
   },
-}
+};
 ```
 
 We can see that the value of _this_ has been stored in a variable inside the closure.
@@ -220,6 +220,8 @@ ES6 is mainly sugar on top of ES5. The JavaScript under the hood remains the sam
 Some of this sugar is for the benefit of Java/C# folk who initially often find prototypical inheritance confusing.
 
 Some of it, such as fat arrows, gives us a terser, more modern looking syntax, and enhances JavaScript's functional capabilities.
+
+Babel lets us target an earlier version of JavaScript and transpile the latest features into code that will run on them. we can go as far as we want, even down to ES5 if we like. We can write code for Chrome and expect it to run on IE6 if we really want. This is all stuff we used to have to do by hand. Babel does it for us.
 
 ## Further Reading
 

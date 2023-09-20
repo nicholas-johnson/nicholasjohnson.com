@@ -1,12 +1,11 @@
 ---
 layout: ../../layouts/Course.astro
-title: "Grouping by date - producing stats"
-description: "We can use the date functions to group by date and output stats. Pipe through project and generate date for a graph."
-section: "mongo"
-exercise: "aggregation-by-date"
+course: mongoCourse
+title: Grouping by date - producing stats
+description: We can use the date functions to group by date and output stats. Pipe through project and generate date for a graph.
+section: mongo
+exercise: aggregation-by-date
 ---
-
-%article
 
 # Aggregation by date
 

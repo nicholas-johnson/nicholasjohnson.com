@@ -11,6 +11,7 @@ export interface ICourse {
   version: string;
   createdAt: string;
   lastUpdatedAt: string;
+  deprecationNotice?: string;
 }
 
 export interface IExercise {

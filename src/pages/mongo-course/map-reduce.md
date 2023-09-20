@@ -1,12 +1,11 @@
 ---
-title: "Map Reduce"
-description: "Unwinding arrays"
-section: "mongo"
-exercise: "map-reduce"
+title: Map Reduce
+description: Unwinding arrays
+section: mongo
+exercise: map-reduce
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Map Reduce
 

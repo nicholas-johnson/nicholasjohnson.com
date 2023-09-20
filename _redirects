@@ -44,6 +44,31 @@
 /ruby/ruby-course/exercises/variables-and-constants/ /ruby/ruby-course/exer-coursenstants
 /ruby/ruby-course/exercises/writing-a-gem/ /ruby/ruby-c-courseg-a-gem
 
+# Mongo Course
+
+/mongo/course/workbook/ /mongo-course/book/
+/mongo/course/exercises/aggregation-by-date/ /mongo-course/aggregation-by-date
+/mongo/course/exercises/aggregation-count/ /mongo-course/aggregation-count
+/mongo/course/exercises/aggregation-dynamic-project/ /mongo-course/aggregation-dynamic-project
+/mongo/course/exercises/aggregation-group/ /mongo-course/aggregation-group
+/mongo/course/exercises/aggregation-project/ /mongo-course/aggregation-project
+/mongo/course/exercises/aggregation-redact/ /mongo-course/aggregation-redact
+/mongo/course/exercises/aggregation-unwind/ /mongo-course/aggregation-unwind
+/mongo/course/exercises/aggregation/ /mongo-course/aggregation
+/mongo/course/exercises/basic-find/ /mongo-course/basic-find
+/mongo/course/exercises/count-and-limit/ /mongo-course/count-and-limit
+/mongo/course/exercises/crud/ /mongo-course/crud
+/mongo/course/exercises/cursors/ /mongo-course/cursors
+/mongo/course/exercises/express/ /mongo-course/express
+/mongo/course/exercises/find-projection/ /mongo-course/find-projection
+/mongo/course/exercises/find-with-expressions/ /mongo-course/find-with-expressions
+/mongo/course/exercises/intro/ /mongo-course/intro
+/mongo/course/exercises/map-reduce/ /mongo-course/map-reduce
+/mongo/course/exercises/mongo-with-node/ /mongo-course/mongo-with-node
+/mongo/course/exercises/node-intro/ /mongo-course/node-intro
+/mongo/course/exercises/node-server/ /mongo-course/node-server
+/mongo/course/exercises/root-unused/ /mongo-course/root-unused
+
 # Posts
 
 /blog/ /posts

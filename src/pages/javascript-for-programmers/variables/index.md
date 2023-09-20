@@ -1,6 +1,3 @@
-%article
-
-
 # Variables
 
 Variables in JavaScript are global by default. This is because JavaScript is designed to be easy for non-programmers to use, and non-programmers might not understand about variable scope.
@@ -8,23 +5,15 @@ Variables in JavaScript are global by default. This is because JavaScript is des
 As a real programmer though you should always initialize your variables correctly using the var keyword:
 
 ```js
-  var a; // creates the variable in the current scope
-  a = 12; // stores a value in the variable
+var a; // creates the variable in the current scope
+a = 12; // stores a value in the variable
 ```
-
-
-
-
 
 You can create and assign a variable in the same line:
 
 ```js
-  var a = 12;
+var a = 12;
 ```
-
-
-
-
 
 ## Single Global Scope
 
@@ -39,15 +28,11 @@ The var keyword creates a local variable, local to the current function. **Alway
 Variables are fully polymorphic, you can store anything you like in any variable, there is no type checking. JavaScript is weekly typed.
 
 ```js
-  var a;
+var a;
 
-  a = 12;
-  a = "Hello JavaScript!";
+a = 12;
+a = "Hello JavaScript!";
 ```
-
-
-
-
 
 This is different to a language like Java where variables can only store one type of thing.
 

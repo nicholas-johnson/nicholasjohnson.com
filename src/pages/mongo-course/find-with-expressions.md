@@ -1,12 +1,11 @@
 ---
-title: "Finding with comparison queries"
-description: "We learn how to make simple Mongo queries using pattern matching"
-section: "mongo"
-exercise: "find-with-expressions"
+title: Finding with comparison queries
+description: We learn how to make simple Mongo queries using pattern matching
+section: mongo
+exercise: find-with-expressions
 layout: ../../layouts/Course.astro
+course: mongoCourse
 ---
-
-%article
 
 # Finding with Expressions and comparison queries
 

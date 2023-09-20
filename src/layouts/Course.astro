@@ -20,6 +20,12 @@ interface Props {
 const { title, frontmatter } = Astro.props;
 
 const course = courses[frontmatter.course];
+
+if (!course) {
+  throw new Error(
+    `Course not found: ${frontmatter.course} at ${frontmatter.file}`
+  );
+}
 ---
 
 <GlobalLayout title={title || frontmatter.seoTitle || frontmatter.title}>

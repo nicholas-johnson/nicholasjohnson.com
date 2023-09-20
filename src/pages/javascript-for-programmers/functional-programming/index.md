@@ -1,6 +1,3 @@
-%article
-
-
 # Closure
 
 Closure can be a tricky concept to get one's head around. It works like this:
@@ -14,45 +11,39 @@ Closure can be a tricky concept to get one's head around. It works like this:
 This is closure in a nutshell. Here's an example:
 
 ```js
-  var outer = function() {
-    var a = "A Local variable"
-    var inner = function() {
-      alert(a)
-    }
-    window.fnc = inner
-  }
-  outer();
-  fnc();
+var outer = function () {
+  var a = "A Local variable";
+  var inner = function () {
+    alert(a);
+  };
+  window.fnc = inner;
+};
+outer();
+fnc();
 ```
-
-
-
-
 
 When we call outer, we define inner and assign it as an attribute of window (in other words, a global variable) inner persists after outer has excited, so the local variable a is still in scope, and still accessible to inner.
 
-__Questions__
+**Questions**
 
 1. Enter the above code and verify it works.
 
-## Self Executing Functions ##
+## Self Executing Functions
 
 It seems a bit superfluous to have to call outer to create inner. Outer only exists here to define inner, there's no need for it once inner has been made.
 
 If only there was a way to avoid referencing outer. Thankfully there is.
 
-Here we have a self executing function. The function is in braces,  and there are braces at the end. We are declaring an unnamed function, then running it straight away, dispensing with the need for outer.
+Here we have a self executing function. The function is in braces, and there are braces at the end. We are declaring an unnamed function, then running it straight away, dispensing with the need for outer.
 
 ```js
-  (function() {
-    var a = "A Local variable"
-    var inner = function() {
-      alert(a)
-    }
-    window.fnc = inner
-  })()
+(function () {
+  var a = "A Local variable";
+  var inner = function () {
+    alert(a);
+  };
+  window.fnc = inner;
+})();
 
-  fnc();
+fnc();
 ```
-
-

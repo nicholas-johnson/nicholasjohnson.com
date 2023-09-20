@@ -1,6 +1,3 @@
-%article
-
-
 # Linting with Grunt
 
 Grunt is a versatile build tool made with NodeJS. Here we will use it to automatically lint our files.
@@ -23,8 +20,6 @@ To install grunt nicely we need npm. Initialize it with.
 
 =code(code, :bash)
 
-
-
 ## Install grunt
 
 ```js
@@ -33,8 +28,6 @@ To install grunt nicely we need npm. Initialize it with.
 ```
 
 =code(code, :bash)
-
-
 
 ## Install the linter and file watcher.
 
@@ -45,9 +38,6 @@ To install grunt nicely we need npm. Initialize it with.
 
 =code(code, :bash)
 
-
-
-
 ## Make a gruntfile
 
 We wire these together using a Gruntfile. Create a file called Gruntfile.js
@@ -55,54 +45,46 @@ We wire these together using a Gruntfile. Create a file called Gruntfile.js
 A simple gruntfile looks like this:
 
 ```js
-  module.exports = function(grunt) {
+module.exports = function (grunt) {
+  // Project configuration.
+  grunt.initConfig({
+    jshint: {
+      src: {
+        src: ["javascript/**/*.js"],
 
-    // Project configuration.
-    grunt.initConfig({
-      jshint: {
-        src: {
-          src: ['javascript/**/*.js'],
-
-          options: {
-            curly: true,
-            eqeqeq: true,
-            immed: true,
-            latedef: 'nofunc',
-            newcap: true,
-            noarg: true,
-            sub: true,
-            undef: true,
-            unused: true,
-            boss: true,
-            eqnull: true,
-            node: true,
-            globals: {}
-          },
-        }
+        options: {
+          curly: true,
+          eqeqeq: true,
+          immed: true,
+          latedef: "nofunc",
+          newcap: true,
+          noarg: true,
+          sub: true,
+          undef: true,
+          unused: true,
+          boss: true,
+          eqnull: true,
+          node: true,
+          globals: {},
+        },
       },
-      watch: {
-        js: {
-          files: 'javascript/**/*.js',
-          tasks: ['jshint']
-        }
-      }
-    });
+    },
+    watch: {
+      js: {
+        files: "javascript/**/*.js",
+        tasks: ["jshint"],
+      },
+    },
+  });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-watch");
 
-    grunt.registerTask('default', ['watch']);
-
-  };
+  grunt.registerTask("default", ["watch"]);
+};
 ```
 
-
-
-
 This gruntfile contains options for jsHint, an automated linter, and watch, an automatic task runner.
-
-
-
 
 ## Exercise - Set up grunt
 
@@ -116,8 +98,6 @@ Lint your code with:
 
 =code(code, :bash)
 
-
-
 You can have grunt watch all changes to your code in real time using:
 
 ```js
@@ -126,16 +106,9 @@ You can have grunt watch all changes to your code in real time using:
 
 =code(code, :bash)
 
-
-
-
-
 ## Exercise - Fix your code
 
 Use the linter to fix all the errors in the intro exercises.
-
-
-
 
 ## Further Exercise
 
