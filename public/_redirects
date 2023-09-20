@@ -15,34 +15,34 @@
 
 # Ruby Course
 
-/ruby/ruby-course/exercises/arrays /ruby-course/arrays
+/ruby/ruby-course/exercises/arrays /ruby-course/array
 /ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
-/ruby/ruby-course/exercises/book/ /ru-coursees/book
-/ruby/ruby-course/exercises/classes-and-objects/ /ruby/ruby-course/-courseobjects
-/ruby/ruby-course/exercises/define-method/ /ruby/ruby-c-course-method
-/ruby/ruby-course/exercises/exceptions/ /ruby/rub-courseeptions
-/ruby/ruby-course/exercises/extend-and-include/ /ruby/ruby-course-courseinclude
-/ruby/ruby-course/exercises/flow-control/ /ruby/ruby--coursecontrol
-/ruby/ruby-course/exercises/functions/ /ruby/ru-coursenctions
-/ruby/ruby-course/exercises/hashes-and-symbols/ /ruby/ruby-course-coursesymbols
-/ruby/ruby-course/exercises/index/ /rub-courses/index
-/ruby/ruby-course/exercises/inheritance/ /ruby/ruby-courseritance
-/ruby/ruby-course/exercises/instance-eval/ /ruby/ruby-c-coursece-eval
-/ruby/ruby-course/exercises/intro/ /rub-courses/intro
-/ruby/ruby-course/exercises/introspection/ /ruby/ruby-c-coursepection
-/ruby/ruby-course/exercises/lifecycle-callbacks/ /ruby/ruby-course/-coursellbacks
-/ruby/ruby-course/exercises/method-missing/ /ruby/ruby-co-coursemissing
-/ruby/ruby-course/exercises/modules/ /ruby/-coursemodules
-/ruby/ruby-course/exercises/monkey-patching/ /ruby/ruby-cou-courseatching
-/ruby/ruby-course/exercises/numbers/ /ruby/-coursenumbers
-/ruby/ruby-course/exercises/operator-overloading/ /ruby/ruby-course/e-courseloading
-/ruby/ruby-course/exercises/receiving-a-block/ /ruby/ruby-cours-coursea-block
-/ruby/ruby-course/exercises/rspec/ /rub-courses/rspec
-/ruby/ruby-course/exercises/ruby-send/ /ruby/ru-courseby-send
-/ruby/ruby-course/exercises/static-methods/ /ruby/ruby-co-coursemethods
-/ruby/ruby-course/exercises/strings/ /ruby/-coursestrings
-/ruby/ruby-course/exercises/variables-and-constants/ /ruby/ruby-course/exer-coursenstants
-/ruby/ruby-course/exercises/writing-a-gem/ /ruby/ruby-c-courseg-a-gem
+/ruby/ruby-course/exercises/book/ /ruby-course/book
+/ruby/ruby-course/exercises/classes-and-objects/ /ruby-course/classes-and-objects
+/ruby/ruby-course/exercises/define-method/ /ruby-course/define-method
+/ruby/ruby-course/exercises/exceptions/ /ruby-course/exceptions
+/ruby/ruby-course/exercises/extend-and-include/ /ruby-course/extend-and-include
+/ruby/ruby-course/exercises/flow-control/ /ruby-course/flow-control
+/ruby/ruby-course/exercises/functions/ /ruby-course/functions
+/ruby/ruby-course/exercises/hashes-and-symbols/ /ruby-course/hashes-and-symbols
+/ruby/ruby-course/exercises/index/ /ruby-course/index
+/ruby/ruby-course/exercises/inheritance/ /ruby-course/inheritance
+/ruby/ruby-course/exercises/instance-eval/ /ruby-course/instance-eval
+/ruby/ruby-course/exercises/intro/ /ruby-course/intro
+/ruby/ruby-course/exercises/introspection/ /ruby-course/introspection
+/ruby/ruby-course/exercises/lifecycle-callbacks/ /ruby-course/lifecycle-callbacks
+/ruby/ruby-course/exercises/method-missing/ /ruby-course/method-missing
+/ruby/ruby-course/exercises/modules/ /ruby-course/modules
+/ruby/ruby-course/exercises/monkey-patching/ /ruby-course/monkey-patching
+/ruby/ruby-course/exercises/numbers/ /ruby-course/numbers
+/ruby/ruby-course/exercises/operator-overloading/ /ruby-course/operator-overloading
+/ruby/ruby-course/exercises/receiving-a-block/ /ruby-course/receiving-a-block
+/ruby/ruby-course/exercises/rspec/ /ruby-course/rspec
+/ruby/ruby-course/exercises/ruby-send/ /ruby-course/ruby-send
+/ruby/ruby-course/exercises/static-methods/ /ruby-course/static-methods
+/ruby/ruby-course/exercises/strings/ /ruby-course/strings
+/ruby/ruby-course/exercises/variables-and-constants/ /ruby-course/variables-and-constants
+/ruby/ruby-course/exercises/writing-a-gem/ /ruby-course/writing-a-gem
 
 # Mongo Course
 
