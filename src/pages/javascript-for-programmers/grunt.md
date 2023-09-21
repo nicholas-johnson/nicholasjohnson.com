@@ -1,5 +1,13 @@
 # Linting with Grunt
 
+<aside class="box">
+
+## Grunt is Old
+
+Grunt is pretty old now. It was excellent at the time, but is too slow for most modern builds. You might want to consider Rollup instead if you're looking for an alternative. This content has been left up for future Googlers, but should be considered deprecated.
+
+</aside>
+
 Grunt is a versatile build tool made with NodeJS. Here we will use it to automatically lint our files.
 
 We will use Grunt to lint all our future exercises.

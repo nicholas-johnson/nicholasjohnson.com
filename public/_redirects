@@ -15,7 +15,7 @@
 
 # Ruby Course
 
-/ruby/ruby-course/exercises/arrays /ruby-course/array
+/ruby/ruby-course/exercises/arrays /ruby-course/arrays
 /ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
 /ruby/ruby-course/exercises/book/ /ruby-course/book
 /ruby/ruby-course/exercises/classes-and-objects/ /ruby-course/classes-and-objects
@@ -46,6 +46,7 @@
 
 # Mongo Course
 
+/mongo/course/ /mongo-course/intro/
 /mongo/course/workbook/ /mongo-course/book/
 /mongo/course/exercises/aggregation-by-date/ /mongo-course/aggregation-by-date
 /mongo/course/exercises/aggregation-count/ /mongo-course/aggregation-count
@@ -68,6 +69,43 @@
 /mongo/course/exercises/node-intro/ /mongo-course/node-intro
 /mongo/course/exercises/node-server/ /mongo-course/node-server
 /mongo/course/exercises/root-unused/ /mongo-course/root-unused
+
+# Webdev
+
+/webdev/course/exercises/abs-layout /webdev-course/abs-layout
+/webdev/course/exercises/attributes /webdev-course/attributes
+/webdev/course/exercises/book /webdev-course/book
+/webdev/course/exercises/css-classes /webdev-course/css-classes
+/webdev/course/exercises/divs-and-spans /webdev-course/divs-and-spans
+/webdev/course/exercises/entity-references /webdev-course/entity-references
+/webdev/course/exercises/float-layout /webdev-course/float-layout
+/webdev/course/exercises/full-width /webdev-course/full-width
+/webdev/course/exercises/hex /webdev-course/hex
+/webdev/course/exercises/images /webdev-course/images
+/webdev/course/exercises/intro /webdev-course/intro
+/webdev/course/exercises/lists /webdev-course/lists
+/webdev/course/exercises/more-tags /webdev-course/more-tags
+/webdev/course/exercises/nested-selectors /webdev-course/nested-selectors
+/webdev/course/exercises/positioning-with-margins /webdev-course/positioning-with-margins
+/webdev/course/exercises/selectors /webdev-course/selectors
+/webdev/course/exercises/style-attributes /webdev-course/style-attributes
+/webdev/course/exercises/stylesheets /webdev-course/stylesheets
+/webdev/course/exercises/tags /webdev-course/tags
+
+# JavaScript for Programmers
+
+/javascript/javascript-for-programmers/exercises/ajax /javascript-for-programmers/ajax
+/javascript/javascript-for-programmers/exercises/events /javascript-for-programmers/events
+/javascript/javascript-for-programmers/exercises/functional-loops /javascript-for-programmers/functional-loops
+/javascript/javascript-for-programmers/exercises/functional-programming /javascript-for-programmers/functional-programming
+/javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
+/javascript/javascript-for-programmers/exercises/grunt /javascript-for-programmers/grunt
+/javascript/javascript-for-programmers/exercises/index /javascript-for-programmers/index
+/javascript/javascript-for-programmers/exercises/intro /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/jquery /javascript-for-programmers/jquery
+/javascript/javascript-for-programmers/exercises/json /javascript-for-programmers/json
+/javascript/javascript-for-programmers/exercises/running-javascript /javascript-for-programmers/running-javascript
+/javascript/javascript-for-programmers/exercises/variables. /javascript-for-programmers/variables.
 
 # Posts
 
