@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: welocome To AJAX
+seoTitle: How to do AJAX with JQuery
+course: javascriptForProgrammers
+---
+
 # Welcome to AJAX
 
 AJAX is the amazing technology that allows you to transfer data to and from your server direct from JavaScript, updating it in real time without any need for a page refresh.

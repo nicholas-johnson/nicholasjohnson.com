@@ -1,5 +1,5 @@
 ---
-title: "Ruby VAriables and Constants"
+title: "Ruby Variables and Constants"
 description: ""
 section: "ruby"
 course: "rubyCourse"

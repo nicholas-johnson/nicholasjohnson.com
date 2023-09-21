@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: JQuery Events
+seoTitle: Eventing with JQuery
+course: javascriptForProgrammers
+---
+
 # JQuery Events
 
 ## Downloads

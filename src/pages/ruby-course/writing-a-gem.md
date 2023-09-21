@@ -1,6 +1,12 @@
-
-
-
+---
+title: "Writing a Gem"
+seoTitle: "How to write a Gem in Ruby"
+description: ""
+section: "ruby"
+course: "rubyCourse"
+exercise: "variables-and-constants"
+layout: ../../layouts/Course.astro
+---
 
 # Creating a Gem
 
@@ -11,7 +17,6 @@ Because a gem contains Ruby code, it can do whatever you like. It can monkeypatc
 A gem can be stored locally, or on a gem host like rubygems.org. If you publish your gem to rubygems it will be available for anyone to download and use. If you keep it in your project, you can still use bundler, you just provide a path.
 
 <http://asciicasts.com/episodes/245-new-gem-with-bundler>
-
 
 In this section we're going to create a simple gem using Bundler.
 
@@ -32,19 +37,11 @@ We are going to create a summarise gem which will extend the string class with m
   end
 ```
 
-
-
-
-
 first of all create the gem:
 
 ```js
   bundle gem summarise
 ```
-
-
-
-
 
 We now have a new summarize directory containing a lib directory for code, a gemspec file for metadata, and a few other files.
 
@@ -80,11 +77,6 @@ The gemspec file is the heart of your gem, it contains all the metadata about yo
   end
 ```
 
-
-
-
-
-
 Notice how spec.files is set by getting the files currently included in git.
 
 Also notice how the version is taken from the Summarize::VERSION constant. This is defined in lib/summarise/version.rb. The version can be updated by editing this file.
@@ -106,10 +98,6 @@ This file simply imports the rest of the code.
   end
 ```
 
-
-
-
-
 **lib/summarise/string_extensions.rb**
 
 This declares the methods we want to add.
@@ -129,10 +117,6 @@ This declares the methods we want to add.
   end
 ```
 
-
-
-
-
 **lib/summarise/string.rb**
 
 This extends the String class.
@@ -143,12 +127,6 @@ This extends the String class.
   end
 ```
 
-
-
-
-
-
-
 ## Building the gem
 
 Because the gemspec uses Git to discover which files to include, we must first commit your updated files.
@@ -158,19 +136,11 @@ Because the gemspec uses Git to discover which files to include, we must first c
   git commit -a -m "first commit"
 ```
 
-
-
-
-
 Build the gem using the gem build command:
 
 ```js
   gem build summarise.gemspec
 ```
-
-
-
-
 
 You will create a file called something like: summarise-0.0.1.gem
 
@@ -184,29 +154,17 @@ First unpack it into vendor/gems:
   gem unpack summarise-0.0.1.gem --target /path_to_rails_app/vendor/gems/.
 ```
 
-
-
-
-
 Now declare it in your Gemfile:
 
 ```js
   gem 'summarise', :path => "#\{File.expand_path(__FILE__)}/../vendor/gems/summarise-0.0.1"
 ```
 
-
-
-
-
 Finally install it into Gemfile.lock
 
 ```js
   bundle install
 ```
-
-
-
-
 
 This is a good way to develop a gem, as you can deploy it locally and work on it in situ.
 
@@ -223,12 +181,6 @@ Now simply push the packaged gem:
 ```js
   gem push summarise-0.0.1.gem
 ```
-
-
-
-
-
-
 
 ## Exercise - creating a gem
 

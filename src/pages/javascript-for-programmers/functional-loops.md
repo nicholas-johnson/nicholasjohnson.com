@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: How to Run JavaScript Code
+seoTitle: How to run JavaScript code in a browser, or with Node
+course: javascriptForProgrammers
+---
+
 # Each Peach
 
 JavaScript comes with all the looping constructs you would expect, for, while, etc. The work as you would hope, and I'm not going to go into these here.
