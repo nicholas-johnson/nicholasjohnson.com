@@ -1,16 +1,7 @@
 ---
-title: "Rendering - React Exercise"
-section: "react"
-exercise: "rendering"
-layout: "exercise"
----
-
----
-
 title: Rendering
 course: reactCourse
 layout: ../../layouts/Course.astro
-
 ---
 
 %article
