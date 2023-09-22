@@ -1,5 +1,9 @@
-%article
-
+---
+title: Express
+course: nodeCourse
+slug: express
+layout: ../../layouts/Course.astro
+---
 
 # Express
 
@@ -7,19 +11,15 @@ Express is a node module that which provides us with middleware. Middleware is l
 
 Middleware functions can do things like:
 
-* Log a request
-* Check authorisation
-* Serve a static file
-* Inspect the URL, parse out URL parameters, and save them in the request
-* Compile a SASS file and serve the result as CSS
-* Serve a web page
-* Serve an error or 404
+- Log a request
+- Check authorisation
+- Serve a static file
+- Inspect the URL, parse out URL parameters, and save them in the request
+- Compile a SASS file and serve the result as CSS
+- Serve a web page
+- Serve an error or 404
 
 We can build an entire site out of middleware.
-
-
-
-
 
 ## Exercise 1 - Install express locally using NPM
 
@@ -31,10 +31,6 @@ Create a directory to hold your express app. We'll use the NPM generator to make
   npm init
 ```
 
-
-
-
-
 Npm init is smart. If you're in a Git repo, it will use the details from that.
 
 Now install the express dependency:
@@ -42,10 +38,6 @@ Now install the express dependency:
 ```js
   npm install express --save
 ```
-
-
-
-
 
 Check out your directory. You have gained an node_modules directory that contains express and all it's dependencies. Now check out your package.json file. The express dependency has been saved in it.
 
@@ -55,44 +47,30 @@ You can now run:
   npm install
 ```
 
-
-
-
-
 ...to install these dependencies on any machine.
 
 You might be interested in the other npm command line methods. You can find them here: <https://www.npmjs.org/doc/>
-
-
 
 ## A Server
 
 We create a simple server in Express by wiring together middleware functions.
 
 ```js
-  var express = require('express');
-  var http = require('http');
+var express = require("express");
+var http = require("http");
 
-  var app = express();
+var app = express();
 
-  // create a route
-  app.get('/', function(req, res){
-    res.writeHead(200);
-    res.write('Hello Express!!!');
-    res.end();
-  });
+// create a route
+app.get("/", function (req, res) {
+  res.writeHead(200);
+  res.write("Hello Express!!!");
+  res.end();
+});
 
-  // Create a server
-  http.createServer(app).listen(3000);
+// Create a server
+http.createServer(app).listen(3000);
 ```
-
-
-
-
-
-
-
-
 
 ## Exercise - Create a server
 
@@ -101,11 +79,6 @@ Use the code above to create a simple Express server.
 Add another route. Make your server respond to a request for "/yo".
 
 Change the port. Make your server listen on port 4567
-
-
-
-
-
 
 ## Custom Middleware
 
@@ -116,24 +89,15 @@ Next is a function. If you call it, control will pass to the next item of middle
 A piece of custom middleware might look like this:
 
 ```js
-  app.use(function(req, res, next) {
-    console.log('hello from the middleware!');
-    next();
-  });
+app.use(function (req, res, next) {
+  console.log("hello from the middleware!");
+  next();
+});
 ```
-
-
-
-
-
 
 ## Logging Middleware
 
 Create a custom middleware function that outputs the current URL to the console.
-
-
-
-
 
 ## Static file handling
 
@@ -142,16 +106,10 @@ We can use built in functions for middleware. Here we will use express to serve 
 Insert the following line before your routes:
 
 ```js
-  app.use('/public', express.static(__dirname + '/public'));
+app.use("/public", express.static(__dirname + "/public"));
 ```
 
-
-
-
-
 Now create directory called public. Express will try to serve static files from the public directory, or subdirectories before moving down the middleware stack. You can put JavaScript files in here, CSS files, even JavaScript templates.
-
-
 
 ## Exercise - static files
 
@@ -164,9 +122,6 @@ For bonus points, generate your CSS file from SASS using Gulp.
 You see how this is all starting to come together?
 
 %img{ src: '/images/hannibal.jpg', alt: "I love it when a plan comes together" }
-
-
-
 
 ## Further Reading
 

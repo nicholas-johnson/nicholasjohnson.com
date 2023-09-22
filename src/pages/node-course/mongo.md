@@ -1,9 +1,8 @@
 ---
-title: "Publishing an API with Mongo"
-description: "Mongo is a JSON based document storage engine. Use it to publish an API"
-section: "node"
-exercise: "mongo"
-layout: "layouts/exercise.njk"
+title: Publishing an API with Mongo
+course: nodeCourse
+slug: mongo
+layout: ../../layouts/Course.astro
 ---
 
 %article

@@ -1,8 +1,11 @@
-%article
-
+---
+title: Scaling
+course: nodeCourse
+slug: scaling
+layout: ../../layouts/Course.astro
+---
 
 # Scaling Node
-
 
 ## Accessing the OS
 
@@ -10,7 +13,6 @@ We can get information about our machine, including the number of cores using th
 
 var os = require('os');
 os.cpus();
-
 
 ## Cluster Module
 
@@ -21,44 +23,39 @@ read more about the cluster module here:
 [https://nodejs.org/api/cluster.html](nodejs.org/api/cluster.html)
 
 ```js
-  var cluster = require("cluster"),
-    http = require("http"),
-    os = require("os"),
-    cpus = os.cpus().length;
+var cluster = require("cluster"),
+  http = require("http"),
+  os = require("os"),
+  cpus = os.cpus().length;
 
-  console.log(cluster)
+console.log(cluster);
 
-  if (cluster.isMaster) {
-    for (var i = 0; i < cpus; i++) {
-      cluster.fork();
-    }
-    cluster.on("exit", function(worker, code, signal) {
-      cluster.fork();
-    });
-    console.log('listening on port 3001')
-  } else {
-    http.createServer(function(req, res) {
+if (cluster.isMaster) {
+  for (var i = 0; i < cpus; i++) {
+    cluster.fork();
+  }
+  cluster.on("exit", function (worker, code, signal) {
+    cluster.fork();
+  });
+  console.log("listening on port 3001");
+} else {
+  http
+    .createServer(function (req, res) {
       res.writeHead(200);
       res.write("Hello Cluster!!");
-      res.end
-    }).listen(3001);
+      res.end;
+    })
+    .listen(3001);
 
-    console.log('Making child process')
-  }
-
+  console.log("Making child process");
+}
 ```
-
-
-
-
 
 ## Exercise - Scaling
 
 Find the number of cores on your machine.
 
 Scale your app across all of your cores.
-
-
 
 ## Downloads
 

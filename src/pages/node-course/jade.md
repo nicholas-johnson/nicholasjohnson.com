@@ -1,21 +1,21 @@
-%article
+---
+title: Pug
+course: nodeCourse
+slug: jade
+layout: ../../layouts/Course.astro
+---
 
+# Pug
 
-# Jade
-
-Jade is an HTML templating language that's extremely popular in Node circles. You make fewer keystrokes to get the same result, which makes you a more productive coder. This is very Node.
+Pug is an HTML templating language that's extremely popular in Node circles. You make fewer keystrokes to get the same result, which makes you a more productive coder. This is very Node.
 
 ## First Install with NPM
 
-To use Jade you must install the package. Do this with NPM.
+To use Pug you must install the package. Do this with NPM.
 
 ```js
-  npm install jade
+  npm install pug
 ```
-
-
-
-
 
 ## Elements
 
@@ -25,18 +25,11 @@ The first word on any line is the html element:
   h1 Hello there
 ```
 
-=code(code, :jade)
-
-
 Compiles to:
 
 ```html
-  <h1>Hello there</h1>
+<h1>Hello there</h1>
 ```
-
-
-
-
 
 ## Nesting elements
 
@@ -48,9 +41,6 @@ We can nest elements inside each other using indentation:
     p Hey!
 ```
 
-=code(code, :jade)
-
-
 Compiles to:
 
 ```html
@@ -60,10 +50,6 @@ Compiles to:
   </article>
 ```
 
-
-
-
-
 ## Attributes
 
 We can create attributes:
@@ -72,32 +58,20 @@ We can create attributes:
   a(href='http://www.lolcats.com/') Lol cats
 ```
 
-=code(code, :jade)
-
-
-
 Compiles to:
 
 ```html
-  <a href="http://www.lolcats.com/">Lol cats</a>
+<a href="http://www.lolcats.com/">Lol cats</a>
 ```
-
-
-
-
 
 ## Variables
 
 We can include variables in our template using an equals sign like this if we just have one value:
 
 ```js
-  article
-    h1= titleContent
+article;
+h1 = titleContent;
 ```
-
-=code(code, :jade)
-
-
 
 or using curly brace interpolation like this if we want to embed content into text:
 
@@ -107,66 +81,42 @@ or using curly brace interpolation like this if we want to embed content into te
       title myWebsite.com - \#{titleContent}
 ```
 
-=code(code, :jade)
+## Compiling Pug
 
-
-
-## Compiling Jade
-
-We compile Jade using the jade package. First we install it with npm:
+We compile Pug using the pug package. First we install it with npm:
 
 ```js
-  npm install jade
+  npm install pug
 ```
-
-
-
-
 
 Now we can compile our template. This gives us a template function:
 
 ```js
-  var jade = require('jade');
-  var template = jade.compile('h1 hello \#{name}');
+var pug = require("pug");
+var template = pug.compile("h1 hello #{name}");
 ```
-
-
-
-
 
 Or from a file:
 
 ```js
-  var template = jade.compileFile('./path/to/template.jade');
+var template = pug.compileFile("./path/to/template.pug");
 ```
-
-
-
-
 
 Finally we can compile our template into HTML, passing it an object full of include variables, like so:
 
 ```js
-  template({name: "Davie Skitch Mulldoon"});
+template({ name: "Davie Skitch Mulldoon" });
 ```
 
+## Exercise - Using Pug
 
-
-
-
-
-
-## Exercise - Using Jade
-
-Modify your Node server to use Jade. Instead of outputting a file directly, use Jade to compile a template and return the result.
-
-
+Modify your Node server to use Pug. Instead of outputting a file directly, use Pug to compile a template and return the result.
 
 ## Layout files
 
 We can create layout files that will wrap our content in a standard wrapper. This saves typing.
 
-Assume an index.jade file like this. Notice that we are declaring a block called content:
+Assume an index.pug file like this. Notice that we are declaring a block called content:
 
 ```js
   extends ../layout
@@ -175,10 +125,6 @@ Assume an index.jade file like this. Notice that we are declaring a block called
     h1= title
     article= content
 ```
-
-=code(code, :jade)
-
-
 
 We can create a layout file like this. Note here that we are including a block called content:
 
@@ -192,25 +138,15 @@ We can create a layout file like this. Note here that we are including a block c
       block content
 ```
 
-=code(code, :jade)
-
-
-
-
-
-
 ## Exercise - Layout
 
 Create a layout file for your application. Have all your views use the same layout.
-
-
 
 ## Partials
 
 We can also include partials in our layout, for example we might split our layout into several smaller parts to make it easier to work on. Smaller files are generally easier to work with than large ones.
 
 A layout file might look more like this:
-
 
 ```js
   html(lang='en')
@@ -224,20 +160,11 @@ A layout file might look more like this:
       include ./partials/javascripts
 ```
 
-=code(code, :jade)
-
-
 The includes are always relative to the current directory.
-
-
-
 
 ## Exercise - Create a partial
 
 Split your layout file into partials. Create a header partial and a footer partial.
-
-
-
 
 ## Further Exercise - Content module (Model?)
 

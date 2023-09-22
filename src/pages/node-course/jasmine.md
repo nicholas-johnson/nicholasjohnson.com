@@ -1,5 +1,9 @@
-%article
-
+---
+title: Jasmine
+course: nodeCourse
+slug: jasmine
+layout: ../../layouts/Course.astro
+---
 
 
 # Jasmine

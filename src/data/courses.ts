@@ -1,7 +1,9 @@
 import { css3Course } from "./css3Course";
 import { javascriptForProgrammers } from "./javascriptForProgrammers";
 import { learnToCodeWithJavaScript } from "./learnToCodeWithJavascript";
-import { mongoCourse } from "./mongo";
+import { mongoCourse } from "./mongoCourse";
+import { nodeCourse } from "./nodeCourse";
+import { reactCourse } from "./reactCourse";
 import { responsiveDesignCourse } from "./responsiveDesignCourse";
 import { rubyCourse } from "./rubyCourse";
 import { webDevCourse } from "./webDevCourse";
@@ -14,4 +16,6 @@ export const courses = {
   webDevCourse,
   responsiveDesignCourse,
   css3Course,
+  nodeCourse,
+  reactCourse,
 };

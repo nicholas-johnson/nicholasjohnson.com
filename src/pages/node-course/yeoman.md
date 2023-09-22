@@ -1,6 +1,9 @@
-%article
-
-
+---
+title: Yeoman
+course: nodeCourse
+slug: yeoman
+layout: ../../layouts/Course.astro
+---
 
 # Yo Yeoman
 
@@ -20,8 +23,6 @@ First install Yeoman. As you would expect, we install it with npm. We're going t
 
 =code(code, :bash)
 
-
-
 ## Installing a generator
 
 Next we'll need a generator. You can find a list of them here: [yeoman.io/generators/](http://yeoman.io/generators/). Yeoman generators all start with the word generator, for example express-generator or angular-generator.
@@ -36,19 +37,15 @@ Create a project directory to hold your code. Now install the express generator.
 
 =code(code, :bash)
 
-
-
 ## Build your Express application
 
 Create an app using the express generator. At a command line type:
 
 ```js
-  yo
+yo;
 ```
 
 =code(code, :bash)
-
-
 
 Choose the Express generator. Accept the defaults. Choose Jade for templates. As a build tool, choose gulp (or grunt if you prefer an old friend). For CSS choose SASS. Optionally choose MVC.
 
@@ -61,12 +58,10 @@ If you choose SASS you'll probably need the compass Ruby gem. Install Ruby if yo
 test if from a terminal using:
 
 ```js
-  ruby -v
+ruby - v;
 ```
 
 =code(code, :bash)
-
-
 
 Now install the gem. From a terminal:
 
@@ -76,34 +71,25 @@ Now install the gem. From a terminal:
 
 =code(code, :bash)
 
-
-
-
 ## Starting the server
 
 We start the server using gulp:
 
 ```js
-  gulp
+gulp;
 ```
 
 =code(code, :bash)
-
-
 
 ## View in the browser
 
 We can now visit <http://localhost:3000> to view our app in all it's glory.
 
-
-
 ## Exercise - Create an Express scaffold with Yeoman
 
 Use yo to generate a simple express site. Fire it up with by running Gulp.
 
-* Try to add another route
-
-
+- Try to add another route
 
 ## Exercise - Gulp
 
@@ -112,9 +98,6 @@ Gulp is watching your project. Every time you change a view file, your browser w
 Make a change to the SASS file and watch the browser reload automatically. This is a massive productivity gain, especially with multiple screens.
 
 You ay need to install the livereload Chrome plugin.
-
-
-
 
 ## Exercise - Modify a view
 

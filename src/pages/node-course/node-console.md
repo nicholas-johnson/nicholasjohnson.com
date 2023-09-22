@@ -1,6 +1,9 @@
-%article
-
-
+---
+title: Node Console
+course: nodeCourse
+slug: node-console
+layout: ../../layouts/Course.astro
+---
 
 # Running Node
 
@@ -24,10 +27,6 @@ If you're on a Macintosh, you can install via brew. Substitute brew for aptitude
   brew install nodejs
 ```
 
-
-
-
-
 You may need to restart your console.
 
 Verify node is working by typing node --version into a console. If you see a version number you have succeeded. You can type any JavaScript here.
@@ -37,18 +36,10 @@ Verify node is working by typing node --version into a console. If you see a ver
 You can open up a NodeJS console from the command line with the node command, like so:
 
 ```js
-  node
+node;
 ```
 
-
-
-
-
 If all is well you should drop into a console where you can type arbitrary JavaScript commands. You can do maths, create functions, assign variables, everything you can do with JavaScript.
-
-
-
-
 
 ## Exercise - Node Console
 
@@ -57,10 +48,6 @@ Let's try out the Node console and execute a command. Drop into the node console
 1. Add 10 + 10.
 2. Use console.log('hello world') to output hello world.
 3. Find out how many seconds there are in a year. How many seconds there are in a century. I don't know the answer to this. See, you're smarter than me already.
-
-
-
-
 
 ## Running a program
 
@@ -72,11 +59,6 @@ We can execute our JavaScript program using node like this:
   node program.js
 ```
 
-
-
-
-
-
 ## Exercise - Executing a program
 
 You can make Node output to the terminal using console.log(). Create a file called app.js and add a line that uses console.log() to tell Node write "Hello World" to the console.
@@ -85,44 +67,27 @@ Run your program from the console using the node command.
 
 You should see hello world.
 
-
-
-
-
-
 ## Further exercise
 
 You can find the current time using:
 
 ```js
-  new Date();
+new Date();
 ```
-
-
-
-
 
 Create a node program that tells you the current time and date.
 
 You can get a date object for a specific date using:
 
 ```js
-  new Date(2022,11,25);
+new Date(2022, 11, 25);
 ```
-
-
-
-
 
 You can subtract one date object from another to get the number of milliseconds between them.
 
 ```js
-  dateOne - dateTwo;
+dateOne - dateTwo;
 ```
-
-
-
-
 
 Make a timeTillChristmas program that tells you how many seconds there are until Christmas.
 

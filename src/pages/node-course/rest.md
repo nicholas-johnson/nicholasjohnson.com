@@ -1,9 +1,11 @@
-%article
-
-
+---
+title: REST
+course: nodeCourse
+slug: rest
+layout: ../../layouts/Course.astro
+---
 
 # REST
-
 
 REST stands for REpresentational State Transfer. It's a complex term for a simple idea, that you should get a different result if you send a POST request to a URL than if you send a GET request to that same URL.
 
@@ -16,23 +18,15 @@ Body Parser is a piece of Express middleware that you can use to parse post requ
 require it like this:
 
 ```js
-  var bodyParser = require('body-parser');
+var bodyParser = require("body-parser");
 ```
-
-
-
-
 
 We can then add the middleware somewhere near the top of our stack, like so:
 
 ```js
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 ```
-
-
-
-
 
 We compose s form that submits data as a post request like this.
 
@@ -44,28 +38,17 @@ We compose s form that submits data as a post request like this.
 
 =code(code, :jade)
 
-
-
 We will then find that we have a params object in our request which we can read values from.
 
 ```js
-  request.params.testValue
+request.params.testValue;
 ```
-
-
-
-
-
-
 
 ## Exercise - Create a calculator
 
 Create a simple form that can send a POST request to an Express endpoint containing 2 numbers.
 
 Have Express return a simple page that shows the sum of the two numbers.
-
-
-
 
 ## A Restful API
 
@@ -87,10 +70,10 @@ POST <http://simple-api.herokuapp.com/api/v1/articles>
 
 with params:
 
-* title
-* intro
-* content
-* author_id
+- title
+- intro
+- content
+- author_id
 
 ### Update an article
 
@@ -98,13 +81,10 @@ POST <http://simple-api.herokuapp.com/api/v1/articles/1/update>
 
 with params:
 
-* title
-* intro
-* content
-* author_id
-
-
-
+- title
+- intro
+- content
+- author_id
 
 ## GET a list of articles
 

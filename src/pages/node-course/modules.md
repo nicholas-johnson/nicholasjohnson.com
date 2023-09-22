@@ -1,5 +1,9 @@
-%article
-
+---
+title: Modules
+course: nodeCourse
+slug: modules
+layout: ../../layouts/Course.astro
+---
 
 # Modules
 
@@ -14,32 +18,26 @@ A node module is a simple JavaScript file that saves an object in a variable cal
 For example, we could create a cat module like this
 
 ```js
-  var Cat = {
-    legs: 4,
-    head: 2,
-    ears: 2,
-    sayHello: function() {
-      console.log('meow');
-    }
-  };
+var Cat = {
+  legs: 4,
+  head: 2,
+  ears: 2,
+  sayHello: function () {
+    console.log("meow");
+  },
+};
 
-  module.exports = cat;
+module.exports = cat;
 ```
-
-
-
-
 
 In another file we can now require('./cat'), like so:
 
 ```js
-  var cat = require('./cat');
+var cat = require("./cat");
 
-  console.log(cat.legs)
-  cat.sayHello();
+console.log(cat.legs);
+cat.sayHello();
 ```
-
-
 
 %aside.box
 
@@ -53,10 +51,6 @@ There is no magic in Node. This is by design.
 
 [nodejs.org/api/modules.html](http://nodejs.org/api/modules.html)
 
-
-
-
-
 ## Returning a newable object
 
 If we want to mimic a class, we could might create a newable object using prototypical inheritance.
@@ -64,38 +58,29 @@ If we want to mimic a class, we could might create a newable object using protot
 Our cat.js file might look like this:
 
 ```js
-  var Cat = function() {}
+var Cat = function () {};
 
-  Cat.prototype = {
-    legs: 4,
-    head: 2,
-    ears: 2,
-    sayHello: function() {
-      console.log('meow');
-    }
-  };
+Cat.prototype = {
+  legs: 4,
+  head: 2,
+  ears: 2,
+  sayHello: function () {
+    console.log("meow");
+  },
+};
 
-  module.exports = Cat;
+module.exports = Cat;
 ```
-
-
-
-
-
 
 When we require it using we can treat it like a class, like so:
 
 ```js
-  var Cat = require('./cat');
+var Cat = require("./cat");
 
-  var tigger = new Cat();
-  console.log(tigger.legs)
-  tigger.sayHello();
+var tigger = new Cat();
+console.log(tigger.legs);
+tigger.sayHello();
 ```
-
-
-
-
 
 ## Exercise - Create a Date Module
 
@@ -103,15 +88,11 @@ Revisit your code from earlier. Create an ultra-simple date module that can tell
 
 Create some code that requires this module and have it output the time.
 
-
-
 ## Further Exercise - Days Till Module
 
 Extend your code to create a daysTill module. It should be able to tell you the number of days till Christmas and the number of days till mothers day. Pick any other significant dates you see fit to include.
 
 Integrate this module into your Node server so you can hit a URL and find the number of days till different dates.
-
-
 
 ## Harder Exercise - A Router
 
@@ -122,8 +103,6 @@ Create a router module. It should receive a URL. It should return the path of a 
 Your node app can now var router = require('./router');
 
 You can pass the url to the router and get back the file that should be returned.
-
-
 
 ## Much Harder Exercise - A controller
 
