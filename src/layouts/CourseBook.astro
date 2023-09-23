@@ -37,7 +37,9 @@ const allContent = await Astro.glob("../pages/**/*.md");
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.subTitle}</h2>
         <p><strong>By Nicholas Johnson</strong></p>
-        <p><strong>Version {course.version}</strong></p>
+        <p>Document Version: {course.version}</p>
+
+        <p>Last Updated: {course.lastUpdatedAt}</p>
         <img src={course.cover} alt="Workbook Cover Image" />
         <slot />
       </section>

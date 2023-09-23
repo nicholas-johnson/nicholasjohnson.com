@@ -5,9 +5,11 @@ export const learnToCodeWithJavaScript: ICourse = {
   slug: "learn-to-code-with-javascript",
   cover: "/images/book-covers/station2.jpg",
   coverAlt: "An awesome space station turning in the void",
-  version: "2.0.0",
+  coverCredit: "",
+  coverCreditUrl: "",
+  version: "2.0.2",
   createdAt: "2014",
-  lastUpdatedAt: "9th September 2023",
+  lastUpdatedAt: "23th September 2023",
   description:
     "Suitable for beginners. Learn to code from scratch with JavaScript",
   bullets: [
@@ -80,6 +82,11 @@ export const learnToCodeWithJavaScript: ICourse = {
       slug: "mario",
       title: "Object Orientation with Mario",
       description: "Building a little game",
+    },
+    {
+      slug: "jquery",
+      title: "A Dash of JQuery",
+      description: "Manipulating the DOM",
     },
   ],
 };
