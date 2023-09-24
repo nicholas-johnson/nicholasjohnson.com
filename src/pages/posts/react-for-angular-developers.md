@@ -7,7 +7,7 @@ date: "2016-04-05 19:04:36"
 preview: "*TL;DR*: **AngularJS** is a complex, monolithic framework that makes lots of choices for you. **React** is a DOM manipulation library that fits into a dynamic evolving ecosystem. Both are actually rather good."
 ---
 
-_Note: When this article was written, AngularJS and ract were the two top frameworks. These comparisons do not apply to modern Angular._
+_Note: When this article was written, AngularJS and React were the two top frameworks. These comparisons do not apply to modern Angular, but they do still apply to AngularJS._
 
 **TL;DR: **AngularJS** is a complex, monolithic framework that makes lots of choices for you. **React** is a DOM manipulation library that fits into a dynamic evolving ecosystem. Both are actually rather good.**
 
@@ -156,7 +156,7 @@ You might be noticing one of the big differences between Angular and React alrea
 
 This is because in Angular the HTML drives the app. It's your wires. Angular is like this because it was originally designed as a tool to allow designers to add interactivity to their pages without coding. Designers speak HTML, so Angular made HTML a first class citizen.
 
-React doesn't have this heritage. It's coming from the jQuery direction. In React, your components are entirely composed of JavaScript. Your HTML is just a dumb container.
+React doesn't have this heritage. It's coming from the jQuery direction. In React, your components are entirely composed of JavaScript. Your HTML is just a dumb container. The JSX syntax is just a traspilation step, masking the JavaScript beneath.
 
 ## Nesting Elements
 

@@ -1,0 +1,53 @@
+---
+import PostList from "../../components/PostList.astro";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+
+const allPosts = await Astro.glob("../posts/*.md");
+
+const posts = allPosts
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date);
+    const dateB = new Date(b.frontmatter.date);
+    return dateA.valueOf() - dateB.valueOf() ? 1 : -1;
+  })
+  .filter((post) => post.frontmatter.tags.includes("webdev"));
+---
+
+<GlobalLayout title="Ruby">
+  <div class="content">
+    <h1>HTML & CSS</h1>
+    <p>
+      HTML and CSS are the foundational languages of the internet. I picked
+      these up a long time ago, back when IE5.5 was still available for the Mac.
+      This was a time of standardisation, when we were trying to find ways to
+      make our code run in every browser.
+    </p>
+    <p>
+      Things are a lot simpler now, but paradoxically there is far more to
+      learn. I hope this HTML / CSS course will give you a solid foundation.
+    </p>
+    <ul>
+      <li><a href="/webdev-course/intro">HTML & CSS Course</a></li>
+      <li>
+        <a href="/webdev-course/book"
+          >HTML * CSS Course Book (the whole course formatted as a single
+          document with internal links)</a
+        >
+      </li>
+    </ul>
+
+    <PostList posts={posts} />
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    max-width: 50rem;
+
+    margin: 5rem auto;
+    padding: 0 1rem;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+</style>

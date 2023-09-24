@@ -4,8 +4,6 @@ course: reactCourse
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Rendering
 
 Compose a react DOM node like so:

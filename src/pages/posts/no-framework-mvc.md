@@ -1,6 +1,6 @@
 ---
 title: MVC JavaScript without a Framework
-tags: javascript
+tags: [javascript, webdev]
 layout: "../../layouts/BlogPost.astro"
 date: "2013-07-10"
 preview: "Looking at Rails or Angular there's a tendency to think of MVC as something rather complicated and difficult to achieve, something that really demands a **framework**.

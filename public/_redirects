@@ -1,6 +1,7 @@
 # Common Overrides
 
 /javascript-book /learn-to-code-with-javascript/book
+/posts /
 
 # Learn to code with JavaScript
 
@@ -19,6 +20,7 @@
 
 # Ruby Course
 
+/ruby/ruby-course/ /ruby-course/intro
 /ruby/ruby-course/exercises/arrays /ruby-course/arrays
 /ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
 /ruby/ruby-course/exercises/book/ /ruby-course/book
@@ -50,6 +52,7 @@
 
 # Mongo Course
 
+/mongo/ /mongo-course/intro/
 /mongo/course/ /mongo-course/intro/
 /mongo/course/workbook/ /mongo-course/book/
 /mongo/course/exercises/aggregation-by-date/ /mongo-course/aggregation-by-date
@@ -124,6 +127,7 @@
 
 # Node Course
 
+/node/ /node-course/node-console
 /node/course/exercises/ /node-course/node-console
 /node/course/exercises/book /node-course/book
 /node/course/exercises/express /node-course/express
