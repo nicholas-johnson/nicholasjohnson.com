@@ -124,6 +124,7 @@
 
 # Node Course
 
+/node/course/exercises/ /node-course/node-console
 /node/course/exercises/book /node-course/book
 /node/course/exercises/express /node-course/express
 /node/course/exercises/file-system /node-course/file-system
