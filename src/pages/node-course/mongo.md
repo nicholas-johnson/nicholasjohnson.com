@@ -5,8 +5,6 @@ slug: mongo
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Mongo plus Node - perfect together
 
 To talk to Mongo we use Mongoose. Mongoose gives us a simple wrapper around Mongo with data validation and access to the Mongo commands.

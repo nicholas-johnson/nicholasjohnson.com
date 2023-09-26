@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Functions
+seoTitle: JavaScript Function Portability
+course: javascriptForProgrammers
+---
+
 # Functions
 
 In JavaScript all functions are objects. You can pass them around, store them in variables and arrays, and pass them as parameters to other functions.

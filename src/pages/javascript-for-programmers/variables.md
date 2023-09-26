@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Variables
+seoTitle: JavaScript Variables and Scope with Let, Const and Var
+course: javascriptForProgrammers
+---
+
 # Variables
 
 Variables in JavaScript are global by default. This is because JavaScript is designed to be easy for non-programmers to use, and non-programmers might not understand about variable scope.
