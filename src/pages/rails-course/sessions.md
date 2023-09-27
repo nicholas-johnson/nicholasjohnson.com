@@ -2,9 +2,9 @@
 title: "Sessions hash"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "sessions"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

@@ -2,9 +2,9 @@
 title: "Params"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "params"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

@@ -2,9 +2,9 @@
 title: "Alternatives to ERB - Haml and Markdown (also Slim)"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "haml"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

@@ -2,9 +2,9 @@
 title: "Internationalisation"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "internationalisation"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

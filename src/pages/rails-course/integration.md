@@ -2,9 +2,9 @@
 title: "Integration Exercise"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "integration"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

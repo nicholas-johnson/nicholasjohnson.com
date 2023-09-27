@@ -2,9 +2,9 @@
 title: "Assets"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "assets"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

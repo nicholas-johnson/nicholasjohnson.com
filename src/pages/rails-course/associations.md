@@ -2,9 +2,9 @@
 title: "Associations Between Models"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "associations"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

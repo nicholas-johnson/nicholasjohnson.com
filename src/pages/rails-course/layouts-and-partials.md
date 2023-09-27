@@ -2,9 +2,9 @@
 title: "Layouts and Partials"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "layouts-and-partials"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article

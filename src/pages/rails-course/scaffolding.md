@@ -2,9 +2,9 @@
 title: "Scaffolding and CRUD"
 description: ""
 section: "ruby"
-course: "rails-course"
+course: "railsCourse"
 exercise: "scaffolding"
-layout: "layouts/exercise.njk"
+layout: ../../layouts/Course.astro
 ---
 
 %article
