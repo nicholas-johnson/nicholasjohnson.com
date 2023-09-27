@@ -69,6 +69,8 @@ sayHello();
 // alerts 'hello undefined'
 ```
 
+<div class="exercise">
+
 ## Exercise - A Sandwich Calculator
 
 1. Write a function called sandwich calculator. This should accept one value: slicesOfBread
@@ -76,6 +78,4 @@ sayHello();
 3. Extend your function so it accepts two values, slicesOfBread and slicesOfCheese.
 4. It takes two slices of bread and one of cheese to make a sandwich. The function should return the total number of possible sandwiches, so if there are 10 slices of bread, but only 1 of cheese, it should return 1. You'll need an if statement to make this work.
 
-## Exercise - Lint your code
-
-Use Grunt and jshint to lint your code.
+</div>

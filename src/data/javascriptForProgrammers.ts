@@ -43,33 +43,33 @@ export const javascriptForProgrammers: ICourse = {
         "JavaScript has both classical loops and functional loops. Lets take a look.",
     },
     {
-      slug: "jquery",
-      title: "Manipulating the DOM with JQuery",
+      slug: "dom-manipulation",
+      title: "Manipulating the DOM",
       description:
-        "In which we investigate the power of JQuery to change your DOM.",
+        "In which we investigate the power of DOM Scripting to change your DOM.",
     },
     {
       slug: "events",
-      title: "JQuery Events",
+      title: "Events",
       description:
         "JavaScript is event driven, it reacts to user events, network events, page load events, etc. We assign callback functions to events. These are called when the event is fired.",
     },
     {
-      slug: "each-peach",
-      title: "JQuery Functional each",
-      description: "Functional Looping with JQuery.",
-    },
-    {
-      slug: "json",
-      title: "Object Orientation",
+      slug: "object-literals",
+      title: "Object Literals",
       description:
         "In JavaScript, all objects are arrays. JSON syntax allows us to create objects quickly and easily.",
     },
     {
-      slug: "object-orientation",
-      title: "Object Orientation",
+      slug: "constructor-functions",
+      title: "Constructor Functions, Classes and OOP",
+      description: "How JavaScript manages Object Orientation",
+    },
+    {
+      slug: "prototypical-inheritance",
+      title: "Prototypical Inheritance",
       description:
-        "JavaScript is class free so any function can act as a constructor.",
+        "JavaScript has a unique way of handling inheritance. It's called prototypical inheritance, and it's actually really good.",
     },
     {
       slug: "meaning-of-this",
@@ -78,15 +78,15 @@ export const javascriptForProgrammers: ICourse = {
         "JavaScript has a special variable called this. This is set at runtime..",
     },
     {
-      slug: "ajax",
-      title: "AJAX",
-      description: "We can pull code directly from our server using AJAX.",
+      slug: "networking",
+      title: "Networking with Fetch",
+      description: "We can pull code directly from our server.",
     },
     {
       slug: "lodash-templates",
-      title: "Lodash Templates",
+      title: "Templates",
       description:
-        "Templates help us keep out HTML where it belongs: in the HTML.",
+        "Templates help us keep our HTML where it belongs: in the HTML.",
     },
     {
       slug: "promises",

@@ -1,10 +1,11 @@
-#json
+---
+layout: ../../layouts/Course.astro
+title: Closure and Variable Scope
+seoTitle: JavaScript Closure and Variable Scope
+course: javascriptForProgrammers
+---
 
-# Object Orientation with JSON and Mario Exercise
-
-## Downloads
-
-- [Code from the board](https://www.dropbox.com/sh/8wnw4q0kwxldqys/AACioz3HSXV_EPqIGFJf4jkna?dl=1)
+# Object Orientation with Object Literals
 
 ## Welcome to JSON
 

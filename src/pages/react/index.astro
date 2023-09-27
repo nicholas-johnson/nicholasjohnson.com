@@ -1,0 +1,66 @@
+---
+import PostList from "../../components/PostList.astro";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+
+const allPosts = await Astro.glob("../posts/*.md");
+
+const posts = allPosts
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date);
+    const dateB = new Date(b.frontmatter.date);
+    return dateA.valueOf() - dateB.valueOf() ? 1 : -1;
+  })
+  .filter((post) => post.frontmatter.tags.includes("react"));
+---
+
+<GlobalLayout title="Ruby">
+  <div class="content">
+    <h1>React</h1>
+    <p>
+      I've been using react since 2017, first for variaous client projects, and
+      then teaching to various organisations including BBC News.
+    </p>
+
+    <p>
+      React is a JavaScript library for building user interfaces. It allows the
+      front end to React to changes in state. It guarantees that the interface
+      will always be correct as the state changes. It does this by re=rendering
+      the entire app for every state change. This is possible thanks to the
+      Virtual DOM (tm) which is a code-only representation of the DOM. Changes
+      to the virtual DOM can be batched together, meaning that the actual DOM
+      can be redrawn only when needed.
+    </p>
+
+    <h1>The React Course</h1>
+
+    <p>
+      The React course was originally buiilt for BBC News some time ago. It is
+      rather short and could do with an update. I hope one day soon to have time
+      to improve it.
+    </p>
+
+    <ul>
+      <li><a href="/react-course/intro">React Course</a></li>
+      <li>
+        <a href="/react-course/intro"
+          >React Course Book (the whole course formatted as a single document
+          with internal links)</a
+        >
+      </li>
+    </ul>
+
+    <PostList posts={posts} />
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    max-width: 50rem;
+
+    margin: 5rem auto;
+    padding: 0 1rem;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+</style>
