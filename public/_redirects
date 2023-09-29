@@ -53,21 +53,21 @@
 
 # Rails Course
 
-/ruby/rails/course/exercises/assets /rails-course/assets
-/ruby/rails/course/exercises/associations /rails-course/associations
-/ruby/rails/course/exercises/blog /rails-course/blog
-/ruby/rails/course/exercises/concerns /rails-course/concerns
-/ruby/rails/course/exercises/debugging /rails-course/debugging
-/ruby/rails/course/exercises/haml /rails-course/haml
-/ruby/rails/course/exercises/hello-world /rails-course/hello-world
-/ruby/rails/course/exercises/integration /rails-course/integration
-/ruby/rails/course/exercises/internationalisation /rails-course/internationalisation
-/ruby/rails/course/exercises/layouts-and-partials /rails-course/layouts-and-partials
-/ruby/rails/course/exercises/models /rails-course/models
-/ruby/rails/course/exercises/params /rails-course/params
-/ruby/rails/course/exercises/rspec /rails-course/rspec
-/ruby/rails/course/exercises/scaffolding /rails-course/scaffolding
-/ruby/rails/course/exercises/sessions /rails-course/sessions
+/ruby/rails-course/exercises/assets /rails-course/assets
+/ruby/rails-course/exercises/associations /rails-course/associations
+/ruby/rails-course/exercises/blog /rails-course/blog
+/ruby/rails-course/exercises/concerns /rails-course/concerns
+/ruby/rails-course/exercises/debugging /rails-course/debugging
+/ruby/rails-course/exercises/haml /rails-course/haml
+/ruby/rails-course/exercises/hello-world /rails-course/hello-world
+/ruby/rails-course/exercises/integration /rails-course/integration
+/ruby/rails-course/exercises/internationalisation /rails-course/internationalisation
+/ruby/rails-course/exercises/layouts-and-partials /rails-course/layouts-and-partials
+/ruby/rails-course/exercises/models /rails-course/models
+/ruby/rails-course/exercises/params /rails-course/params
+/ruby/rails-course/exercises/rspec /rails-course/rspec
+/ruby/rails-course/exercises/scaffolding /rails-course/scaffolding
+/ruby/rails-course/exercises/sessions /rails-course/sessions
 
 # Mongo Course
 
