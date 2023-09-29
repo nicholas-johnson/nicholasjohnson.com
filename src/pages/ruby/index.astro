@@ -10,7 +10,7 @@ const posts = allPosts
     const dateB = new Date(b.frontmatter.date);
     return dateA.valueOf() - dateB.valueOf() ? 1 : -1;
   })
-  .filter((post) => post.frontmatter.tags.includes("ruby"));
+  .filter((post) => post.frontmatter.tags?.includes("ruby"));
 ---
 
 <GlobalLayout title="Ruby">
