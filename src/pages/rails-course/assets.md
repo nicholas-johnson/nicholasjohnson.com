@@ -1,9 +1,6 @@
 ---
 title: "Assets"
-description: ""
-section: "ruby"
 course: "railsCourse"
-exercise: "assets"
 layout: ../../layouts/Course.astro
 ---
 

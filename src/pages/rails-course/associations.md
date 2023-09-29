@@ -1,9 +1,6 @@
 ---
 title: "Associations Between Models"
-description: ""
-section: "ruby"
 course: "railsCourse"
-exercise: "associations"
 layout: ../../layouts/Course.astro
 ---
 

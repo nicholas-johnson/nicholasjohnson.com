@@ -7,15 +7,13 @@ exercise: "extend-and-include"
 layout: ../../layouts/Course.astro
 ---
 
+# Extend vs. Include
 
+Include and Extend allow us to take methods from a module and add them to an object. They work slightly differently from each other though. Let's take a look...
 
-%h1 Extend vs. Include
+## Extend adds methods directly to an object
 
-%p Include and Extend allow us to take methods from a module and add them to an object. They work slightly differently from each other though. Let's take a look...
-
-%h2 Extend adds methods directly to an object
-
-%p Extend adds methods to an object. It extends that object by adding new features to it.
+Extend adds methods to an object. It extends that object by adding new features to it.
 
 ```js
     class Hamster
@@ -28,7 +26,7 @@ layout: ../../layouts/Course.astro
     Hamster.extend PetSkills
 ```
 
-%p If you extend a class, you create a class method.
+If you extend a class, you create a class method.
 
 ```js
     h = Hamster.new
@@ -38,7 +36,7 @@ layout: ../../layouts/Course.astro
     # => false
 ```
 
-%p If you extend an instance of a class, you create an instance method, but only on that instance. You can extend any object like this.
+If you extend an instance of a class, you create an instance method, but only on that instance. You can extend any object like this.
 
 ```js
     h.extend PetSkills
@@ -50,11 +48,11 @@ layout: ../../layouts/Course.astro
     # => false
 ```
 
-%p You can call extend on any object to add methods to that object alone.
+You can call extend on any object to add methods to that object alone.
 
-%h2 Include adds instance methods to a class
+## Include adds instance methods to a class
 
-%p Include takes a more traditional approach. If you include a module in a class, the methods in the module will be added as instance methods, and will be available to all instances of that class.
+Include takes a more traditional approach. If you include a module in a class, the methods in the module will be added as instance methods, and will be available to all instances of that class.
 
 ```js
     class Gerbil
@@ -68,8 +66,8 @@ layout: ../../layouts/Course.astro
     # => true
 ```
 
-%h2 Upshot
+## Upshot
 
-%p Extend will add methods to an object, and only to that object. If we extend a class we get class methods.
+Extend will add methods to an object, and only to that object. If we extend a class we get class methods.
 
-%p Include will include methods from a module into a class, those methods become instance methods for objects of that type.
+Include will include methods from a module into a class, those methods become instance methods for objects of that type.

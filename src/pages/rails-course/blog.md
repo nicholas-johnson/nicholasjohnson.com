@@ -1,9 +1,6 @@
 ---
 title: "Social Media Exercise"
-description: ""
-section: "ruby"
 course: "railsCourse"
-exercise: "associations"
 layout: ../../layouts/Course.astro
 ---
 

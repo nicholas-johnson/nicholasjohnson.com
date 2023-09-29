@@ -100,7 +100,7 @@ db.entrycodes.aggregate([
 
 # $$ROOT
 
-%p The $$ROOT variable contains the source documents for the group. If you'd like to just pass them through unmodified, you can do this by $pushing $$ROOT into the output from the group.
+The $$ROOT variable contains the source documents for the group. If you'd like to just pass them through unmodified, you can do this by $pushing $$ROOT into the output from the group.
 
 ```js
   db.entrycodes.aggregate([
