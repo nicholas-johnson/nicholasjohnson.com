@@ -7,8 +7,6 @@ date: "2014-06-30 19:04:36"
 preview: "JQuery is a library written in JavaScript which is primarily about DOM manipulation. It lets you find parts of a web page and make changes to them with very little code. It's wildly popular and is used extensively across the Internet. It also forms the basis of other larger frameworks. If you're serious about web development you need to know jQuery."
 ---
 
-%article.book_cover
-
 **By Nicholas Johnson**
 
 _Document version 0.0.1 - Alpha_
@@ -118,8 +116,6 @@ This is a contrived example, but it shows that you can do an awful lot with just
 
 We can accomplish a lot very, very quickly with very little code. Things that used to take 500 lines of code can now be done in just one. This makes you as a developer surprisingly productive and helps you show off at work. You can charge more, and spend more time on the beach, or playing Xbox...
 
-#diving_in
-
 # Diving In to jQuery
 
 In this section we're going to write some actual jQuery, then you can have a go. Are you excited? If you're excited, punch the air and say HUH!
@@ -136,7 +132,7 @@ Sounds easy? Lets go!
 
 Ready to have a go? First we need to download a copy of jQuery, so visit <http://www.jquery.com> and click the big download button.
 
-%aside.box
+<aside class="box">
 
 ## Production or Development?
 
@@ -146,6 +142,8 @@ You'll notice you have two choices here, production or development.
 - The development version is nicely formatted, but larger.
 
 I'd suggest using the development version while you're learning so you can poke around inside it, then using the production version when you're ready to make something real.
+
+</aside>
 
 Save the jQuery code into a file called jquery.js
 
@@ -229,13 +227,15 @@ $(function () {
 
 The $ function is receiving another function that can do the DOM manipulation.
 
-%aside.box
+<aside class="box">
 
 ## Passing a function to $
 
 What does jQuery do when you pass it a function? Well it stores it and waits for a very special event: onDOMready. The onDOMready event is fired when the web browser is ready to display the page. It has downloaded and parsed all the HTML and understood all the CSS.
 
 When the DOM is ready, jQuery takes all the functions it has saved up and executes them in order one after another, changing the DOM in any way that's needed.
+
+</aside>
 
 ## The Function literal
 
@@ -278,8 +278,6 @@ $(function () {
 ```
 
 We're doing a lot here. We're storing up a function to be executed when the page has loaded, then when it has loaded we're finding all of the paragraph elements and setting their inner HTML.
-
-#css
 
 # Manipulating CSS - A.K.A. Doing pretty things
 
@@ -337,23 +335,29 @@ $(function () {
 
 This function will make our paragraph big red and bold. Note that "font-size" and "font-weight" have to be quoted because the minus sign is a mathematical operator in JavaScript.
 
+<div class="exercise">
+
 ## Exercises: setting style attributes
 
 1. Using the HTML above, highlight the paragraph with a pale yellow background. This is often useful for highlighting sections of text.
 2. Using the HTML above, try to make the paragraph go to the bottom right of the page using position:fixed; bottom:0px; right:0px;. It's often useful to chuck things around the page like this.
 3. Using the HTML above, hide the paragraph completely using display:none.
 
-#classes
+</div>
 
 # Setting Class Attributes
 
 We can also add classes to parts of the page for styling with CSS. we do this using addClass like so:
 
-$('p').addClass('highlighted');
+```js
+$("p").addClass("highlighted");
+```
 
 We also have a corresponding removeClass function at our command:
 
-$('p').removeClass('highlighted');
+```js
+$("p").removeClass("highlighted");
+```
 
 We can use this like so:
 
@@ -396,17 +400,21 @@ It's generally good to apply styles in this way, using classes and CSS, because 
 
 In general, we should keep our styles in our CSS as much as possible. There are some cases where this is not practical, for example when we want to do animations, but in many cases this is the best way.
 
+<div class="exercise">
+
 ## Exercise - Styling with CSS
 
 Using the HTML document above, use CSS and addClass to highlight the span in a nice pale yellow colour.
 
-#selectors
+</div>
 
 # Selectors
 
 Remember in the previous chapter we wrote this:
 
-$('p')
+```js
+$("p");
+```
 
 This is an example of a selector. In this case it returns a jQuery object containing a list of every paragraph on the page. This is a super simple way to instantiate a jQuery object containing the set of DOM nodes we're interested in working with.
 
@@ -418,11 +426,15 @@ jQuery is cool because it implements most of the CSS3 syntax for use in selector
 
 You use the CSS dot syntax to pull any element by class. Observe:
 
-$('h1.header');
+```js
+$("h1.header");
+```
 
 ...will select the h1 of class header.
 
-$('div#sidebar');
+```js
+$("div#sidebar");
+```
 
 ...will select the div of id sidebar.
 
@@ -430,11 +442,15 @@ $('div#sidebar');
 
 Just as in CSS, you can select elements nested inside one another. Observe:
 
-$('.sidebar ul');
+```js
+$(".sidebar ul");
+```
 
 ...will select any ul element inside an element of class sidebar.
 
-$('.header .topnav li');
+```js
+$(".header .topnav li");
+```
 
 ...will select all the list items inside the element with class 'topnav' inside the header.
 
@@ -446,11 +462,15 @@ As well as the full range of CSS, we also have a whole bunch of CSS3 enhancement
 
 You can select the first child of a particular DOM element using the first-child pseudoclass. see:
 
-$("div :first-child")
+```js
+$("div :first-child");
+```
 
 ...will select the first element inside any div. It will only select the first one. similarly last-child selects the last matching element. You can also select a middle child:
 
-$('ul li:nth-child(2)');
+```js
+$("ul li:nth-child(2)");
+```
 
 ...will select the second li in any unordered list. You can select any element like this.
 
@@ -458,11 +478,15 @@ $('ul li:nth-child(2)');
 
 You can select alternate rows using the :odd and :even pseudoclasses:
 
-$('tr:odd')
+```js
+$("tr:odd");
+```
 
 ...will select every odd numbered row in a table.
 
-$('tr:even')
+```js
+$("tr:even");
+```
 
 Note that JavaScript array lists are zero indexed, so the first element is actually even. This can trip you up if you don't know it.
 
@@ -470,9 +494,13 @@ Note that JavaScript array lists are zero indexed, so the first element is actua
 
 We can also select elements which posses other attributes. For example:
 
-$('a[rel=external]').css('background-image', 'url(external_link.gif)');
+```js
+$("a[rel=external]").css("background-image", "url(external_link.gif)");
+```
 
 will select all links which have a rel attribute with a value of 'external' You could use this to highlight external links.
+
+<div class="exercise">
 
 # Pass Me the Tweezers Exercise
 
@@ -529,40 +557,54 @@ Using the above HTML, only JavaScript, and the shortest most accurate selectors,
 
 1. Highlight just the word putative in green.
 
-$('.one p').css('color', 'green');
+```js
+$(".one p").css("color", "green");
+```
 
 2. Highlight just the word incondite in red.
 
-$('.one h1').css('color', 'red');
+```js
+$(".one h1").css("color", "red");
+```
 
 3. Highlight just the word paronomasia in pink.
 
-$('.two #three').css('color', 'pink');
+```js
+$(".two #three").css("color", "pink");
+```
 
 4. Highlight just the word sobriquet in purple.
 
-$('.two p').css('color', 'purple');
+```js
+$(".two p").css("color", "purple");
+```
 
 5. Highlight just the word lascivious, but not the word anomie in grey.
 
-$('ul ul li').css('color', 'grey');
+```js
+$("ul ul li").css("color", "grey");
+```
 
 6. Highlight just the word opprobrium in orange.
 
 There are two ways to tackle this. The first and simplest would be to change the order of the questions, so by tackling question 4 first we get:
 
-$('.two span').css('color', 'orange');
-$('.two #three').css('color', 'pink');
+```js
+$(".two span").css("color", "orange");
+$(".two #three").css("color", "pink");
+```
 
 Well done if you hit on this solution. Simple is good.
 
 The second would be to use a :not pseudoclass:
 
-$('.two span:not(#three)').css('color', 'orange');
+```js
+$(".two span:not(#three)").css("color", "orange");
+```
 
 Here we have found the span who's id attribute does not equal three
 
-#DOM
+</div>
 
 # Modifying the DOM
 
@@ -572,7 +614,9 @@ Lets look at how to put things on to the page.
 
 The html method lets us replace the contents of an element with our own code. For example:
 
-$('p').html('I ate all your paragraphs');
+```js
+$("p").html("I ate all your paragraphs");
+```
 
 ...will replace the contents of every paragraph tag with the string 'I ate all your paragraphs'.
 
@@ -580,19 +624,21 @@ $('p').html('I ate all your paragraphs');
 
 The Append Method appends code to the end of an element:
 
-$('p').append('...');
+```js
+$("p").append("...");
+```
 
 ## .prepend()
 
 The prepend method is similar to the append method, but adds the code at the start:
 
-$('p').prepend('here it comes: ');
+```js
+$("p").prepend("here it comes: ");
+```
 
 ## .before() and .after()
 
 We also have before and after. These add your code outside the element, before and after respectively.
-
-#events
 
 # Events
 
@@ -608,37 +654,45 @@ JQuery offers a very easy way to bind common handlers to browser events. Observe
 
 ### HTML
 
+```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>Event Binding</title>
-<script src="jquery-1.5.js"></script>
-<script src="binding.js"></script>
-</head>
-<body>
-<p class="clickable">Don't Click Me</p>
-</body>
+  <head>
+    <title>Event Binding</title>
+    <script src="jquery-1.5.js"></script>
+    <script src="binding.js"></script>
+  </head>
+  <body>
+    <p class="clickable">Don't Click Me</p>
+  </body>
 </html>
+```
 
 ### JavaScript - binding.js
 
-$(function() {
-$(".clickable").click(function() {
-alert("you clicked it");
+```js
+$(function () {
+  $(".clickable").click(function () {
+    alert("you clicked it");
+  });
 });
-});
+```
 
 Looks tricky? It isn't. We've simply passed the click function a handler. The first part is as we've seen so far:
 
-$(function() {
-$(".clickable").click();
+```js
+$(function () {
+  $(".clickable").click();
 });
+```
 
 We're detecting the click event on any paragraph, but there wouldn't be much point in doing this if we didn't pass the click event a function to execute when the click event occurs:
 
+```js
 function() {
-alert("you clicked it");
-});
+  alert("you clicked it");
+};
+```
 
 The paragraph click was the event. This is the handler.
 
@@ -646,11 +700,13 @@ The paragraph click was the event. This is the handler.
 
 Sometimes we need to know a little more about the event. If this is the case, we can tell our event handler to receive an event object, which we can query. We do this like so:
 
-$(function() {
-$(".clickable").click(function(e) {
-alert("mouse position: " + e.screenX + " : " + e.screenY);
+```js
+$(function () {
+  $(".clickable").click(function (e) {
+    alert("mouse position: " + e.screenX + " : " + e.screenY);
+  });
 });
-})
+```
 
 Here the handler has received an object called e, which is an event object. We can query the event object in a number of ways. Here we are outputting the x and y position of the mouse at the time when the click took place.
 
@@ -660,32 +716,38 @@ We can also get access to the object (usually a DOM node) that the event happene
 
 ### HTML
 
+```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>Event Binding</title>
-<script src="jquery-1.5.js"></script>
-<script src="binding.js"></script>
-</head>
-<body>
-<p class="clickable">Don't Click Me</p>
-<p class="clickable">Do Click Me</p>
-</body>
+  <head>
+    <title>Event Binding</title>
+    <script src="jquery-1.5.js"></script>
+    <script src="binding.js"></script>
+  </head>
+  <body>
+    <p class="clickable">Don't Click Me</p>
+    <p class="clickable">Do Click Me</p>
+  </body>
 </html>
+```
 
 Here we have two paragraphs with the same class "clickable" Now let's do some binding:
 
 ### JavaScript - binding.js:
 
-$(function() {
-$(".clickable").click(function(e) {
-alert($(this).html());
+```js
+$(function () {
+  $(".clickable").click(function (e) {
+    alert($(this).html());
+  });
 });
-})
+```
 
 This time we are alerting:
 
-$(this).html()
+```js
+$(this).html();
+```
 
 Within handlers, "this" refers to the DOM node that the event happened to. Here we call .html() on it, which returns the element's inner html.
 
@@ -701,19 +763,21 @@ focus: Fires when a form element gains focus. You could use this to show context
 
 Create a web page containing a paragraph in which several words have been emphasised. Make it so that whenever one of the emphasised words is clicked, the emphasised word is alerted. For bonus points, make it so that whenever the emphasised text is clicked, the word that was clicked appears in large text at the top of the page.
 
-#each
-
 # Each Peach
 
 JQuery selectors return an array of DOM nodes. This means that with a single selector, you can pull out all the paragraphs on the page, or all the hyperlinks with a particular class. When we apply methods to a jQuery object, we are generally working on all of the DOM nodes at the same time. This is part of the power of jQuery. For example.
 
-$('p').hide();
+```js
+$("p").hide();
+```
 
 ....will hide every single paragraph on the page without exception. It applies hide to all paragraphs. The selector returns all the paragraphs as an array of DOM nodes, then the hide method iterates over all of the paragraphs, hiding them.
 
 A selector may return just one DOM node, and this is fine, but it will still return it in an array with just one item:
 
-$('.page_header h1')
+```js
+$(".page_header h1");
+```
 
 ...will likely only match one item on the page, but it is still returned in an array. This common interface makes things very simple for us, provided we want to do exactly the same thing to every matched DOM node, but what if things aren't so simple.
 
@@ -727,31 +791,35 @@ Here we use each to create the beginnings of an image gallery:
 
 **HTML**
 
+```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>Each</title>
-<script src="jquery-1.5.js"></script>
-<script src="each.js"></script>
-</head>
-<body>
-<img src="kitten.jpg" alt="kitten" />
-<img src="puppy.png" alt="puppy" />
-<img src="lemur.gif" alt="lemur" />
-</body>
+  <head>
+    <title>Each</title>
+    <script src="jquery-1.5.js"></script>
+    <script src="each.js"></script>
+  </head>
+  <body>
+    <img src="kitten.jpg" alt="kitten" />
+    <img src="puppy.png" alt="puppy" />
+    <img src="lemur.gif" alt="lemur" />
+  </body>
 </html>
+```
 
 This HTML file contains three images, each of which has an alt attribute. For each image, we're going to pull out the alt attribute, pop it in a span, and put that after the image.
 
 **JavaScript - each.js**
 
-$(function() {
-$("img").each(function() {
-var img = $(this);
-var alt_text = img.attr('alt');
-img.after("<span>" + alt_text + "</span>");
+```js
+$(function () {
+  $("img").each(function () {
+    var img = $(this);
+    var alt_text = img.attr("alt");
+    img.after("<span>" + alt_text + "</span>");
+  });
 });
-});
+```
 
 Here we select every image on the page, then iterate over the resulting array using each. Each receives a function, and the function has access to the DOM node via the "this" variable. We convert "this" into a jQuery object, pull out the alt text, then append the alt text after the image.
 
@@ -774,165 +842,6 @@ $("body *");
 ```
 
 Write a jQuery function that iterates over everything on the page using each, makes them all position:absolute, and assigns random top and left values. You need to use each here to give them all different random values.
-
--# #ajax
--#  
--#
--# # Welcome to AJAX #
--#
--# AJAX is the amazing technology that allows you to transfer data to and from your server direct from a webpage, updating it in real time without any need for a page refresh.
--#
--# This is enormously cool.
--#
--# With such power though comes great responsibility. You must be careful not to destroy any buildings for example, or knock over a bridge.
--#
--# ## A Misnomer ##
--#
--# AJAX stands for Asynchronous JavaScript And Xml, but it's actually something of a misnomer, since we seldom use XML any more. More commonly we will find ourselves using JSON, -#which is similar to XML but shorter, or HTML fragments.
--#
--# Unfortunately, AJAJ is not a great acronym, and AJAH sounds like a door, so we're stuck with AJAX for now (which has the nice side effect of making us sound cool and awesome).
--#
--# %aside.box
--#  
--# ## Working over http ##
--#
--# We can't do AJAX on or local file system, that would be a security risk. In order to do AJAX, you need to work on a server. You can use IIS, Apache, or anything else you -#fancy.
--#
--# -# TODO Write this section
--#
--#  
--#
--# # Talking to the server using jQuery #
--#
--# In this exercise, we will use jQuery as a wrapper around the XMLHttpRequest object. We will get greater cross browser compatibility, and a nice syntax which hides the rough -#edges.
--#
--# When performing an AJAX request using jQuery, we have a number of wrapper functions to call on.
--#
--# ## $.ajax ##
--#
--# $.ajax is the most flexible. It allows us to perform an XMLHttpRequest with a nice syntax. We can easily assign callbacks to each stage of the process, and can perform any -#type of request.
--#
--# ## $.getJSON ##
--#
--# $.getJSON is less flexible. It allows us to pull a json object, which is automatically converted to a JavaScript object which we have access to. Powerful in it's simplicity.
--#
--# ## $.getScript ##
--#
--# $.getScript allows us to pull a script from the server and execute it. This is a tremendously powerful technique if we are implementing an MVC pattern. We can ship out -#JavaScript to affect out page in any way we like. The requests are slowed down somewhat because of the extra payload information, but it means we can compose the JavaScript -#serverside to perform exactly the task the user requested.
--#
--# ## Documentation ##
--#
--# The jQuery AJAX api is available here:
--#
--# http://api.jquery.com/category/ajax/
--#
--# # Easy In AJAX Exercise #
--#
--# Let's start slow...
--#
--# ...
--#
--# This exercise is in four parts. See if you can follow along.
--#
--# ## Make the HTML ##
--#
--# First create a little html file containing a little bit of text and upload it to the server. Verify that you can indeed see the file by viewing it in a web browser.
--#
--# ## Do the AJAX ##
--#
--# Now write a Javascript file that hits that URL (note, the url will need to be local to the file, so no http:// at the start):
--#
--# var url = "myfile.html"
--# $.ajax(url);
--#
--# Use the Firebug console to verify that the file is being downloaded. Brilliant, you're doing AJAX!
--#
--# ## Listen for the result ##
--#
--# Next add a lister. We're going to listen for 'done', so...
--#
--# $.ajax(url).done(function(data) {
--# alert(data);
--# });
--#
--# This function is called when the ajax request completes successfully. Wow, you have AJAX.
--#
--#
--# ## Do something with the result ##
--#
--# Finally we want to do something with the result. Lets just append it to the body.
--#
--# $.ajax(url).done(function(data) {
--# $('body').append(data);
--# });
--#
--# Et voila. We have called the ajax, listened for the result, and finally added the result to our page. Note that we don't need to just add the result to the page, we could do -#something else with it instead. For example we could put it into a particular div, make it pop up, or just use it for something else.
--#
--# Jolly well done.
--#
--# # HIJAX jQuery exercise #
--#
--# Overriding the function of hyperlinks is a particularly useful thing to be able to do. The hyperlink will work normally in the absence of JavaScript but will AJAX in the -#content if it is able. This technique is sometimes rather cleverly called HIJAX.
--#
--# ## Questions ##
--#
--# 1. Add a list of hyperlinks to a page. When a hyperlink is clicked, detect that event, and call a function that retrieves the content via AJAX and inserts it into an element -#on the page.
--#
--# **Extension**
--#
--# 2. Add a data attribute to some of your links data-remote="true" now add the event only to hyperlinks with this data-attribute, so only links with data-remote set will use -#AJAX.
--#
--# 3. Add a spinner. link is clicked, display a little spinner next to the link to show something is happening. the complete event occurs, remove the spinner.
--#
--# 3. Add caching. Add a data-section-id attribute to your hyperlinks. When you click a link, first check for the presence of a div with that id. If it is present, reveal it. If -#not, create it, ajax the content into it, hide any other divs that may be on the page, and reveal the div that you just created. Fun!
--#
--#
--# ## Facebooktastic ##
--#
--# You can find information about the facebook graph api here:
--#
--# http://developers.facebook.com/docs/reference/api/
--#
--# 1. Work out the URL you need to pull publicly accessible information from the Coca-Cola page.
--# 2. Output a list of all the publicly accessible information about Coca Cola.
--# 3. Extend your script so that you can type the name of a Facebook page into a text field.
--#
--# ## Answers ##
--#
--# There are lots of good ways to
--#
--# ### Twitterific ###
--#
--# A typical answer might look like this:
--#
--# $(function() {
--# var url = "/mirror.php?url=http://api.twitter.com/1/statuses/public_timeline.json"
--# $.getJSON(url, function(data) {
--# $.each(data, function(i,el) {
--# $('body').append('<p>' + el.text + '</p>');
--# });
--# });
--# })
--#
--# For part two, you'll need to pull out a little more from the JSON, something like this:
--#
--# $(function() {
--# var url = "/mirror.php?url=http://api.twitter.com/1/statuses/public_timeline.json"
--# $.getJSON(url, function(data) {
--# $.each(data, function(i,el) {
--# var tweet = $('<div class="tweet"></div>');
--# tweet.append('<h2>' + el.user.name + '</h2>');
--# var img = $('<img />')
--# .attr('src', el.user.profile_image_url)
--# .attr('title', el.user.description);
--# tweet.append(img);
--# tweet.append('<p>' + el.text + '</p>');
--# $('body').append(tweet);
--# });
--# });
--# })
-
-#jquery-ui
 
 # JQuery UI
 
@@ -967,6 +876,8 @@ This folder contains the complete source code plus documentation. It's interesti
 **js**
 
 This folder contains minified copies of jQuery and jQuery UI. These are the JavaScript files you'll need to use. Import them in your header.
+
+<div class="exercise">
 
 # JQuery UI Exercises
 
@@ -1028,23 +939,23 @@ It this exercise we will play with dialog boxes.
 6. Try out the modal confirm option.
 7. Try to animate the opening and closing of a dialog.
 
-#json
+</div>
 
-# Object Orientation with JSON and Mario Exercise
+# Object Orientation with Mario Exercise
 
-There are several different syntaxes for declaring objects in JavaScript. Of these, the cleanest and most commonly used is JavaScript Object Notation (JSON), pronounced Jason.
+There are several different syntaxes for declaring objects in JavaScript. Of these, the cleanest and most commonly used are Object Literals
 
-## Welcome to JSON
+## Welcome to Object Literals
 
-Packaging our code up into JSON gives us several significant advantages:
+Packaging our code up into object literals gives us several significant advantages:
 
 1. It looks pretty.
 2. It reduces the number of objects in the global namespace.
 3. It's great for AJAX, smaller than XML and readily parsable both client and server side.
 
-In this series of exercises we'll write some JSON, create an API and finally add a thin layer of listeners to hook it up to a jQuery User Interface.
+In this series of exercises we'll write some Javascript literals, create an API and finally add a thin layer of listeners to hook it up to a jQuery User Interface.
 
-JSON looks like this:
+Object literals look like this:
 
 ```js
 var mario = {
@@ -1082,13 +993,17 @@ mario.can_fly = true;
 
 Objects are useful for keeping things neat and tidy. We have encapsulated all the information about Mario in a single place so it's easy to get at and understand.
 
-**Questions**
+<div class="exercise">
+
+## Exercise
 
 1. Enter the above code
 2. Alert the values of mario.description and bowser.description
 3. Use Firebug to add a breakpoint. Check the values of the JSON objects in the debugger.
 4. Add a can_fly attribute to Mario using the dot syntax. Again, check the debugger.
 5. Create an entry for Luigi. He's a bit thinner that Mario, but slightly taller, and he wears a green outfit.
+
+</div>
 
 ## A Rather Dull Mario Game
 
@@ -1141,7 +1056,9 @@ bowser.boost = 20;
 boss_battle();
 ```
 
-### Questions
+<div class="exercises">
+
+## Exercises
 
 1. Enter the above code and get it to run. Who wins?
 2. Give Mario an invincibility attribute. If invincibility is true, Mario always wins. Unfair I know.
@@ -1154,7 +1071,9 @@ Don't worry, we are going somewhere with this. Next!
 2. Extend the boss battle function so it receives two parameters, contestant_1 and contestant_2.
 3. Rewrite it so that instead of running the conditional, it simply prints out the name of the contestant with the highest attack_power. This renders all the other attributes irrelevant, it only checks the attack_power.
 
-## Functions within JSON
+</div>
+
+## Functions within Object Literals
 
 This is all very well. We have Mario and Bowser objects and a function to compare them, but it seems a little artificial having all our functions scattered all over the place like this. Also, the more functions we have in our global namespace, the more likely it is that they will conflict, and we'll accidentally overwrite something important.
 
@@ -1205,13 +1124,15 @@ We have also written an attack_power function which is implemented by bowser and
 
 Because functions are objects, we can assign them as attributes of objects. They're key value pairs, but if you've programmed before, you'll notice they work like methods. We can now call methods on our JSON objects.
 
-**What is this?**
+## What is this?
 
 You might have noticed also that in the attack_power function we use the "this" keyword. We say this.speed and this.boost.
 
 This is a troublesome keyword that trips up even quite advanced JavaScript developers all the time. "this" refers to the context in which the code is currently operating in. In this case, the context is mario (or bowser) and so this refers to these variables. That's because the attack_power function is an attribute of mario. This points to the object the current object is a member of. Your knowledge of JavaScript will be measured by your understanding of scope, and the "this" keyword, so we'll come back to this, but for now, let's make a real game...
 
-**Questions**
+<div class="exercises">
+
+## Exercises
 
 1. Enter the above code and make it work.
 2. Add Princess Peach. The princess is smaller and lighter but compensates for this by being quicker and having a dash mode. Battle Peach vs Bowser and Peach vs Mario.
@@ -1549,7 +1470,7 @@ var mario_world = {
 };
 ```
 
-#closure
+</div>
 
 # Privacy with the Module Pattern
 
@@ -1579,7 +1500,7 @@ fnc();
 
 When we call outer, we define inner and assign it as an attribute of window (in other words, a global variable) inner persists after outer has excited, so the local variable a is still in scope, and still accessible to inner.
 
-**Questions**
+Questions
 
 1. Enter the above code and verify it works.
 
@@ -1647,8 +1568,6 @@ We can use the closure created by a self executing function to wrap our code, gi
   })()
 ```
 
-#plugins
-
 # Writing Plugins
 
 One of the huge strengths of jQuery is it's comfy support for plugins. You can write a plugin in moments to do pretty much anything you like. Plugins range from very complex image galleries, to tiny little scripts that do one thing.
@@ -1681,11 +1600,15 @@ Given access to the jQuery element in the this variable, you can in theory do an
 
 Use it like this:
 
-$('h1').insult();
+```js
+$("h1").insult();
+```
 
 2. Ensure your plugin is chainable. You should also be able to do this:
 
+```js
 $('h1').insult().css({:color:red});
+```
 
 3. For bonus points, make your plugin insert a random insult. You can use Math.floor(Math.random() \* i) to generate a random integer between 0 and i - 1.
 
@@ -1693,29 +1616,31 @@ $('h1').insult().css({:color:red});
 
 A typical answer to this problem might look like this:
 
-(function( $ ){
-var insults = [
-'you have large elbows',
-'your ears smell of chips',
-'your hat is too big'
-]
-$.fn.insult = function() {
-this.each(function(i, el) {
-$(el).html(insults[Math.floor(Math.random()*insults.length)])
-})
-return this;
-};
-})( jQuery );
+```js
+(function ($) {
+  var insults = [
+    "you have overly large elbows",
+    "your ears smell of chips",
+    "your hat is too big",
+  ];
+  $.fn.insult = function () {
+    this.each(function (i, el) {
+      $(el).html(insults[Math.floor(Math.random() * insults.length)]);
+    });
+    return this;
+  };
+})(jQuery);
+```
 
 Here we have defined the plugin. Note the insults array is defined as a local variable within the closure. It is defined once, when the plugin is declared, so we avoid computational overhead, and it is private, so no-one else can read it.
 
 Now lets use our plugin:
 
-$(function() {
-$('h1').insult();
-})
-
-#async
+```js
+$(function () {
+  $("h1").insult();
+});
+```
 
 # Asynchronous Programming
 
@@ -1727,9 +1652,11 @@ Instead, JavaScript allows us to fire, and listen out for events.
 
 We have seen how easy it is to listen for events in jQuery. We can register a click handler for example, simply by calling
 
+```js
 $('a').click(function() {
 alert('clicked');
 }
+```
 
 Here we have registered a hyperlink click handler. It listens to the hyperlinks, and if one fires a 'click' event, the function is called.
 
@@ -1739,26 +1666,31 @@ But jQuery goes much further than this...
 
 Events can be triggered in response to user actions, network events, and many other things. Here we hook an event to a timer, allowing us to submit a form at regular intervals. Let's autosave:
 
-$(function() {
+```js
+$(function () {
+  $("form.autosave").submit(function () {
+    // do cool ajax here
+    $("body").append("<p>saving</p>");
+    return false;
+  });
 
-$('form.autosave').submit(function() {
-// do cool ajax here
-$('body').append('<p>saving</p>');
-return false;
-})
-
-setInterval(function() {$('form').trigger('submit');}, 5000)
-})
+  setInterval(function () {
+    $("form").trigger("submit");
+  }, 5000);
+});
+```
 
 Here we add a submit listener to the form. This takes over the submission of the form, and instead submits an ajax request, alerting the user.
 
 We can trigger the submit event any time we like using the trigger method:
 
-$('form').trigger('submit');
+```js
+$("form").trigger("submit");
+```
 
 In the example above we attach the trigger to a timeout, submitting the form every 5 seconds.
 
-**Exercise**
+## Exercise
 
 1. Enter the above code and get it to run.
 
