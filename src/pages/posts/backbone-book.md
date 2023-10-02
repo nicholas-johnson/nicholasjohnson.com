@@ -1,23 +1,22 @@
 ---
-title: "BackboneJS - Step by Logical Step"
-description: "Backbone JS tutorial, Learn Backbone step by step"
+title: BackboneJS - Step by Logical Step
+tags: javascript
+layout: "../../layouts/BlogPost.astro"
 date: "2014-06-30 19:04:36"
+preview: "Backbone is a the grand-daddy of all the JavaScript MVC frameworks. It's the progenitor of frameworks like Ember, Angular, even Meteor. It's a sensibly put together library full of tools to help you organise your web application, a toolkit for tidy JavaScript."
 ---
-
-# BackboneJS
-
-## Step by Logical Step
 
 **By Nicholas Johnson**
 
-Version 0.51 Beta
+_Version 0.52 Beta_
 
 # What is this, what is that?
 
 Backbone is a the grand-daddy of all the JavaScript MVC frameworks. It's the progenitor of frameworks like Ember, Angular, even Meteor. It's a sensibly put together library full of tools to help you organise your web application, a toolkit for tidy JavaScript.
 
-%aside.pullquote
+<aside class="pullquote">
 [Backbone is] a toolkit for tidy JavaScript.
+</aside>
 
 You can use it to enhance your existing site, to add interactivity to a form for example, or you can go all out and create a single page app (SPA), where the entire site is generated clientside using JavaScript.
 
@@ -51,7 +50,7 @@ Collections can also fire events. A view can listen to a collection.
 
 The Backbone Router uses JavaScript pushstate to change the URL in the address bar, allowing you to create an entire website clientside without hitting the server.
 
-%aside.box
+<aside class="box">
 
 ## Backbone is a library, not a framework
 
@@ -62,7 +61,7 @@ Backbone is a library.
 
 You can use any of the Backbone components in any way you see fit, but it's up to you write the wiring code.
 
-#getting_started
+</aside>
 
 # Getting started
 
@@ -74,14 +73,11 @@ an excellent library of useful JavaScript functions, including functions for fun
 
 Download here: <http://underscorejs.org/>
 
-##JQuery
+## JQuery
 
 Everyone's favourite DOM mainpulation tool. Choose 1.x if you want to support legacy browsers. Choose 2.x if you want a smaller faster codebase.
 
 Download here: <http://jquery.com/>
-
-%aside.sidenote
-Backbone depends on JQuery & Underscore
 
 ## Boilerplate
 
@@ -111,8 +107,6 @@ You might also serve the libraries directly from a Content Delivery Network (CDN
 - <http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js>
 
 If you serve from a CDN you will need to be connected to the internet to work on your site.
-
-#models
 
 # Getting Started with Backbone Models
 
@@ -188,8 +182,6 @@ Using .set allows us to trigger events and wire our app together using listeners
 
 Using .get allows us to pull attributes from the shark.attributes object without our code explicitly referencing it.
 
-#more_models
-
 # More with Models
 
 When we first define our shark, we can pass in an object which will define it. For example:
@@ -208,8 +200,6 @@ const Shark = Backbone.Model.extend({
 const shark = new Shark();
 alert(shark.get("name")); // Outputs "Mr Shark"
 ```
-
-#model_events
 
 # Model Events
 
@@ -270,8 +260,6 @@ You can view the complete list here:
 
 <http://backbonejs.org/#Events-catalog>
 
-#views
-
 # Views
 
 A Backbone View is an object which controls a part of your web page. It's linked to a DOM node which can either be on the page, or a fragment, not connected to the page.
@@ -321,7 +309,7 @@ You would then need to hook this up to a HTML page with an element where id="tan
 </html>
 ```
 
-%aside.box
+<aside class="box">
 
 ## What are el and $el
 
@@ -329,7 +317,7 @@ The el attribute of your view is the DOM node your view attaches to. You specify
 
 The $el attribute of your view is a jQuery version of your el. This is created for you by Backbone.
 
-#view_events
+</aside>
 
 # View Events
 
@@ -399,17 +387,17 @@ const SharkTankView = Backbone.View.extend({
 
 This is acceptable, but arguably less readable. You should favour the events attribute for listening to the DOM.
 
-%aside.box
+<aside class="box">
 
 ## What is this.$?
 
 This.$ is a convenience attribute of a backbone view. It contains a reference to jQuery scoped to the current view.
 
-If you call this.$('p') for example it will get all the paragraphs in the current el.
+If you call `this.$('p')` for example it will get all the paragraphs in the current el.
 
-this.$el is by contrast is the current el attribute packaged as a jQuery object. You could get the same effect by calling this.$el.find('p')
+`this.$el` is by contrast is the current el attribute packaged as a jQuery object. You could get the same effect by calling `this.$el.find('p')`.
 
-#templates
+</aside>
 
 # Templates
 
@@ -462,17 +450,23 @@ template({ name: "Wavy Davey" });
 
 You need to make sure you pass through all attributes or you will get an error.
 
-%aside.box{:'ng-non-bindable' => true}
+<aside class="box">
 
 ## Using {{Mustache}} style syntax
 
 If you're not a big fan of erb <%= => syntax, you can use Mustache style curly brace syntax instead by modifying the \_.templateSettings variable, like so:
 
-\_.templateSettings = {interpolate: /\{\{(.+?)\}\}/g};
+```
+_.templateSettings = {interpolate: /\{\{(.+?)\}\}/g};
+```
 
 Your template can now look like this:
 
+```js
 template("<p>Hello {{ name }}</p>");
+```
+
+</aside>
 
 ## Further reading
 
@@ -488,8 +482,9 @@ Creating templates as strings in JavaScript is OK, provided our templates are ve
 
 We compose the template into our HTML page, then we just use jQuery to pull it out as a string which we can then pass to \_.template.
 
-%aside.pullquote
+<aside class="pullquote">
 We compose the template into our HTML page, then we use jQuery to pull it out as a string.
+</aside>
 
 The convention is to put the template in a script tag with type="text/template". Content between script tags will not be rendered to the page, but can still be accessed using jQuery.
 
@@ -536,10 +531,8 @@ const SharkTankView = Backbone.View.extend({
 });
 ```
 
-#code-organisation
-
 # Further reading
 
 The Backbone sample in MVCTodo gives a very clear demo of how to build a simple todo app.
 
-<https://github.com/tastejs/todomvc/tree/gh-pages/architecture-examples/backbone>
+<https://github.com/jashkenas/backbone/blob/master/examples/todos>

@@ -3,6 +3,8 @@
 /javascript-book /learn-to-code-with-javascript/book/
 /posts /
 /ruby/blog/ /ruby/
+/backbone-book/ /posts/backbone-book/
+/jquery-book/ /posts/jquery-book/
 
 # Learn to code with JavaScript
 
@@ -118,6 +120,33 @@
 /webdev/course/exercises/stylesheets /webdev-course/stylesheets
 /webdev/course/exercises/tags /webdev-course/tags
 
+# HTML And CSS course
+
+/html-and-css/absolute-positioning /webdev-course/absolute-positioning
+/html-and-css/attributes /webdev-course/attributes
+/html-and-css/bar-chart /webdev-course/bar-chart
+/html-and-css/centering /webdev-course/centering
+/html-and-css/display-modes /webdev-course/display-modes
+/html-and-css/document /webdev-course/document
+/html-and-css/floats /webdev-course/floats
+/html-and-css/images /webdev-course/images
+/html-and-css/intro /webdev-course/intro
+/html-and-css/lists /webdev-course/lists
+/html-and-css/matching-classes /webdev-course/matching-classes
+/html-and-css/matching-elements /webdev-course/matching-elements
+/html-and-css/matching-ids /webdev-course/matching-ids
+/html-and-css/matching-nested-elements /webdev-course/matching-nested-elements
+/html-and-css/more-tags /webdev-course/more-tags
+/html-and-css/nested-floats /webdev-course/nested-floats
+/html-and-css/nesting /webdev-course/nesting
+/html-and-css/structural-tags /webdev-course/structural-tags
+/html-and-css/style /webdev-course/style
+/html-and-css/stylesheet /webdev-course/stylesheet
+/html-and-css/styling-lists /webdev-course/styling-lists
+/html-and-css/tables /webdev-course/tables
+/html-and-css/tags /webdev-course/tags
+/html-and-css/typography /webdev-course/typography
+
 # CSS3
 
 /css3/course/exercises/animation /css3-course/animation
@@ -131,6 +160,7 @@
 
 # JavaScript for Programmers
 
+/javascript/javascript-for-programmers/exercises/arrays/ /javascript-for-programmers/arrays
 /javascript/javascript-for-programmers/exercises/ajax /javascript-for-programmers/ajax
 /javascript/javascript-for-programmers/exercises/events /javascript-for-programmers/events
 /javascript/javascript-for-programmers/exercises/closure /javascript-for-programmers/closure
