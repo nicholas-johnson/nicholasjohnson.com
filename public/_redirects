@@ -209,7 +209,7 @@
 
 # Posts
 
-/blog/ /posts
+/blog/ /
 /blog/angular1-vs-angular2 /posts/angular1-vs-angular2
 /blog/angularjs-step-by-logical-step /posts/angularjs-step-by-logical-step
 /blog/annotations-vs-decorators /posts/annotations-vs-decorators
