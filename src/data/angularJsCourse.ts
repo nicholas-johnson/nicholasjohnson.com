@@ -1,10 +1,10 @@
 import type { ICourse } from "../types/Course";
 
-export const css3Course: ICourse = {
+export const angularJsCourse: ICourse = {
   title: "The AngularJS Course",
   description: "",
   bullets: [],
-  slug: "",
+  slug: "angularjs-course",
   cover: "",
   coverAlt: "",
   coverCredit: "",

@@ -19,4 +19,5 @@ export interface IExercise {
   description: string;
   slug: string;
   code?: string;
+  github?: string;
 }

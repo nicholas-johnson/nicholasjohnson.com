@@ -1,3 +1,4 @@
+import { angularJsCourse } from "./angularJsCourse";
 import { css3Course } from "./css3Course";
 import { javascriptForProgrammers } from "./javascriptForProgrammers";
 import { learnToCodeWithJavaScript } from "./learnToCodeWithJavascript";
@@ -20,4 +21,5 @@ export const courses = {
   nodeCourse,
   reactCourse,
   railsCourse,
+  angularJsCourse,
 };

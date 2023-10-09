@@ -1,0 +1,80 @@
+#!/usr/bin/python3
+
+import re
+import os
+import argparse
+
+
+def haml_to_md(haml_text):
+    lines = haml_text.split('\n')
+    md_output = []
+
+    for line in lines:
+        stripped = line.strip()
+
+        # Preserve specific lines
+        if stripped.startswith('<div class="exercise">') or stripped.startswith('</div>'):
+            md_output.append(stripped)
+            continue
+
+        # Convert headers
+        if stripped.startswith('%h1'):
+            md_output.append('# ' + stripped[4:])
+        elif stripped.startswith('%h2'):
+            md_output.append('## ' + stripped[4:])
+        elif stripped.startswith('%h3'):
+            md_output.append('### ' + stripped[4:])
+        elif stripped.startswith('%h4'):
+            md_output.append('#### ' + stripped[4:])
+        elif stripped.startswith('%h5'):
+            md_output.append('##### ' + stripped[4:])
+        elif stripped.startswith('%h6'):
+            md_output.append('###### ' + stripped[4:])
+
+        # Convert paragraphs
+        elif stripped.startswith('%p'):
+            md_output.append(stripped[2:])
+
+        # Convert links
+        link_match = re.match(r'%a\{href: "(.*?)"\} (.*)', stripped)
+        if link_match:
+            md_output.append(f"[{link_match.group(2)}]({link_match.group(1)})")
+
+        # Convert lists
+        elif stripped.startswith('%ul'):
+            md_output.append('')
+        elif stripped.startswith('%li'):
+            md_output.append('- ' + stripped[4:])
+
+        # For other elements, just append as is (might need manual editing)
+        else:
+            md_output.append(stripped)
+
+    return '\n'.join(md_output)
+
+
+def convert_file(filename):
+    # Read the content of the file
+    with open(filename, 'r') as f:
+        haml_content = f.read()
+
+    # Convert the content from HAML to Markdown
+    md_content = haml_to_md(haml_content)
+
+    # Write the converted content to a new file
+    base_name, ext = os.path.splitext(filename)
+    new_filename = f"{base_name}.md"
+    with open(new_filename, 'w') as f:
+        f.write(md_content)
+
+    print(f"Converted {filename} to {new_filename}")
+
+def main():
+    parser = argparse.ArgumentParser(description="Convert HAML to Markdown.")
+    parser.add_argument("filename", help="Path to the HAML file to convert.")
+    args = parser.parse_args()
+
+    convert_file(args.filename)
+
+if __name__ == "__main__":
+    main()
