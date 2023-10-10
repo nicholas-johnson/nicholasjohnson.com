@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.1",
     "@astropub/md": "^0.2.0",
     "astro": "^2.10.3",
     "remark": "^14.0.3"

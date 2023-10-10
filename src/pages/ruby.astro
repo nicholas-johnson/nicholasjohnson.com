@@ -1,0 +1,108 @@
+---
+import PostList from "../components/PostList.astro";
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import CourseList from "../components/CourseList.astro";
+import { railsCourse } from "../data/railsCourse";
+import { rubyCourse } from "../data/rubyCourse";
+
+const allPosts = await Astro.glob("./posts/*.md");
+
+const posts = allPosts
+  .sort((a, b) => {
+    const dateA = new Date(a.frontmatter.date);
+    const dateB = new Date(b.frontmatter.date);
+    return dateA.valueOf() - dateB.valueOf() ? 1 : -1;
+  })
+  .filter((post) => post.frontmatter.tags?.includes("ruby"));
+---
+
+<GlobalLayout title="Ruby">
+  <div class="home">
+    <div class="main">
+      <div class="intro">
+        <h1>Ruby</h1>
+        <p>
+          I first encountered Ruby back when Rails first came out in 2005. Prior
+          to that I had been doing most of my work in PHP, and like a lot of
+          people, I was utterly blown away by how easy it was to get something
+          going.
+        </p>
+
+        <p>
+          Later I went on to build StreetBank.com, a social enterprise that did
+          quite well for a few years back before Facebook Marketplace was a
+          thing. We aimed to put neighbours in touch with each other to share
+          things, skills and friendship.
+        </p>
+
+        <h1>The Ruby Course</h1>
+
+        <p>
+          I originally built the Ruby course back in 2015 for a client called
+          Deaf Alerter, who make fire alarms for deaf people, then later went on
+          to deliver it to several dozen larger clients internationally. The
+          material is available here, you're welcome to make any use of it you
+          wish.
+        </p>
+        <ul>
+          <li><a href="/ruby-course/intro">Ruby Course</a></li>
+          <li>
+            <a href="/ruby-course/intro"
+              >Ruby Course Book (the whole course formatted as a single document
+              with internal links)</a
+            >
+          </li>
+        </ul>
+      </div>
+      <h1>Writings</h1>
+
+      <PostList posts={posts} />
+    </div>
+
+    <div class="sidebar">
+      <h2>Ruby Courses</h2>
+      <div class="courseLinks">
+        <CourseList courses={[rubyCourse]} />
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .home {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+
+    .main {
+      max-width: 50rem;
+      flex: 1;
+    }
+
+    .intro {
+      margin: 8rem 0;
+
+      h1 {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar {
+      max-width: 20rem;
+      margin-top: 4rem;
+
+      h2 {
+        padding-left: 2rem;
+      }
+
+      .courseLinks {
+        border-left: 1px dashed #b8b8b8;
+        padding-left: 2rem;
+      }
+    }
+  </style>
+</GlobalLayout>

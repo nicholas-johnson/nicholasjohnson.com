@@ -7,6 +7,11 @@ export const rubyCourse: ICourse = {
   version: "0.9.0 - Beta",
   createdAt: "2017",
   lastUpdatedAt: "2017",
+  description: "",
+  bullets: [],
+  coverAlt: "",
+  coverCredit: "",
+  coverCreditUrl: "",
   exercises: [
     {
       title: "Intro to Ruby",
