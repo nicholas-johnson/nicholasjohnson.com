@@ -1,8 +1,13 @@
 ---
 layout: ../../layouts/Course.astro
 title: Hello JavaScript
-seoTitle: Introduction to JavaScript for Programmers
+seoTitle: Welcome to the JavaScript for Programmers course!
 course: javascriptForProgrammers
+date: 2023/10/09
+preview: "This short course assumes you're already proficient in at least one language. In it, we focus on the tiny soul of JavaScript, a small set of rules, from which everything else logically follows.
+
+
+Most tutorials skip to the end, they tell you the magic words to type to make a blog or an app. This course doesn't do that, instead we start with the half dozen principles on which the language is founded, and build up to the rest of it. There's actually not very much to know, it's a tidy little language."
 ---
 
 # Hello JavaScript

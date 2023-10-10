@@ -3,6 +3,7 @@ layout: ../../layouts/Course.astro
 title: JQuery Events
 seoTitle: Eventing with JQuery
 course: javascriptForProgrammers
+unpublished: true
 ---
 
 # JQuery Events

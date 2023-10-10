@@ -3,10 +3,11 @@ import type { ICourse } from "../types/Course";
 
 interface Props {
   course?: ICourse;
+  slug?: string;
   internalAnchors?: boolean;
 }
 
-const { course, internalAnchors } = Astro.props;
+const { course, internalAnchors, slug } = Astro.props;
 
 if (!course) {
   throw new Error(
@@ -18,7 +19,7 @@ if (!course) {
 <ul>
   {
     course?.exercises.map((exercise) => (
-      <li>
+      <li class={exercise.slug === slug ? "current" : null}>
         {!internalAnchors && (
           <a href={`/${course.slug}/${exercise.slug}`}>{exercise.title}</a>
         )}

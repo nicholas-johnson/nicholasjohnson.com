@@ -3,6 +3,7 @@ layout: ../../layouts/Course.astro
 title: welocome To AJAX
 seoTitle: How to do AJAX with JQuery
 course: javascriptForProgrammers
+unpublish: true
 ---
 
 # Welcome to AJAX

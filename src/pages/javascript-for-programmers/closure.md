@@ -18,23 +18,25 @@ Closure is one of those things that looks hard, but it's actually really simple 
 For example:
 
 ```js
-var outer = () => {
+var outerFnc = () => {
   let a = "A local variable";
-  let inner = function () {
+  let innerFnc = function () {
     console.log(a);
   };
-  return inner;
+  return innerFnc;
 };
 
-const returnedFnc = outer();
+const returnedFnc = outerFnc();
 returnedFnc();
 ```
 
-This is a function that returns another function. When I call outer it makes two local variables, a which holds the string "A local variable", and inner which points to another function. We then return inner, and assign it to the global variable returnedFnc.
+This is a function that returns another function. When I call `outerFnc` it makes two local variables, `a` holds the string `"A local variable"`, and `innerFnc` which points to another function. We then return `innerFnc`, and assign it to the global variable `returnedFnc`.
 
-The key thing to note here, is that, when I call returnedFnc, the local variable a is no longer in scope, and yet the code still works. This is because the variable a was in scope when I first defined the function inner.
+The key thing to note here, is that, when I call `returnedFnc`, the local variable `a` is no longer in scope, and yet the code still works. This is because the variable a _was in scope when I first defined the function inner_.
 
-Closure simply means that all the local variables that were in scope when the function was declared continue to be in scope for as long as that function exists.
+<aside class="pullquote">if a variable was in scope when the function was declared, it continues to be in scope for that function as long as that function exists</aside>
+
+Closure simply means that if a variable was in scope when the function was declared, it continues to be in scope for that function as long as that function exists.
 
 <div class="exercise">
 

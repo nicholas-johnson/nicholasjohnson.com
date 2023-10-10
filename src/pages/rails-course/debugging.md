@@ -7,8 +7,6 @@ exercise: "debugging"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Debugging Rails
 
 Rails comes with a couple of fully featured debugging systems.

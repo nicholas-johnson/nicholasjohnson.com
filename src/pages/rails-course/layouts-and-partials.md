@@ -7,8 +7,6 @@ exercise: "layouts-and-partials"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Layouts and Partials
 
 Layouts allow you to wrap your code in a standard header and footer.

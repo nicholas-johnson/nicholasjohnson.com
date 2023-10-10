@@ -7,8 +7,6 @@ exercise: "sessions"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Sessions
 
 Rails allows you to store session data on the client in the form of an encrypted cookie. You can read from and write to the session cookie simply by accessing to the session hash:

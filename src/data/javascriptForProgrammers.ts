@@ -42,57 +42,57 @@ export const javascriptForProgrammers: ICourse = {
       description:
         "JavaScript has both classical loops and functional loops. Lets take a look.",
     },
-    {
-      slug: "dom-manipulation",
-      title: "Manipulating the DOM",
-      description:
-        "In which we investigate the power of DOM Scripting to change your DOM.",
-    },
-    {
-      slug: "events",
-      title: "Events",
-      description:
-        "JavaScript is event driven, it reacts to user events, network events, page load events, etc. We assign callback functions to events. These are called when the event is fired.",
-    },
+    // {
+    //   slug: "dom-manipulation",
+    //   title: "Manipulating the DOM",
+    //   description:
+    //     "In which we investigate the power of DOM Scripting to change your DOM.",
+    // },
+    // {
+    //   slug: "events",
+    //   title: "Events",
+    //   description:
+    //     "JavaScript is event driven, it reacts to user events, network events, page load events, etc. We assign callback functions to events. These are called when the event is fired.",
+    // },
     {
       slug: "object-literals",
       title: "Object Literals",
       description:
         "In JavaScript, all objects are arrays. JSON syntax allows us to create objects quickly and easily.",
     },
-    {
-      slug: "constructor-functions",
-      title: "Constructor Functions, Classes and OOP",
-      description: "How JavaScript manages Object Orientation",
-    },
-    {
-      slug: "prototypical-inheritance",
-      title: "Prototypical Inheritance",
-      description:
-        "JavaScript has a unique way of handling inheritance. It's called prototypical inheritance, and it's actually really good.",
-    },
+    // {
+    //   slug: "constructor-functions",
+    //   title: "Constructor Functions, Classes and OOP",
+    //   description: "How JavaScript manages Object Orientation",
+    // },
+    // {
+    //   slug: "prototypical-inheritance",
+    //   title: "Prototypical Inheritance",
+    //   description:
+    //     "JavaScript has a unique way of handling inheritance. It's called prototypical inheritance, and it's actually really good.",
+    // },
     {
       slug: "meaning-of-this",
       title: "Meaning of This",
       description:
         "JavaScript has a special variable called this. This is set at runtime..",
     },
-    {
-      slug: "networking",
-      title: "Networking with Fetch",
-      description: "We can pull code directly from our server.",
-    },
-    {
-      slug: "lodash-templates",
-      title: "Templates",
-      description:
-        "Templates help us keep our HTML where it belongs: in the HTML.",
-    },
-    {
-      slug: "promises",
-      title: "Promises",
-      description: "Promises help us manage asynchronous events.",
-    },
+    // {
+    //   slug: "networking",
+    //   title: "Networking with Fetch",
+    //   description: "We can pull code directly from our server.",
+    // },
+    // {
+    //   slug: "lodash-templates",
+    //   title: "Templates",
+    //   description:
+    //     "Templates help us keep our HTML where it belongs: in the HTML.",
+    // },
+    // {
+    //   slug: "promises",
+    //   title: "Promises",
+    //   description: "Promises help us manage asynchronous events.",
+    // },
   ],
   description:
     "You already know how to code, but JavaScript does things rather differently. In this course we learn JavaScript from a programmer's perspective. This course is _JavaScript for Smart People._",

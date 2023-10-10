@@ -7,8 +7,6 @@ exercise: "params"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Params
 
 The params hash contains all the url and post parameters that were passed to your application.

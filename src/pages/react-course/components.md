@@ -4,8 +4,6 @@ course: reactCourse
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Components
 
 So far we have created elements and appended them to the DOM. We could do this with jQuery. The real strength of React is it's component driven architecture. Components are objects that let us ball up templates with behaviour.

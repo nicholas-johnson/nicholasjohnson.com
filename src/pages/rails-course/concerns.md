@@ -7,8 +7,6 @@ exercise: "concerns"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Concerns
 
 Concerns are little modules that encapsulate reusable functionality. Rather than adding them to our models and controllers directly, we put them in a module and include them.

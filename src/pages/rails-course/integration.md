@@ -7,8 +7,6 @@ exercise: "integration"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Blog integration exercise
 
 Create a new Rails App using:

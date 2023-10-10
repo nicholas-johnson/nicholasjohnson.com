@@ -2,10 +2,10 @@
 title: "Organising your AngularJS code with Browserify"
 tags: angular, javascript, browserify
 layout: "../../layouts/BlogPost.astro"
-description: ""
 published: true
 course_sidebar: :angular
-date: '2016-04-01'
+date: '2015-04-01'
+preview: "Organising JavaScript in a larger app becomes quite painful quite quickly. The issue is that **order of inclusion matters**. If I write a service that belongs to a module, I'd better make sure I have created my module before I try to append the service to it or my code will collapse in a messy heap. As we get more and more modules and more and more files, this becomes progressively harder."
 ---
 
 

@@ -7,8 +7,6 @@ exercise: "haml"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Alternatives to ERB - Haml and Markdown (also Slim)
 
 We are going to try out Haml as an alternative templating engine. Haml is a beautiful, simple HTML preprocessor. Haml compiles directly to HTML, there's a one to one mapping.

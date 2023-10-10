@@ -7,8 +7,6 @@ exercise: "scaffolding"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Scaffolding
 
 The Scaffold Generator allows us to create a controller, model, views, partials, stylesheets and tests with a single call.

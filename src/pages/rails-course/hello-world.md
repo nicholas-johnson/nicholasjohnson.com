@@ -7,8 +7,6 @@ exercise: "hello-world"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Hello World
 
 Hello World is the traditional way to start any new framework. Hello World in Rails is fairly simple, around six lines of code. In this section we'll create an MVC hello world using a simple model, a controller, and a view, in fact the full MVC stack.

@@ -7,8 +7,6 @@ exercise: "internationalisation"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Internationalisation
 
 ## Rails Locales

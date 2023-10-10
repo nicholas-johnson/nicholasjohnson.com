@@ -1,11 +1,10 @@
 ---
-title: 'Nicholas Johnson - HTML and CSS Training near London'
-description: 'HTML and CSS training course in London or Brighton UK - Learn HTML5 and CSS3'
-date: '2014-06-30 19:04:36'
+title: "Nicholas Johnson - HTML and CSS Training near London"
+description: "HTML and CSS training course in London or Brighton UK - Learn HTML5 and CSS3"
+date: "2014-06-30 19:04:36"
 legacy: true
 ---
 
-%article
 .intro
 
 # HTML and CSS Courses

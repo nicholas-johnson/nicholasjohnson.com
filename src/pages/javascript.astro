@@ -3,13 +3,24 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 
 import PostList from "../components/PostList.astro";
 import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
+import { javascriptForProgrammers } from "../data/javascriptForProgrammers";
 import CourseList from "../components/CourseList.astro";
 
 const allPosts = await Astro.glob("./posts/*.md");
-
-const posts = allPosts.sort((a, b) => {
-  return a.frontmatter.date > b.frontmatter.date ? -1 : 1;
+const filteredAllPosts = allPosts.filter((post) => {
+  return post.frontmatter.tags?.includes("javascript");
 });
+const javascroptForProgrammersContent = await Astro.glob(
+  "./javascript-for-programmers/*.md"
+);
+
+const posts = [...filteredAllPosts, ...javascroptForProgrammersContent]
+  .filter(
+    (post) => !post.frontmatter.unpublish || !post.frontmatter.unpublished
+  )
+  .sort((a, b) => {
+    return a.frontmatter?.date > b.frontmatter?.date ? -1 : 1;
+  });
 ---
 
 <GlobalLayout title="Nicholas Johnson.com">
@@ -41,7 +52,9 @@ const posts = allPosts.sort((a, b) => {
     <div class="sidebar">
       <h2>JavaScript Courses</h2>
       <div class="courseLinks">
-        <CourseList courses={[learnToCodeWithJavaScript]} />
+        <CourseList
+          courses={[learnToCodeWithJavaScript, javascriptForProgrammers]}
+        />
       </div>
     </div>
   </div>

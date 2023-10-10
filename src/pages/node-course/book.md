@@ -1,5 +1,3 @@
-%article.book_cover
-
 # NodeJS for Righteous Universal Domination!
 
 ## Complete your awesomeness upgrade. Read this book now!
@@ -11,8 +9,6 @@ _version 0.1.3_
 %img{src: '/images/station.jpeg'}
 
 _Image credit: [NASA Ames Research Center](http://settlement.arc.nasa.gov/70sArt/art.html)_
-
-%article
 
 # Why Node Rocks
 

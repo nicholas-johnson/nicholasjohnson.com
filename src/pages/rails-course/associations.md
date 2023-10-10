@@ -4,8 +4,6 @@ course: "railsCourse"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Associations Between Models
 
 We're going to add Comments to our blog. Comments belong to BlogPosts and blog_posts have many comments.

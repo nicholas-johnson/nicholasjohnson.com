@@ -4,8 +4,6 @@ course: "railsCourse"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Social Media Integration
 
 ## Person

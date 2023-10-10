@@ -7,8 +7,6 @@ exercise: "rspec"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # RSpec Rails
 
 We are going to use RSpec plus FactoryGirl to test our site.

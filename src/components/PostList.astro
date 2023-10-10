@@ -15,7 +15,9 @@ const { posts } = Astro.props;
       <li class="post">
         <a href={post.url}>
           <h2>
-            <a href={post.url}>{post.frontmatter.title}</a>
+            <a href={post.url}>
+              {post.frontmatter.seoTitle || post.frontmatter.title}
+            </a>
           </h2>
           {markdown(post.frontmatter.preview || "")}
           <p class="meta">

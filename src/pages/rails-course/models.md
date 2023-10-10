@@ -7,8 +7,6 @@ exercise: "models"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Models, Validation and Resources
 
 We are going to create a Cat model to held information about a single cat. Use the model generator to create a simple model:

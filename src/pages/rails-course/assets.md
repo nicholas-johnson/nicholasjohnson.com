@@ -4,8 +4,6 @@ course: "railsCourse"
 layout: ../../layouts/Course.astro
 ---
 
-%article
-
 # Assets and SCSS
 
 Assets are files which belong to the web page, such as images, JavaScripts and CSS files. They live in the app/assets folder.
