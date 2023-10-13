@@ -1,17 +1,17 @@
 ---
 title: "Animation - AngularJS Exercise"
 section: "angular"
-exercise: "animation"
-layout: "exercise"
+slug: "animation"
+course: angularJsCourse
+layout: ../../layouts/Course.astro
 ---
-
 
 # Animation with transitions
 
 ## Upshot
 
-* To make $ngAnimate work, you must download the ng_animate.js module from <http://angularjs.org>. Include it in your main app module to make it available.
-* The ng_animate service automatically hooks into any CSS elements animations or transitions applied to the element. It causes enter end leave events to happen on a timeout, allowing you to apply CSS effects.
+- To make $ngAnimate work, you must download the ng_animate.js module from <http://angularjs.org>. Include it in your main app module to make it available.
+- The ng_animate service automatically hooks into any CSS elements animations or transitions applied to the element. It causes enter end leave events to happen on a timeout, allowing you to apply CSS effects.
 
 ## Transitions
 
@@ -23,7 +23,7 @@ To make an attribute transition smoothly from one state to another, use the tran
 
 ```css
 a {
-transition:all 2s linear;
+  transition: all 2s linear;
 }
 ```
 
@@ -31,18 +31,17 @@ You can animate all properties, or just a specific property. You can also specif
 
 ```css
 a {
-transition:color 2s ease;
+  transition: color 2s ease;
 }
 ```
 
-
 Choose from the following timing functions:
 
-* ease
-* linear
-* ease-in
-* ease-out
-* ease-in-out
+- ease
+- linear
+- ease-in
+- ease-out
+- ease-in-out
 
 ## Animatable properties
 
@@ -78,15 +77,14 @@ To make this work, we must first declare the keyframes we want to use, like so:
 
 ```css
 @keyframes pop {
-    from {
-        font-size:100%
-    }
-    to {
-        font-size:500%
-    }
+  from {
+    font-size: 100%;
+  }
+  to {
+    font-size: 500%;
+  }
 }
 ```
-
 
 ## Adding our Animation
 
@@ -94,11 +92,10 @@ Once we have declared our animation, we can add it to the page like so:
 
 ```css
 h1 {
-    animation-name: pop;
-    animation-duration: 3s;
+  animation-name: pop;
+  animation-duration: 3s;
 }
 ```
-
 
 ## Declaring more keyframes
 
@@ -106,18 +103,17 @@ We can add in additional keyframes using percentages:
 
 ```css
 @keyframes pop {
-    from {
-        font-size:100%;
-    }
-    50% {
-        font-size:1000%;
-    }
-    to {
-        font-size:500%;
-    }
+  from {
+    font-size: 100%;
+  }
+  50% {
+    font-size: 1000%;
+  }
+  to {
+    font-size: 500%;
+  }
 }
 ```
-
 
 Here, we have added another keyframe at 50% of the way through the animation.
 

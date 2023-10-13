@@ -11,6 +11,32 @@ layout: ../../layouts/Course.astro
 
 The params hash contains all the url and post parameters that were passed to your application.
 
+You can access it from inside any controller, like so:
+
+```ruby
+params[:key]
+```
+
+Say you have defined a route like so:
+
+```ruby
+  get '/hello/:hello/:everyone' => 'hello#index', :as => :hello_world
+```
+
+In your controller, you can access:
+
+```ruby
+params[:hello]
+```
+
+and
+
+```ruby
+params[:everyone]
+```
+
+These will automatically be extracted from the route.
+
 ## Exercise - Make a calculator
 
 We are going to make a simple calculator, you will be able to give it two numbers, and have it give you the sum.

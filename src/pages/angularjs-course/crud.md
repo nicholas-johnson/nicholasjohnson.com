@@ -2,7 +2,8 @@
 title: "CRUD - AngularJS Exercise"
 section: "angular"
 exercise: "crud"
-layout: "exercise"
+course: angularJsCourse
+layout: ../../layouts/Course.astro
 ---
 
 # CRUD

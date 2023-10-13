@@ -2,7 +2,8 @@
 title: "Directive compilation - AngularJS Exercise"
 section: "angular"
 exercise: "directive-compilation"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
 
 # Directive Compilation and the link function
@@ -22,14 +23,14 @@ Here is a link function that appends a string to the current element.
 
 ```js
 angular.module('app', [])
-.directive('usefulDirective', function() {
-var directive = {
-link: function(scope, element, attributes, controller) {
-element.append('Hello Angular!')
-}
-}
-return directive;
-});
+    .directive('usefulDirective', function() {
+        var directive = {
+            link: function(scope, element, attributes, controller) {
+                element.append('Hello Angular!')
+            }
+        }
+        return directive;
+    });
 ```
 
 
@@ -51,21 +52,21 @@ Directives give us access to jQuery or jqLite. If jQuery is available, Angular w
 
 However in most cases you will find that you can get your work done faster and more cleanly using templates, and this is the approach you should generally favour.
 
-%section.exercise
-
+<section class="exercise">
 
 ## Simple Exercise - a link function
 
 Create a very simple directive using the code above that uses the link function to append the string "hello from the directive" to your directive using jqLite.
 
-%section.exercise
+</section>
 
+<section class="exercise">
 
 ## Simple Exercise - accessing attributes
 
 Create a simple greeting directive using the code above. Add an attribute "name" to your element. The directive should look in the attributes array and append 'hello dave' to the DOM, assuming the name was "dave".
 
-%section
+</section>
 
 
 ## Order of Compilation
@@ -80,15 +81,15 @@ Angular will traverse your DOM depth first, instantiating controllers on the way
 
 ```js
 angular.module('app', [])
-.directive('usefulDirective', function() {
-var directive = {
-controller: function($scope) {
-// this will be instantiated on the way down the tree
-},
-link: function() {
-// this will be instantiated on the way up the tree
-}
-}
+    .directive('usefulDirective', function() {
+        let directive = {
+        controller: function($scope) {
+            // this will be instantiated on the way down the tree
+        },
+        link: function() {
+            // this will be instantiated on the way up the tree
+        }
+    }
 return directive;
 });
 ```
@@ -100,21 +101,21 @@ If you want to execute link functions on the way down the tree declare pre and p
 
 ```js
 angular.module('app', [])
-.directive('usefulDirective', function() {
-var directive = {
-controller: function($scope) {
-// this will be instantiated on the way down
-},
-link: {
-pre: function() {
-// this will be instantiated on the way down
-// but after the controller
-},
-post: function() {
-// this will be instantiated on the way up
-}
-}
-return directive;
+    .directive('usefulDirective', function() {
+        var directive = {
+        controller: function($scope) {
+        // this will be instantiated on the way down
+    },
+    link: {
+        pre: function() {
+            // this will be instantiated on the way down
+            // but after the controller
+        },
+        post: function() {
+            // this will be instantiated on the way up
+        }
+    }
+    return directive;
 });
 ```
 
@@ -122,7 +123,7 @@ return directive;
 
 
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise - Parameterise Flickr
 
@@ -147,4 +148,4 @@ Create a directive which renders a random quote on the page. Use the link functi
 
 Bonus, pull the quote from an API, such as the Chuck Norris random joke API: <http://api.icndb.com/jokes/random>
 
-</div>
+</section>

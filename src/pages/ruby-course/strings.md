@@ -65,7 +65,7 @@ You can include escape characters in your string with a backslash:
     => "Oh yes it is!"
 ```
 
-%aside.box
+<aside class="box">
 
 ## 'Single' vs "double" quoted strings
 
@@ -74,6 +74,8 @@ A question I get asked all the time is whether we should prefer single or double
 Double quotes will hunt for variables and escape characters, so are technically slightly slower.
 
 For this reason you should use single quotes, except where you need an embedded variable or escape character.
+
+</aside>
 
 ## String concatenation
 

@@ -17,39 +17,56 @@ The rails console lets you fire up an instance of your rails server on the comma
 
 Fire it up with:
 
+```bash
 rails console
+```
 
 or just
 
+```bash
 rails c
+```
 
 You can create models, define methods, and do anything you can do in a regular rails instance.
 
 If you make changes to your code, you can load them in to your console by typing:
 
+```ruby
 reload!
+```
 
 ### The Debugger
 
 If you need to poke around inside a running Rails instance to see what's going on, you can use the debugger. To use it you must start your Rails instance in debug mode like so:
 
+```bash
 rails server --debugger
+```
 
 or just
 
+```bash
 rails s --debugger
+```
 
 Then insert breakpoints into your code by typing:
 
+```ruby
 debugger
+```
 
 You can put breakpoints in your models, views or controllers. Within the debugger you have access to all of the variables defined at or before the breakpoint. You can change variables, execute code, write ruby, etc, etc.
 
 To exit the debugger, continue with
 
+```ruby
 c
+```
 
+<aside class="box">
 Tip: Pressing enter will repeat the last console command. If you have multiple debug statements, you can just hold down enter to skip through them.
+
+</aside>
 
 ## Exercise - Debugging
 

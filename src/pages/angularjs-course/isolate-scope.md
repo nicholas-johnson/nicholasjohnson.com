@@ -2,11 +2,9 @@
 title: "Isolate scopes - AngularJS Exercise"
 section: "angular"
 exercise: "isolate-scope"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
-
-%section
-:markdown
 
 # Isolate Scopes
 
@@ -18,17 +16,13 @@ Angular allows us to do this. We can create a directive which has an isolate sco
 
 Creating an isolate $scope in a directive is simple. Set the $scope to be an empty object, like so:
 
-:ruby
-code = <<-CODE
+```js
 .directive('myDirective', function() {
 return {
 scope: {}
 }
 })
-CODE
-=code(code)
-
-:markdown
+```
 
 This will create a little application completely divorced from its parent.
 
@@ -36,28 +30,20 @@ This will create a little application completely divorced from its parent.
 
 We can parameterise our directive using @. We can tell our directive to take an initial value from an attribute of the directive element, like so:
 
-:ruby
-code = <<-CODE
+```js
 .directive('myDirective', function() {
 return {
 scope: {cheese: '@'},
 template: "<input ng-model='cheese' />{{cheese}}"
 }
 })
-CODE
-=code(code)
-
-:markdown
+```
 
 The isolate $scope will be seeded with the cheese attribute from the directive element.
 
-:ruby
-code = <<-CODE
+```html
 <div my-directive cheese="Wensleydale"></div>
-CODE
-=code(code, :html)
-
-:markdown
+```
 
 ## Two-way isolate $scope binding with =
 
@@ -79,8 +65,7 @@ While isolate scopes give us portability they do this at the expense of some fle
 
 Isolate scopes will typically be used with a template to work properly. Only template code will gain access to the isolate scope. Transcluded content (content nested in the directive) will still use the parent scope.
 
-%section.exercise
-:markdown
+<section class="exercise">
 
 ## Exercise - Isolate the Flickr app
 
@@ -88,11 +73,6 @@ Give your Flickr app an isolate scope. It should be able to receive a tag from i
 
 I want to be able to call it like this:
 
-:ruby
-code = <<-CODE
-<input ng-model="search" />
-<flickr tag="search"></flickr>
-CODE
-=code(code, :html)
-
-:markdown
+```html
+<input ng-model="search" /> <flickr tag="search"></flickr>
+```

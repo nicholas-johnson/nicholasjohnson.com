@@ -5,19 +5,19 @@ export const angularJsCourse: ICourse = {
   description: "",
   bullets: [],
   slug: "angularjs-course",
-  cover: "",
+  cover: "/images/book-covers/shuttle3.jpg",
   coverAlt: "",
   coverCredit: "",
   coverCreditUrl: "",
-  version: "",
+  version: "1.0.1",
   createdAt: "",
-  lastUpdatedAt: "",
+  lastUpdatedAt: "12/12/2017  ",
   exercises: [
-    {
-      slug: "angular-intro",
-      title: "Introducing Angular",
-      description: "Course Intro",
-    },
+    // {
+    //   slug: "angular-intro",
+    //   title: "Introducing Angular",
+    //   description: "Course Intro",
+    // },
     {
       slug: "templates",
       title: "Hello World",
@@ -70,11 +70,11 @@ export const angularJsCourse: ICourse = {
       description: "All good developers write unit tests. We will too.",
       github: "angular_karma_demo",
     },
-    {
-      slug: "homework",
-      title: "Homework",
-      description: "Fun and simple homework. It's like school",
-    },
+    // {
+    //   slug: "homework",
+    //   title: "Homework",
+    //   description: "Fun and simple homework. It's like school",
+    // },
     {
       slug: "repeat-and-filter",
       title: "Repeat and Filter",
@@ -84,7 +84,7 @@ export const angularJsCourse: ICourse = {
     },
     {
       slug: "ajax",
-      title: "AJAX",
+      title: "Networking",
       description:
         "Drop JSON into your $scope and it will automatically bind it to the template.",
       github: "angular_ajax_demo",
@@ -174,12 +174,12 @@ export const angularJsCourse: ICourse = {
         "We put it together and talk to a real RESTful API to build a little content driven app",
       github: "angular_crud_demo",
     },
-    {
-      slug: "webapi",
-      title: "Build a back end with WebAPI",
-      description: "Build a simple API with WebAPI, then integrate from it.",
-      github: "angular_webapi_demo",
-    },
+    // {
+    //   slug: "webapi",
+    //   title: "Build a back end with WebAPI",
+    //   description: "Build a simple API with WebAPI, then integrate from it.",
+    //   github: "angular_webapi_demo",
+    // },
     {
       slug: "validation",
       title: "Form Validation",

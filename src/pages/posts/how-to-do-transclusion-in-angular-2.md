@@ -198,11 +198,13 @@ This gives us a DOM like this:
 
 Presto. Have a play at this pen here: <http://codepen.io/superluminary/pen/qZmJKr?editors=1010>
 
-%aside.box
+<aside class="box">
 
 ## What's with all the global variables?
 
 Of course, in a real app you would want to use a proper module loader like SystemJS or RequireJS rather than global variables. For demonstration purposes, I'm just doing the simplest thing that can work.
+
+</aside>
 
 ## Transclusion Scope
 

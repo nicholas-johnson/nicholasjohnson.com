@@ -84,13 +84,15 @@ Now let's write a spec for it. First we need to import our clock, then we call t
 
 Run this and verify it works
 
-%aside.box
+<aside class="box">
 
 ## be vs eq
 
 Note that we have used to eq above, rather than to be. Be tests for the same object. Eq tests for object equality.
 
 When you make two strings, those strings are not the same object, but they do contain the same characters. Be will fail, eq will pass.
+
+</aside>
 
 ## Test First
 

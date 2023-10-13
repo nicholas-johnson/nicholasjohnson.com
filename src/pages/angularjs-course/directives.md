@@ -2,7 +2,8 @@
 title: "Directives - AngularJS Exercise"
 section: "angular"
 exercise: "directives"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
 
 # Directives
@@ -53,8 +54,6 @@ angular.module("app", []).directive("usefulDirective", function () {
 });
 ```
 
-:markdown
-
 - template - a string that will be used as a template. This is a real template and can include other directives or curly braces.
 - templateUrl - use this instead of template if your template content is web accessible.
 - restrict - Accepts the characters "AEC" or any subset thereof. Tells the directive to match an attribute, element or class.
@@ -66,8 +65,6 @@ Use your directive like this:
 ```html
 <div useful-directive></div>
 ```
-
-:markdown
 
 ## Directive naming - HTML is case InSenSiTiVe!
 

@@ -451,7 +451,7 @@ If you prefer your code valid, you can express Angular directives as HTML5 data 
 
 Your template will now pass HTML5 validation.
 
-%aside.box
+<aside class="box"
 
 ## ng-directive vs. ngDirective
 
@@ -460,7 +460,7 @@ HTML is case insensitive, so all Angular directive attributes are lower case. Ja
 - In HTML directives-are-hyphenated
 - In JavaScript directivesAreCamelCased
 
-#di
+</aside>
 
 # Hero Concepts - Dependency Injection (DI)
 
@@ -524,16 +524,14 @@ const MyController = function ($log) {
 };
 ```
 
-%p.pullout
-HEY WHAT!!
+**HEY WHAT!!**
 
-We changed the variable name in the header, and Angular passed in an object capable of doing logging. This looks like named parameters, but JavaScript doesn't support named parameters. Something fishy is going on here...
+**We changed the variable name in the header, and Angular passed in an object capable of doing logging. This looks like named parameters, but JavaScript doesn't support named parameters. Something fishy is going on here...**
 
-%p.highlight Angular knows what to pass in by looking at the name of the variable. But how!
+ **Angular knows what to pass in by looking at the name of the variable. But how!**
 
 ## The magical curtain of toString
 
-%aside
 Angular is inspecting the parameters of our function, by calling
 
 ```js

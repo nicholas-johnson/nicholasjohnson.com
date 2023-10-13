@@ -1,15 +1,11 @@
 ---
 import type { ICourse } from "../types/Course";
+import { getSlug } from "../utils/getSlug";
 
 interface Props {
   path?: string;
   course: ICourse;
 }
-
-const getSlug = (path: string) => {
-  const parts = path.split("/");
-  return parts[parts.length - 1].replace(".md", "");
-};
 
 const getCurrentIndex = (slug: string, course: ICourse) => {
   return course.exercises.findIndex((exercise) => exercise.slug === slug);

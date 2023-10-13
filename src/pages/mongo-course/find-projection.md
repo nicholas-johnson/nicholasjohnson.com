@@ -52,11 +52,13 @@ This will yield
 
 _When you output the cats, you will need to find only people who have cats, where cats $exists, or you will have gaps in your data._
 
-%aside.box
+<aside class="box">
 
 ## Aggregation
 
 We can do much more complex projection, even creating new fields based on expressions using the aggregate pipeline. More on this in a bit.
+
+</aside>
 
 ## Excluding the id field
 

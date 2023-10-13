@@ -88,11 +88,13 @@ Any Object can be used as a key. Here we use the number 45 as a key, and store t
   puts animals.inspect # {45 => #<Dir:0x284a394>
 ```
 
-%aside.box
+<aside class="box">
 
 It’s all allowed.
 
 One caveat to bear in mind, if you are using Ruby 1.8.6 or less, you can't use a hash as a key in another hash. This is an issue that was addressed in Ruby 1.8.7 and up.
+
+</aside>
 
 ## Exercise - Hashes and Symbols
 

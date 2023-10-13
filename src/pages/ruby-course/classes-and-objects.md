@@ -48,13 +48,15 @@ This is great, we have created a new instance of the Pet class. Flopsy is an ins
 
 Note that all objects get a new method for free. This they inherit from the Object superclass. More on inheritance in a bit.
 
-%aside.box
+<aside class="box">
 
 ## Convention in Ruby
 
 Because Ruby is such a relaxed language, conventions become very important. snake_case for variables, CapitalLetters for classes.
 
 These things are not mandated by the language but they will help you to write more consistent, legible and inter-operable code.
+
+</aside>
 
 ## Finding the class of an object
 

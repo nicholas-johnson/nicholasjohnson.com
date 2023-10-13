@@ -1,8 +1,9 @@
 ---
 title: "Controllers - AngularJS Exercise"
 section: "angular"
-exercise: "more-binding"
-layout: "exercise"
+slug: "controllers"
+course: angularJsCourse
+layout: ../../layouts/Course.astro
 ---
 
 # Controllers
@@ -27,7 +28,7 @@ angular.module("app", []).controller("DemoController", function ($scope) {
 });
 ```
 
-:markdown
+
 
 We hook this into our template something like this:
 
@@ -35,8 +36,6 @@ We hook this into our template something like this:
 <div ng-app="app" ng-controller="DemoController">{{hello}}</div>
 ```
 
-%section
-:markdown
 
 ## $scope
 
@@ -58,7 +57,7 @@ Well, yes and no. What you've heard about here is what we call a component based
 
 You will still need to create controllers though, and they will still work in the same way, so what we learn here is still relevant. Just bear it in mind that later in the course we will be wrapping these controllers up into larger objects.
 
-</div>
+</aside>
 
 ## Adding Helper Methods to a Controller
 
@@ -82,7 +81,7 @@ We hook this into our template something like this:
 </div>
 ```
 
-:markdown
+
 
 ## When to create a controller
 

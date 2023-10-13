@@ -62,11 +62,11 @@ const allContent = await Astro.glob("../pages/**/*.md");
       }
     </article>
 
-    <nav class="sidebar">
+    <!-- <nav class="sidebar">
       <div>
-        <CourseSidebar course={course} internalAnchors />
+        <CourseSidebar course={course} />
       </div>
-    </nav>
+    </nav> -->
   </div>
 </GlobalLayout>
 
@@ -96,22 +96,22 @@ const allContent = await Astro.glob("../pages/**/*.md");
     padding: 2rem 0;
   }
 
-  nav.sidebar {
-    min-width: 20rem;
-    margin: 10rem auto 2rem auto;
-    div {
-      position: sticky;
-      top: 0rem;
-      max-height: 100vh;
-      overflow: auto;
-      padding: 2rem 0;
-    }
+  // nav.sidebar {
+  //   min-width: 20rem;
+  //   margin: 10rem auto 2rem auto;
+  //   div {
+  //     position: sticky;
+  //     top: 0rem;
+  //     max-height: 100vh;
+  //     overflow: auto;
+  //     padding: 2rem 0;
+  //   }
 
-    @media screen and (max-width: 1000px) {
-      width: auto;
-      margin: 4rem 0;
-    }
-  }
+  //   @media screen and (max-width: 1000px) {
+  //     width: auto;
+  //     margin: 4rem 0;
+  //   }
+  // }
 </style>
 
 <style is:global lang="scss">

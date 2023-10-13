@@ -2,11 +2,9 @@
 title: "Protractor - AngularJS Exercise"
 section: "angular"
 exercise: "protractor"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
-
-%section
-:markdown
 
 # Protractor
 
@@ -24,26 +22,19 @@ If you are running Windows you will also need the .Net framework.
 
 Tell your browser to hit specific paths and URLs, like this:
 
-:ruby
-code = <<-CODE
-browser.get('http://nicholasjohnson.com/');
-CODE
-=code(code)
+```js
+browser.get("http://nicholasjohnson.com/");
+```
 
-:markdown
 Your browser will literally navigate to this address.
 
 ## Element
 
 Select elements on the page, for example form fields, buttons and links. Call methods to interact with them. For example:
 
-:ruby
-code = <<-CODE
-element(by.id('gobutton')).click();
-CODE
-=code(code)
-
-:markdown
+```js
+element(by.id("gobutton")).click();
+```
 
 ## Installation
 
@@ -53,25 +44,19 @@ Follow the instructions here to install protractor and start up webdriver:
 
 Now create a config file. Save it as protractor.conf.js in your project directory.
 
-:ruby
-code = <<-CODE
+```js
 exports.config = {
-seleniumAddress: 'http://localhost:4444/wd/hub',
-specs: ['selenium_specs/*.js']
+  seleniumAddress: "http://localhost:4444/wd/hub",
+  specs: ["selenium_specs/*.js"],
 };
-CODE
-=code(code)
-
-:markdown
+```
 
 ## What to test
 
 Protractor is for end to end testing user acceptance testing. The internals of your code are a black box. You don't need to check the internals of your app, or how a particular result was achieved, you just need to know that a particular end goal has been reached.
 
+<section class="exercise">
 
-
-%section.exercise
-:markdown
 ## Exercise - Create a Test
 
 Now try to create a test suite for your CRUD application. You should be able to drive the browser to create a new article, then navigate to the article and verify it exists.

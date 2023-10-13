@@ -2,36 +2,31 @@
 title: "JSONP - AngularJS Exercise"
 section: "angular"
 exercise: "jsonp"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
 
-
-%section
-:markdown
 # JSONP
 
 JSONP is a hack which lets us make cross site AJAX requests.
 We use the $http object to make a request.
 We use the .success promise to respond when an AJAX request completes.
 
-:ruby
-code = <<-CODE
-angular.module('app', [])
-.controller('ajaxController', function($scope, $http) {
-$http.jsonp('http://example.com/cats?callback=JSONN_CALLBACK').success(function(data) {
-$scope.cats = data;
-})
-});
-CODE
-=code(code)
-
-:markdown
+```js
+angular
+  .module("app", [])
+  .controller("ajaxController", function ($scope, $http) {
+    $http
+      .jsonp("http://example.com/cats?callback=JSONN_CALLBACK")
+      .success(function (data) {
+        $scope.cats = data;
+      });
+  });
+```
 
 Choose one of the following exercises:
 
-%section.exercise
-:markdown
-
+<section class="exercise">
 
 ## Flickr Exercise
 
@@ -47,14 +42,11 @@ Allow the user to search for a tag.
 
 Test with Karma.
 
-
-%section.exercise
-:markdown
+<section class="exercise">
 
 ## The Weather - Exercise
 
 You can pull in data from all over the internet. Here's the JSONP url for Open Weather Map:
-
 
 <http://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=JSON_CALLBACK>
 

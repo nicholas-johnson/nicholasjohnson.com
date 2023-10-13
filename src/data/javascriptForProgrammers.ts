@@ -5,6 +5,17 @@ export const javascriptForProgrammers: ICourse = {
   slug: "javascript-for-programmers",
   deprecationNotice:
     "JavaScript moves quickly, and courses go out of date. JavaScript for Programmers is currently undergoing maintenance. You're welcome to keep using it, but know that some of the content here may not be best practice.",
+  description:
+    "You already know how to code, but JavaScript does things rather differently. In this course we learn JavaScript from a programmer's perspective. This course is _JavaScript for Smart People._",
+  bullets: [],
+
+  cover: "/images/book-covers/shuttle2.jpg",
+  coverAlt: "",
+  coverCredit: "",
+  coverCreditUrl: "",
+  version: "",
+  createdAt: "",
+  lastUpdatedAt: "",
   exercises: [
     {
       slug: "intro",
@@ -94,14 +105,4 @@ export const javascriptForProgrammers: ICourse = {
     //   description: "Promises help us manage asynchronous events.",
     // },
   ],
-  description:
-    "You already know how to code, but JavaScript does things rather differently. In this course we learn JavaScript from a programmer's perspective. This course is _JavaScript for Smart People._",
-  bullets: [],
-  cover: "",
-  coverAlt: "",
-  coverCredit: "",
-  coverCreditUrl: "",
-  version: "",
-  createdAt: "",
-  lastUpdatedAt: "",
 };

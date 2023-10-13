@@ -18,13 +18,15 @@ AJAX stands for Asynchronous JavaScript And XML, but it's actually something of 
 
 Unfortunately, AJAJ is not a great acronym, and AJAH sounds like a door, so we're stuck with AJAX for now (which has the nice side effect of making us sound cool and awesome).
 
-%aside.box
+<aside class="box">
 
 ## Working over http
 
 We can't do AJAX on or local file system, that would be a security risk. In order to do AJAX, you need to work on a server.
 
 You can use IIS or Apache, or your could create a server using node-server.
+
+</aside>
 
 # Talking to the server using jQuery
 

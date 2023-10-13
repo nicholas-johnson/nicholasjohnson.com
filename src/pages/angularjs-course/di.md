@@ -2,38 +2,32 @@
 title: "Dependency Injection - AngularJS Exercise"
 section: "angular"
 exercise: "di"
-layout: "exercise"
+course: angularJsCourse
+layout: ../../layouts/Course.astro
 ---
 
-%section
-:markdown
+
 # Dependency Injection
 
 We can inject a dependency into a controller by simply receiving it.
 
-:ruby
-code = <<-CODE
+```js
 angular.module('demoModule', [])
-.controller('demoController', function($log) {
-$log.log('Hi!');
-}
-CODE
-=code(code)
-
-:markdown
+    .controller('demoController', function($log) {
+        $log.log('Hi!');
+    }
+```
 
 ## Modules
 
 We can include a module into another module by placing it's name between the square braces:
 
-:ruby
-code = <<-CODE
+```js
 angular.module('app', ['demoModule']);
-CODE
-=code(code)
+```
 
-%section.exercise
-:markdown
+<section class="exercise">
+
 
 ## Exercise - NgDialog
 
@@ -49,54 +43,47 @@ Now download the CSS files: ng-dialog.css and ng-dialog-theme-plain.css. Link th
 
 We need to include ngDialog as a dependency of the app, like this:
 
-:ruby
-code = <<-CODE
+```js
 angular.module('app', ['ngDialog'])
-CODE
-=code(code)
+```
 
-:markdown
+
 
 ## Inject into your controller.
 
 Create a little controller and use the ng-controller directive to hook it to the DOM.
 
-:ruby
-code = <<-CODE
+```html
 <div ng-controller="myController">
-CODE
-=code(code)
+```
 
-:markdown
+
 
 Inject the ngDialog service into your controller.
 
-:ruby
-code = <<-CODE
+```js
 .controller('myController', function($scope, ngDialog) {
 
 })
-CODE
-=code(code)
+```
 
-:markdown
+
 
 You now have access to ngDialog.open. Call this according to the documentation to create a dialog box when the page loads: <https://github.com/likeastore/ngDialog#api>
 
 e.g.
 
-:ruby
-code = <<-CODE
+```js
 ngDialog.open({
-template: '<p>my template</p>',
-className: 'ngdialog-theme-plain',
-plain: true
+    template: '<p>my template</p>',
+    className: 'ngdialog-theme-plain',
+    plain: true
 });
-CODE
-=code(code)
+```
+</section>
 
-%section.exercise
-:markdown
+<section class="exercise">
+
 
 ## Exercise - Extension
 
@@ -109,3 +96,4 @@ Have a go at the minification safe DI syntax.
 If you finish first, have a read through the DI documentation here:
 
 <https://docs.angularjs.org/guide/di>
+</section>

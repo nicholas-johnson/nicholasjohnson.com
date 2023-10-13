@@ -39,7 +39,7 @@ However, our project is now tied to Google's uptime, and we can't easily develop
 
 </aside>
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise 1 - Hello Universe
 
@@ -87,15 +87,14 @@ Now we need to link Angular. Because this is the front end we do this with a scr
 <script src="/Scripts/angular.js"></script>
 ```
 
-:markdown
-
 Now Attempt the Hello Universe exercise.
 
-%section.exercise
-:markdown
+</section>
+
+<section class="exercise">
 
 ## Optional Extension - if you are first to finish
 
 You've downloaded Angular. Open it in your editor and have a quick browse through the Angular codebase. You'll find it clean, and well commented and easy to scan.
 
-</div>
+</section>

@@ -21,11 +21,9 @@ You will see we have made a nice cat class in the models directory, and also a m
 
 Run the migration using:
 
-```js
+```bash
   rake db:migrate
 ```
-
-=code(code, :bash)
 
 This has updated your database schema.
 
@@ -33,11 +31,9 @@ This has updated your database schema.
 
 Drop into the rails console by typing:
 
-```js
+```bash
   rails c
 ```
-
-=code(code, :bash)
 
 ## Exercise - playing with cats
 
@@ -89,10 +85,9 @@ This should point to the index method in the cat_controller. This method should 
 
 Make a view which loops over the cats, displaying them all. To loop over a collection, you can do something like this:
 
-```js
+```ruby
   <% @cats.each do |cat| %>
     <%= cat.name %>
   <% end %>
 ```
 
-=code(code, :erb)

@@ -61,13 +61,15 @@ Use \*\* for exponentiation should you feel that way inclined:
     => 16
 ```
 
-%aside.box
+<aside class="box">
 
 ## Note: There is no Incrementation operator
 
 A surprise here. Ruby has no pre/post increment/decrement operator. For instance, x++ or x-- will fail to parse. Use x += 1 instead. There are some relatively technical and quite good reasons for this to do with consistency.
 
 Matz dislikes this because the ++ incrementation is the only operator with an implied second value, so we don't have it. Use a +=1 instead.
+
+</aside>
 
 ## Looping with Integers
 

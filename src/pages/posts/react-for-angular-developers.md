@@ -136,13 +136,15 @@ Well golly gosh, that was easy. This is roughly equivalent to manually bootstrap
 <p data-height="268" data-theme-id="0" data-slug-hash="oxoGyK" data-default-tab="result" data-user="superluminary" class="codepen">See the Pen <a href="http://codepen.io/superluminary/pen/oxoGyK/">React Hello World</a> by Nicholas Johnson (<a href="http://codepen.io/superluminary">@superluminary</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-%aside.box
+<aside class="box">
 
 ## What is ReactDOM?
 
 Did you notice in the previous section that we used ReactDOM to do the root render call. This is because React works in a range of environments. We can do server side rendering on a server. We have React Native for building mobile applications. The DOM is not guaranteed.
 
 To make this more explicit, the core team split the DOM renderer into its own project called ReactDOM which you need to include as a separate dependency.
+
+</aside>
 
 ## Angular is HTML driven; React is JavaScript driven
 

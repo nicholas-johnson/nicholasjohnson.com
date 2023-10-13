@@ -2,7 +2,8 @@
 title: "Filters - AngularJS Exercise"
 section: "angular"
 exercise: "custom-filters"
-layout: "exercise"
+course: angularJsCourse
+layout: ../../layouts/Course.astro
 ---
 
 # Filter Exercises
@@ -23,7 +24,7 @@ myApp.filter("filterName", function () {
 });
 ```
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise - Reverse Filter
 
@@ -37,9 +38,9 @@ You might like to try this out in a console.
 
 Create a reverse filter that reverses a string.
 
-</div>
+</section>
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise - Filtering the first element from an array
 
@@ -47,17 +48,17 @@ We can filter an array in a similar way. The filter returns a function which rec
 
 Create a filter that returns only the first element in the array.
 
-</div>
+</section>
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise - Pagination
 
 Create a filter that returns the first n elements from an array.
 
-</div>
+</section>
 
-<div class="exercise">
+<section class="exercise">
 
 ## Exercise - Tweets
 
@@ -76,7 +77,9 @@ I'm sorry <a href="http://twitter.com/@dave"> @dave </a>,
 <a href="http://twitter.com/search?query=#icantdothat"> #icantdothat </a>
 ```
 
-<div class="exercise">
+</section>
+
+<section class="exercise">
 
 ## Exercise - Redit style vote filtering
 
@@ -119,4 +122,4 @@ for bonus points, use a range slider like so:
 <input type="range" min="-100" max="100" />
 ```
 
-</div>
+</section>

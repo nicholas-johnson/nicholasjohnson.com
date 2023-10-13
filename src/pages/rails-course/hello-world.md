@@ -11,12 +11,14 @@ layout: ../../layouts/Course.astro
 
 Hello World is the traditional way to start any new framework. Hello World in Rails is fairly simple, around six lines of code. In this section we'll create an MVC hello world using a simple model, a controller, and a view, in fact the full MVC stack.
 
+This will take us about three minutes. Rails is nice that way.
+
 ## Create your rails application
 
 At a terminal type:
 
-```js
-  rails new HelloWorld
+```bash
+rails new HelloWorld
 ```
 
 This initialises a new blank application called HelloWorld
@@ -25,8 +27,8 @@ This initialises a new blank application called HelloWorld
 
 At a terminal navigate to your HelloWorld directory and type:
 
-```js
-  rails server
+```bash
+rails server
 ```
 
 Wait for the application to start then in a web browser visit:
@@ -37,12 +39,12 @@ Wait for the application to start then in a web browser visit:
 
 Create a new file in the app/controllers directory called hello_controller.rb
 
-```js
-  class HelloController < ApplicationController
-    def index
-      @text = "Hello World!"
-    end
+```ruby
+class HelloController < ApplicationController
+  def index
+    @text = "Hello World!"
   end
+end
 ```
 
 This controller defines a single method called index. Index is the default controller action. If you're familiar with HTML this should make sense.
@@ -53,9 +55,9 @@ The index method creates an instance variable called @text.
 
 In the app/views/hello directory (you'll need to create this directory) create a file called index.html.erb containing the following
 
-```js
-  <h1>Hello World</h1>
-  <%= @text %>
+```ruby
+<h1>Hello World</h1>
+<%= @text %>
 ```
 
 =code(code, :erb)
@@ -66,8 +68,8 @@ Views have access to the controller's instance variables. You don't need to do a
 
 Visit config/routes.rb. Take a moment to read the helpful instructions, then add the line:
 
-```js
-  get '/hello' => 'hello#index', :as => :hello_world
+```ruby
+get '/hello' => 'hello#index', :as => :hello_world
 ```
 
 This line creates a named route (called hello_world). It matches the HelloController index method.
@@ -84,9 +86,9 @@ And there we are. Of course we're only touching on the awesome power of Rails he
 
 Change your app into a goodbye world app. Here are the thing's you'll need to do:
 
-- Add a new controller goodbye_controller.rb.
-- Add a route.
-- Add a view
+1. Add a new controller goodbye_controller.rb.
+2. Add a route.
+3. Add a view
 
 Make it so that you can visit <http://localhost:3000/goodbye> to see the goodbye view.
 

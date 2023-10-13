@@ -115,11 +115,13 @@ Given that we can gain access to the URL, write a simple 2 page website that res
 
 If no route matches, have your server return a 404 file not found status code and page.
 
-%aside.box
+<aside class="box">
 
 If all this sounds crazy low level to you, that's because it it. The philosophy of Node is that you bolt together lots of small parts to build the product you want.
 
 Soon we will see how we can add in templating, SASS, routing, middleware, URL parsing, and a host of other features that will make our life more enjoyable.
+
+</aside>
 
 ## Reading
 

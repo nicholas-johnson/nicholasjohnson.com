@@ -11,7 +11,7 @@ layout: ../../layouts/Course.astro
 
 Create a new Rails App using:
 
-```js
+```bash
 rails.new;
 ```
 
@@ -21,7 +21,7 @@ We're going to put everything together and make a simple blog.
 
 First create a BlogPost model and give it some attributes. You can use the following generator as a jumping off point. You will need to add a content:text and probably also a date:datetime too.
 
-```js
+```bash
   rails g model blog_post title:string
 ```
 
@@ -29,7 +29,7 @@ First create a BlogPost model and give it some attributes. You can use the follo
 
 Next we'll need a BlogPost controller. Use a generator like this:
 
-```js
+```bash
   rails g controller blog_post
 ```
 
@@ -37,7 +37,7 @@ Next we'll need a BlogPost controller. Use a generator like this:
 
 Use resources to create the standard CRUD routes. Like this:
 
-```js
+```ruby
 resources: blog_post;
 ```
 
@@ -51,7 +51,7 @@ Use validates_presence_of :title to validate that the blog_post has a title. It 
 
 ## Homepage
 
-Set blog_post#index as the homepage
+Set `blog_post#index` as the homepage
 
 ## Friendly URLs
 
@@ -59,22 +59,29 @@ Add a slug attribute to the blog_post. Do a find_by_slug instead of a regular fi
 
 You can use a migration to add the field, something like:
 
+```bash
 rails g migration add_slug_to_blog_post
+```
 
 Within the migration you will want to do:
 
+```ruby
 add_column :blog_posts, :slug, :string, index: true
+```
 
 # Comments
 
 We're going to create a Comment model. Comments belong to BlogPosts and blog_posts have many comments. You'll need something like the following:
 
+```ruby
 class BlogPost
-has_many :comments
+  has_many :comments
 end
+
 class Comment
-belongs_to :blog_post
+  belongs_to :blog_post
 end
+```
 
 Comment will need a blog_post_id:integer attribute.
 
@@ -82,13 +89,16 @@ Use the generator to create the post.
 
 ## Routes. We'll use a nested route to generate the resources. Modify your routes.rb file like so:
 
+```ruby
 resources :blog_posts do
 resources :comments
 end
+```
 
 rake routes to check the routes you have made.
 
-(side project - read up on routes here: <http://api.rubyonrails.org/classes/ActionDispatch/Routing.html> and here <http://guides.rubyonrails.org/routing.html>)
+- [side project - read up on routes here](http://api.rubyonrails.org/classes/ActionDispatch/Routing.html)
+- [and here](http://guides.rubyonrails.org/routing.html)
 
 ## Comment Controller
 

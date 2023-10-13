@@ -39,13 +39,15 @@ console.log(cat.legs);
 cat.sayHello();
 ```
 
-%aside.box
+<aside class="box">
 
 ## How require works
 
 The require function simply creates an object called module which has an attribute called exports. It then loads your file and executes it with the module object available to it. Once your code has run it returns module.exports.
 
 There is no magic in Node. This is by design.
+
+</aside>
 
 ## Further Reading
 

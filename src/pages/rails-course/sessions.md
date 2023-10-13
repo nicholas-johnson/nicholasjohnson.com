@@ -11,7 +11,9 @@ layout: ../../layouts/Course.astro
 
 Rails allows you to store session data on the client in the form of an encrypted cookie. You can read from and write to the session cookie simply by accessing to the session hash:
 
+```ruby
 session[:user_id] = 1234
+```
 
 It's up to you how much data you store on the client, though if you store too much you will probably encounter a cookie overrun.
 
@@ -19,17 +21,17 @@ The most common use for sessions is for login. We might log a user in by storing
 
 We might then log out by session this value to nil.
 
-Read more on sessions here:
+[Read more on sessions here](http://guides.rubyonrails.org/action_controller_overview.html#session):
 
-<http://guides.rubyonrails.org/action_controller_overview.html#session>
-
-%aside.box
+<aside class="box">
 
 ## Beware cookie attacks
 
 Be aware that although the cookie is encrypted, all client side data is potentially open to attack. If your admin user has an id of 1, you might be opening a ready attack vector.
 
 For this reason I generally store user keys in the session, where user keys are large random alphanumeric values generated in some non-standard way.
+
+</aside>
 
 ## Exercise - Access the session hash
 
@@ -52,7 +54,3 @@ We are going to implement login.
 5. If everything checks out, add the user id to the session
 6. Now in ApplicationController add a before_filter. This should check the session for a user_id, pull the user from the database and save it in @current_user instance variable.
 7. Finally write a partial which displays the session user email.
-
-## Bonus - RSpec
-
-Write rspec

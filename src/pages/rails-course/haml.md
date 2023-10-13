@@ -27,7 +27,7 @@ We are going to try out Haml as an alternative templating engine. Haml is a beau
 
 We are going to use a markdown filter to write text in Markdown. Markdown is a simple text preprocessing language.
 
-1. Check out filters in the Haml docs: <http://haml.info/docs/yardoc/file.REFERENCE.html#filters>
+1. [Check out filters in the Haml docs](http://haml.info/docs/yardoc/file.REFERENCE.html#filters)
 2. Add a markdown filter to your template
 3. Now add a block of text. 2 newlines makea paragraph. A # makes an h1. ## makes an h2.
 

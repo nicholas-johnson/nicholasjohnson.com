@@ -46,13 +46,15 @@ var array = db.people.find().map(function (person) {
 });
 ```
 
-%aside.box
+<aside class="box">
 
 ## Cursor persistence
 
 Cursors last for 10 minutes and are then garbage collected. This should be sufficient for most tasks. If you need a longer lasting cursor for some reason, you can create a long lasting cursor, however you should be aware that it will eventually go out of sync with the database.
 
 If you want to know how to prevent this behaviour, see here: <http://docs.mongodb.org/manual/core/cursors/#closure-of-inactive-cursors>
+
+</aside>
 
 ## Exercise - Cursor methods
 

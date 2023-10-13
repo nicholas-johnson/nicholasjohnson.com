@@ -2,11 +2,10 @@
 title: "ng-include - AngularJS Exercise"
 section: "angular"
 exercise: "ng-include"
-layout: "exercise"
+layout: ../../layouts/Course.astro
+course: angularJsCourse
 ---
 
-%section
-:markdown
 # Templates, ng-include and the $templateCache
 
 Our applications thus far have used a single template. This is fine while we are learning, but will become limiting fairly quickly. We really need to be able to break our application down into smaller templates that can be inserted into the page when they are needed.
@@ -32,18 +31,23 @@ We request an object from the $templateCache using a string. This is typically a
 
 The simplest way to show a template is by using the ng-include directive:
 
+```html
 <div ng-include="/path/to/template.html"></div>
+```
 
 This directive will request a template from the $templateCache. The cache will attempt to supply the template, and will try to AJAX it in if necessary.
 
-%aside.box
-:markdown
+<aside class="box">
+
 ## And Components?
 
 A component is an object that combines a template with a controller. We then include the component on our page rather than using ng-include. We will get to these later.
 
-%section.exercise
-:markdown
+</aside>
+
+```html
+<section class="exercise"></section>
+```
 
 ## Exercise - Create a Flickr Item Template
 
@@ -57,29 +61,24 @@ First create a template to render a single item in the feed. Now in your ng-repe
 
 Try using an inline template in a script tag.
 
-%section
-:markdown
+</section>
+
 ## Writing to the $templateCache directly
 
 When a template is downloaded, it is saved to the template cache so it available again quickly. It's possible to write directly to the template cache. This allows you to pre-compile portions of your app into JavaScript, making your app more responsive at the expense of a longer initial load time.
 
 We do this in a run block like this. Run blocks are executed once when the app is first initialised:
 
-:ruby
-code = <<-CODE
-angular.module('templates', [])
-.run(function($templateCache) {
-$templateCache.put('cachedTemplate', '<h1>Lovely caching!</h1>')
+```js
+angular.module("templates", []).run(function ($templateCache) {
+  $templateCache.put("cachedTemplate", "<h1>Lovely caching!</h1>");
 });
-CODE
-=code(code)
+```
 
-:markdown
-
-%section.exercise
-:markdown
+<section class="exercise">
 
 ## Exercise - Writing directly to the template cache.
 
 Modify the Flickr exercise above, so that the item template is written directly to the $templateCache using `$templateCache.put`
 
+</section>
