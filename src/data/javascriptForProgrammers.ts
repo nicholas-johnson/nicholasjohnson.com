@@ -11,8 +11,8 @@ export const javascriptForProgrammers: ICourse = {
 
   cover: "/images/book-covers/shuttle2.jpg",
   coverAlt: "",
-  coverCredit: "",
-  coverCreditUrl: "",
+  coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
+  coverCredit: "NASA Ames Research Center",
   version: "",
   createdAt: "",
   lastUpdatedAt: "",

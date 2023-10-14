@@ -8,10 +8,10 @@ export const rubyCourse: ICourse = {
   createdAt: "2017",
   lastUpdatedAt: "2017",
   description: "",
-  bullets: [],
+  bullets: ["Free course", "Tidy introduction to Ruby", "No Fluff"],
   coverAlt: "",
-  coverCredit: "",
-  coverCreditUrl: "",
+  coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
+  coverCredit: "NASA Ames Research Center",
   exercises: [
     {
       title: "Intro to Ruby",
