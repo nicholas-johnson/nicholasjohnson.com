@@ -16,7 +16,7 @@ const { courses } = Astro.props;
       <article>
         <div class="imageHost">
           <h3>
-            <a href={`${course.slug}/${course.exercises[0].slug}`}>
+            <a href={`/${course.slug}/${course.exercises[0].slug}`}>
               {course.title}
             </a>
           </h3>
@@ -30,7 +30,7 @@ const { courses } = Astro.props;
             <li>{markdown(bullet)}</li>
           ))}
           <li>
-            <a href={`${course.slug}/${course.exercises[0].slug}`}>
+            <a href={`/${course.slug}/${course.exercises[0].slug}`}>
               Let's do this thing!
             </a>
           </li>
