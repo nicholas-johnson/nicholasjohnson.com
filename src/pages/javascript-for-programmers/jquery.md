@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: JQuery
+seoTitle: JQuery for Programmers
+course: javascriptForProgrammers
+---
+
 # JQuery
 
 JQuery is a standard DOM manipulation tool. It abstracts the browser differences and gives you a clean cross browser DOM API.

@@ -1,12 +1,7 @@
 ---
-import CourseSidebar from "../components/CourseSidebar.astro";
 import GlobalLayout from "./GlobalLayout.astro";
 import { courses } from "../data/courses";
-import CourseNextPrevLinks from "../components/CourseNextPrevLinks.astro";
-import {
-  AstroGlobNoMatch,
-  InvalidContentEntrySlugError,
-} from "astro/dist/core/errors/errors-data";
+
 import type { ICourse } from "../types/Course";
 
 interface Props {

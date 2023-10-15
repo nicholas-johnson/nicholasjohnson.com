@@ -11,7 +11,66 @@ export const angularJsCourse: ICourse = {
   coverCredit: "NASA Ames Research Center",
   version: "1.0.1",
   createdAt: "",
-  lastUpdatedAt: "12/12/2017  ",
+  lastUpdatedAt: "12/12/2017",
+  logo: "",
+  instructorLead: {
+    intro:
+      "Learn Angular from someone who actually uses it. Live coding, Q&A, practical workshops, deep theory, real world exercises and code reviews.",
+    testimonials: [
+      {
+        name: "Leo Horn",
+        jobTitle: "Senior Analyst Developer at Novacroft",
+        image: "/images/testimonials/leo.jpg",
+        linkedIn: "https://uk.linkedin.com/pub/leo-horn/22/898/169",
+        content: `
+By far and away the best, most in depth, and broadest course I have been on. Nick is passionate and vastly knowledgeable about the subject and it really comes through in the lessons.
+
+**Best bit**: I guess the nerdy part of me liked it when we hit a remote api and displayed data back. Also…Thundercats rock!!!
+
+**Comparison with other courses**: Many courses I've been on have been dumbed down and a bit wishy washy, I'm so pleased this was challenging and full of meaty examples.
+        `,
+      },
+      {
+        name: "Emma Phillips",
+        jobTitle: "Analyst Programmer at Novacroft",
+        image: "/images/testimonials/emma.jpg",
+        linkedIn: "https://uk.linkedin.com/pub/emma-phillips/87/627/1a",
+        content: `
+Thank you Nick for the AngularJS course. It was very insightful. Nick was very knowledgeable about the subject matter. Would definitely recommend this course.
+
+**Best bit:** All of it! Learned a lot.
+
+**Comparison with other courses:** Very in depth and flexible to the group. Course was very interactive.
+        `,
+      },
+
+      {
+        name: "Aurore Trunelle",
+        jobTitle: "Front End Developer at Edcoms",
+        image: "/images/testimonials/aurore.jpg",
+        linkedIn: "https://www.linkedin.com/in/auroretrunelle",
+        content: `
+I followed Nicholas' advance JavaScript and extended AngularJS courses. I learned a lot during this well distributed training. The mix of theory and practices make it really interesting, and well-articulated. Nicholas knows his subject perfectly and can answer any questions and debate about web development all day.
+
+All you want to do after this course, is more Javascript and AngularJS. I can only recommend this training
+        `,
+      },
+      {
+        name: "Sarah Tupman",
+        jobTitle: "Senior Front End Developer at EdComs",
+        image: "/images/testimonials/sarah.jpg",
+        linkedIn: "",
+        content: `
+I attended a AngularJs course run by Nick in April 2015. After finding his website looking for such a course, he appeared to have an expansive repertoire of knowledge and I was certainly not disappointed.
+
+Nick is extremely knowledge, approachable, and posses an excellent set of rare teaching skills. He was able to explain complex ideas and theories with an application to a real life usable scenario, and could answer any question related to JavaScript even if it was off topic.
+
+I wouldn't hesitate for a second to recommend Nick to anyone looking to get their head around AngularJS - it was an absolute pleasure, and a very motivating course
+        `,
+      },
+    ],
+    variants: [],
+  },
   exercises: [
     // {
     //   slug: "angular-intro",

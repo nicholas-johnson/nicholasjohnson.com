@@ -23,6 +23,8 @@
 
 # Ruby Course
 
+/ruby/book/ /ruby-course/book
+
 /ruby/ruby-course/ /ruby-course/intro
 /ruby/ruby-course/exercises/arrays /ruby-course/arrays
 /ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
@@ -149,16 +151,20 @@
 
 # CSS3
 
-/css3/course/exercises/animation /css3-course/animation
-/css3/course/exercises/border-radius /css3-course/border-radius
-/css3/course/exercises/box-shadow /css3-course/box-shadow
-/css3/course/exercises/multiple-backgrounds /css3-course/multiple-backgrounds
-/css3/course/exercises/opacity /css3-course/opacity
-/css3/course/exercises/pseudoelements /css3-course/pseudoelements
-/css3/course/exercises/transformations /css3-course/transformations
-/css3/course/exercises/transitions /css3-course/transitions
+/webdev/css3/exercises/animation /css3-course/animation
+/webdev/css3/exercises/border-radius /css3-course/border-radius
+/webdev/css3/exercises/box-shadow /css3-course/box-shadow
+/webdev/css3/exercises/multiple-backgrounds /css3-course/multiple-backgrounds
+/webdev/css3/exercises/opacity /css3-course/opacity
+/webdev/css3/exercises/pseudoelements /css3-course/pseudoelements
+/webdev/css3/exercises/transformations /css3-course/transformations
+/webdev/css3/exercises/transitions /css3-course/transitions
 
 # JavaScript for Programmers
+
+/javascript/javascript-for-programmers/ /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/ /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/index /javascript-for-programmers/intro
 
 /javascript/javascript-for-programmers/exercises/arrays/ /javascript-for-programmers/arrays
 /javascript/javascript-for-programmers/exercises/ajax /javascript-for-programmers/ajax
@@ -168,12 +174,14 @@
 /javascript/javascript-for-programmers/exercises/functional-programming /javascript-for-programmers/functional-programming
 /javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
 /javascript/javascript-for-programmers/exercises/grunt /javascript-for-programmers/grunt
-/javascript/javascript-for-programmers/exercises/index /javascript-for-programmers/index
+/javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
 /javascript/javascript-for-programmers/exercises/intro /javascript-for-programmers/intro
 /javascript/javascript-for-programmers/exercises/jquery /javascript-for-programmers/jquery
-/javascript/javascript-for-programmers/exercises/json /javascript-for-programmers/json
+/javascript/javascript-for-programmers/exercises/json /javascript-for-programmers/object-literals
+/javascript/javascript-for-programmers/exercises/meaning-of-this/ /javascript-for-programmers/meaning-of-this
+/javascript/javascript-for-programmers/exercises/promises /javascript-for-programmers/promises
 /javascript/javascript-for-programmers/exercises/running-javascript /javascript-for-programmers/running-javascript
-/javascript/javascript-for-programmers/exercises/variables. /javascript-for-programmers/variables.
+/javascript/javascript-for-programmers/exercises/variables /javascript-for-programmers/variables
 
 # Node Course
 
@@ -207,6 +215,42 @@
 /react/course/exercises/rendering /react-course/rendering
 /react/course/exercises/transpile /react-course/transpile
 
+# AngularJS Course
+
+/angular /angularjs-course/templates
+/angular/course /angularjs-course/templates
+/angular/course/exercises /angularjs-course/templates
+
+/angular/course/exercises/ajax /angularjs-course/ajax
+/angular/course/exercises/animation /angularjs-course/animation
+/angular/course/exercises/binding /angularjs-course/binding
+/angular/course/exercises/book /angularjs-course/book
+/angular/course/exercises/controllers /angularjs-course/controllers
+/angular/course/exercises/crud /angularjs-course/crud
+/angular/course/exercises/custom-filters /angularjs-course/custom-filters
+/angular/course/exercises/di /angularjs-course/di
+/angular/course/exercises/directive-compilation /angularjs-course/directive-compilation
+/angular/course/exercises/directives /angularjs-course/directives
+/angular/course/exercises/isolate-scope /angularjs-course/isolate-scope
+/angular/course/exercises/jsonp /angularjs-course/jsonp
+/angular/course/exercises/karma /angularjs-course/karma
+/angular/course/exercises/more-binding /angularjs-course/more-binding
+/angular/course/exercises/ng-include /angularjs-course/ng-include
+/angular/course/exercises/promises /angularjs-course/promises
+/angular/course/exercises/protractor /angularjs-course/protractor
+/angular/course/exercises/q /angularjs-course/q
+/angular/course/exercises/repeat-and-filter /angularjs-course/repeat-and-filter
+/angular/course/exercises/resource /angularjs-course/resource
+/angular/course/exercises/routing /angularjs-course/routing
+/angular/course/exercises/scope /angularjs-course/scope
+/angular/course/exercises/services /angularjs-course/services
+/angular/course/exercises/templates /angularjs-course/templates
+/angular/course/exercises/transclusion /angularjs-course/transclusion
+/angular/course/exercises/ui-router /angularjs-course/ui-router
+/angular/course/exercises/validation /angularjs-course/validation
+/angular/course/exercises/watch /angularjs-course/watch
+/angular/course/exercises/webapi /angularjs-course/webapi
+
 # Posts
 
 /blog/ /
@@ -225,3 +269,16 @@
 /blog/react-for-angular-developers /posts/react-for-angular-developers
 /blog/what-is-babel /posts/what-is-babel
 /blog/why-you-should-sometimes-use-mongo /posts/why-you-should-sometimes-use-mongo
+
+/ruby/blog/posts/active_support_core_extensions /posts/active_support_core_extensions
+/ruby/blog/posts/alias_method /posts/alias_method
+/ruby/blog/posts/bang_dup /posts/bang_dup
+/ruby/blog/posts/blank /posts/blank
+/ruby/blog/posts/button_to /posts/button_to
+/ruby/blog/posts/checking_for_a_subclass /posts/checking_for_a_subclass
+/ruby/blog/posts/constantize /posts/constantize
+/ruby/blog/posts/delegating_with_extend /posts/delegating_with_extend
+/ruby/blog/posts/hash_delete /posts/button_to
+/ruby/blog/posts/include_vs_extend /posts/include_vs_extend
+/ruby/blog/posts/is_a /posts/is_a
+/ruby/blog/posts/shuffling_up /posts/shuffling_up

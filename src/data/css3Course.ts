@@ -2,7 +2,7 @@ import type { ICourse } from "../types/Course";
 
 export const css3Course: ICourse = {
   title: "The CSS3 Course",
-  slug: "css3",
+  slug: "css3-course",
   cover: "/images/sections/node.svg",
   description: "",
   bullets: [],

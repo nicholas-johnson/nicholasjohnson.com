@@ -2,8 +2,8 @@
 import GlobalLayout from "./GlobalLayout.astro";
 
 interface Props {
-  title: string;
-  frontmatter: {
+  title?: string;
+  frontmatter?: {
     title: string;
     seoTitle?: string;
     description: string;
@@ -16,7 +16,9 @@ interface Props {
 const { title, frontmatter } = Astro.props;
 ---
 
-<GlobalLayout title={title || frontmatter.seoTitle || frontmatter.title}>
+<GlobalLayout
+  title={title || frontmatter?.seoTitle || frontmatter?.title || ""}
+>
   <div class="content">
     <slot />
   </div>

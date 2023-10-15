@@ -12,6 +12,27 @@ export interface ICourse {
   createdAt: string;
   lastUpdatedAt: string;
   deprecationNotice?: string;
+  logo?: "";
+  instructorLead?: {
+    intro: string;
+    testimonials: ITestimonial[];
+    variants: ICourseVariant[];
+  };
+}
+
+export interface ITestimonial {
+  name: string;
+  jobTitle: string;
+  image: string;
+  linkedIn: string;
+  content: string;
+}
+
+export interface ICourseVariant {
+  title: string;
+  about: string;
+  length: string;
+  price: number;
 }
 
 export interface IExercise {
