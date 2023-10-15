@@ -27,39 +27,53 @@ const course: ICourse = courses[frontmatter.course];
   title={frontmatter.title || frontmatter?.seoTitle || frontmatter?.title || ""}
 >
   <div class="content">
-    <h1>{title}</h1>
+    <h1>
+      {frontmatter.title || frontmatter?.seoTitle || frontmatter?.title || ""}
+    </h1>
+
     <article class="intro">
       <slot />
     </article>
-    <!-- <article>
-      <div class="imageHost">
-        <a href={`${course.slug}/${course.exercises[0].slug}`}>
-          <img src={course.cover} alt={course.coverAlt} />
-        </a>
-      </div>
-      <p>{markdown(course.description)}</p>
-      <ul>
-        {course.bullets.map((bullet) => <li>{markdown(bullet)}</li>)}
-        <li>
-          <a href={`/${course.slug}/${course.exercises[0].slug}`}>
-            Let's do this thing!
-          </a>
-        </li>
-      </ul>
-    </article> -->
-
-    <h2>Testimonials</h2>
 
     {
-      course.instructorLead?.testimonials.map((testimonial) => (
-        <article class="testimonial">
-          <img src={testimonial.image} alt={testimonial.name} />
-          <h2>
-            {testimonial.name} {testimonial.jobTitle}
-            {markdown(testimonial.content)}
-          </h2>
-        </article>
-      ))
+      course.instructorLead?.variants?.length ? (
+        <>
+          <h1>Courses</h1>
+
+          {course.instructorLead?.variants.map((variant) => (
+            <article class="variant">
+              <h2>{variant.title}</h2>
+              {markdown(variant.description)}
+              <p>
+                <strong>Price:</strong> &pound;{variant.price}
+              </p>
+              <p>
+                <strong>Duration:</strong> {variant.duration} days
+              </p>
+            </article>
+          ))}
+        </>
+      ) : null
+    }
+
+    {
+      course.instructorLead?.testimonials ? (
+        <>
+          <h1>Testimonials</h1>
+
+          {course.instructorLead?.testimonials.map((testimonial) => (
+            <article class="testimonial">
+              <a href={testimonial.linkedIn}>
+                <img src={testimonial.image} alt={testimonial.name} />
+              </a>
+              <h2>
+                {testimonial.name} {testimonial.jobTitle}
+                {markdown(testimonial.content)}
+              </h2>
+            </article>
+          ))}
+        </>
+      ) : null
     }
   </div>
 </GlobalLayout>
@@ -79,7 +93,26 @@ const course: ICourse = courses[frontmatter.course];
   }
 
   .intro {
-    max-width: 80rem;
+    max-width: 40rem;
     margin: auto;
+  }
+
+  .variant {
+    max-width: 40rem;
+    margin: 1rem auto;
+    p {
+      margin: 0;
+    }
+  }
+
+  .testimonial {
+    max-width: 40rem;
+    margin: 2rem auto;
+    img {
+      width: 8rem;
+      float: left;
+      margin: 2rem 2rem 1rem 0;
+      border-radius: 50%;
+    }
   }
 </style>

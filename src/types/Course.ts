@@ -30,8 +30,8 @@ export interface ITestimonial {
 
 export interface ICourseVariant {
   title: string;
-  about: string;
-  length: string;
+  description: string;
+  duration: number;
   price: number;
 }
 

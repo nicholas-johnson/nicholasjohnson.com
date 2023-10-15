@@ -1,4 +1,5 @@
 import type { ICourse } from "../types/Course";
+const DAY_RATE = 1950;
 
 export const angularJsCourse: ICourse = {
   title: "The AngularJS Course",
@@ -69,7 +70,39 @@ I wouldn't hesitate for a second to recommend Nick to anyone looking to get thei
         `,
       },
     ],
-    variants: [],
+    variants: [
+      {
+        title: "The AngularJS Course",
+        description:
+          "Three days of Angular covering templates and all the core principles and components. Learn to build and test an Angular App the right way, and finally build a real app against a live API.",
+        duration: 3,
+        price: 3 * DAY_RATE,
+      },
+
+      {
+        title: "AngularJS + JavaScript",
+        description:
+          "JavaScript is an often misunderstood language. It looks superficially like Java, but is different enough to cause developer confusion and occasional outrage! The Angular course plus JavaScript: function scope, closure, object orientation (which is different in JavaScript), and functional concepts.",
+        duration: 4,
+        price: 4 * DAY_RATE,
+      },
+
+      {
+        title: "Angular + NodeJS",
+        description:
+          "NodeJS is the perfect accompaniment to Angular. JavaScript as an event driven language makes a powerful server. Your JSON data shuttles easily between the server and client.",
+        duration: 4,
+        price: 4 * DAY_RATE,
+      },
+
+      {
+        title: "Angular + NodeJS + Mongo + Express (MEAN)",
+        description:
+          "An app built on the mean stack is JavaScript front to back. It will be fast, highly scalable, agile and moderately light on server resources. This is an agile stack favoured by many developers.",
+        duration: 5,
+        price: 5 * DAY_RATE,
+      },
+    ],
   },
   exercises: [
     // {
