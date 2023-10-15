@@ -14,6 +14,7 @@ export interface ICourse {
   deprecationNotice?: string;
   logo?: "";
   instructorLead?: {
+    title: string;
     intro: string;
     testimonials: ITestimonial[];
     variants: ICourseVariant[];

@@ -56,17 +56,19 @@ const allCourses = Object.keys(courses)
           </div>
           <div class="content">
             <h2>
-              <a href={`courses/${course.slug}`}>{course.title}</a>
+              <a href={`courses/${course.slug}`}>
+                {course.instructorLead?.title}
+              </a>
             </h2>
-            <p>{markdown(course.description)}</p>
-            <ul>
-              {course.bullets.map((bullet) => (
-                <li>{markdown(bullet)}</li>
+
+            {markdown(course.instructorLead?.intro || "")}
+
+            <ul class="contentList">
+              {course.exercises.map((exercise) => (
+                <li>{exercise.title}</li>
               ))}
               <li>
-                <a href={`/${course.slug}/${course.exercises[0].slug}`}>
-                  See more
-                </a>
+                <a href={`/courses/${course.slug}`}>Learn more</a>
               </li>
             </ul>
           </div>
@@ -93,7 +95,7 @@ const allCourses = Object.keys(courses)
     }
 
     article.course {
-      max-width: 100rem;
+      max-width: 80rem;
       margin: 0 auto;
       display: flex;
       gap: 4rem;
@@ -120,6 +122,19 @@ const allCourses = Object.keys(courses)
           p {
             margin: 0;
           }
+        }
+      }
+
+      ul.contentList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          margin-right: 1rem;
         }
       }
     }

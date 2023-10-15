@@ -1,13 +1,15 @@
 ---
 title: Today's Rails is the button_to helper
 tags: ruby, rails
-layout: "../../layouts/BlogPost.astro"
-date: "2016-02-15"
+layout: ../../layouts/BlogPost.astro
+date: 2016-02-15
 preview: "This little rockstar will make a whole RESTful form for you containing just one button, so you can make put, post and delete requests without relying on JavaScript.
 
-A regular "a" link can only submit via get. To delete a resource you would usually submit a request via delete.
 
-You can submit a delete request in two ways, either via JavaScript, or as a form submission. You don't want an errant search engine spider hitting all your URLs and deleting all your data, so "hiding" delete links in this way is a good idea, since spiders generally won't parse JavaScript or submit forms."
+A regular a link can only submit via get. To delete a resource you would usually submit a request via delete.
+
+
+You can submit a delete request in two ways, either via JavaScript, or as a form submission. You don't want an errant search engine spider hitting all your URLs and deleting all your data, so hiding delete links in this way is a good idea, since spiders generally won't parse JavaScript or submit forms."
 ---
 
 Today's Rails is the button_to helper.

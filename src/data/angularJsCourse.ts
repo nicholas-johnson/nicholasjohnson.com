@@ -15,6 +15,7 @@ export const angularJsCourse: ICourse = {
   lastUpdatedAt: "12/12/2017",
   logo: "",
   instructorLead: {
+    title: "Angular Js Expert Lead Course",
     intro:
       "Learn Angular from someone who actually uses it. Live coding, Q&A, practical workshops, deep theory, real world exercises and code reviews.",
     testimonials: [
