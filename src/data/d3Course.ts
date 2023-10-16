@@ -6,7 +6,7 @@ export const d3Course: ICourse = {
 
   description: "",
   bullets: [],
-  cover: "",
+  cover: "/images/book-covers/station3.jpg",
   coverAlt: "",
   version: "",
   createdAt: "",

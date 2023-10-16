@@ -1,4 +1,4 @@
-%article
+
 .book_cover
 
 # D is for Data
@@ -71,7 +71,7 @@ We can of course also chain selections together. Say we wanted to match the divs
 We might also break this chain down into parts like this:
 
 ```js
-  var graph = d3.select('.graph')
+  let graph = d3.select('.graph')
   graph.selectAll('div');
 ```
 
