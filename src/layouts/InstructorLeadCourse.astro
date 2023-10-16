@@ -38,7 +38,12 @@ const course: ICourse = courses[frontmatter.course];
     {
       course.instructorLead?.variants?.length ? (
         <>
-          <h1>Courses</h1>
+          <h1>Suggested Course Variants</h1>
+
+          <p class="variant">
+            Courses can be fully tailored in content and duration. The following
+            are examples of configurations that could work.
+          </p>
 
           {course.instructorLead?.variants.map((variant) => (
             <article class="variant">

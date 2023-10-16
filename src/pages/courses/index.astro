@@ -63,14 +63,7 @@ const allCourses = Object.keys(courses)
 
             {markdown(course.instructorLead?.intro || "")}
 
-            <ul class="contentList">
-              {course.exercises.map((exercise) => (
-                <li>{exercise.title}</li>
-              ))}
-              <li>
-                <a href={`/courses/${course.slug}`}>Learn more</a>
-              </li>
-            </ul>
+            <a href={`/courses/${course.slug}`}>Learn more</a>
           </div>
         </article>
       ))
