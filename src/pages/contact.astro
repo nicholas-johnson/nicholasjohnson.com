@@ -1,0 +1,54 @@
+---
+// import type { ICourse } from "../types/Course";
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import { markdown } from "@astropub/md";
+---
+
+<GlobalLayout title="Instructor Lead Courses, taught worldwide">
+  <div class="content">
+    <h1>Say Hello</h1>
+    <article>
+      <p>
+        If you'd like to get in touch about a course, or just for a chat about
+        your startup, the best way is to email me here:
+        <a href="mailto:hello@nicholasjohnson.com">hello@nicholasjohnson.com</a
+        >. I'll try to get back to you right away. We can have a conversation
+        via email, phone or Skype to see if there might be something we can do.
+      </p>
+    </article>
+    <a class="hello" href="mailto:hello@nicholasjohnson.com">Send an email</a>
+  </div>
+
+  <style lang="scss">
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    article {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 2rem auto;
+    }
+
+    a.hello {
+      display: block;
+      margin: 1rem auto;
+      color: white;
+      background: black;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      transition: all 300ms;
+      border-radius: 1rem;
+      &:hover {
+        background: red;
+        transform: rotate(-5deg);
+      }
+    }
+  </style>
+</GlobalLayout>
