@@ -1,14 +1,76 @@
 ---
-title: 'Typography'
-date: '2014-06-30 19:04:36'
-legacy: true
+title: "Typography"
+date: "2014-06-30 19:04:36"
+course: "webDevCourse"
+layout: ../../layouts/Course.astro
 ---
+
+# Typography
 
 A little simple typography can take a boring simple page and make it beautiful.
 
+- font-size - font size
 - letter-spacing - kerning
 - line-height - leading
 - font-family - change the font
+
+## Font Sizes
+
+We can specifiy a font size in several ways:
+
+- px - pixel sizing.
+- em - the width of a letter M - legacy, do not use.
+- rem - Root relative Em. The best way to do font sizing today.
+
+we specify a font size like this:
+
+```css
+body {
+  font-size: 16px;
+}
+```
+
+This will set the base font size on the document to 16px, which is a nice round number.
+
+We can set the font size on an h1 like this:
+
+h1 {
+font-size: 32px;
+}
+
+but we should avoid doing this if possible. Instead we should set a base font size on the body, then use rels to specify to size of individual elements:
+
+```css
+body {
+  font-size: 16px;
+}
+h1 {
+  font-size: 2rel;
+}
+```
+
+The h1 will have font size `2 * 16px`, or `32px`. Changing the root font size will scale up all other elements specified in rels.
+
+We can use this to create a harmonious set of font sizes that scale smoothly from small to large:
+
+```css
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4,
+p {
+  font-size: 1rem;
+}
+```
 
 ## Kerning
 

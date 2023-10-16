@@ -57,6 +57,8 @@
 
 # Rails Course
 
+/ruby/rails-book /rails-course/book
+
 /ruby/rails-course/exercises/assets /rails-course/assets
 /ruby/rails-course/exercises/associations /rails-course/associations
 /ruby/rails-course/exercises/blog /rails-course/blog
@@ -102,63 +104,67 @@
 
 # Webdev
 
-/webdev/course/exercises/abs-layout /webdev-course/abs-layout
-/webdev/course/exercises/attributes /webdev-course/attributes
-/webdev/course/exercises/book /webdev-course/book
-/webdev/course/exercises/css-classes /webdev-course/css-classes
-/webdev/course/exercises/divs-and-spans /webdev-course/divs-and-spans
-/webdev/course/exercises/entity-references /webdev-course/entity-references
-/webdev/course/exercises/float-layout /webdev-course/float-layout
-/webdev/course/exercises/full-width /webdev-course/full-width
-/webdev/course/exercises/hex /webdev-course/hex
-/webdev/course/exercises/images /webdev-course/images
-/webdev/course/exercises/intro /webdev-course/intro
-/webdev/course/exercises/lists /webdev-course/lists
-/webdev/course/exercises/more-tags /webdev-course/more-tags
-/webdev/course/exercises/nested-selectors /webdev-course/nested-selectors
-/webdev/course/exercises/positioning-with-margins /webdev-course/positioning-with-margins
-/webdev/course/exercises/selectors /webdev-course/selectors
-/webdev/course/exercises/style-attributes /webdev-course/style-attributes
-/webdev/course/exercises/stylesheets /webdev-course/stylesheets
-/webdev/course/exercises/tags /webdev-course/tags
+/webdev/course/book /webdev-course/book
+/webdev/course/exercises/ /webdev-course/intro
+/webdev/course /webdev-course/intro
+
+/webdev/course/exercises/abs-layout/ /webdev-course/abs-layout
+/webdev/course/exercises/attributes/ /webdev-course/attributes
+/webdev/course/exercises/book/ /webdev-course/book
+/webdev/course/exercises/css-classes/ /webdev-course/css-classes
+/webdev/course/exercises/divs-and-spans/ /webdev-course/divs-and-spans
+/webdev/course/exercises/entity-references/ /webdev-course/entity-references
+/webdev/course/exercises/float-layout/ /webdev-course/float-layout
+/webdev/course/exercises/full-width/ /webdev-course/full-width
+/webdev/course/exercises/hex/ /webdev-course/hex
+/webdev/course/exercises/images/ /webdev-course/images
+/webdev/course/exercises/intro/ /webdev-course/intro
+/webdev/course/exercises/lists/ /webdev-course/lists
+/webdev/course/exercises/more-tags/ /webdev-course/more-tags
+/webdev/course/exercises/nested-selectors/ /webdev-course/nested-selectors
+/webdev/course/exercises/positioning-with-margins/ /webdev-course/positioning-with-margins
+/webdev/course/exercises/selectors/ /webdev-course/selectors
+/webdev/course/exercises/style-attributes/ /webdev-course/style-attributes
+/webdev/course/exercises/stylesheets/ /webdev-course/stylesheets
+/webdev/course/exercises/tags/ /webdev-course/tags
 
 # HTML And CSS course
 
-/html-and-css/absolute-positioning /webdev-course/absolute-positioning
-/html-and-css/attributes /webdev-course/attributes
-/html-and-css/bar-chart /webdev-course/bar-chart
-/html-and-css/centering /webdev-course/centering
-/html-and-css/display-modes /webdev-course/display-modes
-/html-and-css/document /webdev-course/document
-/html-and-css/floats /webdev-course/floats
-/html-and-css/images /webdev-course/images
-/html-and-css/intro /webdev-course/intro
-/html-and-css/lists /webdev-course/lists
-/html-and-css/matching-classes /webdev-course/matching-classes
-/html-and-css/matching-elements /webdev-course/matching-elements
-/html-and-css/matching-ids /webdev-course/matching-ids
-/html-and-css/matching-nested-elements /webdev-course/matching-nested-elements
-/html-and-css/more-tags /webdev-course/more-tags
-/html-and-css/nested-floats /webdev-course/nested-floats
-/html-and-css/nesting /webdev-course/nesting
-/html-and-css/structural-tags /webdev-course/structural-tags
-/html-and-css/style /webdev-course/style
-/html-and-css/stylesheet /webdev-course/stylesheet
-/html-and-css/styling-lists /webdev-course/styling-lists
-/html-and-css/tables /webdev-course/tables
-/html-and-css/tags /webdev-course/tags
-/html-and-css/typography /webdev-course/typography
+/courses/html-and-css/exercises/absolute-positioning/ /webdev-course/absolute-positioning
+/courses/html-and-css/exercises/attributes/ /webdev-course/attributes
+/courses/html-and-css/exercises/bar-chart/ /webdev-course/bar-chart
+/courses/html-and-css/exercises/centering/ /webdev-course/centering
+/courses/html-and-css/exercises/display-modes/ /webdev-course/display-modes
+/courses/html-and-css/exercises/document/ /webdev-course/document
+/courses/html-and-css/exercises/floats/ /webdev-course/floats
+/courses/html-and-css/exercises/images/ /webdev-course/images
+/courses/html-and-css/exercises/intro/ /webdev-course/intro
+/courses/html-and-css/exercises/lists/ /webdev-course/lists
+/courses/html-and-css/exercises/matching-classes/ /webdev-course/matching-classes
+/courses/html-and-css/exercises/matching-elements/ /webdev-course/matching-elements
+/courses/html-and-css/exercises/matching-ids/ /webdev-course/matching-ids
+/courses/html-and-css/exercises/matching-nested-elements/ /webdev-course/matching-nested-elements
+/courses/html-and-css/exercises/more-tags/ /webdev-course/more-tags
+/courses/html-and-css/exercises/nested-floats/ /webdev-course/nested-floats
+/courses/html-and-css/exercises/nesting/ /webdev-course/nesting
+/courses/html-and-css/exercises/structural-tags/ /webdev-course/structural-tags
+/courses/html-and-css/exercises/style/ /webdev-course/style
+/courses/html-and-css/exercises/stylesheet/ /webdev-course/stylesheets
+/courses/html-and-css/exercises/styling-lists/ /webdev-course/styling-lists
+/courses/html-and-css/exercises/tables/ /webdev-course/tables
+/courses/html-and-css/exercises/tags/ /webdev-course/tags
+/courses/html-and-css/exercises/typography /webdev-course/typography
 
 # CSS3
 
-/webdev/css3/exercises/animation /css3-course/animation
-/webdev/css3/exercises/border-radius /css3-course/border-radius
-/webdev/css3/exercises/box-shadow /css3-course/box-shadow
-/webdev/css3/exercises/multiple-backgrounds /css3-course/multiple-backgrounds
-/webdev/css3/exercises/opacity /css3-course/opacity
-/webdev/css3/exercises/pseudoelements /css3-course/pseudoelements
-/webdev/css3/exercises/transformations /css3-course/transformations
-/webdev/css3/exercises/transitions /css3-course/transitions
+/webdev/css3/exercises/animation/ /css3-course/animation
+/webdev/css3/exercises/border-radius/ /css3-course/border-radius
+/webdev/css3/exercises/box-shadow/ /css3-course/box-shadow
+/webdev/css3/exercises/multiple-backgrounds/ /css3-course/multiple-backgrounds
+/webdev/css3/exercises/opacity/ /css3-course/opacity
+/webdev/css3/exercises/pseudoelements/ /css3-course/pseudoelements
+/webdev/css3/exercises/transformations/ /css3-course/transformations
+/webdev/css3/exercises/transitions/ /css3-course/transitions
 
 # JavaScript for Programmers
 
@@ -171,6 +177,7 @@
 /javascript/javascript-for-programmers/exercises/events /javascript-for-programmers/events
 /javascript/javascript-for-programmers/exercises/closure /javascript-for-programmers/closure
 /javascript/javascript-for-programmers/exercises/functional-loops /javascript-for-programmers/functional-loops
+/javascript/javascript-for-programmers/exercises/each-peach/ /javascript-for-programmers/functional-loops
 /javascript/javascript-for-programmers/exercises/functional-programming /javascript-for-programmers/functional-programming
 /javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
 /javascript/javascript-for-programmers/exercises/grunt /javascript-for-programmers/grunt
@@ -213,7 +220,7 @@
 /react/course/exercises/flux /react-course/flux
 /react/course/exercises/props /react-course/props
 /react/course/exercises/rendering /react-course/rendering
-/react/course/exercises/transpile /react-course/transpile
+/react/course/exercises/transpiler /react-course/transpiler
 
 # AngularJS Course
 
@@ -282,3 +289,9 @@
 /ruby/blog/posts/include_vs_extend /posts/include_vs_extend
 /ruby/blog/posts/is_a /posts/is_a
 /ruby/blog/posts/shuffling_up /posts/shuffling_up
+
+# Taught courses
+
+/angular-course/ /courses/angularjs-course
+/ruby/rails-course/ /courses/rails-course
+/mongo/intro-course/ /courses/mongo-course

@@ -32,6 +32,12 @@ export const webDevCourse: ICourse = {
     },
     {
       slug: "more-tags",
+      title: "Nested Tags (tags inside other tags)",
+      description:
+        "The power of tags lies in their ability to sit inside other tags. We call this nesting.",
+    },
+    {
+      slug: "nesting",
       title: "More types of Tags",
       description: "Here are some more tags you can use",
     },
@@ -49,6 +55,20 @@ export const webDevCourse: ICourse = {
       slug: "lists",
       title: "Lists",
       description: "Lists are used everywhere in HTML",
+    },
+
+    {
+      slug: "tables",
+      title: "Tables",
+      description:
+        "Tables can be used for presenting tabular data. Create a table using the table tag",
+    },
+
+    {
+      slug: "document",
+      title: "Making a document",
+      description:
+        "So far we have been creating little bits of html. Now let's create a whole document",
     },
     {
       slug: "style-attributes",
@@ -96,9 +116,16 @@ export const webDevCourse: ICourse = {
     //   "description": "The default layout if full width, which is actually quite useful."
     // },
     {
+      slug: "typography",
+      title: "Typography",
+      description:
+        "A little simple typography can take a boring simple page and make it beautiful",
+    },
+
+    {
       slug: "full-width",
       title: "Full Width Layouts",
-      description: "Default and useful",
+      description: "The default and useful layout",
     },
     {
       slug: "abs-layout",
