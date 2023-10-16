@@ -227,6 +227,7 @@
 /angular /angularjs-course/templates
 /angular/course /angularjs-course/templates
 /angular/course/exercises /angularjs-course/templates
+angular/course/workbook/ /angularjs-course/book
 
 /angular/course/exercises/ajax /angularjs-course/ajax
 /angular/course/exercises/animation /angularjs-course/animation
