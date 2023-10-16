@@ -291,6 +291,29 @@ angular/course/workbook/ /angularjs-course/book
 /ruby/blog/posts/is_a /posts/is_a
 /ruby/blog/posts/shuffling_up /posts/shuffling_up
 
+# d3 course
+
+/d3/course/exercises/ajax/ /d3-course/ajax
+/d3/course/exercises/append/ /d3-course/append
+/d3/course/exercises/axes/ /d3-course/axes
+/d3/course/exercises/book/ /d3-course/book
+/d3/course/exercises/color/ /d3-course/color
+/d3/course/exercises/data/ /d3-course/data
+/d3/course/exercises/enter-and-exit/ /d3-course/enter-and-exit
+/d3/course/exercises/events/ /d3-course/events
+/d3/course/exercises/histogram/ /d3-course/histogram
+/d3/course/exercises/index/ /d3-course/index
+/d3/course/exercises/intro/ /d3-course/intro
+/d3/course/exercises/line_chart/ /d3-course/line_chart
+/d3/course/exercises/parsing/ /d3-course/parsing
+/d3/course/exercises/paths/ /d3-course/paths
+/d3/course/exercises/pie-layout/ /d3-course/pie-layout
+/d3/course/exercises/scales/ /d3-course/scales
+/d3/course/exercises/scatterplot/ /d3-course/scatterplot
+/d3/course/exercises/select/ /d3-course/select
+/d3/course/exercises/svg/ /d3-course/svg
+/d3/course/exercises/transition/ /d3-course/transition
+
 # Taught courses
 
 /angular-course/ /courses/angularjs-course
