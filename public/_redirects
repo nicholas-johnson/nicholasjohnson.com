@@ -293,6 +293,9 @@ angular/course/workbook/ /angularjs-course/book
 
 # d3 course
 
+/d3/ /d3-course/intro
+/d3/course/ /d3-course/intro
+/d3/course/exercises/ /d3-course/intro
 /d3/course/exercises/ajax/ /d3-course/ajax
 /d3/course/exercises/append/ /d3-course/append
 /d3/course/exercises/axes/ /d3-course/axes
