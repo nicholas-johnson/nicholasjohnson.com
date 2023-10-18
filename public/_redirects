@@ -157,6 +157,9 @@
 
 # CSS3
 
+/webdev/css3/ /css3-course/opacity/
+/webdev/css3/exercises/ /css3-course/opacity/
+
 /webdev/css3/exercises/animation/ /css3-course/animation
 /webdev/css3/exercises/border-radius/ /css3-course/border-radius
 /webdev/css3/exercises/box-shadow/ /css3-course/box-shadow
@@ -171,6 +174,7 @@
 /javascript/javascript-for-programmers/ /javascript-for-programmers/intro
 /javascript/javascript-for-programmers/exercises/ /javascript-for-programmers/intro
 /javascript/javascript-for-programmers/exercises/index /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/object-orientation/ /javascript-for-programmers/object-literals
 
 /javascript/javascript-for-programmers/exercises/arrays/ /javascript-for-programmers/arrays
 /javascript/javascript-for-programmers/exercises/ajax /javascript-for-programmers/ajax
@@ -190,28 +194,30 @@
 /javascript/javascript-for-programmers/exercises/running-javascript /javascript-for-programmers/running-javascript
 /javascript/javascript-for-programmers/exercises/variables /javascript-for-programmers/variables
 
+/courses/javascript-for-programmers/functions/ /javascript-for-programmers/functions/
+
 # Node Course
 
 /node/ /node-course/node-console
 /node/course/exercises/ /node-course/node-console
-/node/course/exercises/book /node-course/book
-/node/course/exercises/express /node-course/express
-/node/course/exercises/file-system /node-course/file-system
-/node/course/exercises/gulp /node-course/gulp
-/node/course/exercises/jade /node-course/jade
-/node/course/exercises/jasmine /node-course/jasmine
-/node/course/exercises/modules /node-course/modules
-/node/course/exercises/mongo /node-course/mongo
-/node/course/exercises/node-console /node-course/node-console
-/node/course/exercises/node-server /node-course/node-server
-/node/course/exercises/npm /node-course/npm
-/node/course/exercises/process /node-course/process
-/node/course/exercises/promises /node-course/promises
-/node/course/exercises/rest /node-course/rest
-/node/course/exercises/sass /node-course/sass
-/node/course/exercises/scaling /node-course/scaling
-/node/course/exercises/socket-io /node-course/socket-io
-/node/course/exercises/yeoma /node-course/yeoman
+/node/course/exercises/book/ /node-course/book
+/node/course/exercises/express/ /node-course/express
+/node/course/exercises/file-system/ /node-course/file-system
+/node/course/exercises/gulp/ /node-course/gulp
+/node/course/exercises/jade/ /node-course/jade
+/node/course/exercises/jasmine/ /node-course/jasmine
+/node/course/exercises/modules/ /node-course/modules
+/node/course/exercises/mongo/ /node-course/mongo
+/node/course/exercises/node-console/ /node-course/node-console
+/node/course/exercises/node-server/ /node-course/node-server
+/node/course/exercises/npm/ /node-course/npm
+/node/course/exercises/process/ /node-course/process
+/node/course/exercises/promises/ /node-course/promises
+/node/course/exercises/rest/ /node-course/rest
+/node/course/exercises/sass/ /node-course/sass
+/node/course/exercises/scaling/ /node-course/scaling
+/node/course/exercises/socket-io/ /node-course/socket-io
+/node/course/exercises/yeoman/ /node-course/yeoman
 
 # React Course
 
