@@ -7,7 +7,7 @@ course: learnToCodeWithJavaScript
 
 # Don't string me along...
 
-The next thing we should know about is strings. A piece of text in JavaScript is called a string. It's a string of letters all attached together. We can tell it's a string because it sits between quote marks like this:
+The next thing we should know about is strings. A piece of text in JavaScript is called a string. It's a string of letters all attached together. We can tell it's a string because it sits between quotation marks like this:
 
 ```js
 "I am a String";
@@ -15,10 +15,10 @@ The next thing we should know about is strings. A piece of text in JavaScript is
 
 Everything between the quotes is part of the string and will be treated by JavaScript as a piece of text, and not part of your program.
 
-We can also use single quotes too like so:
+We can also use single quotes too, like so:
 
 ```js
-"I am a String";
+'I am a String';
 ```
 
 We can add strings together to make longer strings using the plus character:
@@ -43,9 +43,11 @@ One of the ways we can use strings is to help our program talk to our user. We s
 
 We can also get data out using the console object. We write:
 
+```js
 console.log('Hi from the console');
+```
 
-The console is a developer tool. On Windows you can open it by pressing F12. If you're on Chrome you can right click, select inspect, then choose the console tab. You'll be able to see all kinds of information about your program here and we'll be using this a lot going forward.
+The console is a developer tool. On Windows you can open it by pressing F12. If you're on Chrome you can right click, select inspect, then choose the console tab. You'll be able to see all kinds of information about your program here and you'll be using this a lot going forward.
 
 <div class="exercise">
 
@@ -59,7 +61,7 @@ Nice and simple this one. We're just going to create some strings and pop them u
 
 ## Strings are objects
 
-Objects are little balls of related data and ability. We can access information stored in an object using a dot (.).
+Objects are little balls of related data and functionality. We can access information stored in an object using a dot (.).
 
 Let's get the length of the string. We can do it like this:
 
@@ -77,7 +79,9 @@ alert("Allo allo allo".length);
 
 ## Exercise - Monkey with Strings
 
-Write a program that tells me the the number of characters in your name.
-Tell me what 123+456 is. Now tell me what "123" + "456" is. Weird?
+* Write a program that tells me the the number of characters in your name.
+* Tell me what 123+456 is. Now tell me what "123" + "456" is. Weird?
+
+Numbers and strings are different from each other. 123 + 456 adds the numbers together/ '123' + '456' glues the strings one after the other. Strings are sequences of letters.
 
 </div>

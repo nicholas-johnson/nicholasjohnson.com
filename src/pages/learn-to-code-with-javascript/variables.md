@@ -26,9 +26,9 @@ We have put the string "Hi there!" inside a variable (bucket) called greeting. T
 
 ## A note on var, let and const
 
-There are quite a few ways to make variables in JavaScript. The three keywords var, let and const are the most common. The difference between then are subtle and we'll cover them later.
+There are quite a few ways to make variables in JavaScript. The three keywords var, let and const are the most common. The difference between then are subtle and we'll cover them in the advanced course.
 
-let and const are relative newcomers to JavaScript, being added in 2015 when JavaScript was already a teenager. Some folks get super passionate about using them. They provide some useful features to do with variable scope, more on this later.
+let and const are relative newcomers to JavaScript, being added in 2015 when JavaScript was already a teenager. We tend to get super passionate about using them. They provide some useful features to do with variable scope, more on this later.
 
 ```js
 const myName = "Dave";
@@ -38,9 +38,9 @@ var myFavouriteColour = "blue";
 
 - When you use `var` to make a variable, that variable will be local to its containing function - don't worry if this doesn't make sense yet, we haven't covered functions. Var is the original way to make variables and we don't use it much anymore. It is uncool.
 - When you use `let`, you get a variable that is scoped to it's containing block. More on this when we look at blocks.
-- When you use `const`, you get a variable that can never be changed, a constant.
+- When you use `const`, you get a variable that can never be changed. It is a bucket with a tight-fitting lid, a constant.
 
-More on this later. For now, if you don't know which one is right for you, just use `let`.
+More on this later. For now, we'll be using `let` for pretty much everything.
 
 </aside>
 
@@ -52,11 +52,12 @@ We can change the value of a variable any time, just by assigning a new value to
 let name;
 name = "Dave";
 alert(name);
+
 name = "Susan";
 alert(name);
 ```
 
-The variable called name contains first the string "Dave", and then the string "Susan". Dave is now renamed Susan.
+The variable called name contains first the string "Dave", and then the string "Susan". Dave is now renamed Susan. Hopefully he is OK with this.
 
 ## Variables are containers
 

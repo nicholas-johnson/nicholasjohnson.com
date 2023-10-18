@@ -37,7 +37,9 @@ The following special characters are used when doing maths in Javascript.
 - Test for equal to: ===
 - Brackets can be used as in maths to separate a part of the equation. ( )
 
-There are a few more that you might need later, but these will do for now.
+There are a few more that you might need later, but these will do for now. These characters are the same in almost every programming language you will come across.
+
+<aside class="box">
 
 ## A note on ===
 
@@ -53,7 +55,11 @@ this will come out true, because 10 is exactly the same as 10. You can also use 
 "10" == 10;
 ```
 
-will come out true. The string is equal to the number. This causes all sorts of problems, and most of the time is best avoided. When you see lists of JavaScript fails on the internet, the poster is almost always using ==.
+will come out true. The string is equal to the number. This causes all sorts of problems, and most of the time is best avoided.
+
+Most languages use `==` for equality, but JavaScript uses `===`.
+
+</aside>
 
 <div class="exercise">
 
@@ -68,11 +74,11 @@ will come out true. The string is equal to the number. This causes all sorts of 
 
 ### Answers
 
-2. alert( 5 - 2 );
-3. alert( 6 \* 9 );
-4. alert( 6 \* 9 + 4 );
-5. alert( 6 \* (9 + 4) );
-6. alert( (1 + 1) \* (1 + 1) );
+2. `alert( 5 - 2 );`
+3. `alert( 6 \* 9 );`
+4. `alert( 6 \* 9 + 4 );`
+5. `alert( 6 \* (9 + 4) );`
+6. `alert( (1 + 1) \* (1 + 1) );`
 
 </div>
 
@@ -83,15 +89,13 @@ will come out true. The string is equal to the number. This causes all sorts of 
 1. Try this now, alert `1 + 1 === 2`, what do you get?
 2. Now alert `5 + 5 === 10` What do you get?
 3. What if I were to do this instead: `5 + (5 === 2)`. Whoah, that's weird. Why did you get this result?
-4. Now try `5 + (5 === 5)`` - Why did you get this result?
+4. Now try `5 + (5 === 5)`. Also weird. Why did you get this result? You'll find out more when we get to Booleans.
 
-### Answer
+### Answers
 
-The braces force the right part of the expression to be evaluated first. Unlike maths, === is just an operator, the same as + or -. 5 === 2 is false.
-
-`5 + (5 === 2)` is the same as `5 + false`. JavaScript doesn't know how to do this, so it converts the false into zero and gives you `5 + 0` which is `5`
-
-`5 + (5 === 5)` is the same as `5 + true`. JavaScript doesn't know how to do this either, so it converts the true into `1` for "historical reasons" and gives you `5 + 1` which is `6`.
+- The braces force the right part of the expression to be evaluated first. Unlike maths, === is just an operator, the same as + or -. 5 === 2 is false.
+- `5 + (5 === 2)` is the same as `5 + false`. JavaScript doesn't know how to do this, so it converts the false into zero and gives you `5 + 0` which is `5`
+- `5 + (5 === 5)` is the same as `5 + true`. JavaScript doesn't know how to do this either, so it converts the true into `1` for "historical reasons" and gives you `5 + 1` which is `6`.
 
 </div>
 
@@ -112,10 +116,11 @@ alert(numberOfSandwiches);
 3. Find out how many sandwiches you can make?
 4. You have taken a large job lot of bread, 800 slices in total, and it's starting to go stale. Quickly adjust the code to find out how many sandwiches you can make with all that bread.
 5. You decide to make Club sandwiches for a swanky dinner, and you need 3 slices for each. Adjust the code to find out how many sandwiches you can make with those 800 slices?
+6. There's a problem with the delivery and some of the bread comes damaged! You estimate 10% it is no good! How many slices do you have now? How many sandwices can you make?
 
 ### Answers
 
-If you have 800 slices, you need to change the value of the slices variable like so:
+If you have 800 slices, you need to change the value of the `slices` variable like so:
 
 ```js
 let slices = 800;
@@ -128,6 +133,15 @@ To find out how many club sandwiches we need, all we need to do is change the va
 
 ```js
 let slices = 800;
+let slicesNeededForASandwich = 3;
+let numberOfSandwiches = slices / slicesNeededForASandwich;
+alert(numberOfSandwiches);
+```
+
+To estimage the 10% damage, you can just multiply `slices` by `0.9` to get the usable slices that remain.
+
+```js
+let slices = 800 * 0.9;
 let slicesNeededForASandwich = 3;
 let numberOfSandwiches = slices / slicesNeededForASandwich;
 alert(numberOfSandwiches);
