@@ -7,14 +7,22 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: 4000
+    port: 4000,
   },
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [[rehypeKatex, {
-      output: "mathml"
-    }]],
-    syntaxHighlight: "prism"
+    rehypePlugins: [
+      [
+        rehypeKatex,
+        {
+          output: "mathml",
+        },
+      ],
+    ],
+    syntaxHighlight: "prism",
   },
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+
+  site: "https://nicholasjohnson.com",
+  trailingSlash: "never",
 });

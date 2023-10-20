@@ -29,7 +29,7 @@ As you can see, it combines several very useful tools into one helpful package.
 
 Installation is easy. A simple double click install on On Windows and OSX, or a shell script on Linux. Instructions here:
 
-<a target="\_blankhref="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Installing Anaconda</a>
+<a target="_blank" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Installing Anaconda</a>
 
 ## Conda Environments
 

@@ -60,9 +60,9 @@ makeSandwich();
 
 What have we done here? Well, you may have noticed that we've created a new variable called makeSandwich.
 
-The variables we have created so far have contained strings or numbers, see the section on variables if you need a refresher, but variables are buckets remember and they can hold any type of thing. In this case we have said that the makeSandwich variable should be equal to a new type of thing called a function.
+The variables we have created so far have contained strings or numbers, see the section on variables if you need a refresher, but variables are buckets remember and they can hold any type of thing. In this case we have said that the makeSandwich variable should be a new type of thing called a function.
 
-A function is a little ball of javascript, all wrapped up neatly so that we can use it again and again. After creating our function and assigning it to the makeSandwich variable, we can call it by writing:
+A function is a little ball of code, all wrapped up neatly so that we can use it again and again. After creating our function and assigning it to the makeSandwich variable, we can call it by writing:
 
 ```js
 makeSandwich();
@@ -76,7 +76,7 @@ The parenthesis (brackets) mean that we want to treat the variable as a function
 
 Most languages do not encourage you to create a function and put it in a variable like this. This is what we call a lambda function, an unnamed function that works like any other data type. In JavaScript we use lambdas pretty much all the time, it's just how we like to do it.
 
-Assigning functions to variables is one aspect of a programming paradigm called "functional programming". It is one of JavaScript's most powerful features because it enables a thing called "function portability" which we shall look at in a bit.
+Assigning functions to variables is one aspect of a programming paradigm called "functional programming". It is one of JavaScript's most powerful features because it enables a thing called "function portability" which we shall look at on the advanced course.
 
 </aside>
 
