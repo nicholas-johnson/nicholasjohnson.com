@@ -3,6 +3,7 @@ import { css3Course } from "./css3Course";
 import { d3Course } from "./d3Course";
 import { javascriptForProgrammers } from "./javascriptForProgrammers";
 import { learnToCodeWithJavaScript } from "./learnToCodeWithJavascript";
+import { mathsForMachineLearning } from "./mathsForMachineLearning";
 import { mongoCourse } from "./mongoCourse";
 import { nodeCourse } from "./nodeCourse";
 import { railsCourse } from "./railsCourse";
@@ -24,4 +25,5 @@ export const courses = {
   railsCourse,
   angularJsCourse,
   d3Course,
+  mathsForMachineLearning,
 };

@@ -38,6 +38,7 @@ export interface ICourseVariant {
 
 export interface IExercise {
   title: string;
+  seoTitle?: string;
   description: string;
   slug: string;
   code?: string;

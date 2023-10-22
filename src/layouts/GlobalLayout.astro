@@ -222,4 +222,19 @@ const { title } = Astro.props;
       float: none;
     }
   }
+
+  .math-display {
+    font-size: 2rem;
+  }
+
+  mi[mathvariant="bold"] {
+    font-weight: bold;
+  }
+
+  mi[mathvariant="double-struck"] {
+    // border: 1px solid black;
+    // font-family: sans-serif;
+    // font-style: normal;
+    // TODO: Fix this on Chrome!
+  }
 </style>
