@@ -18,10 +18,15 @@ const allCourses = Object.keys(courses)
       <p>
         <strong
           >Courses run internationally at your place of business and can be
-          fully tailored to your specific requirements. All courses are taught
-          by me.</strong
+          fully tailored to your specific requirements. All courses are lead by
+          me personally.</strong
         >
       </p>
+
+      <img
+        src="/images/me-presenting.jpg"
+        alt="Nicholas Johnson, Micro Front Ends tech Talk, Beamery, 2018"
+      />
 
       <p>As coders, we learn in three ways:</p>
       <ol>
@@ -76,6 +81,14 @@ const allCourses = Object.keys(courses)
       flex-direction: column;
       gap: 2rem;
       margin-top: 1rem;
+      img {
+        width: 100%;
+      }
+      @media (max-width: 800px) {
+        h1 {
+          text-align: center;
+        }
+      }
     }
 
     h1 {
@@ -128,6 +141,13 @@ const allCourses = Object.keys(courses)
           list-style: none;
 
           margin-right: 1rem;
+        }
+      }
+      @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 2rem;
+        .imageHost {
+          width: 100%;
         }
       }
     }
