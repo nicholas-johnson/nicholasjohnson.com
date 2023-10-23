@@ -1,0 +1,330 @@
+# Common Overrides
+
+/javascript-book /learn-to-code-with-javascript/book/
+/posts /
+/ruby/blog/ /ruby/
+/backbone-book/ /posts/backbone-book/
+/jquery-book/ /posts/jquery-book/
+
+# Learn to code with JavaScript
+
+/javascript/intro-to-javascript/exercises/intro/ /learn-to-code-with-javascript/intro
+/javascript/intro-to-javascript/exercises/strings/ /learn-to-code-with-javascript/strings
+/javascript/intro-to-javascript/exercises/arrays/ /learn-to-code-with-javascript/arrays
+/javascript/intro-to-javascript/exercises/booleans/ /learn-to-code-with-javascript/booleans
+/javascript/intro-to-javascript/exercises/flow-control/ /learn-to-code-with-javascript/flow-control
+/javascript/intro-to-javascript/exercises/functions/ /learn-to-code-with-javascript/functions
+/javascript/intro-to-javascript/exercises/integration/ /learn-to-code-with-javascript/integration
+/javascript/intro-to-javascript/exercises/loops/ /learn-to-code-with-javascript/loops
+/javascript/intro-to-javascript/exercises/maths/ /learn-to-code-with-javascript/maths
+/javascript/intro-to-javascript/exercises/objects/ /learn-to-code-with-javascript/objects
+/javascript/intro-to-javascript/exercises/variables/ /learn-to-code-with-javascript/variables
+/javascript/intro-to-javascript/exercises/json/ /learn-to-code-with-javascript/mario
+
+# Ruby Course
+
+/ruby/book/ /ruby-course/book
+
+/ruby/ruby-course/ /ruby-course/intro
+/ruby/ruby-course/exercises/arrays /ruby-course/arrays
+/ruby/ruby-course/exercises/blocks/ /ruby-course/blocks
+/ruby/ruby-course/exercises/book/ /ruby-course/book
+/ruby/ruby-course/exercises/classes-and-objects/ /ruby-course/classes-and-objects
+/ruby/ruby-course/exercises/define-method/ /ruby-course/define-method
+/ruby/ruby-course/exercises/exceptions/ /ruby-course/exceptions
+/ruby/ruby-course/exercises/extend-and-include/ /ruby-course/extend-and-include
+/ruby/ruby-course/exercises/flow-control/ /ruby-course/flow-control
+/ruby/ruby-course/exercises/functions/ /ruby-course/functions
+/ruby/ruby-course/exercises/hashes-and-symbols/ /ruby-course/hashes-and-symbols
+/ruby/ruby-course/exercises/index/ /ruby-course/index
+/ruby/ruby-course/exercises/inheritance/ /ruby-course/inheritance
+/ruby/ruby-course/exercises/instance-eval/ /ruby-course/instance-eval
+/ruby/ruby-course/exercises/intro/ /ruby-course/intro
+/ruby/ruby-course/exercises/introspection/ /ruby-course/introspection
+/ruby/ruby-course/exercises/lifecycle-callbacks/ /ruby-course/lifecycle-callbacks
+/ruby/ruby-course/exercises/method-missing/ /ruby-course/method-missing
+/ruby/ruby-course/exercises/modules/ /ruby-course/modules
+/ruby/ruby-course/exercises/monkey-patching/ /ruby-course/monkey-patching
+/ruby/ruby-course/exercises/numbers/ /ruby-course/numbers
+/ruby/ruby-course/exercises/operator-overloading/ /ruby-course/operator-overloading
+/ruby/ruby-course/exercises/receiving-a-block/ /ruby-course/receiving-a-block
+/ruby/ruby-course/exercises/rspec/ /ruby-course/rspec
+/ruby/ruby-course/exercises/ruby-send/ /ruby-course/ruby-send
+/ruby/ruby-course/exercises/static-methods/ /ruby-course/static-methods
+/ruby/ruby-course/exercises/strings/ /ruby-course/strings
+/ruby/ruby-course/exercises/variables-and-constants/ /ruby-course/variables-and-constants
+/ruby/ruby-course/exercises/writing-a-gem/ /ruby-course/writing-a-gem
+
+# Rails Course
+
+/ruby/rails-book /rails-course/book
+
+/ruby/rails-course/exercises/assets /rails-course/assets
+/ruby/rails-course/exercises/associations /rails-course/associations
+/ruby/rails-course/exercises/blog /rails-course/blog
+/ruby/rails-course/exercises/concerns /rails-course/concerns
+/ruby/rails-course/exercises/debugging /rails-course/debugging
+/ruby/rails-course/exercises/haml /rails-course/haml
+/ruby/rails-course/exercises/hello-world /rails-course/hello-world
+/ruby/rails-course/exercises/integration /rails-course/integration
+/ruby/rails-course/exercises/internationalisation /rails-course/internationalisation
+/ruby/rails-course/exercises/layouts-and-partials /rails-course/layouts-and-partials
+/ruby/rails-course/exercises/models /rails-course/models
+/ruby/rails-course/exercises/params /rails-course/params
+/ruby/rails-course/exercises/rspec /rails-course/rspec
+/ruby/rails-course/exercises/scaffolding /rails-course/scaffolding
+/ruby/rails-course/exercises/sessions /rails-course/sessions
+
+# Mongo Course
+
+/mongo/ /mongo-course/intro/
+/mongo/course/ /mongo-course/intro/
+/mongo/course/workbook/ /mongo-course/book/
+/mongo/course/exercises/aggregation-by-date/ /mongo-course/aggregation-by-date
+/mongo/course/exercises/aggregation-count/ /mongo-course/aggregation-count
+/mongo/course/exercises/aggregation-dynamic-project/ /mongo-course/aggregation-dynamic-project
+/mongo/course/exercises/aggregation-group/ /mongo-course/aggregation-group
+/mongo/course/exercises/aggregation-project/ /mongo-course/aggregation-project
+/mongo/course/exercises/aggregation-redact/ /mongo-course/aggregation-redact
+/mongo/course/exercises/aggregation-unwind/ /mongo-course/aggregation-unwind
+/mongo/course/exercises/aggregation/ /mongo-course/aggregation
+/mongo/course/exercises/basic-find/ /mongo-course/basic-find
+/mongo/course/exercises/count-and-limit/ /mongo-course/count-and-limit
+/mongo/course/exercises/crud/ /mongo-course/crud
+/mongo/course/exercises/cursors/ /mongo-course/cursors
+/mongo/course/exercises/express/ /mongo-course/express
+/mongo/course/exercises/find-projection/ /mongo-course/find-projection
+/mongo/course/exercises/find-with-expressions/ /mongo-course/find-with-expressions
+/mongo/course/exercises/intro/ /mongo-course/intro
+/mongo/course/exercises/map-reduce/ /mongo-course/map-reduce
+/mongo/course/exercises/mongo-with-node/ /mongo-course/mongo-with-node
+/mongo/course/exercises/node-intro/ /mongo-course/node-intro
+/mongo/course/exercises/node-server/ /mongo-course/node-server
+/mongo/course/exercises/root-unused/ /mongo-course/root-unused
+
+# Webdev
+
+/webdev/course/book /webdev-course/book
+/webdev/course/exercises/ /webdev-course/intro
+/webdev/course /webdev-course/intro
+
+/webdev/course/exercises/abs-layout/ /webdev-course/abs-layout
+/webdev/course/exercises/attributes/ /webdev-course/attributes
+/webdev/course/exercises/book/ /webdev-course/book
+/webdev/course/exercises/css-classes/ /webdev-course/css-classes
+/webdev/course/exercises/divs-and-spans/ /webdev-course/divs-and-spans
+/webdev/course/exercises/entity-references/ /webdev-course/entity-references
+/webdev/course/exercises/float-layout/ /webdev-course/float-layout
+/webdev/course/exercises/full-width/ /webdev-course/full-width
+/webdev/course/exercises/hex/ /webdev-course/hex
+/webdev/course/exercises/images/ /webdev-course/images
+/webdev/course/exercises/intro/ /webdev-course/intro
+/webdev/course/exercises/lists/ /webdev-course/lists
+/webdev/course/exercises/more-tags/ /webdev-course/more-tags
+/webdev/course/exercises/nested-selectors/ /webdev-course/nested-selectors
+/webdev/course/exercises/positioning-with-margins/ /webdev-course/positioning-with-margins
+/webdev/course/exercises/selectors/ /webdev-course/selectors
+/webdev/course/exercises/style-attributes/ /webdev-course/style-attributes
+/webdev/course/exercises/stylesheets/ /webdev-course/stylesheets
+/webdev/course/exercises/tags/ /webdev-course/tags
+
+# HTML And CSS course
+
+/courses/html-and-css/exercises/absolute-positioning/ /webdev-course/absolute-positioning
+/courses/html-and-css/exercises/attributes/ /webdev-course/attributes
+/courses/html-and-css/exercises/bar-chart/ /webdev-course/bar-chart
+/courses/html-and-css/exercises/centering/ /webdev-course/centering
+/courses/html-and-css/exercises/display-modes/ /webdev-course/display-modes
+/courses/html-and-css/exercises/document/ /webdev-course/document
+/courses/html-and-css/exercises/floats/ /webdev-course/floats
+/courses/html-and-css/exercises/images/ /webdev-course/images
+/courses/html-and-css/exercises/intro/ /webdev-course/intro
+/courses/html-and-css/exercises/lists/ /webdev-course/lists
+/courses/html-and-css/exercises/matching-classes/ /webdev-course/matching-classes
+/courses/html-and-css/exercises/matching-elements/ /webdev-course/matching-elements
+/courses/html-and-css/exercises/matching-ids/ /webdev-course/matching-ids
+/courses/html-and-css/exercises/matching-nested-elements/ /webdev-course/matching-nested-elements
+/courses/html-and-css/exercises/more-tags/ /webdev-course/more-tags
+/courses/html-and-css/exercises/nested-floats/ /webdev-course/nested-floats
+/courses/html-and-css/exercises/nesting/ /webdev-course/nesting
+/courses/html-and-css/exercises/structural-tags/ /webdev-course/structural-tags
+/courses/html-and-css/exercises/style/ /webdev-course/style
+/courses/html-and-css/exercises/stylesheet/ /webdev-course/stylesheets
+/courses/html-and-css/exercises/styling-lists/ /webdev-course/styling-lists
+/courses/html-and-css/exercises/tables/ /webdev-course/tables
+/courses/html-and-css/exercises/tags/ /webdev-course/tags
+/courses/html-and-css/exercises/typography /webdev-course/typography
+
+# CSS3
+
+/webdev/css3/ /css3-course/opacity/
+/webdev/css3/exercises/ /css3-course/opacity/
+
+/webdev/css3/exercises/animation/ /css3-course/animation
+/webdev/css3/exercises/border-radius/ /css3-course/border-radius
+/webdev/css3/exercises/box-shadow/ /css3-course/box-shadow
+/webdev/css3/exercises/multiple-backgrounds/ /css3-course/multiple-backgrounds
+/webdev/css3/exercises/opacity/ /css3-course/opacity
+/webdev/css3/exercises/pseudoelements/ /css3-course/pseudoelements
+/webdev/css3/exercises/transformations/ /css3-course/transformations
+/webdev/css3/exercises/transitions/ /css3-course/transitions
+
+# JavaScript for Programmers
+
+/javascript/javascript-for-programmers/ /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/ /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/index /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/object-orientation/ /javascript-for-programmers/object-literals
+
+/javascript/javascript-for-programmers/exercises/arrays/ /javascript-for-programmers/arrays
+/javascript/javascript-for-programmers/exercises/ajax /javascript-for-programmers/ajax
+/javascript/javascript-for-programmers/exercises/events /javascript-for-programmers/events
+/javascript/javascript-for-programmers/exercises/closure /javascript-for-programmers/closure
+/javascript/javascript-for-programmers/exercises/functional-loops /javascript-for-programmers/functional-loops
+/javascript/javascript-for-programmers/exercises/each-peach/ /javascript-for-programmers/functional-loops
+/javascript/javascript-for-programmers/exercises/functional-programming /javascript-for-programmers/functional-programming
+/javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
+/javascript/javascript-for-programmers/exercises/grunt /javascript-for-programmers/grunt
+/javascript/javascript-for-programmers/exercises/functions /javascript-for-programmers/functions
+/javascript/javascript-for-programmers/exercises/intro /javascript-for-programmers/intro
+/javascript/javascript-for-programmers/exercises/jquery /javascript-for-programmers/jquery
+/javascript/javascript-for-programmers/exercises/json /javascript-for-programmers/object-literals
+/javascript/javascript-for-programmers/exercises/meaning-of-this/ /javascript-for-programmers/meaning-of-this
+/javascript/javascript-for-programmers/exercises/promises /javascript-for-programmers/promises
+/javascript/javascript-for-programmers/exercises/running-javascript /javascript-for-programmers/running-javascript
+/javascript/javascript-for-programmers/exercises/variables /javascript-for-programmers/variables
+
+/courses/javascript-for-programmers/functions/ /javascript-for-programmers/functions/
+
+# Node Course
+
+/node/ /node-course/node-console
+/node/course/exercises/ /node-course/node-console
+/node/course/exercises/book/ /node-course/book
+/node/course/exercises/express/ /node-course/express
+/node/course/exercises/file-system/ /node-course/file-system
+/node/course/exercises/gulp/ /node-course/gulp
+/node/course/exercises/jade/ /node-course/jade
+/node/course/exercises/jasmine/ /node-course/jasmine
+/node/course/exercises/modules/ /node-course/modules
+/node/course/exercises/mongo/ /node-course/mongo
+/node/course/exercises/node-console/ /node-course/node-console
+/node/course/exercises/node-server/ /node-course/node-server
+/node/course/exercises/npm/ /node-course/npm
+/node/course/exercises/process/ /node-course/process
+/node/course/exercises/promises/ /node-course/promises
+/node/course/exercises/rest/ /node-course/rest
+/node/course/exercises/sass/ /node-course/sass
+/node/course/exercises/scaling/ /node-course/scaling
+/node/course/exercises/socket-io/ /node-course/socket-io
+/node/course/exercises/yeoman/ /node-course/yeoman
+
+# React Course
+
+/react/course/exercises/children /react-course/children
+/react/course/exercises/components /react-course/components
+/react/course/exercises/flux /react-course/flux
+/react/course/exercises/props /react-course/props
+/react/course/exercises/rendering /react-course/rendering
+/react/course/exercises/transpiler /react-course/transpiler
+
+# AngularJS Course
+
+/angular /angularjs-course/templates
+/angular/course /angularjs-course/templates
+/angular/course/exercises /angularjs-course/templates
+angular/course/workbook/ /angularjs-course/book
+
+/angular/course/exercises/ajax /angularjs-course/ajax
+/angular/course/exercises/animation /angularjs-course/animation
+/angular/course/exercises/binding /angularjs-course/binding
+/angular/course/exercises/book /angularjs-course/book
+/angular/course/exercises/controllers /angularjs-course/controllers
+/angular/course/exercises/crud /angularjs-course/crud
+/angular/course/exercises/custom-filters /angularjs-course/custom-filters
+/angular/course/exercises/di /angularjs-course/di
+/angular/course/exercises/directive-compilation /angularjs-course/directive-compilation
+/angular/course/exercises/directives /angularjs-course/directives
+/angular/course/exercises/isolate-scope /angularjs-course/isolate-scope
+/angular/course/exercises/jsonp /angularjs-course/jsonp
+/angular/course/exercises/karma /angularjs-course/karma
+/angular/course/exercises/more-binding /angularjs-course/more-binding
+/angular/course/exercises/ng-include /angularjs-course/ng-include
+/angular/course/exercises/promises /angularjs-course/promises
+/angular/course/exercises/protractor /angularjs-course/protractor
+/angular/course/exercises/q /angularjs-course/q
+/angular/course/exercises/repeat-and-filter /angularjs-course/repeat-and-filter
+/angular/course/exercises/resource /angularjs-course/resource
+/angular/course/exercises/routing /angularjs-course/routing
+/angular/course/exercises/scope /angularjs-course/scope
+/angular/course/exercises/services /angularjs-course/services
+/angular/course/exercises/templates /angularjs-course/templates
+/angular/course/exercises/transclusion /angularjs-course/transclusion
+/angular/course/exercises/ui-router /angularjs-course/ui-router
+/angular/course/exercises/validation /angularjs-course/validation
+/angular/course/exercises/watch /angularjs-course/watch
+/angular/course/exercises/webapi /angularjs-course/webapi
+
+# Posts
+
+/blog/ /
+/blog/angular1-vs-angular2 /posts/angular1-vs-angular2
+/blog/angularjs-step-by-logical-step /posts/angularjs-step-by-logical-step
+/blog/annotations-vs-decorators /posts/annotations-vs-decorators
+/blog/astro-vs-next-vs-eleventy /posts/astro-vs-next-vs-eleventy
+/blog/building-angular-with-browserify /posts/building-angular-with-browserify
+/blog/extracting-images-into-a-concern /posts/extracting-images-into-a-concern
+/blog/how-angular2-di-works-with-typescript /posts/how-angular2-di-works-with-typescript
+/blog/how-to-do-everything-in-angular2-using-es6 /posts/how-to-do-everything-in-angular2-using-es6
+/blog/how-to-do-transclusion-in-angular-2 /posts/how-to-do-transclusion-in-angular-2
+/blog/javascript-getters-and-setters /posts/javascript-getters-and-setters
+/blog/ng-app /posts/ng-app
+/blog/no-framework-mvc /posts/no-framework-mvc
+/blog/react-for-angular-developers /posts/react-for-angular-developers
+/blog/what-is-babel /posts/what-is-babel
+/blog/why-you-should-sometimes-use-mongo /posts/why-you-should-sometimes-use-mongo
+
+/ruby/blog/posts/active_support_core_extensions /posts/active_support_core_extensions
+/ruby/blog/posts/alias_method /posts/alias_method
+/ruby/blog/posts/bang_dup /posts/bang_dup
+/ruby/blog/posts/blank /posts/blank
+/ruby/blog/posts/button_to /posts/button_to
+/ruby/blog/posts/checking_for_a_subclass /posts/checking_for_a_subclass
+/ruby/blog/posts/constantize /posts/constantize
+/ruby/blog/posts/delegating_with_extend /posts/delegating_with_extend
+/ruby/blog/posts/hash_delete /posts/button_to
+/ruby/blog/posts/include_vs_extend /posts/include_vs_extend
+/ruby/blog/posts/is_a /posts/is_a
+/ruby/blog/posts/shuffling_up /posts/shuffling_up
+
+# d3 course
+
+/d3/ /d3-course/intro
+/d3/course/ /d3-course/intro
+/d3/course/exercises/ /d3-course/intro
+/d3/course/exercises/ajax/ /d3-course/ajax
+/d3/course/exercises/append/ /d3-course/append
+/d3/course/exercises/axes/ /d3-course/axes
+/d3/course/exercises/book/ /d3-course/book
+/d3/course/exercises/color/ /d3-course/color
+/d3/course/exercises/data/ /d3-course/data
+/d3/course/exercises/enter-and-exit/ /d3-course/enter-and-exit
+/d3/course/exercises/events/ /d3-course/events
+/d3/course/exercises/histogram/ /d3-course/histogram
+/d3/course/exercises/index/ /d3-course/index
+/d3/course/exercises/intro/ /d3-course/intro
+/d3/course/exercises/line_chart/ /d3-course/line_chart
+/d3/course/exercises/parsing/ /d3-course/parsing
+/d3/course/exercises/paths/ /d3-course/paths
+/d3/course/exercises/pie-layout/ /d3-course/pie-layout
+/d3/course/exercises/scales/ /d3-course/scales
+/d3/course/exercises/scatterplot/ /d3-course/scatterplot
+/d3/course/exercises/select/ /d3-course/select
+/d3/course/exercises/svg/ /d3-course/svg
+/d3/course/exercises/transition/ /d3-course/transition
+
+# Taught courses
+
+/angular-course/ /courses/angularjs-course
+/ruby/rails-course/ /courses/rails-course
+/mongo/intro-course/ /courses/mongo-course

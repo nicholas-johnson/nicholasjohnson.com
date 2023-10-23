@@ -1,0 +1,77 @@
+---
+import { courses } from "../data/courses";
+import { getFirstExercisePath } from "../utils/getFirstExercisePath";
+const allCourses = Object.keys(courses)
+  .sort()
+  .map((key) => courses[key as keyof typeof courses]);
+
+const allTopics = [
+  { title: "JavaScript", slug: "javascript" },
+  { title: "Ruby", slug: "ruby" },
+  { title: "Webdev", slug: "webdev" },
+];
+---
+
+<footer>
+  <section>
+    <h2>Free Courses</h2>
+    <ul>
+      {
+        allCourses.map((course) => (
+          <li>
+            <a href={getFirstExercisePath(course)}>{course.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section>
+    <h2>Topics</h2>
+    <ul>
+      {
+        allTopics.map(({ title, slug }) => (
+          <li>
+            <a href={`/${slug}`}>{title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</footer>
+
+<style lang="scss">
+  footer {
+    margin: 5rem auto;
+    display: flex;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    box-shadow: 0px 2rem 1rem -1rem inset lightgrey;
+    padding: 1rem 2rem;
+    gap: 2rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    ul,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    section {
+      flex: 1;
+    }
+  }
+</style>

@@ -1,0 +1,166 @@
+---
+// import type { ICourse } from "../types/Course";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import { markdown } from "@astropub/md";
+
+import { courses } from "../../data/courses";
+import { getFirstExercisePath } from "../../utils/getFirstExercisePath";
+const allCourses = Object.keys(courses)
+  .sort()
+  .map((key) => courses[key as keyof typeof courses])
+  .filter((course) => course.instructorLead);
+---
+
+<GlobalLayout title="Instructor Lead Courses, taught worldwide">
+  <div class="content">
+    <h1>Instructor Lead Courses, Taught Worldwide by an Industry Expert</h1>
+    <article class="intro">
+      <p>
+        <strong
+          >Courses run internationally at your place of business and can be
+          fully tailored to your specific requirements. All courses are lead by
+          me personally.</strong
+        >
+      </p>
+
+      <img
+        src="/images/me-presenting.jpg"
+        alt="Nicholas Johnson, Micro Front Ends tech Talk, Beamery, 2018"
+      />
+
+      <p>As coders, we learn in three ways:</p>
+      <ol>
+        <li>
+          By learning theory - knowing what should work keeps us out of blind
+          alleys
+        </li><li>
+          By looking at code - live coding sessions with interactive Q&A let us
+          see how theory works in practice
+        </li><li>
+          By writing code - exercises and labs let individuals work at their own
+          pace. An instructor is on hand for code reviews and debugging, and
+          questions are welcomed.
+        </li>
+      </ol>
+
+      <p>
+        Courses consist of live coding, Q&A, exercises and code reviews.
+        Powerpoint is not welcome, your people will not be sitting still
+        watching a bunch of slides. Instead they will participate in
+        self-directed lab sessions with expert tuition and demos.
+      </p>
+    </article>
+
+    {
+      allCourses.map((course) => (
+        <article class="course">
+          <div class="imageHost">
+            <a href={`courses/${course.slug}`}>
+              <img src={course.cover} alt={course.coverAlt} />
+            </a>
+          </div>
+          <div class="content">
+            <h2>
+              <a href={`courses/${course.slug}`}>
+                {course.instructorLead?.title}
+              </a>
+            </h2>
+
+            {markdown(course.instructorLead?.intro || "")}
+
+            <a href={`/courses/${course.slug}`}>Learn more</a>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <style lang="scss">
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1rem;
+      img {
+        width: 100%;
+      }
+      @media (max-width: 800px) {
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+
+    h1 {
+      margin: 2rem auto;
+    }
+
+    article.intro {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    article.course {
+      max-width: 80rem;
+      margin: 0 auto;
+      display: flex;
+      gap: 4rem;
+
+      .imageHost {
+        width: 40rem;
+        flex: 1;
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        flex: 1;
+
+        h2 {
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+        li {
+          margin: 0;
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      ul.contentList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          margin-right: 1rem;
+        }
+      }
+      @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 2rem;
+        .imageHost {
+          width: 100%;
+        }
+      }
+    }
+  </style>
+
+  <!-- Markdown styling -->
+  <style lang="scss" is:global>
+    .courseList {
+      li {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  </style>
+</GlobalLayout>

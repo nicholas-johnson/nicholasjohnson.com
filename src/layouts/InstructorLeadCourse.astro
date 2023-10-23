@@ -1,0 +1,123 @@
+---
+import GlobalLayout from "./GlobalLayout.astro";
+import type { ICourse } from "../types/Course";
+
+import { courses } from "../data/courses";
+import { markdown } from "@astropub/md";
+
+interface Props {
+  title: string;
+  frontmatter: {
+    title: string;
+    subTitle: string;
+    subSubTitle?: string;
+    seoTitle?: string;
+    description: string;
+    tags: string[];
+    course: keyof typeof courses;
+  };
+}
+
+const { title, frontmatter } = Astro.props;
+
+const course: ICourse = courses[frontmatter.course];
+---
+
+<GlobalLayout
+  title={frontmatter.title || frontmatter?.seoTitle || frontmatter?.title || ""}
+>
+  <div class="content">
+    <h1>
+      {frontmatter.title || frontmatter?.seoTitle || frontmatter?.title || ""}
+    </h1>
+
+    <article class="intro">
+      <slot />
+    </article>
+
+    {
+      course.instructorLead?.variants?.length ? (
+        <>
+          <h1>Suggested Course Variants</h1>
+
+          <p class="variant">
+            Courses can be fully tailored in content and duration. The following
+            are examples of configurations that could work.
+          </p>
+
+          {course.instructorLead?.variants.map((variant) => (
+            <article class="variant">
+              <h2>{variant.title}</h2>
+              {markdown(variant.description)}
+              <p>
+                <strong>Price:</strong> &pound;{variant.price}
+              </p>
+              <p>
+                <strong>Duration:</strong> {variant.duration} days
+              </p>
+            </article>
+          ))}
+        </>
+      ) : null
+    }
+
+    {
+      course.instructorLead?.testimonials ? (
+        <>
+          <h1>Testimonials</h1>
+
+          {course.instructorLead?.testimonials.map((testimonial) => (
+            <article class="testimonial">
+              <a href={testimonial.linkedIn}>
+                <img src={testimonial.image} alt={testimonial.name} />
+              </a>
+              <h2>
+                {testimonial.name} {testimonial.jobTitle}
+                {markdown(testimonial.content)}
+              </h2>
+            </article>
+          ))}
+        </>
+      ) : null
+    }
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .content {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+
+  h1 {
+    margin: 2rem auto;
+  }
+
+  .intro {
+    max-width: 40rem;
+    margin: auto;
+  }
+
+  .variant {
+    max-width: 40rem;
+    margin: 1rem auto;
+    p {
+      margin: 0;
+    }
+  }
+
+  .testimonial {
+    max-width: 40rem;
+    margin: 2rem auto;
+    img {
+      width: 8rem;
+      float: left;
+      margin: 2rem 2rem 1rem 0;
+      border-radius: 50%;
+    }
+  }
+</style>

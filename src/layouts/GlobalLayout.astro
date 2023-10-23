@@ -1,0 +1,240 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/monokai.scss";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+<style is:global lang="scss">
+  //   Inria regular
+  @font-face {
+    font-family: "inria";
+    src: url("/fonts/inria/inriasans-regular-webfont.woff2") format("woff2"),
+      url("/fonts/inria/inriasans-regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  //   Inria regular italic
+  @font-face {
+    font-family: "inria";
+    src: url("fonts/inria/inriasans-italic-webfont.woff2") format("woff2"),
+      url("fonts/inria/inriasans-italic-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  //   Inria bold
+  @font-face {
+    font-family: "inria";
+    src: url("/fonts/inria/inriasans-bold-webfont.woff2") format("woff2"),
+      url("/fonts/inria/inriasans-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  //   Inria bold italic
+  @font-face {
+    font-family: "inria";
+    src: url("/fonts/inria/inriasans-bolditalic-webfont.woff2") format("woff2"),
+      url("/fonts/inria/inriasans-bolditalic-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  // Open Sans
+
+  @font-face {
+    font-family: "open-sans";
+    src: url("/fonts/open-sans/opensans-regular-webfont.woff2") format("woff2"),
+      url("/fonts/open-sans/opensans-regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  //   open-sans regular italic
+  @font-face {
+    font-family: "open-sans";
+    src: url("fonts/open-sans/opensans-italic-webfont.woff2") format("woff2"),
+      url("fonts/open-sans/opensans-italic-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  //   open-sans bold
+  @font-face {
+    font-family: "open-sans";
+    src: url("/fonts/open-sans/opensans-bold-webfont.woff2") format("woff2"),
+      url("/fonts/open-sans/opensans-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  //   open-sans bold italic
+  @font-face {
+    font-family: "open-sans";
+    src: url("/fonts/open-sans/opensans-bolditalic-webfont.woff2")
+        format("woff2"),
+      url("/fonts/open-sans/opensans-bolditalic-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: "open-sans", serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    padding: 2rem;
+    @media screen and (max-width: 600px) {
+      padding: 1rem;
+    }
+  }
+
+  p {
+    line-height: 2rem;
+    // letter-spacing: 0.01rem;
+  }
+
+  li {
+    // line-height: 2rem;
+    letter-spacing: 0.01rem;
+  }
+
+  a {
+    color: red;
+  }
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    letter-spacing: -0.05rem;
+    font-family: "inria", sans-serif;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+    font-family: "inria", sans-serif;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    font-family: "inria", sans-serif;
+  }
+
+  p,
+  code,
+  pre,
+  button,
+  input,
+  textarea,
+  select,
+  label {
+    font-size: 1rem;
+  }
+
+  pre {
+    display: block;
+    padding: 1rem;
+  }
+
+  .exercise {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+
+  aside.box {
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+  }
+
+  aside.pullquote {
+    background: #f5f5f5;
+    padding: 1rem 2rem;
+    margin: 1rem 0rem 1rem 4rem;
+    border-radius: 0.5rem;
+    font-style: italic;
+    font-size: 2rem;
+    max-width: 50%;
+    float: right;
+    &:before {
+      content: "“";
+      font-size: 2rem;
+    }
+    &:after {
+      content: "”";
+      font-size: 2rem;
+    }
+
+    @media (max-width: 800px) {
+      margin: 1rem 0rem 1rem 0rem;
+      max-width: 100%;
+      float: none;
+    }
+  }
+
+  .math-display {
+    font-size: 2rem;
+  }
+
+  mi[mathvariant="bold"] {
+    font-weight: bold;
+  }
+
+  mi[mathvariant="double-struck"] {
+    // border: 1px solid black;
+    // font-family: sans-serif;
+    // font-style: normal;
+    // TODO: Fix this on Chrome!
+  }
+</style>

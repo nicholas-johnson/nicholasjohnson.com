@@ -1,27 +1,27 @@
 {
-  "name": "nicholasjohnson.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nicholasjohnson-com-astro",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev -w ./packages/nicholasjohnson.com & npm run dev -w ./packages/seniordevtime.com"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nicholas-johnson/nicholasjohnson.com.git"
+  "dependencies": {
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.1",
+    "@astropub/md": "^0.2.0",
+    "astro": "^2.10.3",
+    "remark": "^14.0.3",
+    "rehype-katex": "^6.0.3",
+    "remark-math": "^5.1.1",
+    "sass": "^1.66.1"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nicholas-johnson/nicholasjohnson.com/issues"
-  },
-  "homepage": "https://github.com/nicholas-johnson/nicholasjohnson.com#readme",
-  "workspaces": {
-    "packages": [
-      "packages/nicholasjohnson.com",
-      "packages/seniordevtime.com",
-      "packages/content"
-    ]
+  "devDependencies": {
+    "stylelint": "^15.10.3",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-standard": "^34.0.0"
   }
 }

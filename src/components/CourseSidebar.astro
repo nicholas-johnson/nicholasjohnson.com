@@ -1,0 +1,70 @@
+---
+import type { ICourse } from "../types/Course";
+import { getSlug } from "../utils/getSlug";
+
+interface Props {
+  course: ICourse;
+  path: string;
+}
+
+const { course, internalAnchors, path } = Astro.props;
+
+if (!course) {
+  throw new Error(
+    `Error in CourseSidebar.astro. No course provided: ${course}`
+  );
+}
+---
+
+<ul>
+  <li class="book"><a href={`/${course.slug}/book`}>Course Book</a></li>
+  {
+    course?.exercises.map((exercise) => {
+      const exercisePath = `/${course.slug}/${exercise.slug}`;
+      const slug = getSlug(path);
+
+      return (
+        <li>
+          {slug === exercise.slug && <span>{exercise.title}</span>}
+          {slug !== exercise.slug && (
+            <a href={exercisePath}>{exercise.title}</a>
+          )}
+        </li>
+      );
+    })
+  }
+
+  <style lang="scss">
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      display: block;
+      padding: 0.5rem 1rem;
+      background: black;
+      color: white;
+      font-weight: 700;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: transform 0.5s ease-in-out;
+      &:hover {
+        // transform: translate(0.5rem, 0);
+        text-decoration: underline;
+      }
+    }
+  </style>
+</ul>

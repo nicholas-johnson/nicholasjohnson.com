@@ -1,0 +1,55 @@
+import type { ICourse } from "../types/Course";
+
+export const railsCourse: ICourse = {
+  title: "The Rails Course",
+  slug: "rails-course",
+  cover: "/images/book-covers/station3.jpg",
+  coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
+  coverCredit: "NASA Ames Research Center",
+  description: "",
+  bullets: [
+    "Free Course!",
+    "Learn the fundamentals of Rails",
+    "Models",
+    "Views",
+    "Controllers",
+    "Routing",
+    "Hyper-productive Full Stack Developement",
+  ],
+  coverAlt: "",
+  version: "",
+  createdAt: "",
+  lastUpdatedAt: "",
+  exercises: [
+    { title: "Hello World", description: "", slug: "hello-world" },
+    { title: "Debugging Rails", description: "", slug: "debugging" },
+    {
+      title: "Layouts and Partials",
+      description: "",
+      slug: "layouts-and-partials",
+    },
+    { title: "The Params Hash", description: "", slug: "params" },
+    {
+      title: "Models and Talking to the Database",
+      description: "",
+      slug: "models",
+    },
+    { title: "Scaffolding and CRUD", description: "", slug: "scaffolding" },
+    { title: "Associations", description: "", slug: "associations" },
+    { title: "The Session Hash", description: "", slug: "sessions" },
+    { title: "Assets", description: "", slug: "assets" },
+    { title: "Rspec Testing", description: "", slug: "rspec" },
+    { title: "Concerns", description: "", slug: "concerns" },
+    {
+      title: "Alternative Template Engines (Haml, Markdown, Slim)",
+      slug: "haml",
+      description: "",
+    },
+    {
+      title: "Internationalisation",
+      description: "",
+      slug: "internationalisation",
+    },
+    { title: "Integration", description: "", slug: "integration" },
+  ],
+};

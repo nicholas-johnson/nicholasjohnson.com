@@ -1,0 +1,117 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+import PostList from "../components/PostList.astro";
+import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
+import { javascriptForProgrammers } from "../data/javascriptForProgrammers";
+import CourseList from "../components/CourseList.astro";
+
+const allPosts = await Astro.glob("./posts/*.md");
+const filteredAllPosts = allPosts.filter((post) => {
+  return post.frontmatter.tags?.includes("javascript");
+});
+const javascroptForProgrammersContent = await Astro.glob(
+  "./javascript-for-programmers/*.md"
+);
+
+const posts = [...filteredAllPosts, ...javascroptForProgrammersContent]
+  .filter(
+    (post) => !post.frontmatter.unpublish || !post.frontmatter.unpublished
+  )
+  .sort((a, b) => {
+    return a.frontmatter?.date > b.frontmatter?.date ? -1 : 1;
+  });
+---
+
+<GlobalLayout title="Nicholas Johnson.com">
+  <div class="home">
+    <div class="main">
+      <div class="intro">
+        <h1>JavaScript is Lovely</h1>
+        <p>
+          JavaScript is the democratic language of the internet. It supports all
+          coding styles and all skill levels. There's nothing else like it, it's
+          a magnificent little language with a pure soul and a few wonky bits
+          around the edge. It has grown with us over the years, imposing no
+          restrictions and letting us discover new ways of working almost every
+          day.
+        </p>
+
+        <p>
+          I was lucky enough to pick up JavaScript in 1997, when it was first
+          coming out in Netscape. Back then it was a weird little beast that no
+          one quite knew what to do with. I've been using ever since, and I like
+          to think we've grown together.
+        </p>
+
+        <ul>
+          <li>
+            <a href="/learn-to-code-with-javascript/intro">
+              Learn to Code with JavaScript
+            </a>
+
+            - Free course, starts from nothing and teaches practical programming
+            skills. Won't someone help Mrs Potts?
+          </li>
+          <li>
+            <a href="/javascript-for-programmers/intro">
+              JavaScript for Programmers</a
+            >
+            - Advanced course, for people who already know how to code. Go quickly
+            and focus on the core logic that lies beneath.
+          </li>
+        </ul>
+      </div>
+      <h1>Writings</h1>
+      <PostList posts={posts} />
+    </div>
+
+    <div class="sidebar">
+      <h2>JavaScript Courses</h2>
+      <div class="courseLinks">
+        <CourseList
+          courses={[learnToCodeWithJavaScript, javascriptForProgrammers]}
+        />
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .home {
+      display: flex;
+      justify-content: space-between;
+      gap: 4rem;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+
+    .main {
+      max-width: 50rem;
+      flex: 1;
+    }
+
+    .intro {
+      margin: 8rem 0;
+
+      h1 {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar {
+      max-width: 20rem;
+      margin-top: 4rem;
+
+      h2 {
+        padding-left: 2rem;
+      }
+
+      .courseLinks {
+        border-left: 1px dashed #b8b8b8;
+        padding-left: 2rem;
+      }
+    }
+  </style>
+</GlobalLayout>

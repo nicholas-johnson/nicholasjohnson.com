@@ -1,0 +1,73 @@
+---
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import PostList from "../../components/PostList.astro";
+import CourseList from "../../components/CourseList.astro";
+---
+
+<GlobalLayout title="Nicholas Johnson.com">
+  <div class="home">
+    <div class="main">
+      <div class="intro">
+        <h1>Artificial Intelligence and Machine Learning</h1>
+        <p>
+          I built my first neural network in Turbo Pascal when I was a teenager
+          (chills) and completed my first AI degree at Sussex in 2004. I am
+          currently taking a Masters in CS/AI at York. AI is a passion.
+        </p>
+        <p>
+          Over the last decade we've seen enormous leaps forward in AI, fueled
+          in part by easy access to GPUs and libraries like PyTorch and
+          TensorFlow.
+        </p>
+
+        <p>
+          This section is under construction. I am writing a two short books on
+          Python and Mathematics, coving the fundamentals you need to know to
+          enter the field.
+        </p>
+        <ul>
+          <li>
+            <a href="/maths-for-machine-learning/intro"
+              >Maths for Machine Learning (for coders)</a
+            > - under construction
+          </li>
+          <li>
+            Practical Python and PyTorch for Data Science - under construction
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</GlobalLayout>
+
+<style lang="scss">
+  .home {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  .main {
+    max-width: 50rem;
+    flex: 1;
+  }
+  .intro {
+    margin: 8rem 0;
+    h1 {
+      margin-top: 0;
+    }
+  }
+  .sidebar {
+    max-width: 20rem;
+    margin-top: 4rem;
+    h2 {
+      padding-left: 2rem;
+    }
+    .courseLinks {
+      border-left: 1px dashed #b8b8b8;
+      padding-left: 2rem;
+    }
+  }
+</style>
