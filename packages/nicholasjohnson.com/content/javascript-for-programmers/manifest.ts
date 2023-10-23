@@ -2,6 +2,8 @@ import { ICourseManifest } from '../../types'
 
 const manifest: ICourseManifest = {
   title: 'JavaScript for Smart People Course',
+  img: '/images/cover-images/station2.jpg',
+  alt: 'A space station',
   exercises: [
     {
       slug: 'intro',

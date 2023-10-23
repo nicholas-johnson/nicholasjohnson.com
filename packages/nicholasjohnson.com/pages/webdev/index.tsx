@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import Course from '../../components/atoms/Course'
+import Course from '../../components/shared/Course'
 import manfest from './manifest'
 
 const Webdev: FC = () => {

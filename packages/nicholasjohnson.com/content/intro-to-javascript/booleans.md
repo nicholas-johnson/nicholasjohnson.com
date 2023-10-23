@@ -1,13 +1,9 @@
 ---
-title: 'Booleans'
+title: 'An exciting foray into Booleans. What Ho!'
 section: 'javascript'
 course: 'intro-to-javascript'
-exercise: 'booleans'
-layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
-
-# An exciting foray into Booleans. What Ho!
 
 These values that we're using, true and false, have a special name. They are called Boolean values, named after the wonderful Victorian English mathematician George Boole who first described them. Boolean values are actually the basis for all computing. You may have heard it said that computers use ones and zeros, and it's true. Deep inside, computers are made of vast arrays of switches, which can be either on or off, one or zero, true or false.
 

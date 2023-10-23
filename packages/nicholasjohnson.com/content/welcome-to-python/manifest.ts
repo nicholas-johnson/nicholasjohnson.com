@@ -1,7 +1,7 @@
 import { ICourseManifest } from '../../types'
 
 const manifest: ICourseManifest = {
-  title: 'JavaScript for Smart People Course',
+  title: 'Welcome to Python!',
   exercises: [
     {
       slug: 'intro',

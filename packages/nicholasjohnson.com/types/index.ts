@@ -13,12 +13,16 @@ export interface ISeries {
 export interface IExercise {
   slug: string
   title: string
-  description: string
+  description?: string
 }
 
 export interface ICourseManifest {
   title: string
-  slug: string
   img: string
+  alt: string
   exercises: IExercise[]
+}
+
+export interface ICourseManifests {
+  courses: ICourseManifest[]
 }
