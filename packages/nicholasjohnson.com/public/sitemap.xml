@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      
+	<url>
+		<loc>https://nicholasjohnson.com/[folder]/[slug]</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/api/hello</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/index</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/manifest</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/responsive-design/[slug]</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/responsive-design/index</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/responsive-design/manifest</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/webdev/index</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+
+	<url>
+		<loc>https://nicholasjohnson.com/webdev/manifest</loc>
+		<lastmod>2022-12-01</lastmod>
+	</url>
+</urlset>
