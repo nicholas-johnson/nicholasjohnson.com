@@ -1,9 +1,0 @@
-.hiddenSection {
-  height:auto;
-  opacity:1;
-  transition: all 0.3s;
-  &.hidden {
-    height: 0;
-    opacity: 0
-  }
-}

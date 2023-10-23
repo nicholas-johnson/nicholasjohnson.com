@@ -1,3 +1,0 @@
-    %section
-      :markdown
-        # Flow Control
