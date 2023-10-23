@@ -1,13 +1,11 @@
 ---
-title: 'JavaScript Intro'
+title: 'Welcome to JavaScript'
 section: 'javascript'
 course: 'intro-to-javascript'
 exercise: 'intro'
 layout: 'exercise'
 date: '2022-11-30 19:04:36'
 ---
-
-# Welcome to JavaScript
 
 JavaScript is the most widely deployed language in the world by an order of magnitude. In this course, you're going to learn this most ubiquitous of all languages. You don't need any previous experience, we'll pick it up as we go, but you will need a computer of some kind.
 
