@@ -7,9 +7,9 @@ course: mathsForMachineLearning
 
 # Syntax and Terminology
 
-We're going to run through some basic syntax and terminology here. remember when I said that every piece of syntax is significant in Maths? In this section we will very quickly run through all of the core syntax as it is commonly used in machine learning today. This will give you a basis to understand the rest of the book.
+In this section, we're going to run through most of the basic syntax and terminology that you'll need to interpret mathematical equations, specifically for machine learning. This will give you a basis to understand the rest of the book.
 
-Don't worry if not everything makes sense yet. You may wish to refer to this chapter later on.
+Don't worry if not everything makes sense yet. You'll probably wish to refer back to this chapter as you move on.
 
 ## Variables
 
@@ -30,14 +30,14 @@ a is now 12 for the duration of the equation.
 ## Capitals
 
 - $x$ - lower case italic letters are used for variables representing scalar values, eg $5$
-- $\mathbf{x}$ - bold lower case letters are used for variables representing vectors
-- $\mathbf{X}$ - bold capitals are used to represent matrices and tensors, eg $1,2,3$
+- $\mathbf{x}$ - bold lower case letters are used for vectors.
+- $\mathbf{X}$ - bold capitals are used to represent matrices and tensors, eg $[1,2,3]$
 
 This isn't necessarily true for all Maths, but has become a convention in machine learning.
 
 ## Scalars, Vectors, Matrices and Tensors
 
-In Maths we have a lot of words for arrays. This is for historical reasons, various folks writing at different times using different words for related concepts. In code, we use tensors for everything. You may have heard of a package called TensorFlow? PyTorch also deals with tensors.
+In Maths we have a lot of words for arrays. This is for historical reasons, various folks writing at different times using different words for related concepts.
 
 ### Scalars
 
@@ -51,7 +51,7 @@ $$
 
 ### Vectors
 
-Vectors are one dimensional arrays, jsut like regular arrays:
+Vectors are one dimensional arrays, just like regular arrays. They also share the same syntax, which is nice:
 
 $$
 \mathbf{x} = [1, 2, 3]
@@ -106,3 +106,41 @@ If we want to specify that a variable X contains a $5 \times 5\times 5\times 5$ 
 $$
 Y \in \mathbb{ℝ}^{5 \times 5 \times 5 \times 5 \times 5}
 $$
+
+When writing code, we use tensors most of the time regardless of how many dimensionw we need. You may have heard of a package called TensorFlow? PyTorch also deals with tensors, as does Jax.
+
+## Vertical Bars ||
+
+Double bars around a vector denote the length of a vector. We will look at calculating this value with the Euclidian Norm later.
+
+$$
+||w||
+$$
+
+Single bars can also sometimes be used to mean the length of the vector, especially in a more casual context.
+
+$$
+|w|
+$$
+
+Single bars can also mean the absolute value of a scalar
+
+$$
+|-5| = 5
+$$
+
+A single bar separating two side of an equation means "such that"
+
+TODO: Find real world example of this.
+
+## Hats
+
+A hat means a prediction.
+
+TODO: Create formula
+
+We often use yHat as a variable name, to mean our current prediction. It's not necessarily the final value, just what we have right now in this current training epoch.
+
+## Stars
+
+A star means an ideal value, it's the value we want to get to

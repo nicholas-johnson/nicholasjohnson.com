@@ -1,4 +1,19 @@
-# Confidence Intervals
+---
+layout: ../../layouts/Course.astro
+title: Stats
+seoTitle: Statistics for Machine Learning, aimed at coders
+course: mathsForMachineLearning
+---
+
+# Statistics
+
+## Mean
+
+sigma
+
+## Standard Deviation
+
+## Confidence Intervals
 
 A confidence interval represents our confidence that any given value $x$ belongs to the set ${x_i .. x_n}$.
 
