@@ -79,7 +79,6 @@ Add in a checkbox. Bind it using ng-model. When the checkbox is checked, the edi
 <div class="exercise">
 
 ## Optional Exercise - Tabs
-
 Use ng-show to create a simple navigation. Your page will contain several sections, each with an ng-show attribute. Choose a horizontal or vertical nav. Use ng-click to set the value of a model and show the sections.
 
 </div>
