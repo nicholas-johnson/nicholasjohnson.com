@@ -38,7 +38,7 @@ It can be very helpful to think of all functions as having a secret Scope object
 
 You don't get access to any other Scope object, but I have foiund this to be a helpful way to think about things.
 
-</div>
+</aside>
 
 ## This within a function
 

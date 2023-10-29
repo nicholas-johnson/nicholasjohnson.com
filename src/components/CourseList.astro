@@ -1,7 +1,6 @@
 ---
 import { markdown } from "@astropub/md";
 import type { ICourse } from "../types/Course";
-import { markdown } from "@astropub/md";
 
 interface Props {
   courses: ICourse[];
@@ -20,7 +19,7 @@ const { courses } = Astro.props;
               {course.title}
             </a>
           </h3>
-          <a href={`${course.slug}/${course.exercises[0].slug}`}>
+          <a href={`/${course.slug}/${course.exercises[0].slug}`}>
             <img src={course.cover} alt={course.coverAlt} />
           </a>
         </div>
