@@ -36,22 +36,32 @@ export const javascriptForProgrammers: ICourse = {
       description: "",
     },
     {
+      slug: "strings",
+      title: "Strings",
+      description: "",
+    },
+    {
+      slug: "numbers",
+      title: "Numbers",
+      description: "",
+    },
+    {
       slug: "functions",
       title: "Functions",
       description:
         "Functions are first class objects in JavaScript, here we look at what this means for you.",
     },
     {
-      slug: "closure",
-      title: "Closure and Variable Scope",
-      description:
-        "Local variables belong to a special hidden object called scope. This object can persist, even after their function has exited.",
-    },
-    {
       slug: "arrays",
       title: "Arrays and loops",
       description:
         "JavaScript has both classical loops and functional loops. Lets take a look.",
+    },
+    {
+      slug: "closure",
+      title: "Closure and Variable Scope",
+      description:
+        "Local variables belong to a special hidden object called scope. This object can persist, even after their function has exited.",
     },
     // {
     //   slug: "dom-manipulation",

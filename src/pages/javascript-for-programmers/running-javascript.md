@@ -39,7 +39,7 @@ alert(`hello ${name}`);
 
 It's important to remember that when we put JavaScript on our page, the code we linked to is executed right away before the rest of the page is loaded. This is important if your code needs to access the DOM. It might not be loaded yet.
 
-It's also important to note the `</script>`. Unlike most tage, script tags cannot be self closing. It's just one of those browser ideosyncrasies that opten trips new coders.
+It's also important to note the `</script>`. Unlike most tage, script tags cannot be self closing. It's just one of those browser ideosyncrasies that often trips new coders. It's an old standard that is now too dificult to change.
 
 In practice, this means you need to type:
 
@@ -69,3 +69,23 @@ To run the code, just refresh the page.
 8. Extend the code so it pops up two alerts.
 
 </div>
+
+## The console
+
+If you are running your code in a browser, you will want to be using the developer console. The keyboard shortcut for opening the developer console varies between platforms, but typically you can right click and choos 'inspect' from the context menu. From here you can select the console or sources tab. The console shows you everything
+
+### console.log
+
+To write to the console from your code, use the console.log method. This is excellent for debugging.
+
+console.log('Hello')
+
+Console.log will accept any number of items and any datatype. If you pass it objects and arrays, the console will format these nicely.
+
+We also have console.error, console.info, and a variety of others that will change the formatting of the output. You can change the log level of your console to see different levels of error.
+
+### debugger
+
+If you drop the debugger keyword into your JavaScript file somewhere and execute the code, the console will freeze at that breakpoint allowing you to inspect variables. This is an excellent way to debug a running application. You cn add additional breakpoints in the sources tab by clicking to the gutter to the left of the line number.
+
+Be sure to remove debugger statments before shipping your code.
