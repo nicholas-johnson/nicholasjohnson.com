@@ -33,10 +33,20 @@ $$
 y = \sum_{i=1}^{n} w_i x_i + b 
 $$
 
-You might, if you kew a bit of Maths, recognise that this formula is the same thing. You might also, if you're not new to this, recognise the formula for a simple linear perceptron, or you might not.
+You might, if you knew a bit of Maths, recognise that this formula is the same thing. You might also, if you're not new to this, recognise the formula for a simple linear perceptron, or you might not.
 
-In an equation like this, everything is relevant, the sigma, the italics, capitals, subscripts, superscipts. Sometimes we write a dot or a star or a hat. All of these things have significance. In this short book we will come to understand the significance. Where possible we will understand why things are the way they are.
+In the code, everything is relevant, the square and curly braces, the semicolons, the ordering of the lines.
 
-This book is your coder's guide to maths. Our goal in this book will be to get to a point where we can understand all the mathematics needed to read modern machine learning papers, papers like "Attention is All You Need", the paper that laid the groundwork for ChatGPT.
+In the equation too, everything is relevant, the sigma, the italics, capitals, subscripts, superscipts. Sometimes we write a dot or a bar or a star or a hat. All of these things have significance. both the code and the equation express an idea in a way that is understandable. 
 
-We'll cover the syntax and what the various symbos mean in context
+This book is your coder's guide to maths. It is a rosetta stone that will let you mentally translate the equations into algorithms. 
+
+Our goal in this book will be to get to a point where we can understand all the mathematics needed to read modern machine learning papers, papers like "Attention is All You Need", the paper that laid the groundwork for ChatGPT.
+
+## This book is actually 2 books
+
+This book very specifically focusses on Maths so you can read and understand papers. The companion to this book, Python for Machine Learning will trach you how to put these ideas into practice. You may wish to switch between these two as you go, or remain focussed on one or the other.
+
+## Exercises
+
+Like learning code, learning maths is interactive. You'll find exercises sprinkled through this course. Doing these exercise will cement the ideas in your head.

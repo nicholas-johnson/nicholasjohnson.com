@@ -19,15 +19,17 @@ Variables in Maths are not like variables in programming. In software I might wr
 a = a + 1;
 ```
 
+I can do this because a is a pointer to a location in memory.
+
 This makes no sense in mathematics. Variables in Maths have values or values that can be discovered. You can't just set them to whatever you want. If I write:
 
 $$
 a = 12
 $$
 
-a is now 12 for the duration of the equation.
+$a$ is now 12 for the duration of the equation.
 
-## Capitals
+## Capitals, Bold and Italic in Variable Names
 
 - $x$ - lower case italic letters are used for variables representing scalar values, eg $5$
 - $\mathbf{x}$ - bold lower case letters are used for vectors.
@@ -51,7 +53,7 @@ $$
 
 ### Vectors
 
-Vectors are one dimensional arrays, just like regular arrays. They also share the same syntax, which is nice:
+Vectors are one dimensional arrays, just like regular arrays. They also share the same square bracket and comma syntax, which is nice:
 
 $$
 \mathbf{x} = [1, 2, 3]
@@ -59,7 +61,7 @@ $$
 
 ### Matrices
 
-Matrices are two dimensional arrays. we can optionally surround them with square braces:
+Matrices are two dimensional arrays. We can optionally surround them with square braces. A matrix is an array of arrays:
 
 $$
 X = \begin{bmatrix}
@@ -75,7 +77,7 @@ $$
 
 Tensors are N dimensional arrays. A one dimensional tensor is also a vector. A two dimensional tensor is also a matrix.
 
-Tensors are hard to represent on paper, but we could have a go using a collection of matrix of matrices
+Tensors are hard to represent on paper, but we could have a go at showing a 3d tensor using a vector of matrices:
 
 $$
 X = \left[ \begin{array}{c}
@@ -109,25 +111,61 @@ $$
 
 When writing code, we use tensors most of the time regardless of how many dimensionw we need. You may have heard of a package called TensorFlow? PyTorch also deals with tensors, as does Jax.
 
-## Vertical Bars ||
+## Single or Double Vertical Bars around vectors denote the length of the vector ||
 
-Double bars around a vector denote the length of a vector. We will look at calculating this value with the Euclidian Norm later.
+Single or double bars around a vector denote the length of a vector. These two notations are used interchangeably in different contexts.
 
-$$
-||w||
-$$
-
-Single bars can also sometimes be used to mean the length of the vector, especially in a more casual context.
+To find the length (or magnitude) of a vector $ \mathbf{w} $ given by $ \mathbf{w} = [1,2] $, you can use the Pythagorean formula for the magnitude of a 2D vector:
 
 $$
-|w|
+|\mathbf{w}| = ||\mathbf{w}|| = \sqrt{w_1^2 + w_2^2}
 $$
+
+Where:
+
+- $ w_1 $ is the first component of the vector (in this case, 1).
+- $ w_2 $ is the second component of the vector (in this case, 2).
+
+Plugging in the values from vector $ \mathbf{w} $:
+
+$ |\mathbf{w}| = \sqrt{1^2 + 2^2} $
+$ |\mathbf{w}| = \sqrt{1 + 4} $
+$ |\mathbf{w}| = \sqrt{5} $
+
+So, the magnitude (or length) of vector $ \mathbf{w} $ is $ \sqrt{5} $.
+
+## Single Vertical Bars around scalars are absolute values |
 
 Single bars can also mean the absolute value of a scalar
 
 $$
-|-5| = 5
+a = -5
+|a| = 5
 $$
+
+We can also write this as a function:
+
+$$
+\text{abs}(a) = 5
+$$
+
+We can define this like so:
+
+$$
+|a| =
+\begin{cases}
+a & \text{if } a \geq 0 \\
+-a & \text{if } a < 0
+\end{cases}
+$$
+
+Occasioanlly you will also see this:
+
+$$
+|a| = \sqrt{a^2}
+$$
+
+## Vertical bars in sets mean "such that"
 
 A single bar separating two side of an equation means "such that"
 
