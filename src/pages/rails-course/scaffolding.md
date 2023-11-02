@@ -19,7 +19,7 @@ It's traditional to make a blog, but feel free to make a kitten, or similar.
 
 First create a BlogPost scaffold and give it some attributes. You can use the following generator as a jumping off point. You will need to add a `content:text` and probably also a `date:datetime` too.
 
-```bash
+```sh
 rails g scaffold blog_post title:string
 ```
 
@@ -35,7 +35,7 @@ You will find one line has been added to the routes file: `resources`.
 
 This single line generates all of the standard crud routes for you. Check them out from a console by typing:
 
-```bash
+```sh
 rake routes
 ```
 
@@ -47,7 +47,7 @@ Look at the views. See the form partial? It's used by the new and edit templates
 
 The tests that have been built for you should work right out of the box. Run:
 
-```bash
+```sh
 rake test
 ```
 
@@ -73,7 +73,7 @@ BlogPost.find_by_slug params[:id]
 
 Use a migration to add the field, generate the migration like this:
 
-```bash
+```sh
 rails g migration add_slug_to_blog_post
 ```
 

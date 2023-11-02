@@ -11,7 +11,7 @@ layout: ../../layouts/Course.astro
 
 Create a new Rails App using:
 
-```bash
+```sh
 rails.new;
 ```
 
@@ -21,7 +21,7 @@ We're going to put everything together and make a simple blog.
 
 First create a BlogPost model and give it some attributes. You can use the following generator as a jumping off point. You will need to add a content:text and probably also a date:datetime too.
 
-```bash
+```sh
   rails g model blog_post title:string
 ```
 
@@ -29,7 +29,7 @@ First create a BlogPost model and give it some attributes. You can use the follo
 
 Next we'll need a BlogPost controller. Use a generator like this:
 
-```bash
+```sh
   rails g controller blog_post
 ```
 
@@ -59,7 +59,7 @@ Add a slug attribute to the blog_post. Do a find_by_slug instead of a regular fi
 
 You can use a migration to add the field, something like:
 
-```bash
+```sh
 rails g migration add_slug_to_blog_post
 ```
 

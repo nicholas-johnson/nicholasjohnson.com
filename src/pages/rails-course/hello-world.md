@@ -17,7 +17,7 @@ This will take us about three minutes. Rails is nice that way.
 
 At a terminal type:
 
-```bash
+```sh
 rails new HelloWorld
 ```
 
@@ -27,7 +27,7 @@ This initialises a new blank application called HelloWorld
 
 At a terminal navigate to your HelloWorld directory and type:
 
-```bash
+```sh
 rails server
 ```
 

@@ -17,13 +17,13 @@ The rails console lets you fire up an instance of your rails server on the comma
 
 Fire it up with:
 
-```bash
+```sh
 rails console
 ```
 
 or just
 
-```bash
+```sh
 rails c
 ```
 
@@ -39,13 +39,13 @@ reload!
 
 If you need to poke around inside a running Rails instance to see what's going on, you can use the debugger. To use it you must start your Rails instance in debug mode like so:
 
-```bash
+```sh
 rails server --debugger
 ```
 
 or just
 
-```bash
+```sh
 rails s --debugger
 ```
 

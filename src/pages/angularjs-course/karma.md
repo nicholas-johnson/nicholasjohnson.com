@@ -34,7 +34,7 @@ test your installation by typing `node` at a command line.
 
 Once you have Node, you will we use NPM (Node Package Manager) to install a few Karma packages, like so:
 
-```bash
+```sh
 npm init
 npm install karma --save-dev
 npm install -g karma-cli
@@ -51,13 +51,13 @@ Once Karma is installed, you should be able to type `karma` at a command line an
 
 Karma needs a karma.conf.js file in the root of your project directory to tell it how to work. Use the command line to navigate to the folder in which you want to work. Now type `karma init`. You will be taken through a wizard which will create the karma.conf.js file. Keep all the defaults for now.
 
-```bash
+```sh
 karma init
 ```
 
 We can now start the Karma runner using:
 
-```bash
+```sh
 karma start
 ```
 

@@ -38,13 +38,13 @@ In order to make requests you will need a server.
 
 You can create a simple local server with Node http-server
 
-```bash
+```sh
   npm install http-server -g
 ```
 
 Start it with
 
-```bash
+```sh
   http-server
 ```
 

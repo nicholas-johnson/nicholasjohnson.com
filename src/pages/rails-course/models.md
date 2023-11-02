@@ -21,7 +21,7 @@ You will see we have made a nice cat class in the models directory, and also a m
 
 Run the migration using:
 
-```bash
+```sh
   rake db:migrate
 ```
 
@@ -31,7 +31,7 @@ This has updated your database schema.
 
 Drop into the rails console by typing:
 
-```bash
+```sh
   rails c
 ```
 

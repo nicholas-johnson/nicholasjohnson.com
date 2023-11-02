@@ -35,25 +35,25 @@ Installation is easy. A simple double click install on On Windows and OSX, or a 
 
 Typing:
 
-```bash
+```sh
 conda info
 ```
 
 at the command line will list some details about your current conda environment. You should notice something like this:
 
-```bash
+```sh
 active environment : base
 ```
 
 This means we are in the base environment, a general environment for all our projects. Ideally we want to create a specific environment for our project. We can do this with conda create:
 
-```bash
+```sh
 conda create -n my-project
 ```
 
 This creates the environemt, but doesn't start using it. To activate the env, type:
 
-```bash
+```sh
 conda activate my-project
 ```
 
@@ -63,7 +63,7 @@ If you have something like Oh My ZSH running you should see the command prompt c
 
 We can now install a package from the Anaconda repo with Conda install, thus:
 
-```bash
+```sh
 conda install jellyfish
 ```
 
@@ -81,7 +81,7 @@ Note that Conda environments do not stack. You can't install a library in Base a
 
 To see all the packages you have installed type:
 
-```bash
+```sh
 conda list
 ```
 
@@ -89,7 +89,7 @@ conda list
 
 To see a list all the environments you have created, type:
 
-```bash
+```sh
 conda env list
 ```
 
@@ -97,7 +97,7 @@ conda env list
 
 To destroy an environment, type:
 
-```bash
+```sh
 conda deactivate
 ```
 
@@ -109,7 +109,7 @@ Conda is fully compatible with Pip. Libraries installed with Pip are local to th
 
 Pip using PyPy, which has a LOT more packages, but some of them might be broken or dangerous. Conda has a select few packages, but all of them work and will not infect your computer with herpes.
 
-```bash
+```sh
 pip install nose
 ```
 
@@ -121,13 +121,13 @@ pip install nose
 
 This likely means you're using a global version of python rather than Conda's local environment specific version. Try:
 
-```bash
+```sh
 which python
 ```
 
 If you see something like this:
 
-```bash
+```sh
 which python
 /usr/local/bin/python3
 ```
@@ -136,7 +136,7 @@ you have a global python, and probably need to hit stack overflow for instructio
 
 If you see something like:
 
-```bash
+```sh
 which python
 /Users/nicholas/anaconda3/envs/test-env-1/bin/python
 ```
@@ -153,7 +153,7 @@ A common mistage (especially with OSX) is to type `python3` or `pip3` to get Pyt
 
 To use a specific version of Python, you have to create the environment with the python flag:
 
-```bash
+```sh
 conda create --name test-env-2 python=3.8
 ```
 
@@ -165,7 +165,7 @@ If you want to share an environment, you can put all your requirements in a file
 
 To install from a requirements.txt, first create your environment with conda create, then install from the file, like so:
 
-```bash
+```sh
 conda install --file requirements.txt
 ```
 
@@ -173,13 +173,13 @@ conda install --file requirements.txt
 
 You can save your current environment to a requirements.txt file, just by piping `conda list -e` into the file:
 
-```bash
+```sh
 conda list -e > requirements.txt
 ```
 
 You can then recreate this environment easily with:
 
-```bash
+```sh
 conda install --file requirements.txt
 ```
 
