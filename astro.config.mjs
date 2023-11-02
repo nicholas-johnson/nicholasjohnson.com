@@ -3,7 +3,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import sitemap from "@astrojs/sitemap";
 
-import mdx from "@astrojs/mdx";
+// import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +22,7 @@ export default defineConfig({
     ],
     syntaxHighlight: "prism",
   },
-  integrations: [sitemap(), mdx()],
+  integrations: [sitemap()],
   site: "https://nicholasjohnson.com",
   trailingSlash: "never",
 });
