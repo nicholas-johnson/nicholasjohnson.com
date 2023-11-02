@@ -1,5 +1,5 @@
 ---
-title: What is Terraform?
+title: What is Terraform? A Quick Devops Overview
 tags: devops
 layout: "../../layouts/BlogPost.astro"
 date: "2023-11-02"
