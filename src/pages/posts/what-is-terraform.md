@@ -46,21 +46,39 @@ Core(config.tf, state) ---> Execution Plan ---> Providers ---> Infrastructure
 
 Say I need two EC2 servers. I might create main.tf file with a provider and a resource that looked something like this:
 
-```tf
+```sh
 provider "aws" {
   region = "us-west-2"
 }
 
 resource "aws_instance" "my_ec2" {
-  count         = 2
+  count = 2
   instance_type = "t2.micro"
 }
 ```
 
-To run this script, I would first run `terraform init` to initialize Terraform and download the required plugins.
+To run this script, I would first run
+ 
+```sh
+terraform init
+``` 
 
-I might then run `terraform plan` to review the actions Terraform will perform.
+to initialize Terraform and download the required plugins.
 
-Finally, `terraform apply` would execute the plan and apply the changes to AWS.
+I might then run: 
+
+```sh
+terraform plan
+``` 
+
+to review the actions Terraform will perform.
+
+Finally: 
+
+```sh
+terraform apply
+``` 
+
+would execute the plan and apply the changes to AWS.
 
 
