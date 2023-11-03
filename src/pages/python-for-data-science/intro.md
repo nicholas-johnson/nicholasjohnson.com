@@ -1,4 +1,32 @@
-1. Look at Python builtins and builtins classes.
+# Python is a lovely language
+
+It's also the language of machine learning, so it makes a lot of sense to learn it.
+
+Python is a high level, interpreted language that emphasises beauty and readability. It's easy to learn, nice and uncluttered to l
+
+## The Zen of Python
+
+1. Beautiful is better than ugly.
+2. Explicit is better than implicit.
+3. Simple is better than complex.
+4. Complex is better than complicated.
+5. Flat is better than nested.
+6. Sparse is better than dense.
+7. Readability counts.
+8. Special cases aren't special enough to break the rules.
+9. Although practicality beats purity.
+10. Errors should never pass silently.
+11. Unless explicitly silenced.
+12. In the face of ambiguity, refuse the temptation to guess.
+13. There should be one-- and preferably only one --obvious way to do it.
+14. Although that way may not be obvious at first unless you're Dutch.
+15. Now is better than never.
+16. Although never is often better than _right_ now.
+17. If the implementation is hard to explain, it's a bad idea.
+18. If the implementation is easy to explain, it may be a good idea.
+19. Namespaces are one honking great idea -- let's do more of those!
+
+<!-- 1. Look at Python builtins and builtins classes.
 2. Understand the object class and the basis of object orientated programming,
 3. Understand then the text classes (unicode string, byte string and bytearray),
 4. Numeric classes (integer, boolean, floating point and complex),
@@ -15,12 +43,4 @@
 11. Seaborn is also a good library to learn it is a data visualisation library based around matplotlib.
 
 12. Once comfortable with the above, you can move onto something more advanced like scikit learn.
-
-## What is Pytorch and why is is good?
-
-Pytorch is a framework for machine learning. Made by Meta, it has quickly become the tool of choice for machine learning professionals, taking over from Google's TensorFlow
-
-Shortcuts to define networks
-Tensor maths (maths with n-dimensional arrays)
-Buit in Gradient descent!
-Support for CUDA - the langauge of NVidia GPUs for massively parallel computation
+ -->

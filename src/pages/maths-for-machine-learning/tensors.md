@@ -1,0 +1,3 @@
+A tensor is an n-dimensional general purpose matrix. It's an array of arrays of arrays of...
+
+The dimensionality of a tensor is known as it's rank
