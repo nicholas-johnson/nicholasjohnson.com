@@ -27,8 +27,8 @@ const { posts } = Astro.props;
               month: "long",
               day: "numeric",
             })}{" "}
-            -{Math.round(post.rawContent().split(" ").length / 250)} minute read
-            - {post.rawContent().split(" ").length} words -
+            - {Math.round(post.rawContent().split(" ").length / 250)} minute
+            read - {post.rawContent().split(" ").length} words -
             <a href={post.url}>Read more</a>
           </p>
         </a>
