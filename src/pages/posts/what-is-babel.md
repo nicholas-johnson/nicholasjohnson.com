@@ -14,7 +14,7 @@ You can convert prety much any modern JavaScript features into code that will ru
 
 Babel is a JavaScript **transpiler** that converts edge JavaScript into plain old ES5 JavaScript that can run in any browser (even the old ones).
 
-arrows, multiline strings, generators, and many more.
+It makes available all the syntactical sugar that was added to JavaScript with ES6 and ESNext, including classes, fat arrows, multiline strings, generators, and many more.
 
 You can convert prety much any modern JavaScript features into code that will run on any browser, even the really old ones. This is fantastic news if you need to support older browsers, mobile browsers, Safari, IE11, or anything other than edge Chrome.
 
