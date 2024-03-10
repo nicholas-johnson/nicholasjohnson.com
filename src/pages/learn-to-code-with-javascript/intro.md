@@ -15,7 +15,7 @@ So allow me to say:
 
 Coding is like Hobbits. You can learn all that there is to know about its ways in a month and yet, after a hundred years, it can still surprise you.
 
-This book will teach you the _ways_ of code. The fundamental pieces that we all use. It won't teach you how to make a Twitter clone in thirty minutes, instead it wil teach you about variables, loops, functions and arrays, the foundational building blocks thateverything we do is built upon.
+This book will teach you the _ways_ of code. The fundamental pieces that we all use. It won't teach you how to make a Twitter clone in thirty minutes, instead it will teach you about variables, loops, functions and arrays, the foundational building blocks that everything we do is built upon.
 
 Computer languages are all pretty similar. Learn one and you're well on the way to learning more than one. What differs is the syntax and the culture. Luckily JavaScript has lovely syntax, and an awsome culture full of brilliant folks who will go out of their way to welcome you into the fold.
 
