@@ -60,17 +60,15 @@ $$
 
 C = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
 
-
-$$
-
 Here:
 
 - \(X\) is the variable holding the matrix.
 - The matrix is populated row-wise with the numbers 1 through 4.
 
+
 $$
 
 x \in \mathbb{R}
 
-
+$$
 $$
