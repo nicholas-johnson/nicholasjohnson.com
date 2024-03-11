@@ -11,7 +11,6 @@ D3 gives us a function called data. The data function operates on a selection an
 
 Each element in the selection gains a new attribute called **data**. This attribute is added directly to the DOM node, not as an HTML5 data attribute.
 
-%aside.box
 
 ## Data is stored on the DOM node
 

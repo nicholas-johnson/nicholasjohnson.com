@@ -7,39 +7,44 @@ course: mathsForMachineLearning
 
 # Syntax and Terminology
 
-In this section, we're going to run through most of the basic syntax and terminology that you'll need to interpret mathematical equations, specifically for machine learning. This will give you a basis to understand the rest of the book.
+It's important to understand that Mathematical notation is used in several ways. In school, maths is all about solving equations and making things true. In a paper, mathematical notation is often far more losely, as a concise way of expressing ideas. You're not always meant to be able to solve the equations in a paper, they are simply shorthand for thoughts about the way things are.
 
-Don't worry if not everything makes sense yet. You'll probably wish to refer back to this chapter as you move on.
+In this section, we'll do a lightening run through of most of the basic syntax and terminology that you'll need to interpret mathematical equations, specifically for machine learning. This will give you a basis to understand the rest of the book.
+
+Don't worry if not everything makes sense yet, we'll refer back to this chapter as we move on together.
 
 ## Variables
 
-Variables in Maths are not like variables in programming. In software I might write
+Variables in Maths are not like variables in programming. In software I might write:
 
 ```js
+let a = 5;
 a = a + 1;
 ```
 
-I can do this because a is a pointer to a location in memory.
+I can do this because `a` is a pointer to a location in memory. It can hold any arbitrary value I choose to put there, it's just flipping some binary digits on a chip.
 
-This makes no sense in mathematics. Variables in Maths have values or values that can be discovered. You can't just set them to whatever you want. If I write:
+This makes no sense in mathematics. Variables in Maths have values eternal. You can't just set them to whatever you want. If I write:
 
 $$
 a = 12
 $$
 
-$a$ is now 12 for the duration of the equation.
+$a$ is now 12 for the duration of the equation. Solving the formula is a process of discovering the other things that are true given what we know.
 
 ## Capitals, Bold and Italic in Variable Names
 
-- $x$ - lower case italic letters are used for variables representing scalar values, eg $5$
-- $\mathbf{x}$ - bold lower case letters are used for vectors.
-- $\mathbf{X}$ - bold capitals are used to represent matrices and tensors, eg $[1,2,3]$
+Everything is significant in mathematical notation. The following forms have become reasonably reliable standard in recent years, and knowing them will help you interpret things more quickly.
 
-This isn't necessarily true for all Maths, but has become a convention in machine learning.
+- $x$ - lower case italic letters are used for variables representing scalar values, eg $5$
+- $\mathbf{x}$ - bold lower case letters are used for vectors, which are one dimensional arrays.
+- $\mathbf{X}$ - bold capitals are used to represent matrices and tensors, which are multi-dimensional arrays.
+
+This isn't necessarily true for all Maths throughout time, but has become a convention in machine learning. Once you internalise this, a lot of things start to make a lot more sense.
 
 ## Scalars, Vectors, Matrices and Tensors
 
-In Maths we have a lot of words for arrays. This is for historical reasons, various folks writing at different times using different words for related concepts.
+In Maths we have a lot of words for arrays. This is for historical reasons, various folks writing at different times using different words for related concepts. The syntax is different, and also the way we work with them is slightly different too. More on this later.
 
 ### Scalars
 
@@ -59,12 +64,14 @@ $$
 \mathbf{x} = [1, 2, 3]
 $$
 
+Note the capital $\mathbf{x}$.
+
 ### Matrices
 
 Matrices are two dimensional arrays. We can optionally surround them with square braces. A matrix is an array of arrays:
 
 $$
-X = \begin{bmatrix}
+\mathbf{X} = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} & a_{14} & a_{15} \\
 a_{21} & a_{22} & a_{23} & a_{24} & a_{25} \\
 a_{31} & a_{32} & a_{33} & a_{34} & a_{35} \\
@@ -80,7 +87,7 @@ Tensors are N dimensional arrays. A one dimensional tensor is also a vector. A t
 Tensors are hard to represent on paper, but we could have a go at showing a 3d tensor using a vector of matrices:
 
 $$
-X = \left[ \begin{array}{c}
+\mathbf{X} = \left[ \begin{array}{c}
 \begin{bmatrix} x_{111} & x_{112} & x_{113} & x_{114} & x_{115} \\
 x_{121} & x_{122} & x_{123} & x_{124} & x_{125} \\
 x_{131} & x_{132} & x_{133} & x_{134} & x_{135} \\

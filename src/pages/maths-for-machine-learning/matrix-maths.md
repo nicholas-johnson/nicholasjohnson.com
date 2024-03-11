@@ -23,14 +23,13 @@ a x b = ab = a.b
 
 a x b is the cross product. a.b or ab is the dot product. With scalars these give the same result, so we use them interchangeably. Not so with tensors.
 
-$$
-Certainly! To calculate the dot product of the rows of matrix \(A\) with the columns of matrix \(B\), we can use the following matrices:
-
+To calculate the dot product of the rows of matrix \(A\) with the columns of matrix \(B\), we can use the following matrices:
 
 $$
-
 A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}, \quad B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}
-\]
+
+
+$$
 
 1. **Calculating \(C\_{11}\):**
 
@@ -64,17 +63,14 @@ C = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
 
 $$
 
-$$
-
 Here:
 
 - \(X\) is the variable holding the matrix.
 - The matrix is populated row-wise with the numbers 1 through 4.
 
-
 $$
 
 x \in \mathbb{R}
 
-$$
+
 $$
