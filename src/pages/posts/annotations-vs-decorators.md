@@ -2,8 +2,8 @@
 title: "What's the difference between annotations and decorators in Angular?"
 tags: angular, angular2, javascript, es6
 layout: "../../layouts/BlogPost.astro"
-description: 'Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an annotations array. Decorators are functions that receive the decorated object and can make any changes to it they like. Traceur gives us annotations. TypeScript gives us decorators. Angular 2 supports both.'
-date: '2016-02-21'
+description: "Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an annotations array. Decorators are functions that receive the decorated object and can make any changes to it they like. Traceur gives us annotations. TypeScript gives us decorators. Angular 2 supports both."
+date: "2016-02-21"
 ---
 
 **TL;DR: Annotations and decorators are two competing and incompatible ways to compile the @ symbols that we often see attached to Angular components. Annotations create an "annotations" array. Decorators are functions that receive the decorated object and can make any changes to it they like.**
@@ -20,8 +20,8 @@ You will have noticed that an Angular component is often written like this:
 
 ```js
 @Component({
-  selector: 'app',
-  template: 'Hello World!',
+  selector: "app",
+  template: "Hello World!",
 })
 class MyComponent {}
 ```
@@ -36,8 +36,8 @@ Google's Traceur compiler includes annotations as an experimental feature. If we
 
 ```js
 $traceurRuntime.ModuleStore.getAnonymousModule(function (require) {
-  'use strict'
-  var $__3
+  "use strict";
+  var $__3;
   var MyComponent = $traceurRuntime.initTailRecursiveFunction(function () {
     return $traceurRuntime.call(
       function () {
@@ -46,34 +46,34 @@ $traceurRuntime.ModuleStore.getAnonymousModule(function (require) {
           $traceurRuntime.createClass,
           $traceurRuntime,
           [MyComponent, {}, {}]
-        )
+        );
       },
       this,
       arguments
-    )
-  })()
-  Object.defineProperty(MyComponent, 'annotations', {
+    );
+  })();
+  Object.defineProperty(MyComponent, "annotations", {
     get: function () {
       return [
         new Component({
-          selector: 'app',
-          template: 'Hello World!',
+          selector: "app",
+          template: "Hello World!",
         }),
-      ]
+      ];
     },
-  })
+  });
   return (
     ($__3 = {}),
-    Object.defineProperty($__3, 'MyComponent', {
+    Object.defineProperty($__3, "MyComponent", {
       get: function () {
-        return MyComponent
+        return MyComponent;
       },
       configurable: true,
       enumerable: true,
     }),
     $__3
-  )
-})
+  );
+});
 ```
 
 <a href="https://google.github.io/traceur-compiler/demo/repl.html#%2F%2F%20Options%3A%20--annotations%20--array-comprehension%20--async-functions%20--async-generators%20--exponentiation%20--export-from-extended%20--for-on%20--generator-comprehension%20--jsx%20--member-variables%20--proper-tail-calls%20--require%20--types%20%0A%40Component(%7B%0A%20%20selector%3A%20'app'%2C%0A%20%20template%3A%20'Hello%20World!'%0A%7D)%0Aexport%20class%20MyComponent%20%7B%0A%0A%7D%3B%0A" target="_blank">Have a play with this code in the Traceur REPL here.</a>
@@ -81,28 +81,28 @@ $traceurRuntime.ModuleStore.getAnonymousModule(function (require) {
 The key thing to notice here is this bit:
 
 ```js
-Object.defineProperty(MyComponent, 'annotations', {
+Object.defineProperty(MyComponent, "annotations", {
   get: function () {
     return [
       new Component({
-        selector: 'app',
-        template: 'Hello World!',
+        selector: "app",
+        template: "Hello World!",
       }),
-    ]
+    ];
   },
-})
+});
 ```
 
 Paraphrasing somewhat, Traceur is actually generating something like this:
 
 ```js
-var MyComponent = function MyComponent() {}
+var MyComponent = function MyComponent() {};
 MyComponent.annotations = [
   new Component({
-    selector: 'app',
-    template: 'Hello World!',
+    selector: "app",
+    template: "Hello World!",
   }),
-]
+];
 ```
 
 An annotations property is being defined on MyComponent, which is populated with a newly instantiated Component object. This is what annotations do. They just create this array. You are then free to do what you like with the array. Angular inspects it to decide how to treat the component.
@@ -124,28 +124,28 @@ var __decorate =
           : desc === null
           ? (desc = Object.getOwnPropertyDescriptor(target, key))
           : desc,
-      d
-    if (typeof Reflect === 'object' && typeof Reflect.decorate === 'function')
-      r = Reflect.decorate(decorators, target, key, desc)
+      d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+      r = Reflect.decorate(decorators, target, key, desc);
     else
       for (var i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r
-    return c > 3 && r && Object.defineProperty(target, key, r), r
-  }
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+  };
 var MyComponent = (function () {
   function MyComponent() {}
   MyComponent = __decorate(
     [
       Component({
-        selector: 'app',
-        template: 'Hello World!',
+        selector: "app",
+        template: "Hello World!",
       }),
     ],
     MyComponent
-  )
-  return MyComponent
-})()
+  );
+  return MyComponent;
+})();
 ```
 
 <a href="http://www.typescriptlang.org/Playground#src=%40Component(%7B%0A%20%20selector%3A%20'app'%2C%0A%20%20template%3A%20'Hello%20World!'%0A%7D)%0Aclass%20MyComponent%20%7B%7D" target="_blank">Have a play with this code in the TypeScript playground here.</a>
@@ -154,15 +154,13 @@ The key part is here (to paraphrase):
 
 ```js
 var __decorate = function (decorators, target) {
-  for (var i = decorators.length - 1; i >= 0; i--) d(target, key, r)
-}
+  for (var i = decorators.length - 1; i >= 0; i--) d(target, key, r);
+};
 ```
 
-Our component calls **decorate, which is defined automatically whenever we decorate something. Our component passes **decorate an array of decorators, and itself. The decorators are just functions. Each decorator function will receive the object, and can modify it in any way you see fit.
+Our component calls `__decorate`, which is defined automatically whenever we decorate something. Our component passes `__decorate` an array of decorators, and itself. The decorators are just functions. Each decorator function will receive the object, and can modify it in any way you see fit.
 
 It follows that we can easily use decorators to implement annotations, but we can also do anything else we like. We might add attributes, modify attributes, run conditional code, even create and return a completely new object.
-
-.box
 
 ## Relect.decorate
 
@@ -203,7 +201,7 @@ The main difference you will notice is your imports. Because annotations and dec
 If you are using decorators, your imports will look like normal TypeScript imports:
 
 ```js
-import { Component, View } from 'angular2/angular2'
+import { Component, View } from "angular2/angular2";
 ```
 
 If you are using annotations then you'll have to import the annotation version of the core angular components
@@ -212,7 +210,7 @@ If you are using annotations then you'll have to import the annotation version o
 import {
   ComponentAnnotation as Component,
   ViewAnnotation as View,
-} from 'angular2/angular2'
+} from "angular2/angular2";
 ```
 
 Otherwise, your Angular code will remain unchanged.
