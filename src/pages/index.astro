@@ -2,6 +2,7 @@
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 
 import PostList from "../components/PostList.astro";
+import BookLink from "../components/BookLink.astro";
 import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
 import CourseList from "../components/CourseList.astro";
 import { webDevCourse } from "../data/webDevCourse";
@@ -41,8 +42,10 @@ const posts = allPosts.sort((a, b) => {
     </div>
 
     <div class="sidebar">
-      <h2>Free Courses</h2>
+      <h2>You might also like...</h2>
+
       <div class="courseLinks">
+        <BookLink />
         <CourseList courses={[learnToCodeWithJavaScript, webDevCourse]} />
       </div>
     </div>
