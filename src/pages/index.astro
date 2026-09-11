@@ -9,9 +9,14 @@ import { webDevCourse } from "../data/webDevCourse";
 
 const allPosts = await Astro.glob("./posts/*.md");
 
-const posts = allPosts.sort((a, b) => {
-  return a.frontmatter.date > b.frontmatter.date ? -1 : 1;
-});
+const posts = allPosts
+  .filter((post) => {
+    if (post.frontmatter.unpublished || post.frontmatter.unpublish) {
+      return false;
+    }
+    return !Number.isNaN(Date.parse(post.frontmatter.date));
+  })
+  .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <GlobalLayout title="Nicholas Johnson.com">
@@ -25,8 +30,8 @@ const posts = allPosts.sort((a, b) => {
         <div class="textHost">
           <h1>Hi, I'm Nick Johnson!</h1>
           <p>
-            Previously Front End Lead at Beamery. Currently Principle Front End
-            at Cencora.
+            Previously Front End Lead at Beamery. Currently Principle Engineer
+            at Cencora. BSc in Artificial Intelligence.
           </p>
 
           <p>

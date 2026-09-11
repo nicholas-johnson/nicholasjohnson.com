@@ -7,11 +7,24 @@ interface Props {
 }
 
 const { posts } = Astro.props;
+
+const formatDate = (value: string | undefined) => {
+  const date = new Date(value ?? "");
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
 ---
 
 <ul class="postList">
   {
-    posts.map((post) => (
+    posts.map((post) => {
+      const updated = formatDate(post.frontmatter.date);
+      const wordCount = post.rawContent().split(" ").length;
+      return (
       <li class="post">
         <a href={post.url}>
           <h2>
@@ -21,19 +34,15 @@ const { posts } = Astro.props;
           </h2>
           {markdown(post.frontmatter.preview || "")}
           <p class="meta">
-            Last updated:{" "}
-            {new Date(post.frontmatter.date).toLocaleDateString(undefined, {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}{" "}
-            - {Math.round(post.rawContent().split(" ").length / 250)} minute
-            read - {post.rawContent().split(" ").length} words -
+            {updated && <>Last updated: {updated} - </>}
+            {Math.round(wordCount / 250)} minute
+            read - {wordCount} words -
             <a href={post.url}>Read more</a>
           </p>
         </a>
       </li>
-    ))
+      );
+    })
   }
 
   <style lang="scss">
