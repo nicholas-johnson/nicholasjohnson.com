@@ -14,6 +14,9 @@
           target="_blank">LinkedIn</a
         >
       </li>
+      <li>
+        <button type="button" class="themeToggle">Dark</button>
+      </li>
     </ul>
   </nav>
 
@@ -28,9 +31,39 @@
   </nav>
 </header>
 
-<style lang="scss">
-  @import "../styles/variables.scss";
+<script>
+  const storageKey = "theme";
 
+  const currentTheme = () =>
+    document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+
+  const syncToggle = () => {
+    const button = document.querySelector(".themeToggle");
+    if (!(button instanceof HTMLButtonElement)) return;
+    const isDark = currentTheme() === "dark";
+    button.textContent = isDark ? "Light" : "Dark";
+    button.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+  };
+
+  const setTheme = (theme: "light" | "dark") => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch (e) {}
+  };
+
+  document.querySelector(".themeToggle")?.addEventListener("click", () => {
+    setTheme(currentTheme() === "dark" ? "light" : "dark");
+    syncToggle();
+  });
+
+  syncToggle();
+</script>
+
+<style lang="scss">
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,13 +79,13 @@
   }
 
   .intro {
-    color: $colour-text;
+    color: var(--colour-text);
     text-decoration: none;
     transition: color 0.5s ease-in-out;
     grid-area: intro;
 
     &:hover {
-      color: $colour-link;
+      color: var(--colour-link);
     }
     .wordmark {
       margin: 0;
@@ -88,9 +121,9 @@
     }
     a {
       text-decoration: none;
-      color: $colour-text;
+      color: var(--colour-text);
       &:hover {
-        color: $colour-link;
+        color: var(--colour-link);
         text-decoration: underline;
       }
     }
@@ -114,14 +147,24 @@
       display: flex;
       gap: 1rem;
       justify-content: flex-end;
+      align-items: center;
     }
-    a {
+    a,
+    .themeToggle {
       text-decoration: none;
-      color: $colour-text;
+      color: var(--colour-text);
       &:hover {
-        color: $colour-link;
+        color: var(--colour-link);
         text-decoration: underline;
       }
+    }
+    .themeToggle {
+      appearance: none;
+      background: none;
+      border: 0;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
     }
     @media screen and (max-width: 800px) {
       display: flex;

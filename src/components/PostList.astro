@@ -42,8 +42,6 @@ const formatDate = (value: string | undefined) => {
   }
 
   <style lang="scss">
-    @import "../styles/variables.scss";
-
     ul,
     li {
       list-style: none;
@@ -55,8 +53,8 @@ const formatDate = (value: string | undefined) => {
 
       letter-spacing: 0.01rem;
       text-align: right;
-      border-top: 1px dashed $colour-muted;
-      color: $colour-muted;
+      border-top: 1px dashed var(--colour-muted);
+      color: var(--colour-muted);
     }
 
     li.post {
@@ -65,9 +63,9 @@ const formatDate = (value: string | undefined) => {
 
     h2 a {
       text-decoration: none;
-      color: $colour-text;
+      color: var(--colour-text);
       &:hover {
-        color: $colour-link;
+        color: var(--colour-link);
         text-decoration: underline;
       }
     }

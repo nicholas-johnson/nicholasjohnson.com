@@ -25,6 +25,20 @@ const { title } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script is:inline>
+      {
+        try {
+          const stored = localStorage.getItem("theme");
+          const theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      }
+    </script>
     <script
       src="https://wonderful-pebble-011691503.5.azurestaticapps.net/cozydata-v1.js"
       defer></script>
@@ -129,6 +143,26 @@ const { title } = Astro.props;
     box-sizing: border-box;
   }
 
+  :root {
+    --colour-page: #{$colour-page};
+    --colour-text: #{$colour-text};
+    --colour-link: #{$colour-link};
+    --colour-muted: #{$colour-muted};
+    --colour-brand: #{$colour-brand};
+    --colour-well: #f5f5f5;
+    color-scheme: light;
+  }
+
+  html[data-theme="dark"] {
+    --colour-page: hsl(100, 12%, 8%);
+    --colour-text: hsl(50, 35%, 93%);
+    --colour-link: red;
+    --colour-muted: hsl(80, 6%, 58%);
+    --colour-brand: #{$colour-brand};
+    --colour-well: hsl(100, 10%, 14%);
+    color-scheme: dark;
+  }
+
   html {
     font-family: "open-sans", sans-serif;
     font-weight: 400;
@@ -136,15 +170,15 @@ const { title } = Astro.props;
     line-height: 1.55;
     margin: 0;
     padding: 0;
-    background: $colour-page;
-    color: $colour-text;
+    background: var(--colour-page);
+    color: var(--colour-text);
   }
 
   body {
     margin: 0;
     padding: 0;
-    background: $colour-page;
-    color: $colour-text;
+    background: var(--colour-page);
+    color: var(--colour-text);
   }
   main {
     padding: 2rem;
@@ -162,7 +196,7 @@ const { title } = Astro.props;
   }
 
   a {
-    color: $colour-link;
+    color: var(--colour-link);
   }
   h1 {
     font-size: 2.25rem;
@@ -170,7 +204,7 @@ const { title } = Astro.props;
     line-height: 2.5rem;
     letter-spacing: -0.05rem;
     font-family: "inria", sans-serif;
-    color: $colour-text;
+    color: var(--colour-text);
   }
 
   h2 {
@@ -178,7 +212,7 @@ const { title } = Astro.props;
     font-weight: 700;
     line-height: 2rem;
     font-family: "inria", sans-serif;
-    color: $colour-text;
+    color: var(--colour-text);
   }
 
   h3 {
@@ -186,7 +220,7 @@ const { title } = Astro.props;
     font-weight: 700;
     line-height: 2rem;
     font-family: "inria", sans-serif;
-    color: $colour-text;
+    color: var(--colour-text);
   }
 
   p,
@@ -208,20 +242,20 @@ const { title } = Astro.props;
   .exercise {
     margin: 2rem 0;
     padding: 1rem 2rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--colour-muted);
     border-radius: 0.5rem;
   }
 
   aside.box {
-    background: black;
-    color: white;
+    background: var(--colour-text);
+    color: var(--colour-page);
     padding: 1rem 2rem;
     margin: 2rem 0;
     border-radius: 0.5rem;
   }
 
   aside.pullquote {
-    background: #f5f5f5;
+    background: var(--colour-well);
     padding: 1rem 2rem;
     margin: 1rem 0rem 1rem 4rem;
     border-radius: 0.5rem;

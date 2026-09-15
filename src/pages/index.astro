@@ -72,8 +72,6 @@ const posts = allPosts
   </div>
 
   <style lang="scss">
-    @import "../styles/variables.scss";
-
     .home {
       display: flex;
       justify-content: space-between;
@@ -92,7 +90,7 @@ const posts = allPosts
     .intro {
       display: flex;
       gap: 2rem;
-      border-left: 3px solid $colour-brand;
+      border-left: 3px solid var(--colour-brand);
       padding-left: 2rem;
       margin: 3rem 0;
 
@@ -141,7 +139,7 @@ const posts = allPosts
       }
 
       .courseLinks {
-        border-left: 1px dashed $colour-muted;
+        border-left: 1px dashed var(--colour-muted);
         padding-left: 2rem;
       }
     }

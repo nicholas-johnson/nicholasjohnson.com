@@ -18,8 +18,6 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
   </div>
 
   <style lang="scss">
-    @import "../styles/variables.scss";
-
     .content {
       display: flex;
       flex-direction: column;
@@ -39,14 +37,14 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
     a.hello {
       display: block;
       margin: 1rem auto;
-      color: $colour-page;
-      background: $colour-text;
+      color: var(--colour-page);
+      background: var(--colour-text);
       padding: 1rem 2rem;
       text-decoration: none;
       transition: all 300ms;
       border-radius: 1rem;
       &:hover {
-        background: $colour-link;
+        background: var(--colour-link);
         transform: rotate(-5deg);
       }
     }

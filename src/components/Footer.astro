@@ -79,14 +79,12 @@ const allTopics = [
 </footer>
 
 <style lang="scss">
-  @import "../styles/variables.scss";
-
   footer {
     margin: 5rem auto;
     display: flex;
     font-size: 0.875rem;
     line-height: 1.4;
-    border-top: 1px dashed $colour-muted;
+    border-top: 1px dashed var(--colour-muted);
     padding: 1rem 2rem;
     gap: 2rem;
 
@@ -102,11 +100,11 @@ const allTopics = [
     }
 
     a {
-      color: $colour-text;
+      color: var(--colour-text);
       text-decoration: none;
 
       &:hover {
-        color: $colour-link;
+        color: var(--colour-link);
         text-decoration: underline;
       }
     }
