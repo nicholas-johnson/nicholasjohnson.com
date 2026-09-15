@@ -10,13 +10,13 @@ const allPosts = await Astro.glob("./posts/*.md");
 const filteredAllPosts = allPosts.filter((post) => {
   return post.frontmatter.tags?.includes("javascript");
 });
-const javascroptForProgrammersContent = await Astro.glob(
+const javascriptForProgrammersContent = await Astro.glob(
   "./javascript-for-programmers/*.md"
 );
 
-const posts = [...filteredAllPosts, ...javascroptForProgrammersContent]
+const posts = [...filteredAllPosts, ...javascriptForProgrammersContent]
   .filter(
-    (post) => !post.frontmatter.unpublish || !post.frontmatter.unpublished
+    (post) => !post.frontmatter.unpublish && !post.frontmatter.unpublished
   )
   .sort((a, b) => {
     return a.frontmatter?.date > b.frontmatter?.date ? -1 : 1;

@@ -17,7 +17,17 @@ a = [3, 5]
 
 Because this is two dimensional, we could plot this in two dimensional coordinate space like so:
 
-<LineChart>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="white"></rect>
+  <line x1="10" y1="190" x2="190" y2="190" stroke="black"></line>
+  <line x1="10" y1="10" x2="10" y2="190" stroke="black"></line>
+  <text x="5" y="205" font-family="Arial" font-size="12" text-anchor="middle">0</text>
+  <text x="70" y="205" font-family="Arial" font-size="12" text-anchor="middle">3</text>
+  <text x="-15" y="190" font-family="Arial" font-size="12" text-anchor="middle" transform="rotate(-90 5,190)">5</text>
+  <line x1="10" y1="190" x2="70" y2="65" stroke="blue" stroke-width="2"></line>
+  <circle cx="10" cy="190" r="3" fill="red"></circle>
+  <circle cx="70" cy="65" r="3" fill="red"></circle>
+</svg>
 
 Let's define a second vector:
 
@@ -95,8 +105,6 @@ b = [0,1]
 
 a x b = [0, 2]
 $$
-
-<LineGraph>
 
 We use this in particular for embeddings (more later), or for converting scalar data into network inputs. These types of masks can be trained or computed dynamically using a function.
 

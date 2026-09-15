@@ -1,3 +1,12 @@
+---
+layout: ../../layouts/Course.astro
+title: Case Studies
+seoTitle: Machine Learning Case Studies, aimed at coders
+course: mathsForMachineLearning
+---
+
+# Case Studies
+
 1970 - Ridge Regression (Hoerl & Kennard)
 
 1980 - CHAID Decision Tree (Kass)

@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Lists, Tuples and Loops
+seoTitle: Lists, Tuples and Loops in Python
+course: pythonForMachineLearning
+---
+
 # Lists, Tuples, Sets and Loops
 
 Python has threem ain array types: Lists, tuples and sets.

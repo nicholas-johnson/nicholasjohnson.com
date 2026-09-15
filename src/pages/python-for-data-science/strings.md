@@ -1,3 +1,12 @@
+---
+layout: ../../layouts/Course.astro
+title: Strings
+seoTitle: Strings in Python
+course: pythonForMachineLearning
+---
+
+# Strings
+
 Strings in Python can be declared using singe or bouble quotes
 
 name = "Davros"

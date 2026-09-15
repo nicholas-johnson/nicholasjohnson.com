@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Training a Perceptron
+seoTitle: Training a Perceptron in Python
+course: pythonForMachineLearning
+---
+
 # Training a Perceptron
 
 When I was at university, one of the first tasks we did with neural networks was building logic gates. You can think of it

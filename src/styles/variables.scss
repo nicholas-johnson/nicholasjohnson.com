@@ -28,6 +28,29 @@ $colour-dark-hue: 206;
 $colour-dark-saturation: 46%;
 $colour-dark-luminance: 37%;
 
+$colour-brand: hsl(
+  $colour-brand-hue,
+  $colour-brand-saturation,
+  $colour-brand-luminance
+);
+$colour-secondary: hsl(
+  $colour-secondary-hue,
+  $colour-secondary-saturation,
+  $colour-secondary-luminance
+);
+$colour-page: hsl(
+  $colour-light-text-hue,
+  $colour-light-text-saturation,
+  $colour-light-text-luminance
+);
+$colour-text: hsl(
+  $colour-dark-text-hue,
+  $colour-dark-text-saturation,
+  $colour-dark-text-luminance
+);
+$colour-link: red;
+$colour-muted: hsl($colour-dark-text-hue, 8%, 40%);
+
 /* spacing */
 $spacing-px: 1px;
 $spacing-0: 0;

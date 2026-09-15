@@ -2,10 +2,12 @@
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 
 import PostList from "../components/PostList.astro";
-import BookLink from "../components/BookLink.astro";
 import { learnToCodeWithJavaScript } from "../data/learnToCodeWithJavascript";
-import CourseList from "../components/CourseList.astro";
+import { javascriptForProgrammers } from "../data/javascriptForProgrammers";
+import { pythonForMachineLearning } from "../data/pythonForMachineLearning";
+import { rubyCourse } from "../data/rubyCourse";
 import { webDevCourse } from "../data/webDevCourse";
+import CourseList from "../components/CourseList.astro";
 
 const allPosts = await Astro.glob("./posts/*.md");
 
@@ -30,7 +32,7 @@ const posts = allPosts
         <div class="textHost">
           <h1>Hi, I'm Nick Johnson!</h1>
           <p>
-            Previously Front End Lead at Beamery. Currently Principle Engineer
+            Previously Front End Lead at Beamery. Currently Principal Engineer
             at Cencora. BSc in Artificial Intelligence.
           </p>
 
@@ -40,23 +42,38 @@ const posts = allPosts
               >hello@nicholasjohnson.com</a
             >. I'll be glad to have a chat.
           </p>
+
+          <p>
+            I also write free courses you can work through at your own pace, and
+            run
+            <a href="/courses">instructor-led training</a> internationally.
+          </p>
         </div>
       </div>
-      <h1>Writings</h1>
+      <h2>Writings</h2>
       <PostList posts={posts} />
     </div>
 
     <div class="sidebar">
-      <h2>You might also like...</h2>
+      <h2>Free courses</h2>
 
       <div class="courseLinks">
-        <BookLink />
-        <CourseList courses={[learnToCodeWithJavaScript, webDevCourse]} />
+        <CourseList
+          courses={[
+            learnToCodeWithJavaScript,
+            webDevCourse,
+            pythonForMachineLearning,
+            javascriptForProgrammers,
+            rubyCourse,
+          ]}
+        />
       </div>
     </div>
   </div>
 
   <style lang="scss">
+    @import "../styles/variables.scss";
+
     .home {
       display: flex;
       justify-content: space-between;
@@ -75,16 +92,20 @@ const posts = allPosts
     .intro {
       display: flex;
       gap: 2rem;
-      border-left: 5px solid black;
+      border-left: 3px solid $colour-brand;
       padding-left: 2rem;
-      margin: 8rem 0;
+      margin: 3rem 0;
 
       .imageHost {
         flex: 1;
-        max-width: 20rem;
+        max-width: 16rem;
         img {
           display: block;
           width: 100%;
+          aspect-ratio: 4 / 5;
+          object-fit: cover;
+          object-position: top center;
+          border-radius: 0.5rem;
         }
       }
       .textHost {
@@ -104,8 +125,9 @@ const posts = allPosts
         flex-direction: column-reverse;
 
         .imageHost {
-          width: 100%;
-          max-width: 100%;
+          width: 16rem;
+          max-width: 16rem;
+          margin: 0 auto;
         }
       }
     }
@@ -119,7 +141,7 @@ const posts = allPosts
       }
 
       .courseLinks {
-        border-left: 1px dashed #b8b8b8;
+        border-left: 1px dashed $colour-muted;
         padding-left: 2rem;
       }
     }

@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Classes and Object Orientation
+seoTitle: Object Orientation in Python
+course: pythonForMachineLearning
+---
+
 # Classes and Object Orientation
 
 In Python, as with most languages, all objects are made using classes. There are no object literals, you mist make a class.

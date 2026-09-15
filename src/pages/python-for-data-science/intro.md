@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Hello Python
+seoTitle: Hello Python
+course: pythonForMachineLearning
+---
+
 # Python is a lovely language
 
 It's also the language of machine learning, so it makes a lot of sense to learn it.

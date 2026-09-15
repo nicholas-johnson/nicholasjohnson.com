@@ -1,7 +1,5 @@
 ---
-// import type { ICourse } from "../types/Course";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
-import { markdown } from "@astropub/md";
 ---
 
 <GlobalLayout title="Instructor Lead Courses, taught worldwide">
@@ -13,13 +11,15 @@ import { markdown } from "@astropub/md";
         your startup, the best way is to email me here:
         <a href="mailto:hello@nicholasjohnson.com">hello@nicholasjohnson.com</a
         >. I'll try to get back to you right away. We can have a conversation
-        via email, phone or Skype to see if there might be something we can do.
+        via email or phone to see if there might be something we can do.
       </p>
     </article>
     <a class="hello" href="mailto:hello@nicholasjohnson.com">Send an email</a>
   </div>
 
   <style lang="scss">
+    @import "../styles/variables.scss";
+
     .content {
       display: flex;
       flex-direction: column;
@@ -39,14 +39,14 @@ import { markdown } from "@astropub/md";
     a.hello {
       display: block;
       margin: 1rem auto;
-      color: white;
-      background: black;
+      color: $colour-page;
+      background: $colour-text;
       padding: 1rem 2rem;
       text-decoration: none;
       transition: all 300ms;
       border-radius: 1rem;
       &:hover {
-        background: red;
+        background: $colour-link;
         transform: rotate(-5deg);
       }
     }

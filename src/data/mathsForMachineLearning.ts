@@ -40,5 +40,40 @@ export const mathsForMachineLearning: ICourse = {
       title: "Polynomials",
       description: "",
     },
+    {
+      slug: "vectors",
+      title: "Vectors",
+      description: "",
+    },
+    {
+      slug: "euclidian-distance",
+      title: "Euclidian Distance",
+      description: "",
+    },
+    {
+      slug: "calculus",
+      title: "Calculus",
+      description: "",
+    },
+    {
+      slug: "stats",
+      title: "Stats",
+      description: "",
+    },
+    {
+      slug: "tensors",
+      title: "Tensors",
+      description: "",
+    },
+    {
+      slug: "case-studies",
+      title: "Case Studies",
+      description: "",
+    },
+    {
+      slug: "book",
+      title: "Maths for Machine Learning - For Coders!",
+      description: "",
+    },
   ],
 };

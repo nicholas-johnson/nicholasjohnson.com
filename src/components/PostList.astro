@@ -14,7 +14,6 @@ const formatDate = (value: string | undefined) => {
   return date.toLocaleDateString(undefined, {
     year: "numeric",
     month: "long",
-    day: "numeric",
   });
 };
 ---
@@ -24,28 +23,27 @@ const formatDate = (value: string | undefined) => {
     posts.map((post) => {
       const updated = formatDate(post.frontmatter.date);
       const wordCount = post.rawContent().split(" ").length;
+      const minutes = Math.max(1, Math.round(wordCount / 250));
       return (
       <li class="post">
-        <a href={post.url}>
-          <h2>
-            <a href={post.url}>
-              {post.frontmatter.seoTitle || post.frontmatter.title}
-            </a>
-          </h2>
-          {markdown(post.frontmatter.preview || "")}
-          <p class="meta">
-            {updated && <>Last updated: {updated} - </>}
-            {Math.round(wordCount / 250)} minute
-            read - {wordCount} words -
-            <a href={post.url}>Read more</a>
-          </p>
-        </a>
+        <h2>
+          <a href={post.url}>
+            {post.frontmatter.seoTitle || post.frontmatter.title}
+          </a>
+        </h2>
+        {markdown(post.frontmatter.preview || "")}
+        <p class="meta">
+          {updated && <>{updated} · </>}
+          {minutes} min read
+        </p>
       </li>
       );
     })
   }
 
   <style lang="scss">
+    @import "../styles/variables.scss";
+
     ul,
     li {
       list-style: none;
@@ -57,21 +55,19 @@ const formatDate = (value: string | undefined) => {
 
       letter-spacing: 0.01rem;
       text-align: right;
-      border-top: 1px dashed #ccc;
-      color: #999;
-      a {
-        color: #999;
-      }
+      border-top: 1px dashed $colour-muted;
+      color: $colour-muted;
     }
 
     li.post {
-      margin: 4rem 0;
+      margin: 2rem 0;
     }
 
     h2 a {
       text-decoration: none;
-      color: black;
+      color: $colour-text;
       &:hover {
+        color: $colour-link;
         text-decoration: underline;
       }
     }

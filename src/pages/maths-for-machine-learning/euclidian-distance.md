@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Euclidian Distance
+seoTitle: Euclidian Distance for Machine Learning, aimed at coders
+course: mathsForMachineLearning
+---
+
 # Euclidian Distance
 
 Given two vectors, it is possible to calculate the distance between them. This can be useful when

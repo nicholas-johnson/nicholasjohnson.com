@@ -1,13 +1,12 @@
 <header>
   <a href="/" class="intro">
-    <h1>Hi, I'm Nicholas Johnson!</h1>
+    <p class="wordmark">Nicholas Johnson</p>
     <p>software engineer / trainer / AI Guy</p>
   </a>
 
   <nav class="topLinks">
     <ul>
       <li><a href="/courses">Teaching</a></li>
-      <!-- <li><a href="/cv">CV</a></li> -->
       <li><a href="/contact">Contact</a></li>
       <li>
         <a
@@ -34,12 +33,12 @@
 
   header {
     display: grid;
-    grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "intro topLinks" "intro techLinks";
     gap: 1rem;
     padding: 1rem 2rem;
     @media screen and (max-width: 800px) {
-      grid-columns: 1fr;
+      grid-template-columns: 1fr;
       grid-template-areas: "topLinks" "intro" "techLinks";
       gap: 1rem;
       padding: 1rem 1rem;
@@ -47,21 +46,20 @@
   }
 
   .intro {
-    color: black;
+    color: $colour-text;
     text-decoration: none;
-    transition: all 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     grid-area: intro;
 
     &:hover {
-      // transform: scale(1.1);
-
-      color: blue;
+      color: $colour-link;
     }
-    h1 {
+    .wordmark {
       margin: 0;
       font-size: 1.25rem;
       text-transform: uppercase;
       font-weight: 400;
+      font-family: "inria", sans-serif;
     }
     p {
       margin: 0;
@@ -90,8 +88,9 @@
     }
     a {
       text-decoration: none;
-      color: black;
+      color: $colour-text;
       &:hover {
+        color: $colour-link;
         text-decoration: underline;
       }
     }
@@ -118,8 +117,9 @@
     }
     a {
       text-decoration: none;
-      color: black;
+      color: $colour-text;
       &:hover {
+        color: $colour-link;
         text-decoration: underline;
       }
     }

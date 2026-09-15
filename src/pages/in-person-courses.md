@@ -1,63 +1,26 @@
 ---
+layout: ../layouts/ContentPage.astro
 title: "HTML5 and CSS3 Courses close to London UK"
-description: "Learn to automate your workflow from an someone who actually uses it. Live coding, Q&A,practical workshops, deep theory and lots of real world exercises."
-section_slug: "webdev"
+description: "Learn to automate your workflow from someone who actually uses it. Live coding, Q&A, practical workshops, deep theory and lots of real world exercises."
 ---
 
-%h1 CSS and HTML
+# CSS and HTML
 
-%p.subtitle
 The web is built on HTML and styled with CSS.
 
-%img.sectionLogo{ src: '/images/sections/html5.svg' }
+![HTML5](/images/sections/html5.svg)
 
-%h1 The Web Development Course
+# The Web Development Course
 
-=partial 'partials/exercise_list', locals: {section_slug: "webdev", course_slug: "course" }
+Start the [Web Development Course](/webdev-course/intro).
 
-%h1 The Responsive Design Course
+# The Responsive Design Course
 
-=partial 'partials/exercise_list', locals: {section_slug: "webdev", course_slug: "responsive-design" }
+Media queries, responsive menus, images, and vector graphics.
 
-%h1 The CSS3 Course
+# The CSS3 Course
 
-=partial 'partials/exercise_list', locals: {section_slug: "webdev", course_slug: "css3" }
-
--# %h1 Gulp, SASS and Jade Courses
-
--# %nav.courses
--# %ul
--# %li
--#
-
--# ## Learn Node in a day - NodeJS course near London
-
--# A brief introduction to the magic that is Node, plus Grunt, SASS Jade, Express and common plugins. Node is the most interesting serverside technology out there at the moment.
-
--# Prerequisites: This is not a learn to program course, you will need to have some coding ability, ideally in JavaScript.
-
--# Based in London but can run anywhere in the UK, or internationally.
-
--# _ [Exercises and sample code](/node/course/exercises/)
--# _ [Book now](mailto:hello@nicholasjohnson.com)
-
--# %li
--#  
--# ## Four day AngularJS plus NodeJS course
-
--# Angular is the perfect complement to Node. Create complete single page web applications completely from JavaScript. Everything you need to know.
-
--# _ [Exercises and sample code](/node/course/exercises/)
--# _ [Additional Angular Exercises and sample code](/angular/course/exercises/)
--# \* [Book now](mailto:hello@nicholasjohnson.com)
-
--# %li
--#  
--# ## Five Day Modern Web Design course
-
--# Learn the full modern web stack. JavaScript, Angular, HTML5, CSS3, SASS, NodeJS, Bootstrap. Note that this is not an introductory course, and some knowledge of programming is required to tackle the material.
-
--# \* [Book now](mailto:hello@nicholasjohnson.com)
+Start the [CSS3 Course](/css3-course/opacity).
 
 # JavaScript Courses
 
@@ -97,7 +60,7 @@ Courses run in a sunny training venue by the sea in Brighton, just 55 minutes fr
 - Separation of concerns
 - Unobtrusive JavaScript
 - Protecting the global namespace
-- Principle of Singe Responsibility
+- Principle of Single Responsibility
 - MVC (3 day only)
 
 ### Optional topics (May be covered if there's time)
@@ -115,7 +78,7 @@ Additional topics can be added on request
 - Separation of concerns
 - Unobtrusive JavaScript
 - Protecting the global namespace
-- Principle of Singe Responsibility
+- Principle of Single Responsibility
 - MVC
 
 ### Object Orientation
@@ -172,20 +135,16 @@ Prerequisites: This is not a learn to program course, you will need to have some
 
 Based in London but can run anywhere in the UK, or internationally.
 
-- [Exercises and sample code](/node/course/exercises/)
+- [Exercises and sample code](/node-course/intro)
 - [Book now](mailto:hello@nicholasjohnson.com)
-
-%li
 
 ## Four day AngularJS plus NodeJS course
 
 Angular is the perfect complement to Node. Create complete single page web applications completely from JavaScript. Everything you need to know.
 
-- [Exercises and sample code](/node/course/exercises/)
-- [Additional Angular Exercises and sample code](/angular/course/exercises/)
+- [Exercises and sample code](/node-course/intro)
+- [Additional Angular Exercises and sample code](/angularjs-course/intro)
 - [Book now](mailto:hello@nicholasjohnson.com)
-
-%li
 
 ## Five Day Modern Web Design course
 

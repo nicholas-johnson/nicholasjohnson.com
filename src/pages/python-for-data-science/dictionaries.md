@@ -1,3 +1,12 @@
+---
+layout: ../../layouts/Course.astro
+title: Dictionaries
+seoTitle: Dictionaries in Python
+course: pythonForMachineLearning
+---
+
+# Dictionaries
+
 A dictionary in Python is what in other languages we would call an Ordered Hashmap. Its a set of keys and associated values. If you know the key, the machine can get the value extremely quickly.
 
 A dictionary looks like this:

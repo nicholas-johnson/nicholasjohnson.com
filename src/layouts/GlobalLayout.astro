@@ -14,7 +14,10 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Courses and writings by Nicholas Johnson: software engineer, trainer, and AI enthusiast."
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -37,6 +40,8 @@ const { title } = Astro.props;
 </html>
 
 <style is:global lang="scss">
+  @import "../styles/variables.scss";
+
   //   Inria regular
   @font-face {
     font-family: "inria";
@@ -51,8 +56,8 @@ const { title } = Astro.props;
   @font-face {
     font-family: "inria";
     src:
-      url("fonts/inria/inriasans-italic-webfont.woff2") format("woff2"),
-      url("fonts/inria/inriasans-italic-webfont.woff") format("woff");
+      url("/fonts/inria/inriasans-italic-webfont.woff2") format("woff2"),
+      url("/fonts/inria/inriasans-italic-webfont.woff") format("woff");
     font-weight: 400;
     font-style: italic;
   }
@@ -125,16 +130,21 @@ const { title } = Astro.props;
   }
 
   html {
-    font-family: "open-sans", serif;
+    font-family: "open-sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.55;
     margin: 0;
     padding: 0;
+    background: $colour-page;
+    color: $colour-text;
   }
 
   body {
     margin: 0;
     padding: 0;
+    background: $colour-page;
+    color: $colour-text;
   }
   main {
     padding: 2rem;
@@ -144,38 +154,39 @@ const { title } = Astro.props;
   }
 
   p {
-    line-height: 2rem;
-    // letter-spacing: 0.01rem;
+    line-height: 1.55;
   }
 
   li {
-    // line-height: 2rem;
     letter-spacing: 0.01rem;
   }
 
   a {
-    color: red;
+    color: $colour-link;
   }
   h1 {
     font-size: 2.25rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: -0.05rem;
     font-family: "inria", sans-serif;
+    color: $colour-text;
   }
 
   h2 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2rem;
     font-family: "inria", sans-serif;
+    color: $colour-text;
   }
 
   h3 {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2rem;
     font-family: "inria", sans-serif;
+    color: $colour-text;
   }
 
   p,

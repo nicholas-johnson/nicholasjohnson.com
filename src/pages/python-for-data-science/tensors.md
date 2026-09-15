@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: Tensors
+seoTitle: Tensors in Python
+course: pythonForMachineLearning
+---
+
 # Tensors
 
 A tensor is just an n-dimensional array. It can contain any of the numeric data types that Python supports, including 8 bit, 16 bit, 32 bit and 64 bit integers and floats, and also Booleans and chars.

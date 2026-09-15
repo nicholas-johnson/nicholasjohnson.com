@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Course.astro
-title: Hello JavaScript
-seoTitle: Welcome to the JavaScript for Programmers course!
+title: Conditionals
+seoTitle: JavaScript Conditionals for Programmers
 course: javascriptForProgrammers
 date: 2023/10/09
 preview: "This short course assumes you're already proficient in at least one language. In it, we focus on the tiny soul of JavaScript, a small set of rules, from which everything else logically follows.

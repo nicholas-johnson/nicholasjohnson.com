@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/Course.astro
+title: List Comprehension
+seoTitle: List Comprehension in Python
+course: pythonForMachineLearning
+---
+
 # List Comprehension
 
 List Comprehension is a shorthand syntax that includes a loop, an expression, and a conditional. Its commonly used for converting one list into another. At a high level, the syntax looks like this:
