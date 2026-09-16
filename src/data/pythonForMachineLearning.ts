@@ -5,7 +5,7 @@ export const pythonForMachineLearning: ICourse = {
   slug: "python-for-data-science",
 
   description:
-    "Python is the language of machine learning. High level, readable, and a good place to start if you want to work with data.",
+    "Python is a lovely language, and the language of machine learning, so it makes a lot of sense to learn it. High level, readable, uncluttered: lists, dictionaries, pandas, then tensors and a perceptron.\n\nBeautiful is better than ugly. Readability counts. We start from first principles and work up to the bits you actually need for data.",
   bullets: [
     "Python from first principles",
     "Lists, dictionaries, and pandas",

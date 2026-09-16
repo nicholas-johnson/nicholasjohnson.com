@@ -8,7 +8,7 @@ export const webDevCourse: ICourse = {
   coverCredit: "NASA Ames Research Center",
   coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
   description:
-    "Learn HTML anc CSS, the foundational skills you need to build websites and become a front end developer.",
+    "HTML for what the page *is*, CSS for how it looks. Tags, nesting, layout, and the secret ways of the internet, built up from the foundations with exercises you actually do.\n\nThis isn't a tutorial. Tutorials are a hard way to learn the fundamentals. This is a set of exercises that starts at the beginning and skips nothing.",
   bullets: [
     "HTML and CSS for beginners",
     "13 lessons plus exercises",

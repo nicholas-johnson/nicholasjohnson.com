@@ -1,12 +1,11 @@
 <header>
   <a href="/" class="intro">
     <p class="wordmark">Nicholas Johnson</p>
-    <p>software engineer / trainer / AI Guy</p>
+    <p>Engineer / Trainer / BSc AI</p>
   </a>
 
   <nav class="topLinks">
     <ul>
-      <li><a href="/courses">Teaching</a></li>
       <li><a href="/contact">Contact</a></li>
       <li>
         <a
@@ -15,13 +14,50 @@
         >
       </li>
       <li>
-        <button type="button" class="themeToggle">Dark</button>
+        <button type="button" class="themeToggle" aria-label="Switch to dark mode">
+          <svg
+            class="icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg
+            class="icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+            ></path>
+          </svg>
+        </button>
       </li>
     </ul>
   </nav>
 
   <nav class="techLinks">
     <ul>
+      <li>
+        <a href="https://linearhorizon.com/training">Teaching</a>
+      </li>
       <li><a href="/javascript">JavaScript</a></li>
       <li><a href="/ruby">Ruby</a></li>
       <li><a href="/mongo-course/intro">Mongo</a></li>
@@ -41,7 +77,6 @@
     const button = document.querySelector(".themeToggle");
     if (!(button instanceof HTMLButtonElement)) return;
     const isDark = currentTheme() === "dark";
-    button.textContent = isDark ? "Light" : "Dark";
     button.setAttribute(
       "aria-label",
       isDark ? "Switch to light mode" : "Switch to dark mode"
@@ -79,7 +114,7 @@
   }
 
   .intro {
-    color: var(--colour-text);
+    color: var(--colour-muted);
     text-decoration: none;
     transition: color 0.5s ease-in-out;
     grid-area: intro;
@@ -89,14 +124,14 @@
     }
     .wordmark {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
       font-weight: 400;
       font-family: "inria", sans-serif;
     }
     p {
       margin: 0;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
 
     @media screen and (max-width: 800px) {
@@ -108,6 +143,7 @@
 
   .techLinks {
     grid-area: techLinks;
+    font-size: 0.8rem;
     ul,
     li {
       margin: 0;
@@ -121,7 +157,8 @@
     }
     a {
       text-decoration: none;
-      color: var(--colour-text);
+      color: var(--colour-muted);
+      transition: color 400ms ease;
       &:hover {
         color: var(--colour-link);
         text-decoration: underline;
@@ -136,7 +173,7 @@
 
   .topLinks {
     grid-area: topLinks;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     ul,
     li {
       margin: 0;
@@ -149,10 +186,10 @@
       justify-content: flex-end;
       align-items: center;
     }
-    a,
-    .themeToggle {
+    a {
       text-decoration: none;
-      color: var(--colour-text);
+      color: var(--colour-muted);
+      transition: color 400ms ease;
       &:hover {
         color: var(--colour-link);
         text-decoration: underline;
@@ -160,11 +197,29 @@
     }
     .themeToggle {
       appearance: none;
+      display: flex;
+      align-items: center;
       background: none;
       border: 0;
       padding: 0;
-      font: inherit;
+      color: var(--colour-muted);
       cursor: pointer;
+      line-height: 0;
+      transition: color 400ms ease;
+      &:hover {
+        color: var(--colour-link);
+      }
+    }
+    .icon-sun {
+      display: none;
+    }
+    :global(html[data-theme="dark"]) & {
+      .icon-sun {
+        display: block;
+      }
+      .icon-moon {
+        display: none;
+      }
     }
     @media screen and (max-width: 800px) {
       display: flex;

@@ -6,7 +6,7 @@ export const javascriptForProgrammers: ICourse = {
   deprecationNotice:
     "JavaScript moves quickly, and courses go out of date. JavaScript for Programmers is currently undergoing maintenance. You're welcome to keep using it, but know that some of the content here may not be best practice.",
   description:
-    "You already know how to code, but JavaScript does things rather differently. In this course we learn JavaScript from a programmer's perspective. This course is _JavaScript for Smart People._",
+    "You already know how to code, but JavaScript does things rather differently. We start with the tiny soul of the language: a small set of rules from which everything else follows. This is JavaScript for smart people, not a skip-to-the-end tutorial.\n\nMost courses tell you the magic words to type to make a blog. This one doesn't. There's actually not very much to know. It's a tidy little language.",
   bullets: [],
 
   cover: "/images/book-covers/shuttle2.jpg",

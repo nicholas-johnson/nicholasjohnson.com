@@ -4,6 +4,7 @@ tags: javascript, angular
 layout: "../../layouts/BlogPost.astro"
 course_sidebar: :angular
 date: '2015-06-02'
+preview: "Today's Angular is the angularInit function: the thing that makes ng-app work. It selects elements, discovers the root module name, then shells out to bootstrap."
 ---
 
 Today's Angular is the angularInit function. This is the function which makes ng-app work.

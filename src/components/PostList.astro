@@ -1,12 +1,15 @@
 ---
 import type { MarkdownInstance } from "astro";
 import { markdown } from "@astropub/md";
+import type { ICourse } from "../types/Course";
+import { getFirstExercisePath } from "../utils/getFirstExercisePath";
 
 interface Props {
   posts: MarkdownInstance<Record<string, any>>[];
+  courses?: ICourse[];
 }
 
-const { posts } = Astro.props;
+const { posts, courses = [] } = Astro.props;
 
 const formatDate = (value: string | undefined) => {
   const date = new Date(value ?? "");
@@ -16,9 +19,33 @@ const formatDate = (value: string | undefined) => {
     month: "long",
   });
 };
+
+const coursePreview = (course: ICourse) =>
+  course.description.trim() || course.exercises[0]?.description || "";
 ---
 
 <ul class="postList">
+  {
+    courses.map((course) => {
+      const href = getFirstExercisePath(course);
+      return (
+      <li class="post course">
+        {course.cover && (
+          <a class="cover" href={href}>
+            <img src={course.cover} alt={course.coverAlt || course.title} />
+          </a>
+        )}
+        <div class="body">
+          <h2>
+            <a href={href}>{course.title}</a>
+          </h2>
+          {markdown(coursePreview(course))}
+          <p class="meta">Course</p>
+        </div>
+      </li>
+      );
+    })
+  }
   {
     posts.map((post) => {
       const updated = formatDate(post.frontmatter.date);
@@ -67,6 +94,42 @@ const formatDate = (value: string | undefined) => {
       &:hover {
         color: var(--colour-link);
         text-decoration: underline;
+      }
+    }
+
+    a.cover {
+      display: block;
+      flex: 0 0 11rem;
+      img {
+        display: block;
+        width: 11rem;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+    }
+
+    li.course {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+
+      .body {
+        flex: 1;
+        min-width: 0;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+
+        a.cover,
+        a.cover img {
+          width: 100%;
+        }
       }
     }
   </style>

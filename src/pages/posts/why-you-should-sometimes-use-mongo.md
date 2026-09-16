@@ -4,6 +4,7 @@ tags: javascript, mongodb
 layout: "../../layouts/BlogPost.astro"
 course_sidebar: :mongo
 date: "2015-07-17"
+preview: "Mongo has taken some heavy flak, particularly from the SQL crowd. It's missing a few features, has bugs, and does things in an unfamiliar way. If your data is tree shaped, you like JavaScript, and you can live without transactions, it might still be the right tool."
 ---
 
 I should start out by saying that I have no axe to grind here. I'm just a guy who enjoys learning things and using new technology.

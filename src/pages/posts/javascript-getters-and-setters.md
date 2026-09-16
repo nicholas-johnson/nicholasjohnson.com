@@ -4,6 +4,7 @@ tags: javascript
 layout: "../../layouts/BlogPost.astro"
 course_sidebar: :js2
 date: '2016-01-10'
+preview: "Getters and setters let us create read only attributes of JSON objects. They work in all current browsers (except IE8), so you can use them today."
 ---
 
 **TL;DR Getters and setters let us create read only attributes of JSON objects. They work in all current browsers (except IE8), so you can use them today**

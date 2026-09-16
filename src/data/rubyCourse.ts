@@ -7,7 +7,8 @@ export const rubyCourse: ICourse = {
   version: "0.9.0 - Beta",
   createdAt: "2017",
   lastUpdatedAt: "2017",
-  description: "",
+  description:
+    "Ruby is an expressive, open language that aims to make developers fall in love with programming again. Objects, blocks, and the bits that make it different from whatever you already write. Small teams build things in it that used to take months.\n\nA tidy introduction. No fluff. Language fundamentals first, then the culture: Rails, Sinatra, and a community that wants to help you.",
   bullets: ["Free course", "Tidy introduction to Ruby", "No Fluff"],
   coverAlt: "",
   coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",

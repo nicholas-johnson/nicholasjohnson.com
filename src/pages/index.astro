@@ -7,7 +7,6 @@ import { javascriptForProgrammers } from "../data/javascriptForProgrammers";
 import { pythonForMachineLearning } from "../data/pythonForMachineLearning";
 import { rubyCourse } from "../data/rubyCourse";
 import { webDevCourse } from "../data/webDevCourse";
-import CourseList from "../components/CourseList.astro";
 
 const allPosts = await Astro.glob("./posts/*.md");
 
@@ -19,6 +18,44 @@ const posts = allPosts
     return !Number.isNaN(Date.parse(post.frontmatter.date));
   })
   .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+
+const linearHorizonCourses = [
+  {
+    title: "AI Engineering with Python",
+    slug: "ai-engineering",
+    duration: "3 days",
+  },
+  {
+    title: "Applied NLP with Python",
+    slug: "applied-nlp",
+    duration: "2 days",
+  },
+  {
+    title: "Generative AI Fundamentals",
+    slug: "generative-ai-fundamentals",
+    duration: "1 day",
+  },
+  {
+    title: "Building AI Agents",
+    slug: "building-ai-agents",
+    duration: "2 days",
+  },
+  {
+    title: "RAG: From Fundamentals to Production",
+    slug: "rag-from-fundamentals-to-production",
+    duration: "2 days",
+  },
+  {
+    title: "Production AI Architecture",
+    slug: "production-ai-architecture",
+    duration: "2 days",
+  },
+  {
+    title: "AI for Technical Leaders",
+    slug: "ai-for-technical-leaders",
+    duration: "1 day",
+  },
+];
 ---
 
 <GlobalLayout title="Nicholas Johnson.com">
@@ -26,14 +63,18 @@ const posts = allPosts
     <div class="main">
       <div class="intro">
         <div class="imageHost">
-          <img src="/images/me.jpg" alt="Nick Johnson" />
+          <img src="/images/me.jpeg" alt="Nick Johnson" />
         </div>
 
         <div class="textHost">
           <h1>Hi, I'm Nick Johnson!</h1>
           <p>
-            Previously Front End Lead at Beamery. Currently Principal Engineer
-            at Cencora. BSc in Artificial Intelligence.
+            I'm a Principal AI Product Engineer at Cencora, building
+            skunkworks products at enterprise scale. Previously an early hire at
+            Beamery (now $1bn), Brandwatch ($450m acquisition), and Higgidy
+            (acquired), and lead engineer at Streetbank. I founded
+            <a href="https://fictionite.com">Fictionite</a> and
+            <a href="https://linearhorizon.com">Linear Horizon</a>.
           </p>
 
           <p>
@@ -50,15 +91,8 @@ const posts = allPosts
           </p>
         </div>
       </div>
-      <h2>Writings</h2>
-      <PostList posts={posts} />
-    </div>
-
-    <div class="sidebar">
-      <h2>Free courses</h2>
-
-      <div class="courseLinks">
-        <CourseList
+      <div class="feed">
+        <PostList
           courses={[
             learnToCodeWithJavaScript,
             webDevCourse,
@@ -66,7 +100,28 @@ const posts = allPosts
             javascriptForProgrammers,
             rubyCourse,
           ]}
+          posts={posts}
         />
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="courseLinks">
+        <ul>
+          {
+            linearHorizonCourses.map((course) => (
+              <li>
+                <a href={`https://linearhorizon.com/training/${course.slug}`}>
+                  {course.title}
+                </a>
+                <span class="duration">{course.duration}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="catalogue">
+          <a href="https://linearhorizon.com/training">Full catalogue</a>
+        </p>
       </div>
     </div>
   </div>
@@ -87,8 +142,13 @@ const posts = allPosts
       flex: 1;
     }
 
+    .feed {
+      margin-top: 3rem;
+    }
+
     .intro {
       display: flex;
+      flex-direction: row-reverse;
       gap: 2rem;
       border-left: 3px solid var(--colour-brand);
       padding-left: 2rem;
@@ -102,7 +162,7 @@ const posts = allPosts
           width: 100%;
           aspect-ratio: 4 / 5;
           object-fit: cover;
-          object-position: top center;
+          object-position: 72% 20%;
           border-radius: 0.5rem;
         }
       }
@@ -132,15 +192,51 @@ const posts = allPosts
 
     .sidebar {
       max-width: 20rem;
-      margin-top: 4rem;
-
-      h2 {
-        padding-left: 2rem;
-      }
+      margin-top: 3rem;
+      font-size: 0.875rem;
 
       .courseLinks {
         border-left: 1px dashed var(--colour-muted);
         padding-left: 2rem;
+      }
+
+      ul,
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      a {
+        color: var(--colour-muted);
+        text-decoration: none;
+        transition: color 400ms ease;
+
+        &:hover {
+          color: var(--colour-link);
+          text-decoration: underline;
+        }
+      }
+
+      .duration {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--colour-muted);
+        opacity: 0.8;
+      }
+
+      .catalogue {
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 1000px) {
+        margin-top: 1rem;
       }
     }
   </style>

@@ -11,7 +11,7 @@ export const learnToCodeWithJavaScript: ICourse = {
   createdAt: "2014",
   lastUpdatedAt: "23th September 2023",
   description:
-    "Suitable for beginners. Learn to code from scratch with JavaScript",
+    "Starts from nothing. Variables, loops, functions and arrays: the building blocks everything else is made of. It won't teach you a Twitter clone in thirty minutes. It will teach you the ways of code.\n\nMrs Potts is in a pickle. Won't someone help her?",
   bullets: [
     "12 lessons",
     "Suitable for new coders and non-coders",
