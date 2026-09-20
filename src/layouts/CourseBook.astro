@@ -1,6 +1,7 @@
 ---
 import GlobalLayout from "./GlobalLayout.astro";
 import { courses } from "../data/courses";
+import { formatDate } from "../utils/formatDate";
 
 import type { ICourse } from "../types/Course";
 
@@ -34,7 +35,11 @@ const allContent = await Astro.glob("../pages/**/*.md");
         <p><strong>By Nicholas Johnson</strong></p>
         <p>Document Version: {course.version}</p>
 
-        <p>Last Updated: {course.lastUpdatedAt}</p>
+        {
+          course.lastUpdatedAt && (
+            <p>Last Updated: {formatDate(course.lastUpdatedAt) ?? course.lastUpdatedAt}</p>
+          )
+        }
         <img src={course.cover} alt="Workbook Cover Image" />
         <slot />
       </section>

@@ -18,8 +18,8 @@ export const pythonForMachineLearning: ICourse = {
   coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
   coverCredit: "NASA Ames Research Center",
   version: "",
-  createdAt: "",
-  lastUpdatedAt: "",
+  createdAt: "2023",
+  lastUpdatedAt: "2023-09-25",
   exercises: [
     {
       slug: "intro",

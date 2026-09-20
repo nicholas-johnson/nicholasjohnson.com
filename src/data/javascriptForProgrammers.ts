@@ -14,8 +14,8 @@ export const javascriptForProgrammers: ICourse = {
   coverCreditUrl: "http://settlement.arc.nasa.gov/70sArt/art.html",
   coverCredit: "NASA Ames Research Center",
   version: "",
-  createdAt: "",
-  lastUpdatedAt: "",
+  createdAt: "2014",
+  lastUpdatedAt: "2023-09-23",
   exercises: [
     {
       slug: "intro",

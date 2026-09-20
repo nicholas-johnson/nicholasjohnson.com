@@ -2,23 +2,45 @@
 import type { MarkdownInstance } from "astro";
 import { markdown } from "@astropub/md";
 import type { ICourse } from "../types/Course";
+import type { LinearHorizonWriting } from "../data/linearHorizonWritings";
 import { getFirstExercisePath } from "../utils/getFirstExercisePath";
+import { formatDate, writingTimestamp } from "../utils/formatDate";
 
 interface Props {
   posts: MarkdownInstance<Record<string, any>>[];
   courses?: ICourse[];
+  writings?: LinearHorizonWriting[];
 }
 
-const { posts, courses = [] } = Astro.props;
+const { posts, courses = [], writings = [] } = Astro.props;
 
-const formatDate = (value: string | undefined) => {
-  const date = new Date(value ?? "");
-  if (Number.isNaN(date.getTime())) return null;
-  return date.toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "long",
-  });
-};
+const minutesFor = (text: string) =>
+  Math.max(1, Math.round(text.split(/\s+/).filter(Boolean).length / 250));
+
+const kindLabel = (kind: LinearHorizonWriting["kind"]) =>
+  kind === "whitepaper" ? "Whitepaper" : "Linear Horizon";
+
+const datedWritings = [
+  ...posts.map((post) => {
+    const preview = post.frontmatter.preview || "";
+    return {
+      title: post.frontmatter.seoTitle || post.frontmatter.title,
+      href: post.url ?? "",
+      preview,
+      date: post.frontmatter.date as string,
+      extra: `${minutesFor(post.rawContent())} min read`,
+    };
+  }),
+  ...writings.map((writing) => ({
+    title: writing.title,
+    href: writing.href,
+    preview: writing.description,
+    date: writing.date,
+    extra: writing.body
+      ? `${kindLabel(writing.kind)} · ${minutesFor(writing.body)} min read`
+      : kindLabel(writing.kind),
+  })),
+].sort((a, b) => writingTimestamp(b.date) - writingTimestamp(a.date));
 
 const coursePreview = (course: ICourse) =>
   course.description.trim() || course.exercises[0]?.description || "";
@@ -28,6 +50,7 @@ const coursePreview = (course: ICourse) =>
   {
     courses.map((course) => {
       const href = getFirstExercisePath(course);
+      const updated = formatDate(course.lastUpdatedAt);
       return (
       <li class="post course">
         {course.cover && (
@@ -40,28 +63,27 @@ const coursePreview = (course: ICourse) =>
             <a href={href}>{course.title}</a>
           </h2>
           {markdown(coursePreview(course))}
-          <p class="meta">Course</p>
+          <p class="meta">
+            Course
+            {updated && <> · Last updated {updated}</>}
+          </p>
         </div>
       </li>
       );
     })
   }
   {
-    posts.map((post) => {
-      const updated = formatDate(post.frontmatter.date);
-      const wordCount = post.rawContent().split(" ").length;
-      const minutes = Math.max(1, Math.round(wordCount / 250));
+    datedWritings.map((writing) => {
+      const updated = formatDate(writing.date);
       return (
       <li class="post">
         <h2>
-          <a href={post.url}>
-            {post.frontmatter.seoTitle || post.frontmatter.title}
-          </a>
+          <a href={writing.href}>{writing.title}</a>
         </h2>
-        {markdown(post.frontmatter.preview || "")}
+        {markdown(writing.preview || "")}
         <p class="meta">
           {updated && <>{updated} · </>}
-          {minutes} min read
+          {writing.extra}
         </p>
       </li>
       );

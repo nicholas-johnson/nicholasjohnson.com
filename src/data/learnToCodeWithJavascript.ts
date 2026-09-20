@@ -9,7 +9,7 @@ export const learnToCodeWithJavaScript: ICourse = {
   coverCredit: "NASA Ames Research Center",
   version: "2.0.2",
   createdAt: "2014",
-  lastUpdatedAt: "23th September 2023",
+  lastUpdatedAt: "2023-09-23",
   description:
     "Starts from nothing. Variables, loops, functions and arrays: the building blocks everything else is made of. It won't teach you a Twitter clone in thirty minutes. It will teach you the ways of code.\n\nMrs Potts is in a pickle. Won't someone help her?",
   bullets: [
